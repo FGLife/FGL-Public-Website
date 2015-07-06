@@ -1,2 +1,2 @@
 # FGL-Public-Website
-New public website for fgl
+This is the new public website for FGL. Based on Canvas theme distributed by Envato.
