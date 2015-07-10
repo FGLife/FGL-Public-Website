@@ -1011,7 +1011,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 #footer.dark,
 .dark #footer {
   /*background-color: #333;*/
-	background-color: #009999;
+	background-color: #009999; /*fgl-pdt - dark.less doesn't update*/
 	color: #CCC;
 	border-top-color: rgba(0,0,0,0.2);
 }
