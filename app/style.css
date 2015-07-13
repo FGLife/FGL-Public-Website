@@ -503,9 +503,9 @@ span.middot {
 -----------------------------------------------------------------*/
 .section {
   position: relative;
-  margin: 60px 0;
-  padding: 60px 0;
-  background-color: #f9f9f9;
+  margin: 50px 0;
+  padding: 50px 0;
+  background-color: #4d858d;
   overflow: hidden;
 }
 .section .container {
@@ -529,13 +529,13 @@ span.middot {
 }
 .revealer-image {
   position: relative;
-  bottom: -120px;
+  bottom: -100px;
   transition: bottom 0.3s ease-in-out;
   -webkit-transition: bottom 0.3s ease-in-out;
   -o-transition: bottom 0.3s ease-in-out;
 }
 .section:hover .revealer-image {
-  bottom: -60px;
+  bottom: -50px;
 }
 /* ----------------------------------------------------------------
     Columns & Grids
@@ -7081,11 +7081,11 @@ body:not(.device-touch) .button.button-full strong {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0;
-  color: #333;
+  color: #001a71;
 }
 .feature-box p {
   margin: 8px 0 0 0;
-  color: #999;
+  color: #5c666f;
 }
 .feature-box .before-heading {
   font-size: 14px;
@@ -7410,7 +7410,7 @@ body:not(.device-touch) .button.button-full strong {
 .feature-box h3 span.subtitle {
   display: block;
   margin-top: 5px;
-  color: #444;
+  color: #5c666f;
   font-weight: 300;
   text-transform: none;
 }
@@ -7504,7 +7504,7 @@ body:not(.device-touch) .button.button-full strong {
   top: -3px;
   left: -3px;
   padding: 3px;
-  box-shadow: 0 0 0 2px #333;
+  box-shadow: 0 0 0 2px #5c666f;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   -webkit-transform: scale(0.8);
   -moz-transition: -moz-transform 0.3s, opacity 0.3s;
@@ -11456,6 +11456,17 @@ body:not(.device-touch) .tagcloud a {
 .widget_pages li a:hover,
 .widget_rss li a:hover,
 .widget_recent_comments li a:hover {
+  color: #000;
+}
+.fgl-bullet-check-mark li {
+  list-style: none;
+  padding: 0 3px 0 12px;
+  background: url("images/icons/icon-line-check.png") left top no-repeat;
+  border: none !important;
+  color: #f53922;
+  font-size: 14px;
+}
+.fgl-bullet-check-mark li:hover {
   color: #000;
 }
 .widget_recent_comments li {
