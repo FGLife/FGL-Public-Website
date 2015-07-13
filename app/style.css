@@ -114,7 +114,7 @@ li {
 -----------------------------------------------------------------*/
 body {
   line-height: 1.5;
-  color: #555555;
+  color: #5c666f;
   font-size: 14px;
   font-family: "proxima-nova", Arial, sans-serif;
 }
@@ -143,7 +143,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #444444;
+  color: #009999;
   font-weight: 600;
   line-height: 1.5;
   margin: 0 0 30px 0;
@@ -154,12 +154,9 @@ h2.white,
 h3.white,
 h4.white,
 h5.white,
-h6.white {
+h6.white,
+p.white {
   color: #ffffff;
-  font-weight: 600;
-  line-height: 1.5;
-  margin: 0 0 30px 0;
-  font-family: "proxima-nova", Arial, sans-serif;
 }
 h5,
 h6 {
