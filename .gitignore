@@ -52,3 +52,7 @@ test/bower_components
 GulpFiles/build/gulpfile.js
 
 *.json
+
+.idea/vcs.xml
+
+styles.css
