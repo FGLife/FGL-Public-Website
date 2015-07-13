@@ -123,7 +123,7 @@ a {
   color: #009999;
 }
 a:hover {
-  color: #222;
+  color: #FFFFFF;
 }
 a img {
   border: none;
@@ -6768,12 +6768,12 @@ body:not(.device-touch) .button.button-full strong {
 .button-reveal.button-leaf:hover {
   background-color: #A8CABA !important;
 }
-.button-pink {
-  background-color: #F89FA1;
+.button-gray {
+  background-color: #5c666f;
 }
-.button-3d.button-pink:hover,
-.button-reveal.button-pink:hover {
-  background-color: #F89FA1 !important;
+.button-3d.button-gray:hover,
+.button-reveal.button-gray:hover {
+  background-color: #5c666f !important;
 }
 .button-dirtygreen {
   background-color: #1693A5;
@@ -6783,18 +6783,18 @@ body:not(.device-touch) .button.button-full strong {
   background-color: #1693A5 !important;
 }
 .button-blue {
-  background-color: #1265A8;
+  background-color: #001a71;
 }
 .button-3d.button-blue:hover,
 .button-reveal.button-blue:hover {
-  background-color: #1265A8 !important;
+  background-color: #001a71 !important;
 }
-.button-amber {
-  background-color: #EB9C4D;
+.button-orange {
+  background-color: #ff5000;
 }
-.button-3d.button-amber:hover,
-.button-reveal.button-amber:hover {
-  background-color: #EB9C4D !important;
+.button-3d.button-orange:hover,
+.button-reveal.button-orange:hover {
+  background-color: #ff5000 !important;
 }
 .button-black {
   background-color: #111;
