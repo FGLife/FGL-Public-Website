@@ -514,7 +514,11 @@ span.middot {
   position: relative;
   margin: 50px 0;
   padding: 50px 0;
+<<<<<<< HEAD
   background-color: #009999;
+=======
+  background-color: #4d858d;
+>>>>>>> origin/master
   overflow: hidden;
 }
 .section .container {
@@ -11465,6 +11469,17 @@ body:not(.device-touch) .tagcloud a {
 .widget_pages li a:hover,
 .widget_rss li a:hover,
 .widget_recent_comments li a:hover {
+  color: #000;
+}
+.fgl-bullet-check-mark li {
+  list-style: none;
+  padding: 0 3px 0 12px;
+  background: url("images/icons/icon-line-check.png") left top no-repeat;
+  border: none !important;
+  color: #f53922;
+  font-size: 14px;
+}
+.fgl-bullet-check-mark li:hover {
   color: #000;
 }
 .widget_recent_comments li {
