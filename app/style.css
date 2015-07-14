@@ -514,11 +514,7 @@ span.middot {
   position: relative;
   margin: 50px 0;
   padding: 50px 0;
-<<<<<<< HEAD
-  background-color: #009999;
-=======
   background-color: #4d858d;
->>>>>>> origin/master
   overflow: hidden;
 }
 .section .container {
@@ -6332,8 +6328,6 @@ body:not(.device-xs):not(.device-xxs) .countdown.countdown-large.coming-soon .co
 body:not(.device-xs):not(.device-xxs) .countdown.countdown-large.coming-soon .countdown-amount {
   height: 140px;
   line-height: 140px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.2);
   margin-bottom: 15px !important;
