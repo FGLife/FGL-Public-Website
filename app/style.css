@@ -123,7 +123,7 @@ a {
   color: #009999;
 }
 a:hover {
-  color: #FFFFFF;
+  color: white;
 }
 a img {
   border: none;
@@ -10260,7 +10260,7 @@ body:not(.device-touch) .text-overlay {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #333;
+  color: white;
 }
 .emphasis-title h1,
 .emphasis-title h2 {
@@ -10269,7 +10269,7 @@ body:not(.device-touch) .text-overlay {
   text-transform: none;
 }
 .heading-block h1 {
-  font-size: 32px;
+  font-size: 42px;
 }
 .heading-block h2 {
   font-size: 30px;

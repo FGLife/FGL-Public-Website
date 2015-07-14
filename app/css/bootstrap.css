@@ -2307,11 +2307,13 @@ fieldset[disabled] .btn-primary.active {
   color: #337ab7;
   background-color: #ffffff;
 }
+/* color change to button - FGL-KC*/
 .btn-success {
   color: #ffffff;
   background-color: #5c666f;
   border-color: #5c666f;
 }
+/* color change to hover button - FGL-KC*/
 .btn-success:hover,
 .btn-success:focus,
 .btn-success.focus,
