@@ -6731,7 +6731,7 @@ body:not(.device-touch) .button.button-full strong {
 }
 .button-3d.button-green:hover,
 .button-reveal.button-green:hover {
-  background-color: #009999 !important;
+  background-color: #ff5000 !important;
 }
 .button-brown {
   background-color: #774F38;
@@ -6773,7 +6773,7 @@ body:not(.device-touch) .button.button-full strong {
 }
 .button-3d.button-gray:hover,
 .button-reveal.button-gray:hover {
-  background-color: #5c666f !important;
+  background-color: #ff5000 !important;
 }
 .button-dirtygreen {
   background-color: #1693A5;
@@ -8031,7 +8031,7 @@ body:not(.device-touch) .on-hover.i-overlay {
   height: 40px;
   font-size: 20px;
   line-height: 38px !important;
-  color: #555;
+  color: #5c666f;
   text-shadow: none;
   border: 1px solid #AAA;
   -webkit-border-radius: 3px;
