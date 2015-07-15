@@ -146,7 +146,7 @@ h6 {
   color: #009999;
   font-weight: 600;
   line-height: 1.5;
-  margin: 0 0 30px 0;
+  margin: 0 0 10px 0;
   font-family: "proxima-nova", Arial, sans-serif;
 }
 h1.white,
@@ -253,12 +253,12 @@ small {
   clear: both;
   position: relative;
   width: 100%;
-  margin: 60px 0;
+  margin: 40px 0;
   border-top: 1px solid #EEE;
 }
 .line.line-sm,
 .double-line.line-sm {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 span.middot {
   display: inline-block;
@@ -272,40 +272,40 @@ span.middot {
   position: relative !important;
 }
 .allmargin {
-  margin: 50px !important;
-}
-.leftmargin {
-  margin-left: 50px !important;
-}
-.rightmargin {
-  margin-right: 50px !important;
-}
-.topmargin {
-  margin-top: 50px !important;
-}
-.bottommargin {
-  margin-bottom: 50px !important;
-}
-.clear-bottommargin {
-  margin-bottom: -50px !important;
-}
-.allmargin-sm {
   margin: 30px !important;
 }
-.leftmargin-sm {
+.leftmargin {
   margin-left: 30px !important;
 }
-.rightmargin-sm {
+.rightmargin {
   margin-right: 30px !important;
 }
-.topmargin-sm {
+.topmargin {
   margin-top: 30px !important;
 }
-.bottommargin-sm {
+.bottommargin {
   margin-bottom: 30px !important;
 }
-.clear-bottommargin-sm {
+.clear-bottommargin {
   margin-bottom: -30px !important;
+}
+.allmargin-sm {
+  margin: 20px !important;
+}
+.leftmargin-sm {
+  margin-left: 20px !important;
+}
+.rightmargin-sm {
+  margin-right: 20px !important;
+}
+.topmargin-sm {
+  margin-top: 20px !important;
+}
+.bottommargin-sm {
+  margin-bottom: 20px !important;
+}
+.clear-bottommargin-sm {
+  margin-bottom: -20px !important;
 }
 .allmargin-lg {
   margin: 80px !important;
@@ -341,13 +341,13 @@ span.middot {
   margin-bottom: 0 !important;
 }
 .header-stick {
-  margin-top: -50px !important;
+  margin-top: -30px !important;
 }
 .content-wrap .header-stick {
   margin-top: -80px !important;
 }
 .footer-stick {
-  margin-bottom: -50px !important;
+  margin-bottom: -30px !important;
 }
 .content-wrap .footer-stick {
   margin-bottom: -80px !important;
@@ -513,8 +513,8 @@ span.middot {
 .section {
   position: relative;
   margin: 50px 0;
-  padding: 50px 0;
-  background-color: #4d858d;
+  padding: 40px 0;
+  background-color: #009999;
   overflow: hidden;
 }
 .section .container {
@@ -538,13 +538,13 @@ span.middot {
 }
 .revealer-image {
   position: relative;
-  bottom: -100px;
+  bottom: -80px;
   transition: bottom 0.3s ease-in-out;
   -webkit-transition: bottom 0.3s ease-in-out;
   -o-transition: bottom 0.3s ease-in-out;
 }
 .section:hover .revealer-image {
-  bottom: -50px;
+  bottom: -40px;
 }
 /* ----------------------------------------------------------------
     Columns & Grids
@@ -616,7 +616,7 @@ body.stretched .container-fullwidth {
   display: block;
   position: relative;
   margin-right: 4%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   float: left;
 }
 .postcontent,
@@ -3318,7 +3318,7 @@ body.stretched .container-fullwidth .breadcrumb {
 }
 #content .content-wrap {
   position: relative;
-  padding: 80px 0;
+  padding: 70px 0 45px 0;
 }
 #content .container {
   position: relative;
@@ -9104,6 +9104,7 @@ body:not(.device-touch) .clients-grid li a {
   font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
+  color: #001a71;
 }
 .testi-meta:before {
   content: '\2013';
@@ -11391,11 +11392,9 @@ button.toast-close-button {
   border: 1px solid #E5E5E5;
   font-size: 13px !important;
   color: #666;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
 }
-.tagcloud a:hover {
+.tagcloud a .hover {
   border-color: #009999 !important;
   color: #009999 !important;
 }
@@ -11451,7 +11450,7 @@ body:not(.device-touch) .tagcloud a {
   padding: 0 3px 0 12px;
   background: url("images/icons/widget-link.png") left top no-repeat;
   border: none !important;
-  color: #444;
+  color: #FFFFFF;
   font-size: 14px;
 }
 .widget_nav_menu li a:hover,
