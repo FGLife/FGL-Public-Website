@@ -526,7 +526,7 @@ span.middot {
 .section-fgl-green {
   position: relative;
   margin: 50px 0;
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: #009999;
   overflow: hidden;
 }
@@ -11407,7 +11407,7 @@ button.toast-close-button {
   color: #666;
   border-radius: 2px;
 }
-.tagcloud a .hover {
+.tagcloud a:hover {
   border-color: #009999 !important;
   color: #009999 !important;
 }
