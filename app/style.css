@@ -115,7 +115,7 @@ li {
 body {
   line-height: 1.5;
   color: #5c666f;
-  font-size: 14px;
+  font-size: 16px;
   font-family: "proxima-nova", Arial, sans-serif;
 }
 a {
@@ -175,7 +175,7 @@ h4 {
   font-size: 18px;
 }
 h5 {
-  font-size: 14px;
+  font-size: 16px;
 }
 h6 {
   font-size: 12px;
@@ -521,6 +521,19 @@ span.middot {
   z-index: 2;
 }
 .section .container + .video-wrap {
+  z-index: 1;
+}
+.section-fgl-green {
+  position: relative;
+  margin: 50px 0;
+  padding: 50px 0;
+  background-color: #009999;
+  overflow: hidden;
+}
+.section-fgl-green .container {
+  z-index: 2;
+}
+.section-fgl-green .container + .video-wrap {
   z-index: 1;
 }
 .parallax {
@@ -1036,7 +1049,7 @@ body.stretched #header.full-header .container {
   padding: 0 25px;
   color: #001a71;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: "proxima-nova", Arial, sans-serif;
@@ -1067,7 +1080,7 @@ body.stretched #header.full-header .container {
 #primary-menu ul li .mega-menu-content {
   display: none;
   position: absolute;
-  width: 240px;
+  width: 260px;
   background-color: #FFF;
   box-shadow: 0px 13px 42px 11px rgba(0, 0, 0, 0.05);
   border: 1px solid #EEE;
@@ -1080,7 +1093,7 @@ body.stretched #header.full-header .container {
 }
 #primary-menu ul ul ul {
   top: -2px !important;
-  left: 238px;
+  left: 258px;
 }
 #primary-menu ul ul.menu-pos-invert,
 #primary-menu ul li .mega-menu-content.menu-pos-invert {
@@ -1088,7 +1101,7 @@ body.stretched #header.full-header .container {
   right: 0;
 }
 #primary-menu ul ul ul.menu-pos-invert {
-  right: 238px;
+  right: 258px;
 }
 #primary-menu ul ul li {
   float: none;
@@ -1098,7 +1111,7 @@ body.stretched #header.full-header .container {
   border-top: 0;
 }
 #primary-menu ul ul a {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   height: 42px !important;
   line-height: 42px !important;
@@ -6767,7 +6780,7 @@ body:not(.device-touch) .button.button-full strong {
   background-color: #A8CABA !important;
 }
 .button-gray {
-  background-color: #5c666f;
+  background-color: #9DA3A8;
 }
 .button-3d.button-gray:hover,
 .button-reveal.button-gray:hover {
@@ -7315,7 +7328,7 @@ body:not(.device-touch) .button.button-full strong {
   line-height: 88px;
 }
 .feature-box.fbox-center p {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 15px;
 }
 /* Feature Box - Center & Large Icons
@@ -11300,13 +11313,13 @@ button.toast-close-button {
 #copyrights {
   padding: 40px 0;
   background-color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
 }
 #copyrights i.footer-icon {
   position: relative;
   top: 1px;
-  font-size: 14px;
+  font-size: 16px;
   width: 14px;
   text-align: center;
   margin-right: 3px;
@@ -11334,7 +11347,7 @@ button.toast-close-button {
   margin-bottom: 10px;
 }
 .copyrights-menu a {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 10px;
   border-bottom: 0 !important;
 }
@@ -11464,15 +11477,18 @@ body:not(.device-touch) .tagcloud a {
 .widget_recent_comments li a:hover {
   color: #000;
 }
-.fgl-bullet-check-mark li {
+.fgl-bullet li {
   list-style: none;
+  margin: 0;
+  padding: 6px;
+  display: inline-block;
   padding: 0 3px 0 12px;
-  background: url("images/icons/icon-line-check.png") left top no-repeat;
+  background: url("images/icons/widget-link.png") left top no-repeat;
   border: none !important;
-  color: #f53922;
-  font-size: 14px;
+  color: #444;
+  font-size: 16px;
 }
-.fgl-bullet-check-mark li:hover {
+.fgl-bullet li:hover {
   color: #000;
 }
 .widget_recent_comments li {

@@ -1077,7 +1077,8 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 .dark .widget_categories li a,
 .dark .widget_pages li a,
 .dark .widget_rss li a {
-	color: #CCC;
+	color: #FFF; /*fgl pdt was #CCC */
+
 	background-image: url("../images/icons/widget-link-dark.png");
 }
 
