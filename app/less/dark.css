@@ -63,7 +63,7 @@
 .dark h4,
 .dark h5,
 .dark h6 {
-  color: #EEE;
+  color: white;
 }
 .dark a:hover {
   color: #EEE;
@@ -1243,7 +1243,7 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
   color: #FFF;
 }
 .dark .widget h4 {
-  color: #FFFFFF;
+  color: white !important;
 }
 .dark .widget p {
   opacity: 0.8;
@@ -1270,8 +1270,8 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 .dark .widget_categories li a,
 .dark .widget_pages li a,
 .dark .widget_rss li a {
-  color: #ffffff;
-  background-image: url("../images/icons/widget-link-dark.png");
+  color: white;
+  background-image: url("../images/icons/widget-link-dark.png") !important;
 }
 .dark .widget_nav_menu li a:hover,
 .dark .widget_links li a:hover,

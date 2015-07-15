@@ -26,6 +26,23 @@
     }
 }
 
+//fgl-pdt new section color
+.section-fgl-green {
+  position: relative;
+  margin: @section-margin 0;
+  padding: @section-padding 0;
+  background-color: @section-green-bg;
+  overflow: hidden;
+
+  .container {
+    z-index: 2;
+  }
+
+  .container + .video-wrap {
+    z-index: 1;
+  }
+}
+
 .parallax {
     background-color: transparent;
     background-attachment: fixed;

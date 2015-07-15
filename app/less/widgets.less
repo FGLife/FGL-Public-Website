@@ -55,7 +55,7 @@
         border: 1px solid #E5E5E5;
         font-size: 13px !important;
         color: #666;
-        .border-radius(2px);
+        border-radius: 2px;
         &:hover {
             border-color: @theme-color !important;
             color: @theme-color !important;
@@ -132,20 +132,23 @@ body {
     }
 }
 
-.fgl-bullet-check-mark {
+.fgl-bullet {
   li {
     list-style: none;
+    margin: 0;
+    padding: 6px;
+
+      display: inline-block;
       padding: 0 3px 0 12px;
-      background: url("images/icons/icon-line-check.png") left top no-repeat;
+      background: url("images/icons/widget-link.png") left top no-repeat;
       border: none !important;
-      color: #f53922;
-      font-size: 14px;
+      color: #444;
+      font-size: 16px;
       &:hover {
         color: #000;
-      }
 
+    }
   }
-
 }
 
 .widget_recent_comments {
