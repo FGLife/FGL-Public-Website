@@ -221,6 +221,9 @@ small {
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+sup {
+  top: -0.3em;
+}
 /*-----------------------------------------------------------------------------------
 
     helpers.less
@@ -526,7 +529,7 @@ span.middot {
 .section-fgl-green {
   position: relative;
   margin: 50px 0;
-  padding: 40px 0;
+  padding: 35px 0;
   background-color: #33a99c;
   overflow: hidden;
 }
@@ -712,9 +715,6 @@ body.stretched .container-fullwidth {
   font-size: 14px;
   margin: 0;
 }
-.top-links li:hover {
-  background-color: #EEE;
-}
 .top-links li:hover ul,
 .top-links li:hover div.top-link-section {
   pointer-events: auto;
@@ -785,6 +785,10 @@ body.stretched .container-fullwidth {
   line-height: 34px;
   border-bottom: none;
   margin-top: 6px;
+}
+.top-links .login-btn{
+  font-size: 14px;
+  font-weight: 400;
 }
 /* ----------------------------------------------------------------
     Top Social
@@ -3346,12 +3350,16 @@ body.stretched .container-fullwidth .breadcrumb {
 #content .container {
   position: relative;
 }
-
 .content-heading{
-	text-align: center;
+  text-align: center;
 }
 .content-heading h3{
-	color:#242b6a;
+  color:#242b6a;
+  margin-bottom: 0px;
+  font-size: 20px;
+}
+.content-heading p {
+  font-size: 14px;
 }
 .content-heading p:after {
   content: '';
@@ -4798,8 +4806,11 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay {
 .take-action-content ul{
 	line-height: 18px;
 }
+.take-action-content a:hover{
+	color: #23527c;
+}
 
-/* CTA Banner 
+/* CTA Banner - Bottom
 -----------------------------------------------------------------*/
 .cta-banner.section.nomargin{
 	background-color: #242b6a !important;
@@ -4811,7 +4822,17 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay {
 	font-size: 20px;
 }
 
-
+/* CTA Banner - Bottom
+-----------------------------------------------------------------*/
+.col-md-8.top-cta h4{
+	font-weight: 300;
+	text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.col-md-8.top-cta p{
+	font-size: 16px;
+}
 /*-----------------------------------------------------------------------------------
 
     blog.less
@@ -6812,7 +6833,7 @@ body:not(.device-touch) .button.button-full strong {
 }
 .button-3d.button-green:hover,
 .button-reveal.button-green:hover {
-  background-color: #ff5000 !important;
+  background-color: #097F75 !important;
 }
 .button-brown {
   background-color: #774F38;
@@ -6854,7 +6875,7 @@ body:not(.device-touch) .button.button-full strong {
 }
 .button-3d.button-gray:hover,
 .button-reveal.button-gray:hover {
-  background-color: #ff5000 !important;
+  background-color: #444C53  !important;
 }
 .button-dirtygreen {
   background-color: #1693A5;
@@ -6892,8 +6913,8 @@ body:not(.device-touch) .button.button-full strong {
   background-color: #F9F9F9 !important;
 }
 .btn-success:hover{
-  background-color: #fd7233;
-  border-color: #fd7233;
+  background-color: #4A4E52;
+  border-color: #4A4E52;
 }
 /* Buttons - No Hover
 -----------------------------------------------------------------*/
@@ -7175,13 +7196,15 @@ body:not(.device-touch) .button.button-full strong {
   letter-spacing: 1px;
   margin-bottom: 0;
   color: #5a6771;
+  text-transform: uppercase;
 }
 .feature-box-section .feature-box h3 {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 0;
   color: #5a6771;
+  text-transform: none;
 }
 .feature-box p {
   margin: 8px 0 0 0;
@@ -7452,7 +7475,7 @@ body:not(.device-touch) .button.button-full strong {
   line-height: 88px;
 }
 .feature-box.fbox-center p {
-  font-size: 16px;
+  font-size: 12px;
   margin-top: 15px;
 }
 /* Feature Box - Center & Large Icons
@@ -9235,6 +9258,7 @@ body:not(.device-touch) .clients-grid li a {
   margin-bottom: 0;
   font-family: "proxima-nova", Arial, sans-serif;
   font-size: 14px;
+  min-height: 80px;
 }
 .testi-content p:before,
 .testi-content p:after {
@@ -10409,7 +10433,8 @@ body:not(.device-touch) .text-overlay {
   text-transform: none;
 }
 .heading-block h1 {
-  font-size: 42px;
+  font-size: 48px;
+  text-shadow: rgba(0, 0, 0, 0.66) 1px 1px 2px;
 }
 .heading-block h2 {
   font-size: 30px;
@@ -11431,6 +11456,10 @@ button.toast-close-button {
 .footer-widgets-wrap .col_five_sixth {
   margin-bottom: 0;
 }
+#footer .btn-success{
+  font-size: 12px;
+  padding: 8px 12px;
+}
 #copyrights {
   padding: 20px 0 0px 0px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -11490,13 +11519,13 @@ button.toast-close-button {
 -----------------------------------------------------------------*/
 .widget {
   position: relative;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .widget:first-child {
   margin-top: 0;
 }
 .widget > h4 {
-  margin-bottom: 25px;
+  margin-bottom: 12px;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -11596,7 +11625,7 @@ body:not(.device-touch) .tagcloud a {
   background: url("images/icons/widget-link.png") left top no-repeat;
   border: none !important;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 12px;
 }
 .widget_nav_menu li a:hover,
 .widget_links li a:hover,
@@ -11714,8 +11743,9 @@ body:not(.device-touch) .tagcloud a {
 -----------------------------------------------------------------*/
 .subscribe-widget h5 {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
+  margin-bottom: 30px;
 }
 /* Twitter Feed Widget
 -----------------------------------------------------------------*/
