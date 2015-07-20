@@ -3359,7 +3359,7 @@ body.stretched .container-fullwidth .breadcrumb {
   font-size: 20px;
 }
 .content-heading p {
-  font-size: 16px;
+  font-size: 15px;
 }
 .content-heading p:after {
   content: '';
@@ -4783,18 +4783,21 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay {
 -----------------------------------------------------------------*/
 
 .take-action-content p{
-	font-size: 16px !important;
+	font-size: 15px !important;
 	margin-bottom: 15px;
 	color: #5a6771;
 }
 .take-action-content .col_full p{
-	font-size: 16px !important;
+	font-size: 15px !important;
 	margin-bottom: 0px;
 	color: #5a6771;
 }
+.take-action-content .col_full {
+	margin-bottom: 0px !important;
+}
 .take-action-content li{
 	width: 100%;
-    font-size: 16px !important;
+    font-size: 15px !important;
     line-height: 1.4;
 	background: none !important;
 	padding: 0 !important;
@@ -4802,7 +4805,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay {
 }
 .take-action-content h4{
 	color: #5a6771;
-	font-size: 16px;
+	font-size: 15px;
 }
 .take-action-content li:before{
 	content:"•";
@@ -4810,7 +4813,8 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay {
 	padding-right: 4px;
 }
 .take-action-content ul{
-	line-height: 18px;
+    line-height: 1.4;
+    margin-bottom: 15px;
 }
 .take-action-content a:hover{
 	color: #23527c;
@@ -7197,15 +7201,12 @@ body:not(.device-touch) .button.button-full strong {
   text-align: center;
   line-height: 64px;
 }
-.feature-box.fbox-center p{
-  font-size: 16px;
-}
 .feature-box h3 {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 0;
-  color: #5a6771;
+  color: #001A71;
   text-transform: uppercase;
 }
 .feature-box-section .feature-box h3 {
@@ -7234,12 +7235,12 @@ body:not(.device-touch) .button.button-full strong {
   top: 22px;
   position: relative;
 }
-.feature-box .icon-dollar-bag:before {
+.feature-box .icon-prosperity:before {
   content: "";
-  background-image: url(../images/icon-dollar-bag.png);
+  background-image: url(../images/icon-prosperity.png);
   display: block;
-  width: 57px;
-  height: 61px;
+  width: 50px;
+  height: 70px;
   background-repeat: no-repeat;
   margin: 0 auto;
   top: 12px;
@@ -7485,7 +7486,7 @@ body:not(.device-touch) .button.button-full strong {
   line-height: 88px;
 }
 .feature-box.fbox-center p {
-  font-size: 12px;
+  font-size: 15px;
   margin-top: 15px;
 }
 /* Feature Box - Center & Large Icons
@@ -9267,8 +9268,8 @@ body:not(.device-touch) .clients-grid li a {
 .testi-content p {
   margin-bottom: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-size: 16px;
-  min-height: 115px;
+  font-size: 15px;
+  min-height: 90px;
 }
 .testi-content p:before,
 .testi-content p:after {
