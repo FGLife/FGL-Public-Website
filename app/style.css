@@ -4814,7 +4814,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay {
 }
 .take-action-content ul{
     line-height: 1.4;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .take-action-content a:hover{
 	color: #23527c;
@@ -7239,7 +7239,7 @@ body:not(.device-touch) .button.button-full strong {
   content: "";
   background-image: url(../images/icon-prosperity.png);
   display: block;
-  width: 50px;
+  width: 48px;
   height: 70px;
   background-repeat: no-repeat;
   margin: 0 auto;
