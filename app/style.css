@@ -5819,7 +5819,7 @@ p.wp-caption-text {
   margin-bottom: 5px;
 }
 .accordion-section .togglec p {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   line-height: 1.5 !important;
 }
 p.caption{
@@ -11782,10 +11782,10 @@ body:not(.device-touch) .tagcloud a {
   background: url("images/icons/widget-link.png") left top no-repeat;
   border: none !important;
   color: #5a6771;
-  font-size: 16px;
+  font-size: 15px;
 }
 .fgl-bullet li:hover {
-  color: #000;
+  color: #242B6A;
 }
 .fgl-bullet-space li {
   list-style: none;
@@ -11799,7 +11799,7 @@ body:not(.device-touch) .tagcloud a {
   line-height: 1.4;
 }
 .fgl-bullet-space li:hover {
-  color: #000;
+  color: #242B6A;
 }
 .widget_recent_comments li {
   display: block;
