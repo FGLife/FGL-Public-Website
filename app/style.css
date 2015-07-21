@@ -4830,6 +4830,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay {
 -----------------------------------------------------------------*/
 .cta-banner.section.nomargin{
 	background-color: #242b6a !important;
+	padding: 15px 0 35px;
 }
 .cta-banner.section.nomargin h3{
 	color:#fff;
@@ -7345,48 +7346,48 @@ body:not(.device-touch) .button.button-full strong {
 .feature-box .before-heading {
   font-size: 14px;
 }
-.feature-box .icon-safe:before {
+.feature-box .icon-water-drop:before {
   content: "";
-  background-image: url(../images/icon-safe.png);
+  background-image: url(../images/icon-water-drop.png);
   display: block;
-  width: 53px;
-  height: 55px;
+  width: 40px;
+  height: 59px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 22px;
+  top: 20px;
   position: relative;
 }
 .feature-box .icon-prosperity:before {
   content: "";
   background-image: url(../images/icon-prosperity.png);
   display: block;
-  width: 48px;
-  height: 70px;
+  width: 43px;
+  height: 64px;
   background-repeat: no-repeat;
   margin: 0 auto;
   top: 12px;
   position: relative;
 }
-.feature-box .icon-graph:before {
+.feature-box .icon-performance:before {
   content: "";
-  background-image: url(../images/icon-graph.png);
+  background-image: url(../images/icon-performance.png);
   display: block;
-  width: 62px;
-  height: 45px;
+  width: 65px;
+  height: 65px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 24px;
+  top: 16px;
   position: relative;
 }
-.feature-box .icon-shield:before {
+.feature-box .icon-elite:before {
   content: "";
-  background-image: url(../images/icon-shield.png);
+  background-image: url(../images/icon-elite.png);
   display: block;
-  width: 57px;
-  height: 57px;
+  width: 68px;
+  height: 52px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 23px;
+  top: 20px;
   position: relative;
 }
 /* Feature Box - Icon Large
