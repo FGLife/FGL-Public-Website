@@ -115,7 +115,7 @@ li {
 body {
   line-height: 1.5;
   color: #5c666f;
-  font-size: 16px;
+  font-size: 15px;
   font-family: "proxima-nova", Arial, sans-serif;
 }
 a {
@@ -321,6 +321,12 @@ span.middot {
 }
 .topmargin-lg {
   margin-top: 80px !important;
+}
+.topmargin-md{
+  margin-top: 60px !important;
+}
+.bottommargin-md{
+  margin-bottom: 60px !important;
 }
 .bottommargin-lg {
   margin-bottom: 80px !important;
@@ -5724,6 +5730,121 @@ p.wp-caption-text {
   max-height: 13px;
   margin: 0 !important;
 }
+
+
+/* Product Page
+-----------------------------------------------------------------*/
+.top-block.section h1.page-title{
+	float:left;
+	color: #5a6771;
+	font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+.top-block.section{
+	padding: 29px 0;
+}
+.top-block.section p.breadcrumbs{
+	margin-bottom: 0px;
+	float: right;
+	padding-top: 12px;
+	color: #5a6771;
+	font-size: 14px;
+}
+.key-features h3{
+	font-size: 25px;
+	font-weight: 400;
+	color: #242b6a;
+}
+.key-features p {
+  margin-bottom: 10px;
+}
+.key-features ul{
+  margin-bottom: 0px;
+}
+.key-features .button.button-large{
+  font-size: 20px;
+  font-weight: 300;
+  max-width: 280px;
+  margin-top: 25px !important;
+  margin-bottom: 35px;
+}
+.accordion.accordion-border {
+	padding: 10px 14px 0px 14px;
+}
+.accordion.accordion-border .toggle{
+  margin-bottom: 0px;
+  padding: 8px 0px;
+}
+
+.accordion.accordion-border .toggle .togglet.last{
+  border-bottom: none;
+  padding-bottom: 5px !important;
+}
+.dashed-separator{
+  border-bottom: 1px dashed #eceeef;
+  width: auto;
+  margin-left: -14px;
+  margin-right: -14px;
+}
+
+.accordion-section h3{
+	font-size: 24px;
+	color:#242b6a;
+	font-weight: 400;
+}
+.accordion-section h4{
+	color:#242b6a;
+	font-weight: 400;
+}
+.accordion-section .cta-title{
+	margin-top: -5px;
+	font-size: 20px;
+}
+.accordion-section a.button.button-3d.button-dark.button-small.btn-block.center {
+  margin: 10px 0px;
+  max-width: 141px;
+  background-color: #ff641f;
+  height: 42px;
+  line-height: 45px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0px;
+}
+.accordion-section a.button.button-3d.button-dark.button-small.btn-block.center:hover {
+  background-color: #D54100 !important;
+}	
+.accordion-section .col_one_third {
+  margin-bottom: 5px;
+}
+.accordion-section .togglec p {
+  margin-bottom: 5px;
+  line-height: 1.5 !important;
+}
+p.caption{
+	font-size: 14px;
+	line-height: 1.5 !important;
+	float:left;
+}
+.tabs-section h3 {
+	font-size: 24px;
+	color:#242b6a;
+	font-weight: 400;
+}
+.tabs-section .tab-content {
+  padding: 90px 20px 0px 20px;
+}
+.col_full.cta-button{
+	text-align: center;
+}
+hr.col_half{
+	border-color:#b1b1b1;
+}
+
+
+
+
+
 /*-----------------------------------------------------------------------------------
 
     shop.less
@@ -8642,9 +8763,9 @@ body:not(.device-touch) .social-icon i {
   line-height: 24px;
   padding: 0 0 0 24px;
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  color: #444;
+  color: #5c666f;
   cursor: pointer;
 }
 .toggle .togglet i {
@@ -8840,8 +8961,9 @@ ul.tab-nav li:first-child {
 ul.tab-nav li a {
   display: block;
   padding: 0 15px;
-  color: #444;
+  color: #5c666f;
   height: 40px;
+  min-width: 112px;
   line-height: 40px;
   background-color: #F2F2F2;
   font-size: 14px;
@@ -8851,6 +8973,7 @@ ul.tab-nav li.ui-tabs-active a {
   position: relative;
   top: 1px;
   background-color: #FFF;
+  border-bottom: 1px solid rgb(221, 221, 221);
 }
 /* Tabs - Alternate Nav
 -----------------------------------------------------------------*/
@@ -11657,7 +11780,7 @@ body:not(.device-touch) .tagcloud a {
   padding: 0 3px 0 12px;
   background: url("images/icons/widget-link.png") left top no-repeat;
   border: none !important;
-  color: #444;
+  color: #5a6771;
   font-size: 16px;
 }
 .fgl-bullet li:hover {
@@ -11666,13 +11789,13 @@ body:not(.device-touch) .tagcloud a {
 .fgl-bullet-space li {
   list-style: none;
   margin: 0;
-  padding: 6px;
   display: inline-block;
-  padding: 5 3px 0 12px;
-  background: url("images/icons/widget-link.png") left top no-repeat;
+  padding: 0px 0px 15px 40px;
+  background: url("images/icons/checkmark.png") left top no-repeat;
   border: none !important;
-  color: #444;
-  font-size: 16px;
+  color: #5a6771;
+  font-size: 14px;
+  line-height: 1.4;
 }
 .fgl-bullet-space li:hover {
   color: #000;

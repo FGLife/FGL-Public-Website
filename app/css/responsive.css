@@ -19,6 +19,12 @@
 	    margin-left: 7%;
 	    width: 18%;
 	}
+	.cta-button a.button.button-3d.button-gray.button-large.btn-block.center{
+		max-width: 250px;
+	}
+	.key-features {
+		padding-right: 70px;
+	}
 }
 @media (min-width: 1199px){
 
@@ -1813,6 +1819,21 @@
 	#copyrights .footer-logo {
 		margin-left: auto;
 		margin-right: auto;
+	}
+	
+	/* Product Page
+	-----------------------------------------------------------------*/
+	.accordion-section .product-cta{
+		text-align: center !important;
+	}
+	.cta-img-wrapper{
+		width: 100%;
+	}
+	.top-block.section p.breadcrumbs{
+		width: 100%;
+	}
+	.top-block.section h1.page-title{
+		width: 100%;
 	}
 
 }
