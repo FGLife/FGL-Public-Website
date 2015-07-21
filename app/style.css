@@ -11783,6 +11783,7 @@ body:not(.device-touch) .tagcloud a {
   border: none !important;
   color: #5a6771;
   font-size: 15px;
+  width: 100%;
 }
 .fgl-bullet li:hover {
   color: #242B6A;
