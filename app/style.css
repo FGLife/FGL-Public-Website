@@ -5848,7 +5848,6 @@ hr.col_half{
 
 .about-page .feature-box h3{
 	font-size: 15px;
-	text-transform: none;
 }
 .about-page .feature-box.fbox-center:not(.fbox-bg) h3:after{
 	display: none;
@@ -5959,7 +5958,9 @@ section.contact-top-container{
   font-weight: 500;
 }
 .contact-top-container .search-bar{
-  max-width: 500px;
+  max-width: 570px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .search-bar input.form-control {
   border-radius: 0px;
@@ -5984,6 +5985,37 @@ section.contact-top-container{
   margin-bottom: 25px;
 }
 
+h3.blue-heading{
+	color:#242b6a;
+	font-size:20px;
+}
+.contact-hours{
+	font-size: 15px;
+	line-height: 1.4 !important;
+	margin-bottom: 10px;
+}
+.contact-number{
+	font-weight: bold;
+	font-size: 15px;
+	color: #5a6771;
+}
+p.hours-title{
+	line-height: 1.3 !important;
+	margin-top: 8px;
+	margin-bottom: 15px;
+}
+p.hours-title span{
+	font-weight: bold;
+}
+form.contact-page-form button#submit-button{
+	width: 100%;
+	font-weight: 500;
+	font-size:18px;
+}
+.contact-page ul.tab-nav li a{
+  text-transform: uppercase;
+  font-size: 15px;
+}
 
 /*-----------------------------------------------------------------------------------
 
@@ -11136,10 +11168,10 @@ body:not(.device-touch) .text-overlay {
   padding: 8px 14px;
   font-size: 15px;
   line-height: 1.42857143;
-  color: #555555;
+  color: #999999;
   background-color: #ffffff;
   background-image: none;
-  border: 2px solid #DDD;
+  border: 1px solid #737e87;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
@@ -11172,6 +11204,15 @@ fieldset[disabled] .sm-form-control {
 }
 .sm-form-control {
   height: auto;
+}
+select.sm-form-control {
+  height: 38px;
+}
+input.sm-form-control[placeholder] {
+  padding-left: 25px;
+}
+textarea.sm-form-control[placeholder] {
+  padding-left: 25px;
 }
 .form-control {
   -webkit-border-radius: 3px;

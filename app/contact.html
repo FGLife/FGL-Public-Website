@@ -196,7 +196,7 @@
 	        </div>
         </div>
       
-        <section class="contact-top-container" data-height-lg="550" data-height-md="400" data-height-sm="300" data-height-xs="250" data-height-xxs="200">
+        <section class="contact-top-container" data-height-lg="550" data-height-md="400" data-height-sm="300" data-height-xs="250" data-height-xxs="150">
 
             <div class="container clearfix">
                 <div class="vertical-middle center">
@@ -232,7 +232,7 @@
                     
                     <div class="col_full contact-page">
                     
-                        <div class="tabs tabs-bb tabs-alt tabs-justify clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-9">
+                        <div class="tabs tabs-bb tabs-alt clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-9">
 
 							<ul class="tab-nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
 								<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="false"><a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">FAQ</a></li>
@@ -267,42 +267,41 @@
 								
 								<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-4" aria-labelledby="ui-id-4" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
 									
-                    <div class="col_half">
+                    <div class="col_two_fifth">
 
-                        <div class="fancy-title title-dotted-border">
-                            <h3>Send us an Email</h3>
-                        </div>
+                        
+                            <h3 class="blue-heading">Reach Customer Service</h3>
+                        
+                        <div class="center topmargin">
+                           <p class="bottommargin-sm">By Web:</p>
+						   <img src="../images/icons/icon-desktop.png">
+						</div>
 
                         <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
 
-                        <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
+                        <form class="nobottommargin topmargin contact-page-form" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
 
                             <div class="form-process"></div>
 
                             <div class="col_one_third">
-                                <label for="template-contactform-name">Name <small>*</small></label>
-                                <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+                                <input type="text" id="template-contactform-name" placeholder="Name" name="template-contactform-name" value="" class="sm-form-control required" />
                             </div>
 
                             <div class="col_one_third">
-                                <label for="template-contactform-email">Email <small>*</small></label>
-                                <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
+                                <input type="email" id="template-contactform-email" placeholder="Email" name="template-contactform-email" value="" class="required email sm-form-control" />
                             </div>
 
                             <div class="col_one_third col_last">
-                                <label for="template-contactform-phone">Phone</label>
-                                <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
+                                <input type="text" id="template-contactform-phone" placeholder="Phone" name="template-contactform-phone" value="" class="sm-form-control" />
                             </div>
 
                             <div class="clear"></div>
 
                             <div class="col_two_third">
-                                <label for="template-contactform-subject">Subject <small>*</small></label>
-                                <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" />
+                                <input type="text" id="template-contactform-subject" placeholder="Subject" name="template-contactform-subject" value="" class="required sm-form-control" />
                             </div>
 
                             <div class="col_one_third col_last">
-                                <label for="template-contactform-service">Services</label>
                                 <select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
                                     <option value="">-- Select One --</option>
                                     <option value="Wordpress">Wordpress</option>
@@ -315,8 +314,7 @@
                             <div class="clear"></div>
 
                             <div class="col_full">
-                                <label for="template-contactform-message">Message <small>*</small></label>
-                                <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+                                <textarea class="required sm-form-control" placeholder="Comments" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
                             </div>
 
                             <div class="col_full hidden">
@@ -324,7 +322,7 @@
                             </div>
 
                             <div class="col_full">
-                                <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d nomargin">Submit Comment</button>
+                                <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-orange button-3d nomargin">Submit</button>
                             </div>
 
                         </form>
@@ -350,46 +348,23 @@
 
                     </div><!-- Contact Form End -->
 
+ <div class="col_one_fifth"></div>
+
                     <!-- Google Map
                     ============================================= -->
-                    <div class="col_half col_last">
-
-                        <section id="google-map" class="gmap" style="height: 410px;"></section>
-
-                        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-                        <script type="text/javascript" src="js/jquery.gmap.js"></script>
-
-                        <script type="text/javascript">
-
-                            jQuery('#google-map').gMap({
-
-                                address: 'Melbourne, Australia',
-                                maptype: 'ROADMAP',
-                                zoom: 14,
-                                markers: [
-                                    {
-                                        address: "Melbourne, Australia",
-                                        html: '<div style="width: 300px;"><h4 style="margin-bottom: 8px;">Hi, we\'re <span>Envato</span></h4><p class="nobottommargin">Our mission is to help people to <strong>earn</strong> and to <strong>learn</strong> online. We operate <strong>marketplaces</strong> where hundreds of thousands of people buy and sell digital goods every day, and a network of educational blogs where millions learn <strong>creative skills</strong>.</p></div>',
-                                        icon: {
-                                            image: "images/icons/map-icon-red.png",
-                                            iconsize: [32, 39],
-                                            iconanchor: [32,39]
-                                        }
-                                    }
-                                ],
-                                doubleclickzoom: false,
-                                controls: {
-                                    panControl: true,
-                                    zoomControl: true,
-                                    mapTypeControl: true,
-                                    scaleControl: false,
-                                    streetViewControl: false,
-                                    overviewMapControl: false
-                                }
-
-                            });
-
-                        </script>
+                    <div class="col_two_fifth col_last">
+	                    
+						<div class="center topmargin-md">
+							<p class="bottommargin-sm">By Phone:</p>
+							<img src="../images/icons/icon-phone.png" class="bottommargin-sm">
+							
+							<p class="hours-title"><span>HOURS</span><br>
+							Monday - Friday</p>
+							<p class="contact-hours">8:00 A.M. - 7:00 PM (EST)<br>
+							   7:00 A.M. - 6:00 PM (CST)<br>
+							   5:00 A.M. - 4:00 PM (PST)</p>
+							<p class="contact-number">888-513-8797</p>
+						</div>
 
                     </div><!-- Google Map End -->
 									
