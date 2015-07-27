@@ -721,14 +721,9 @@ body.stretched .container-fullwidth {
   font-size: 14px;
   margin: 0;
 }
-.top-links li:hover ul,
-.top-links li:hover div.top-link-section {
-  pointer-events: auto;
-}
 .top-links ul ul,
 .top-links ul div.top-link-section {
   display: none;
-  pointer-events: none;
   position: absolute;
   z-index: 210;
   line-height: 1.5;
