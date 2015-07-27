@@ -1,0 +1,172 @@
+/*-----------------------------------------------------------------------------------
+
+    product.less
+
+-----------------------------------------------------------------------------------*/
+/* Product Page
+-----------------------------------------------------------------*/
+.top-block.section {
+  padding: 29px 0;
+}
+.top-block.section h1.page-title {
+  float: left;
+  color: #5a6771;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.top-block.section p.breadcrumbs {
+  margin-bottom: 0px;
+  float: right;
+  padding-top: 12px;
+  color: #5a6771;
+  font-size: 14px;
+}
+.key-features h3 {
+  font-size: 25px;
+  font-weight: 400;
+  color: #242b6a;
+}
+.key-features p {
+  margin-bottom: 10px;
+}
+.key-features ul {
+  margin-bottom: 0px;
+}
+.key-features .button.button-large {
+  font-size: 20px;
+  font-weight: 300;
+  max-width: 280px;
+  margin-top: 25px !important;
+  margin-bottom: 35px;
+}
+.accordion.accordion-border {
+  padding: 10px 14px 0px 14px;
+}
+.accordion.accordion-border .toggle {
+  margin-bottom: 0px;
+  padding: 8px 0px;
+}
+.accordion.accordion-border .toggle .togglet.last {
+  border-bottom: none;
+  padding-bottom: 5px !important;
+}
+.dashed-separator {
+  border-bottom: 1px dashed #eceeef;
+  width: auto;
+  margin-left: -14px;
+  margin-right: -14px;
+}
+.accordion-section h3 {
+  font-size: 24px;
+  color: #242b6a;
+  font-weight: 400;
+}
+.accordion-section h4 {
+  color: #242b6a;
+  font-weight: 400;
+}
+.accordion-section .cta-title {
+  margin-top: -5px;
+  font-size: 20px;
+}
+.accordion-section a.button.button-3d.button-dark.button-small.btn-block.center {
+  margin: 10px 0px;
+  max-width: 141px;
+  background-color: #ff641f;
+  height: 42px;
+  line-height: 45px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0px;
+}
+.accordion-section a.button.button-3d.button-dark.button-small.btn-block.center:hover {
+  background-color: #D54100 !important;
+}
+.accordion-section .col_one_third {
+  margin-bottom: 5px;
+}
+.accordion-section .togglec p {
+  margin-bottom: 10px;
+  line-height: 1.5 !important;
+}
+p.caption {
+  font-size: 14px;
+  line-height: 1.5 !important;
+  float: left;
+}
+.tabs-section h3 {
+  font-size: 24px;
+  color: #242b6a;
+  font-weight: 400;
+}
+.tabs-section .tab-content {
+  padding: 90px 20px 0px 20px;
+}
+.col_full.cta-button {
+  text-align: center;
+}
+hr.col_half {
+  border-color: #b1b1b1;
+}
+/* Take Action Section
+-----------------------------------------------------------------*/
+.take-action-content p {
+  font-size: 15px !important;
+  margin-bottom: 15px;
+  color: #5a6771;
+}
+.take-action-content .col_full {
+  margin-bottom: 0px !important;
+}
+.take-action-content .col_full p {
+  font-size: 15px !important;
+  margin-bottom: 0px;
+  color: #5a6771;
+}
+.take-action-content li {
+  width: 100%;
+  font-size: 15px !important;
+  line-height: 1.4;
+  background: none !important;
+  padding: 0 !important;
+  color: #5a6771 !important;
+}
+.take-action-content h4 {
+  color: #5a6771;
+  font-size: 15px;
+}
+.take-action-content li:before {
+  content: "•";
+  display: inline-block;
+  padding-right: 4px;
+}
+.take-action-content ul {
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+.take-action-content a:hover {
+  color: #23527c;
+}
+/* CTA Banner - Bottom
+-----------------------------------------------------------------*/
+.cta-banner.section.nomargin {
+  background-color: #242b6a !important;
+  padding: 15px 0 35px;
+}
+.cta-banner.section.nomargin h3 {
+  color: #fff;
+  text-align: left;
+  font-weight: 400;
+  font-size: 20px;
+}
+.col-md-8.top-cta h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+.col-md-8.top-cta p {
+  font-size: 16px;
+  font-weight: 100;
+}
