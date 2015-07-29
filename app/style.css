@@ -180,8 +180,11 @@ h5 {
 h6 {
   font-size: 12px;
 }
+h3 {
+  font-weight: 400;
+}
 h4 {
-  font-weight: 600;
+  font-weight: 400;
 }
 h5,
 h6 {
@@ -7758,16 +7761,16 @@ body:not(.device-touch) .button.button-full strong {
 }
 .feature-box.fbox-center .fbox-icon {
   position: relative;
-  width: 96px;
-  height: 96px;
+  width: 80px
+      height: 80px;
   margin: 0 auto 30px;
 }
 .feature-box.fbox-center .fbox-icon i {
-  font-size: 42px;
-  line-height: 96px;
+  font-size: 30px;
+  line-height: 80px;
 }
 .feature-box.fbox-center.fbox-outline .fbox-icon i {
-  line-height: 88px;
+  line-height: 50px;
 }
 .feature-box.fbox-center p {
   font-size: 15px;
@@ -7787,7 +7790,7 @@ body:not(.device-touch) .button.button-full strong {
   line-height: 118px;
 }
 .feature-box.fbox-center.fbox-light .fbox-icon i {
-  line-height: 94px;
+  line-height: 70px;
 }
 .feature-box.fbox-center.fbox-light .fbox-outline .fbox-icon i {
   line-height: 86px;
@@ -7901,8 +7904,8 @@ body:not(.device-touch) .button.button-full strong {
 /* Feature Box - Background
 -----------------------------------------------------------------*/
 .feature-box.fbox-bg.fbox-center {
-  margin-top: 68px;
-  padding: 68px 30px 30px;
+  margin-top: 50px;
+  padding: 50px 30px 30px;
   background-color: #FFF;
   border: 1px solid #E5E5E5;
   -webkit-border-radius: 5px;
