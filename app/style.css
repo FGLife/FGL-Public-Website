@@ -7761,8 +7761,8 @@ body:not(.device-touch) .button.button-full strong {
 }
 .feature-box.fbox-center .fbox-icon {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   margin: 0 auto 30px;
 }
 .feature-box.fbox-center .fbox-icon i {
