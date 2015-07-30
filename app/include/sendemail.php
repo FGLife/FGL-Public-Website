@@ -24,8 +24,8 @@ if( isset( $_POST['template-contactform-submit'] ) AND $_POST['template-contactf
 
         $botcheck = $_POST['template-contactform-botcheck'];
 
-        $toemail = ''; // Your Email Address
-        $toname = ''; // Your Name
+        $toemail = ''; // paul.tyler@fglife.com
+        $toname = ''; // Paul Tyler
 
         if( $botcheck == '' ) {
 
@@ -42,7 +42,7 @@ if( isset( $_POST['template-contactform-submit'] ) AND $_POST['template-contactf
 
             $referrer = $_SERVER['HTTP_REFERER'] ? '<br><br><br>This Form was submitted from: ' . $_SERVER['HTTP_REFERER'] : '';
 
-            $body = "$service $firstname $lastname $adrress1 $address2 $city $state $zip $email $phone $policy $message $referrer";
+            $body = "$service $firstname $lastname $adrress1 $address2 $city $state $zip $email $phone $policy $message";
 
             $mail->MsgHTML( $body );
             $sendEmail = $mail->Send();
