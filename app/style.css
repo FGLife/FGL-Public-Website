@@ -7711,6 +7711,17 @@ body:not(.device-touch) .button.button-full strong {
     top: 12px;
     position: relative;
 }
+.feature-box .icon-road:before{
+    content: "";
+    background-image: url(images/icons/icon-road.png);
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    top: 16px;
+    position: relative;
+}
 .feature-box-section .feature-box h3 {
   font-size: 14px;
   font-weight: 700;
