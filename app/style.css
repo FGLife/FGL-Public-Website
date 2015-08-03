@@ -115,7 +115,7 @@ li {
 body {
   line-height: 1.5;
   color: #5c666f;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "proxima-nova", Arial, sans-serif;
 }
 a {
@@ -226,6 +226,22 @@ small {
 }
 sup {
   top: -0.3em;
+}
+h3.blue-heading {
+  font-size: 25px !important;
+  font-weight: 400;
+  color: #242b6a;
+}
+h3.gray-heading {
+  font-size: 25px !important;
+  font-weight: 400;
+  color: #5a6771;
+}
+h4.gray-heading {
+  font-size: 20px !important;
+  font-weight: 400;
+  color: #5a6771;
+  text-transform: uppercase;
 }
 /*-----------------------------------------------------------------------------------
 
@@ -386,6 +402,9 @@ span.middot {
 }
 .col-padding {
   padding: 60px;
+}
+.rightpadding-sm{
+  padding-right: 10px !important;
 }
 .nopadding {
   padding: 0 !important;
@@ -6438,6 +6457,27 @@ hr.col_half {
   font-weight: 400;
   font-size: 20px;
 }
+.cta-banner-2.section.nomargin {
+  background-color: #242b6a !important;
+  padding: 15px 0 35px;
+}
+.cta-banner-2.section.nomargin h3 {
+  color: #fff;
+  text-align: left;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: none;
+}
+.cta-banner-2.section.nomargin .topmargin-sm {
+  margin-top: 34px !important;
+}
+span.light-text {
+  font-size: 14px;
+  text-transform: none;
+  color: #fff !important;
+  font-weight: 100;
+}
 .col-md-8.top-cta h4 {
   font-weight: 400;
   text-transform: uppercase;
@@ -6599,9 +6639,9 @@ section.contact-top-container {
   text-transform: uppercase;
   font-size: 15px;
 }
-h3.blue-heading {
+h4.blue-heading {
   color: #242b6a;
-  font-size: 20px;
+  font-size: 20px !important;
 }
 .contact-hours {
   font-size: 15px;
@@ -7546,6 +7586,119 @@ body:not(.device-touch) .button.button-full strong {
   margin: 0 auto;
   top: 20px;
   position: relative;
+}
+.feature-box .icon-water-drop-2:before {
+  content: "";
+  background-image: url(images/icon-water-drop.png);
+  display: block;
+  width: 40px;
+  height: 62px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 3px;
+  position: relative;
+  transform: scale(.6);
+}
+.feature-box .icon-prosperity-2:before {
+  content: "";
+  background-image: url(images/icon-prosperity.png);
+  display: block;
+  width: 45px;
+  height: 65px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 0px;
+  position: relative;
+  transform: scale(.6);
+}
+.feature-box .icon-performance-2:before {
+  content: "";
+  background-image: url(images/icon-performance.png);
+  display: block;
+  width: 65px;
+  height: 65px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 0px;
+  position: relative;
+  transform: scale(.6);
+}
+.feature-box .icon-safe:before{
+    content: "";
+    background-image: url(images/icons/icon-safe.png);
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    top: 18px;
+    position: relative;
+}
+.feature-box .icon-graph:before{
+    content: "";
+    background-image: url(images/icons/icon-graph.png);
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    top: 18px;
+    position: relative;
+}
+.feature-box .icon-index-safety-7:before{
+    content: "";
+    background-image: url(images/icons/icon-index-safety-7.png);
+    display: block;
+    width: 42px;
+    height: 30px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    top: 16px;
+    position: relative;
+}
+.feature-box .icon-index-choice-10:before{
+    content: "";
+    background-image: url(images/icons/icon-index-choice-10.png);
+    display: block;
+    width: 42px;
+    height: 30px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    top: 16px;
+    position: relative;
+}
+.feature-box .icon-building:before{
+    content: "";
+    background-image: url(images/icons/icon-building.png);
+    display: block;
+    width: 34px;
+    height: 30px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    top: 16px;
+    position: relative;
+}
+.feature-box .icon-life-elite:before{
+    content: "";
+    background-image: url(images/icons/icon-arrows.png);
+    display: block;
+    width: 44px;
+    height: 38px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    top: 12px;
+    position: relative;
+}
+.feature-box .icon-arrows:before{
+    content: "";
+    background-image: url(images/icons/icon-arrows.png);
+    display: block;
+    width: 44px;
+    height: 38px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    top: 12px;
+    position: relative;
 }
 .feature-box-section .feature-box h3 {
   font-size: 14px;
@@ -8971,6 +9124,10 @@ body:not(.device-touch) .social-icon i {
   padding-top: 20px;
   font-size: 15px;
 }
+.annuities-page .faqs .toggle {
+  border-bottom: 1px #b1b1b1 solid;
+}
+
 /* Toggle - with Title Background
 -----------------------------------------------------------------*/
 .toggle.toggle-bg .togglet,
@@ -11976,6 +12133,7 @@ body:not(.device-touch) .tagcloud a {
   color: #5a6771;
   font-size: 14px;
   line-height: 1.4;
+  width: 100%;
 }
 .fgl-bullet-space li:hover {
   color: #242B6A;
@@ -12202,6 +12360,40 @@ body:not(.device-touch) .tagcloud a {
 }
 .table .danger {
   color: #a94442;
+}
+.annuities-page .table{
+  max-width: 990px;
+  margin: 0 auto;
+  font-size: 13px !important;
+}
+.annuities-page .annuities-large-table.table{
+  max-width: none;
+  margin: 0 auto;
+  font-size: 13px !important;
+}
+.annuities-page .annuities-large-table.table th{
+  border: none !important;
+}
+.annuities-page .table.table-striped > tbody > tr:nth-of-type(odd){
+  background-color: #cdd1d4;
+}
+.annuities-page .table > tbody > tr > td, .annuities-page .table > thead > tr > th{
+  vertical-align: middle;
+  padding: 5px 15px 5px 15px;
+  max-width: 265px;
+  border-top: 1px solid #b1b1b1;
+}
+.annuities-page .annuities-large-table.table > tbody > tr > td, .annuities-page .annuities-large-table.table > thead > tr > th{
+  vertical-align: middle;
+  padding: 10px;
+  max-width: 265px;
+  border: 1px solid #b1b1b1;
+}
+.life-insurance-page.annuities-page .annuities-large-table.table > tbody > tr > td, .annuities-page .annuities-large-table.table > thead > tr > th {
+  vertical-align: middle;
+  padding: 5px 10px 5px 10px;
+  max-width: 138px;
+  border: 1px solid #b1b1b1;
 }
 .btn-link {
   color: #009999;

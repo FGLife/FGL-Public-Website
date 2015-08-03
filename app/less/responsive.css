@@ -557,6 +557,14 @@
     bottom: -142px;
   }
 }
+
+@media only screen and (min-width: 479px) and (max-width: 991px) {
+  .annuities-large-table{
+	overflow: scroll;
+	display: block;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   #wrapper {
     width: 100%;
@@ -1896,6 +1904,11 @@
     font-size: 30px;
     margin-top: 8px;
   }
+  /* Annuities Page
+	-----------------------------------------------------------------*/
+  .annuities-page .feature-box{
+	display: inline-block;
+  }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .container,
@@ -2257,6 +2270,51 @@
   .contact-top-container .heading-block h1 {
     margin-top: 22px;
     margin-bottom: -8px;
+  }
+  .annuities-page .table th {
+    display: none;
+  }
+  .annuities-page .table td {
+    display: block;
+    max-width: none !important;
+  }
+  .annuities-page .table td:first-child {
+    padding-top: .5em;
+  }
+  .annuities-page .table td:last-child {
+    padding-bottom: .5em;
+  }
+  .annuities-page .table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 6.5em;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  .annuities-large-table.table th {
+    display: none;
+  }
+  .annuities-large-table.table td {
+    display: block;
+    border-left: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    width: 100%;
+    text-align: left !important;
+    max-width: none !important;
+  }
+  .annuities-large-table.table td:first-child {
+    padding-top: .5em;
+  }
+  .annuities-large-table.table td:last-child {
+    padding-bottom: .5em;
+  }
+  .annuities-large-table.table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 6.5em;
+    display: inline-block;
+    margin-right: 8px;
   }
 }
 /* ----------------------------------------------------------------

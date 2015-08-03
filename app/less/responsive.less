@@ -2483,6 +2483,13 @@
 	    }
 	}
 	
+	/* Annuities Page
+	-----------------------------------------------------------------*/
+	
+    .annuities-page .feature-box{
+	    display: inline-block;
+    }
+	
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -3005,6 +3012,59 @@
 	.contact-top-container .heading-block h1{
 		margin-top: 22px;
 		margin-bottom: -8px;
+	}
+	
+	.annuities-page {
+	    .table {
+	        th {
+	            display: none;
+	        }
+	        td {
+	            display: block;
+	            max-width: none !important;
+	        }
+	        td:first-child {
+	            padding-top: .5em;
+	        }
+	        td:last-child {
+	            padding-bottom: .5em;
+	        }
+	        td:before {
+	            content: attr(data-th) ": ";
+	            font-weight: bold;
+	            width: 6.5em;
+	            display: inline-block;
+	            margin-right: 8px;
+	        }
+	    }
+	}
+
+	.annuities-large-table.table {
+	    th {
+	        display: none;
+	    }
+	    td {
+	        display: block;
+	        border-left: none !important;
+	        border-bottom: none !important;
+	        border-right: none !important;
+	        width: 100%;
+	        text-align: left !important;
+	        max-width: none !important;
+	    }
+	    td:first-child {
+	        padding-top: .5em;
+	    }
+	    td:last-child {
+	        padding-bottom: .5em;
+	    }
+	    td:before {
+	        content: attr(data-th) ": ";
+	        font-weight: bold;
+	        width: 6.5em;
+	        display: inline-block;
+	        margin-right: 8px;
+	    }
 	}
 
 }
