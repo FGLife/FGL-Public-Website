@@ -123,7 +123,7 @@ a {
   color: #009999;
 }
 a:hover {
-  color: white;
+  color: #001a71;
 }
 a img {
   border: none;
@@ -6448,6 +6448,17 @@ hr.col_half {
   font-size: 16px;
   font-weight: 100;
 }
+/* FAQ pages
+-----------------------------------------------------------------*/
+.faq-section h3 {
+  font-size: 24px;
+  color: #001a71;
+  font-weight: 400;
+}
+.faq-section h4 {
+  color: #001a71;
+  font-weight: 400;
+}
 /*-----------------------------------------------------------------------------------
 
     about.less
@@ -11962,6 +11973,12 @@ body:not(.device-touch) .tagcloud a {
   color: #5a6771;
   font-size: 15px;
   width: 100%;
+}
+.fgl-bullet li a {
+  color: #009999;
+}
+.fgl-bullet li a:hover {
+  color: #B2E0E0 ;
 }
 .fgl-bullet li:hover {
   color: #242B6A;

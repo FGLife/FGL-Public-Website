@@ -170,3 +170,14 @@ hr.col_half {
   font-size: 16px;
   font-weight: 100;
 }
+/* FAQ pages
+-----------------------------------------------------------------*/
+.faq-section h3 {
+  font-size: 24px;
+  color: #001a71;
+  font-weight: 400;
+}
+.faq-section h4 {
+  color: #001a71;
+  font-weight: 400;
+}
