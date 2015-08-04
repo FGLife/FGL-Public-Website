@@ -8248,11 +8248,28 @@ body:not(.device-touch) .button.button-full strong {
 .feature-box.media-box.fbox-bg .fbox-media {
   margin: 0;
 }
+.feature-box.media-box.fbox-bg .fbox-media.fgl-form-image {
+  margin: 10;
+  padding: 25px;
+  border: 1px solid #E5E5E5;
+  border-top: 1;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
 .feature-box.media-box.fbox-bg .fbox-desc {
   padding: 8px 0px;
   background-color: #FFF;
   border-top: 0;
   text-align: left;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+.feature-box.media-box.fbox-bg .fbox-desc.fgl-form-image {
+  padding: 25px;
+  border: 1px solid #E5E5E5;
+  border-top: 0;
   -webkit-border-radius: 0 0 5px 5px;
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
