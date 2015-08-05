@@ -440,7 +440,7 @@
 
  <div class="col-md-1"></div>
 
-                    <!-- Google Map
+                    <!-- Service Center Phone
                     ============================================= -->
                     <div class="col-md-5 col_last">
 
@@ -458,14 +458,103 @@
 							<p class="contact-number">888-513-8797</p>
 						</div>
 
-                    </div><!-- Google Map End -->
+                    </div><!-- Service Center Phone -->
 
 								</div>
 
-								<!-- TAB 5  ======================== -->
+								<!-- Talk to an agent  ======================== -->
 
 								<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-5" aria-labelledby="ui-id-5" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
-									Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.
+
+                  <div class="col-md-2 "></div>
+                  <div class="col-md-8 ">
+                    <h3 class="blue-heading">Talk to an Agent</h3>
+
+                    <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+
+                    <form class="nobottommargin topmargin contact-page-form" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
+
+                      <div class="form-process"></div>
+
+                      <div class="col_full">
+                        <select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
+                          <option value="">I want to discuss...</option>
+                          <option value="Agency Services">Annuities</option>
+                          <option value="Annutiy New Business">Life insurance</option>
+                        </select>
+                      </div>
+
+
+                      <div class="col_half">
+                        <input type="text" id="template-contactform-firstname" placeholder="First Name" name="template-contactform-firstname" value="" class="sm-form-control required" />
+                      </div>
+
+
+                      <div class="col_half col_last">
+                        <input type="text" id="template-contactform-lastname" placeholder="Last Name" name="template-contactform-lastname" value="" class="sm-form-control required" />
+                      </div>
+
+
+                      <div class="col_full">
+                        <input type="text" id="template-contactform-address1" placeholder="Address 1" name="template-contactform-address1" value="" class="sm-form-control required" />
+                      </div>
+
+
+                      <div class="col_full">
+                        <input type="text" id="template-contactform-address2" placeholder="Address 2" name="template-contactform-address2" value="" class="sm-form-control required" />
+                      </div>
+
+
+                      <div class="col_half">
+                        <input type="email" id="template-contactform-email" placeholder="Email" name="template-contactform-email" value="" class="required email sm-form-control" />
+                      </div>
+
+
+                      <div class="col_half col_last">
+                        <input type="text" id="template-contactform-phone" placeholder="Phone" name="template-contactform-phone" value="" class="sm-form-control" />
+                      </div>
+
+                      <div class="col_full">
+                        <input type="text" id="template-contactform-policy" placeholder="FGL policy number, if you own one" name="template-contactform-policy" value="" class="sm-form-control" />
+                      </div>
+
+
+                      <div class="col_full">
+                        <textarea class="required sm-form-control" placeholder="Comments" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+                      </div>
+
+                      <div class="col_full hidden">
+                        <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+                      </div>
+
+                      <div class="col_full">
+                        <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-orange button-3d nomargin">Submit</button>
+                      </div>
+
+                    </form>
+
+                    <script type="text/javascript">
+
+                      $("#template-contactform").validate({
+                        submitHandler: function(form) {
+                          $('.form-process').fadeIn();
+                          $(form).ajaxSubmit({
+                            target: '#contact-form-result',
+                            success: function() {
+                              $('.form-process').fadeOut();
+                              $('#template-contactform').find('.sm-form-control').val('');
+                              $('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
+                              SEMICOLON.widget.notifications($('#contact-form-result'));
+                            }
+                          });
+                        }
+                      });
+
+                    </script>
+
+                  </div><!-- Contact Form End -->
+                  </div>
+                  <div class="col-md-2 col_last"></div>
 								</div>
 
 							</div>
