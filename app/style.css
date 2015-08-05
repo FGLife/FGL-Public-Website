@@ -7528,6 +7528,10 @@ body:not(.device-touch) .button.button-full strong {
   border-radius: 50%;
   background-color: #19a094;
 }
+.feature-box .fbox-icon.icon-fgl-form-instructions {
+  width: 40px;
+  height: 40px;
+}
 .feature-box .fbox-icon i {
   font-style: normal;
   font-size: 28px;
@@ -7835,6 +7839,10 @@ body:not(.device-touch) .button.button-full strong {
 }
 .feature-box.fbox-border .fbox-icon i {
   line-height: 62px !important;
+}
+.feature-box.fbox-border .fbox-icon i.icon-fgl-form-instructions {
+  font-size: 18px;
+  line-height: 38px !important;
 }
 .feature-box.fbox-border.fbox-large .fbox-icon i {
   line-height: 94px !important;
@@ -8249,10 +8257,11 @@ body:not(.device-touch) .button.button-full strong {
   margin: 0;
 }
 .feature-box.media-box.fbox-bg .fbox-media.fgl-form-image {
-  margin: 10;
+  margin: 0;
   padding: 25px;
   border: 1px solid #E5E5E5;
-  border-top: 1;
+  text-align: center;
+  border-top: 1px;
   -webkit-border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
