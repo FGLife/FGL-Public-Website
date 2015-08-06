@@ -4,6 +4,7 @@
   },
   "devDependencies": {
     "babel": "^5.6.14",
+    "babel-core": "^5.8.3",
     "browser-sync": "^2.2.1",
     "del": "^1.1.1",
     "gulp": "^3.9.0",
@@ -24,7 +25,7 @@
     "gulp-sourcemaps": "^1.5.0",
     "gulp-uglify": "^1.2.0",
     "gulp-useref": "^1.1.1",
-    "main-bower-files": "^2.5.0",
+    "main-bower-files": "^2.9.0",
     "opn": "^1.0.1",
     "wiredep": "^2.2.2"
   },

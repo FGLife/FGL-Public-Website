@@ -54,10 +54,10 @@
     padding: 8px 14px;
     font-size: 15px;
     line-height: 1.42857143;
-    color: #555555;
+    color: #999999;
     background-color: #ffffff;
     background-image: none;
-    border: 2px solid #DDD;
+    border: 1px solid #737e87;
     .border-radius(0) !important;
     -webkit-transition: border-color ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s;
@@ -88,6 +88,16 @@ fieldset[disabled] .sm-form-control {
 }
 
 .sm-form-control { height: auto; }
+
+select.sm-form-control {
+  height: 38px;
+}
+input.sm-form-control[placeholder] {
+  padding-left: 25px;
+}
+textarea.sm-form-control[placeholder] {
+  padding-left: 25px;
+}
 
 .form-control { .border-radius(3px); }
 

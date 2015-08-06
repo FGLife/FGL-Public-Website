@@ -17,6 +17,9 @@
 	&:first-child {
 		margin-top: 0;
 	}
+
+
+
 	.fbox-icon {
 		display: block;
 		position: absolute;
@@ -36,8 +39,13 @@
 		i,
 		img {
 			.border-radius(50%);
-			background-color: @theme-color;
+			background-color: #19a094;
 		}
+    &.icon-fgl-form-instructions {
+      width: 40px;
+      height: 40px;
+      //fgl-pdt
+    }
 		i {
 			font-style: normal;
 			font-size: 28px;
@@ -51,17 +59,194 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		margin-bottom: 0;
+		color: #001a71;
 		//color: #333; fgl-KC
-    color: #001a71;
 	}
 	p {
 		margin: 8px 0 0 0;
 		//color: #999; fgl-KC
     color: #5c666f;
 	}
+
 	.before-heading { font-size: 14px; }
+	.icon-water-drop:before {
+        content: "";
+        background-image: url(images/icon-water-drop.png);
+        display: block;
+        width: 40px;
+        height: 59px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 20px;
+        position: relative;
+    }
+    .icon-prosperity:before {
+        content: "";
+        background-image: url(images/icon-prosperity.png);
+        display: block;
+        width: 43px;
+        height: 64px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 12px;
+        position: relative;
+    }
+    .icon-performance:before {
+        content: "";
+        background-image: url(images/icon-performance.png);
+        display: block;
+        width: 65px;
+        height: 65px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 16px;
+        position: relative;
+    }
+    .icon-elite:before {
+        content: "";
+        background-image: url(images/icon-elite.png);
+        display: block;
+        width: 68px;
+        height: 52px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 20px;
+        position: relative;
+    }
+	.icon-water-drop-2:before {
+	    content: "";
+	    background-image: url(images/icon-water-drop.png);
+	    display: block;
+	    width: 40px;
+	    height: 62px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 3px;
+	    position: relative;
+	    transform: scale(.6);
+	}
+	.icon-prosperity-2:before {
+	    content: "";
+	    background-image: url(images/icon-prosperity.png);
+	    display: block;
+	    width: 45px;
+	    height: 65px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 0px;
+	    position: relative;
+	    transform: scale(.6);
+	}
+	.icon-performance-2:before {
+	    content: "";
+	    background-image: url(images/icon-performance.png);
+	    display: block;
+	    width: 65px;
+	    height: 65px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 0px;
+	    position: relative;
+	    transform: scale(.6);
+	}
+	.icon-safe:before{
+	    content: "";
+	    background-image: url(images/icons/icon-safe.png);
+	    display: block;
+	    width: 30px;
+	    height: 30px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 18px;
+	    position: relative;
+	}
+	.icon-graph:before{
+	    content: "";
+	    background-image: url(images/icons/icon-graph.png);
+	    display: block;
+	    width: 30px;
+	    height: 30px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 18px;
+	    position: relative;
+	}
+	.icon-index-safety-7:before{
+	    content: "";
+	    background-image: url(images/icons/icon-index-safety-7.png);
+	    display: block;
+	    width: 42px;
+	    height: 30px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 16px;
+	    position: relative;
+	}
+	.icon-index-choice-10:before{
+	    content: "";
+	    background-image: url(images/icons/icon-index-choice-10.png);
+	    display: block;
+	    width: 42px;
+	    height: 30px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 16px;
+	    position: relative;
+	}
+	.icon-building:before{
+	    content: "";
+	    background-image: url(images/icons/icon-building.png);
+	    display: block;
+	    width: 34px;
+	    height: 30px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 16px;
+	    position: relative;
+	}
+	.icon-life-elite:before{
+	    content: "";
+	    background-image: url(images/icons/icon-arrows.png);
+	    display: block;
+	    width: 44px;
+	    height: 38px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 12px;
+	    position: relative;
+	}
+	.icon-arrows:before{
+	    content: "";
+	    background-image: url(images/icons/icon-arrows.png);
+	    display: block;
+	    width: 44px;
+	    height: 38px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 12px;
+	    position: relative;
+	}
+	.icon-road:before{
+	    content: "";
+	    background-image: url(images/icons/icon-road.png);
+	    display: block;
+	    width: 28px;
+	    height: 28px;
+	    background-repeat: no-repeat;
+	    margin: 0 auto;
+	    top: 16px;
+	    position: relative;
+	}
 }
 
+.feature-box-section .feature-box h3 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  color: #5a6771;
+  text-transform: none;
+}
 
 /* Feature Box - Icon Large
 -----------------------------------------------------------------*/
@@ -211,7 +396,13 @@
 		}
 		.fbox-icon {
 			padding: 0;
-			i { line-height: 62px !important; }
+			i { line-height: 62px !important;
+        &.icon-fgl-form-instructions {
+          font-size: 18px;
+          line-height: 38px !important;}
+        //fgl pdt
+      }
+
 		}
 		&.fbox-large .fbox-icon i { line-height: 94px !important; }
 	}
@@ -327,21 +518,21 @@
 		}
 		.fbox-icon {
 			position: relative;
-			width: 96px;
-			height: 96px;
+      width: 96px;
+      height: 96px;
 			margin: 0 auto 30px;
 			i {
-				font-size: 42px;
-				line-height: 96px;
+				font-size: 30px;
+				line-height: 80px;
 			}
 		}
 		&.fbox-outline {
 			.fbox-icon {
-				i { line-height: 88px; }
+				i { line-height: 50px; }
 			}
 		}
 		p {
-			font-size: 16px; //fgl-pdt original is 14px
+			font-size: 15px; //fgl-pdt original is 14px
 			margin-top: 15px;
 		}
 	}
@@ -369,7 +560,7 @@
 			}
 		}
 		&.fbox-light {
-			.fbox-icon i { line-height: 94px; }
+			.fbox-icon i { line-height: 70px; }
 			.fbox-outline {
 				.fbox-icon i { line-height: 86px; }
 				.fbox-large {
@@ -494,6 +685,7 @@
   color: #5c666f;
 	font-weight: 300;
 	text-transform: none;
+	font-size: 11px;
 }
 
 .feature-box.fbox-center:not(.fbox-bg) h3:after {
@@ -502,7 +694,7 @@
 	margin: 20px auto;
 	width: 30px;
 	//border-top: 2px solid #555; FGL-KC
-  border-top: 2px solid #009999;
+    border-top: 2px solid #5a6771;
 	-webkit-transition: width .3s ease;
 	-o-transition: width .3s ease;
 	transition: width .3s ease;
@@ -525,8 +717,9 @@
 .feature-box {
 	&.fbox-bg {
 		&.fbox-center {
-			margin-top: 68px;
-			padding: 68px 30px 30px;
+			margin-top: 50px;
+			padding: 50px 30px 30px;
+      //FGL-KC padding: 68px 30px 30px;
 			background-color: #FFF;
 			border: 1px solid #E5E5E5;
 			.border-radius(5px);
@@ -696,13 +889,30 @@
 
 .feature-box.media-box.fbox-bg .fbox-media { margin: 0; }
 
+//fgl pdt
+.feature-box.media-box.fbox-bg .fbox-media.fgl-form-image {
+  margin: 0;
+  padding: 25px;
+  border: 1px solid #E5E5E5;
+  text-align: center;
+  border-top: 1px;
+  .border-radius-custom(5px, 5px, 0, 0);}
+
 .feature-box.media-box.fbox-bg .fbox-desc {
-	padding: 25px;
+	padding: 8px 0px;
 	background-color: #FFF;
-	border: 1px solid #E5E5E5;
 	border-top: 0;
+	text-align: left;
 	.border-radius-custom(0, 0, 5px, 5px);
 }
 
-.feature-box.media-box.fbox-bg .fbox-media img { .border-radius-custom(5px, 5px, 0, 0); }
+//fgl-pdt
+.feature-box.media-box.fbox-bg .fbox-desc.fgl-form-image {
+  padding: 25px;
+  border: 1px solid #E5E5E5;
+  border-top: 0;
+  .border-radius-custom(0, 0, 5px, 5px);
+}
+
+.feature-box.media-box.fbox-bg .fbox-media img { border-radius: 0px; }
 

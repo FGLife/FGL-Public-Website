@@ -47,8 +47,8 @@
 .testi-image img,
 .testi-image i {
     display: block;
-    width: 64px;
-    height: 64px;
+    width: 58px;
+    height: 58px;
 }
 
 .testi-image {
@@ -65,6 +65,7 @@
     }
     img {
         .border-radius(50%);
+        border: 1px solid #eeeff0;
     }
 }
 .testi-content {
@@ -73,7 +74,8 @@
     p {
         margin-bottom: 0;
         font-family: @secondary-font;
-        font-style: italic;
+        font-size: 15px;
+        min-height: 90px;
         &:before,
         &:after {
             content: '"';
@@ -85,7 +87,7 @@
     font-size: 13px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #001a71;
+    color: #5a6771;
     &:before {
         content: '\2013';
     }
@@ -95,7 +97,7 @@
         color: #999;
         font-size: 12px;
         text-transform: none;
-        padding-left: 10px;
+        padding-left: 4px;
     }
 }
 
@@ -136,7 +138,7 @@
         padding: 30px;
     }
     &.testimonial-full[data-animation="fade"] {
-        padding: 30px;
+        padding: 12px;
         .flexslider {
             overflow: visible !important;
         }
