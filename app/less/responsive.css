@@ -556,6 +556,9 @@
   .landing-form-overlay {
     bottom: -142px;
   }
+  .team.team-list .team-desc.long-text{
+	height: 265px;
+  }
 }
 
 @media only screen and (min-width: 479px) and (max-width: 991px) {
@@ -1909,6 +1912,13 @@
   .annuities-page .feature-box{
 	display: inline-block;
   }
+  /* About - Leadership Page
+	-----------------------------------------------------------------*/
+  .team .team-content ~ .social-icon {
+	margin-top: 10px;
+	bottom: 0px;
+	position: inherit;
+  }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .container,
@@ -2315,6 +2325,9 @@
     width: 6.5em;
     display: inline-block;
     margin-right: 8px;
+  }
+  .team.team-list .team-desc {
+	height: inherit;
   }
 }
 /* ----------------------------------------------------------------

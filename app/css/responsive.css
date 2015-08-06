@@ -561,6 +561,10 @@
 	.bnews-slider { width: 817px; }
 
 	.landing-form-overlay { bottom: -142px; }
+	
+	.team.team-list .team-desc.long-text{
+		height: 265px;
+    }
 
 }
 
@@ -1879,6 +1883,13 @@
     .annuities-page .feature-box{
 	    display: inline-block;
     }
+	/* About - Leadership Page
+		-----------------------------------------------------------------*/
+	.team .team-content ~ .social-icon {
+		margin-top: 10px;
+		bottom: 0px;
+		position: inherit;
+	}
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -2283,6 +2294,9 @@
         width: 6.5em;
         display: inline-block;
         margin-right: 8px;
+    }
+    .team.team-list .team-desc {
+	    height: inherit;
     }
 }
 
