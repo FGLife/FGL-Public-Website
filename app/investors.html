@@ -12,14 +12,14 @@
 
 
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="stylesheet" href="css/dark.css" type="text/css" />
-    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-    <link rel="stylesheet" href="css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css" />
 
-    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="../css/responsive.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -27,8 +27,8 @@
 
     <!-- External JavaScripts
     ============================================= -->
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/plugins.js"></script>
 
     <!-- Document Title
     ============================================= -->
@@ -56,13 +56,11 @@
 
                     <div class="top-links fright" >
 
-
                         <ul>
-
-                            <li onclick="jQuery('.top-link-section').toggle();">
-                            	<a href="#" class="login-btn button button-3d button-green btn-block center">Login to SalesLink</a>
+                            <li>
+                            	<a href="#" class="login-btn button button-3d button-green btn-block center" onclick="jQuery('.top-link-section').toggle();">Login to SalesLink</a>
                                 <div class="top-link-section">
-                                    <form id="top-login" role="form">
+                                    <form id="top-login" role="form" name="login-form">
                                         <div class="input-group" id="top-login-username">
                                             <span class="input-group-addon"><i class="icon-user"></i></span>
                                             <input type="email" class="form-control" placeholder="Username" required="">
@@ -100,8 +98,8 @@
                     <!-- Logo
                     ============================================= -->
                     <div id="logo">
-                        <a href="index.html" class="standard-logo" data-dark-logo="images/fgl-logo-dark.png"><img src="images/fgl-logo.png" alt="FGL Logo"></a>
-                        <a href="index.html" class="retina-logo" data-dark-logo="images/fgl-logo-dark@2x.png"><img src="images/fgl-logo@2x.png" alt="FGL Logo"></a>
+                        <a href="../index.html" class="standard-logo" data-dark-logo="../images/fgl-logo-dark.png"><img src="../images/fgl-logo.png" alt="FGL Logo"></a>
+                        <a href="../index.html" class="retina-logo" data-dark-logo="../images/fgl-logo-dark@2x.png"><img src="../images/fgl-logo@2x.png" alt="FGL Logo"></a>
                     </div><!-- #logo end -->
 
                     <!-- Primary Navigation
@@ -109,55 +107,55 @@
                     <nav id="primary-menu">
 
                       <ul>
-                        <li><a href="annuities.html"><div>Annuities</div></a>
+                        <li><a href="../annuities.html"><div>Annuities</div></a>
                           <ul>
-                            <li><a href="download-forms.html"><div>Download Forms</div></a></li>
-                            <li><a href="annuities/annuities-101.html"><div>Annuities 101</div></a></li>
-                            <li><a href="annuities/prosperity-elite-series.html"><div>Prosperity Elite</div></a></li>
-                            <li><a href="annuities/performance-pro.html"><div>Performance Pro</div></a></li>
-                            <li><a href="annuities/safe-income-plus.html"><div>Safe Income Plus</div></a></li>
-                            <li><a href="annuities/fg-retirement-pro.html"><div>FG Retirement Pro</div></a></li>
-                            <li><a href="annuities/fg-index-choice-10.html"><div>FG Index-Choice 10</div></a></li>
-                            <li><a href="annuities/fgny-index-safety-7.html"><div>FGNY Index-Safety 7</div></a></li>
-                            <li><a href="annuities/fgny-index-choice-10.html"><div>FGNY Index-Choice 10</div></a></li>
-                            <li><a href="annuities/fg-guarantee-platinum.html"><div>FG Guarantee-Platinum</div></a></li>
-                            <li><a href="annuities/fg-immediate-income.html"><div>FG Immediate-Income</div></a></li>
+                            <li><a href="../download-forms.html"><div>Download Forms</div></a></li>
+                            <li><a href="annuities-101.html"><div>Annuities 101</div></a></li>
+                            <li><a href="prosperity-elite-series.html"><div>Prosperity Elite</div></a></li>
+                            <li><a href="performance-pro.html"><div>Performance Pro</div></a></li>
+                            <li><a href="safe-income-plus.html"><div>Safe Income Plus</div></a></li>
+                            <li><a href="fg-retirement-pro.html"><div>FG Retirement Pro</div></a></li>
+                            <li><a href="fg-index-choice-10.html"><div>FG Index-Choice 10</div></a></li>
+                            <li><a href="fgny-index-safety-7.html"><div>FGNY Index-Safety 7</div></a></li>
+                            <li><a href="fgny-index-choice-10.html"><div>FGNY Index-Choice 10</div></a></li>
+                            <li><a href="fg-guarantee-platinum.html"><div>FG Guarantee-Platinum</div></a></li>
+                            <li><a href="fg-immediate-income.html"><div>FG Immediate-Income</div></a></li>
                           </ul>
                         </li>
-                        <li><a href="life-insurance.html"><div>Life Insurance</div></a>
+                        <li><a href="../life-insurance.html"><div>Life Insurance</div></a>
                           <ul>
-                            <li><a href="download-forms.html"><div>Download Forms</div></a></li>
-                            <li><a href="life-insurance/life-insurance-101.html"><div>Life 101</div></a></li>
-                            <li><a href="life-insurance/fg-life-elite.html"><div>FG Life-Elite</div></a></li>
-                            <li><a href="life-insurance/fg-life-choice.html"><div>FG Life-Choice</div></a></li>
+                            <li><a href="../download-forms.html"><div>Download Forms</div></a></li>
+                            <li><a href="../life-insurance/life-insurance-101.html"><div>Life 101</div></a></li>
+                            <li><a href="../life-insurance/fg-life-elite.html"><div>FG Life-Elite</div></a></li>
+                            <li><a href="../life-insurance/fg-life-choice.html"><div>FG Life-Choice</div></a></li>
                           </ul>
                         </li>
-                        <li><a href="investors.html"><div>Investors</div></a>
+                        <li><a href="../investors.html"><div>Investors</div></a>
                           <ul>
-                            <li><a href="investors/financial-information.html"><div>Financial Information</div></a></li>
-                            <li><a href="investors/board-of-directors.html"><div>Board of Directors</div></a></li>
-                            <li><a href="investors/sec-filings.html"><div>SEC Filings</div></a></li>
-                            <li><a href="investors/press-releases.html"><div>Press Releases</div></a></li>
-                            <li><a href="investors/annual-reports.html"><div>AR &amp; Proxy Statements</div></a></li>
-                            <li><a href="investors/calendar-presentations.html"><div>Calendar &amp; Presentations</div></a></li>
-                            <li><a href="investors/statutory-statement.html"><div>Statutory Statements</div></a></li>
-                            <li><a href="investors/corporate-governance.html"><div>Corporate Governance</div></a></li>
-                            <li><a href="investors/shareholder-services.html"><div>Shareholder Services</div></a></li>
-                            <li><a href="investors/bondholder-relations.html"><div>Bondholder Relations</div></a></li>
+                            <li><a href="../investors/financial-information.html"><div>Financial Information</div></a></li>
+                            <li><a href="../investors/board-of-directors.html"><div>Board of Directors</div></a></li>
+                            <li><a href="../investors/sec-filings.html"><div>SEC Filings</div></a></li>
+                            <li><a href="../investors/press-releases.html"><div>Press Releases</div></a></li>
+                            <li><a href="../investors/annual-reports.html"><div>AR &amp; Proxy Statements</div></a></li>
+                            <li><a href="../investors/calendar-presentations.html"><div>Calendar &amp; Presentations</div></a></li>
+                            <li><a href="../investors/statutory-statement.html"><div>Statutory Statements</div></a></li>
+                            <li><a href="../investors/corporate-governance.html"><div>Corporate Governance</div></a></li>
+                            <li><a href="../investors/shareholder-services.html"><div>Shareholder Services</div></a></li>
+                            <li><a href="../investors/bondholder-relations.html"><div>Bondholder Relations</div></a></li>
 
                           </ul>
                         </li>
-                        <li><a href="about-fgl.html"><div>About</div></a>
+                        <li><a href="../about-fgl.html"><div>About</div></a>
                           <ul>
-                            <li><a href="about-fgl/ratings.html"><div>Ratings</div></a></li>
-                            <li><a href="about-fgl/careers.html"><div>Careers</div></a></li>
-                            <li><a href="about-fgl/leadership-team.html"><div>Leadership Team</div></a></li>
-                            <li><a href="about-fgl/company-culture.html"><div>Company Culture</div></a></li>
-                            <li><a href="about-fgl/corporate-responsibility.html"><div>Corporate Responsibility</div></a></li>
+                            <li><a href="../about-fgl/ratings.html"><div>Ratings</div></a></li>
+                            <li><a href="../about-fgl/careers.html"><div>Careers</div></a></li>
+                            <li><a href="../about-fgl/leadership-team.html"><div>Leadership Team</div></a></li>
+                            <li><a href="../about-fgl/company-culture.html"><div>Company Culture</div></a></li>
+                            <li><a href="../about-fgl/corporate-responsibility.html"><div>Corporate Responsibility</div></a></li>
                           </ul>
                         </li>
 
-                        <li><a href="contact.html"><div>Contact</div></a>
+                        <li><a href="../contact.html"><div>Contact</div></a>
 
                         </li>
 
@@ -204,237 +202,458 @@
 
           <div class="container clearfix">
 
-            <div class="heading-block title-center nobottomborder">
-              <h1>We are currently Under Construction</h1>
-              <span>Please check back again within Some Days as We're Pretty Close</span>
-            </div>
+		  			<div id="portfolio" class="portfolio-3 clearfix" >
 
-            <div id="countdown-ex1" class="countdown countdown-large divcenter bottommargin" style="max-width:700px;"></div>
+                        <article class="portfolio-item pf-media" >
+                            <div class="portfolio-image">
+                                <a href="portfolio-single.php">
+                                    <img src="images/portfolio/3/financial-information.jpg" alt="Open Imagination" >
+                                </a>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h4 class="gray-heading">Financial Information</h4>
+                                <div class="line topmargin-sm bottommargin-sm" style="max-width:210px;"></div>
+                                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                            </div>
+                        </article>
 
-            <div class="clear"></div>
+                        <article class="portfolio-item pf-media" >
+                            <div class="portfolio-image">
+                                <a href="portfolio-single.php">
+                                    <img src="images/portfolio/3/sec-filings.jpg" alt="Open Imagination" >
+                                </a>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h4 class="gray-heading">SEC Filings</h4>
+                                <div class="line topmargin-sm bottommargin-sm" style="max-width:210px;"></div>
+                                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                            </div>
+                        </article>
 
-            <div class="progress progress-striped active topmargin divcenter" style="height: 10px; max-width:600px;">
-              <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                <span class="sr-only">80% Complete</span>
-              </div>
-            </div>
+                        <article class="portfolio-item pf-media" >
+                            <div class="portfolio-image">
+                                <a href="portfolio-single.php">
+                                    <img src="images/portfolio/3/calendar-presentations.jpg" alt="Open Imagination" >
+                                </a>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h4 class="gray-heading">Calendar + Presentations</h4>
+                                <div class="line topmargin-sm bottommargin-sm" style="max-width:210px;"></div>
+                                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                            </div>
+                        </article>
 
-            <div class="divider divider-center divider-short divider-margin"><i class="icon-time"></i></div>
+                        <article class="portfolio-item pf-media" >
+                            <div class="portfolio-image">
+                                <a href="portfolio-single.php">
+                                    <img src="images/portfolio/3/annual-reports.jpg" alt="Open Imagination" >
+                                </a>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h4 class="gray-heading">Annual Reports + Proxy Statements</h4>
+                                <div class="line topmargin-sm bottommargin-sm" style="max-width:210px;"></div>
+                                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                            </div>
+                        </article>
 
-            <div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
-            <form id="widget-subscribe-form" action="../include/subscribe.php" role="form" method="post" class="nobottommargin">
-              <div class="input-group input-group-lg divcenter" style="max-width:600px;">
-                <span class="input-group-addon"><i class="icon-email2"></i></span>
-                <input type="email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit">Subscribe Now</button>
-                            </span>
-              </div>
-            </form>
+                        <article class="portfolio-item pf-media" >
+                            <div class="portfolio-image">
+                                <a href="portfolio-single.php">
+                                    <img src="images/portfolio/3/statutory-statements.jpg" alt="Open Imagination" >
+                                </a>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h4 class="gray-heading">Statutory Statements</h4>
+                                <div class="line topmargin-sm bottommargin-sm" style="max-width:210px;"></div>
+                                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                            </div>
+                        </article>
 
-            <script>
-              jQuery(document).ready( function($){
-                var newDate = new Date(2015, 2, 31);
-                $('#countdown-ex1').countdown({until: newDate});
-              });
-              $("#widget-subscribe-form").validate({
-                submitHandler: function(form) {
-                  $(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-                  $(form).ajaxSubmit({
-                    target: '#widget-subscribe-form-result',
-                    success: function() {
-                      $(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-                      $('#widget-subscribe-form').find('.form-control').val('');
-                      $('#widget-subscribe-form-result').attr('data-notify-msg', $('#widget-subscribe-form-result').html()).html('');
-                      SEMICOLON.widget.notifications($('#widget-subscribe-form-result'));
-                    }
-                  });
-                }
-              });
-            </script>
+                        <article class="portfolio-item pf-media" >
+                            <div class="portfolio-image">
+                                <a href="portfolio-single.php">
+                                    <img src="images/portfolio/3/shareholder-services.jpg" alt="Open Imagination" >
+                                </a>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h4 class="gray-heading">Shareholder Services</h4>
+                                <div class="line topmargin-sm bottommargin-sm" style="max-width:210px;"></div>
+                                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="portfolio-item pf-media" >
+                            <div class="portfolio-image">
+                                <a href="portfolio-single.php">
+                                    <img src="images/portfolio/3/corporate-governance.jpg" alt="Open Imagination" >
+                                </a>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h4 class="gray-heading">Corporate Governance</h4>
+                                <div class="line topmargin-sm bottommargin-sm" style="max-width:210px;"></div>
+                                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                            </div>
+                        </article>
 
+                        <article class="portfolio-item pf-media" >
+                            <div class="portfolio-image">
+                                <a href="portfolio-single.php">
+                                    <img src="images/portfolio/3/board-of-directors.jpg" alt="Open Imagination" >
+                                </a>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h4 class="gray-heading">Board of Directors</h4>
+                                <div class="line topmargin-sm bottommargin-sm" style="max-width:210px;"></div>
+                                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-item pf-media" >
+                            <div class="portfolio-image">
+                                <a href="portfolio-single.php">
+                                    <img src="images/portfolio/3/bondholder-relations.jpg" alt="Open Imagination" >
+                                </a>
+                            </div>
+                            <div class="portfolio-desc">
+                                <h4 class="gray-heading">Bondholder Relations</h4>
+                                <div class="line topmargin-sm bottommargin-sm" style="max-width:210px;"></div>
+                                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                    
           </div>
 
         </div>
 
-      </section><!-- #content end -->
+      </section>
+      
+    <!-- FEATURED LINKS SECTION -->
+      
+    <div class="featured-links-section nomargin noborder">
+        <div class="container center clearfix">
 
-      <!-- Footer
-      ============================================= -->
+            <div class="col_half topmargin-sm nobottommargin press-releases">
+                <h4 class="gray-heading">Recent Press Releases</h4>
+                <div class="line bottommargin topmargin-sm"></div>
+                    <div class="feature-container">
+	                	<div class="calendar-block">
+		                	<div class="date-container">
+			                	<p class="month">JULY</p>
+			                	<p class="day">27</p>
+		                	</div>
+	                	</div>
+		                <p class="caption">
+			                <a href="#">Fidelity & Guaranty Life Launches Exciting New Modified Single Premium Annuity.</a>
+			                <span>Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis una.</span>
+			            </p>
+                    </div>
+                    
+                    
+					<div class="feature-container">
+	                	<div class="calendar-block">
+		                	<div class="date-container">
+			                	<p class="month">JULY</p>
+			                	<p class="day">14</p>
+		                	</div>
+	                	</div>
+		                <p class="caption">
+			                <a href="#">Fidelity & Guaranty Life To Report Fiscal 2015 Third Quarter Financial Results On August 5, 2015</a>
+			                <span>Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis una. </span>
+			            </p>
+					</div>
+					
+					<div class="feature-container">
+	                	<div class="calendar-block">
+		                	<div class="date-container">
+			                	<p class="month">JUNE</p>
+			                	<p class="day">30</p>
+		                	</div>
+	                	</div>
+		                <p class="caption">
+			                <a href="#">Iowa Insurance Companies to Host Des Moines Insurance Conference June 11</a>
+			                <span>Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis una.</span>
+			            </p>
+					</div>
+			            
+	                <!-------- FOR MONTHS 7+ CHARACTERS , USE long-month CLASS AS SHOWN BELOW ------->
+		            <!-- 
+			            
+			        <div class="feature-container">
+		                <div class="calendar-block">
+		                	<div class="date-container">
+			                	<p class="month long-month">SEPTEMBER</p>
+			                	<p class="day">30</p>
+		                	</div>
+	                	</div>
+		                <p class="caption">
+			                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+			            </p>
+			        </div> 
+	                -->
+                <div class="line bottommargin-sm topmargin-md"></div>
+                <a href="#" class="view-all-link">VIEW ALL UPDATES</a>
+            </div>
+            
+            
+            <div class="col_half topmargin-sm nobottommargin norightmargin featured-reports">
+                <h4 class="gray-heading">Featured Reports</h4>
+                <div class="line bottommargin topmargin-sm"></div>
+                
+                	<div class="feature-container">
+	                	<a href="#" class="icon-pdf">&nbsp;</a>
+		                <p class="caption">
+	                		<a href="#" >2Q 2015 10-Q 03.31.2015</a>
+			                <span>REPORT<br>MARCH 31, 2015</span>
+			            </p>
+                	</div>
+                	    
+		            <div class="feature-container">
+	                	<a href="#" class="icon-pdf">&nbsp;</a>
+		                <p class="caption">
+	                	    <a href="#">2Q 2015 Financial Supplement</a> 
+			                <span>REPORT<br>MARCH 31, 2015</span>
+			            </p>
+		            </div>
+		            
+		            <div class="feature-container">
+	                	<a href="#" class="icon-pdf">&nbsp;</a>
+		                <p class="caption">
+	                	<a href="#">Report Title Lorem Ipsum</a>
+			                <span>REPORT<br>MARCH 31, 2015</span>
+			            </p>
+		            </div>
+		            
+                <div class="line bottommargin-sm topmargin-md"></div>
+                <a href="#" class="view-all-link">VIEW ALL EVENTS</a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <!-- IFRAME DATA SECTION -->
+    
+    <section id="content">
+
+        <div class="content-wrap">
+
+          <div class="container clearfix">
+		  		<h4 class="gray-heading nomargin">Stock Quote</h4>
+                <div class="line bottommargin topmargin-sm"></div>
+                
+                <!-- IFRAME -->
+                
+          </div>
+          
+        </div>
+        
+    </section>
+      
+
+       <!-- #content end -->
+
+      <div class="cta-banner section nomargin noborder " style="background-color: rgba(0, 153, 153, 0.2)">
+
+        <div class="container center clearfix">
+
+          <div class="row">
+
+            <div class="col-md-9">
+              <div style="margin-top: 35px;">
+                <h3>Join our Investor Email List</h3>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <a href="../contact.html#tabs-5" class="button button-3d button-orange button-large btn-block center uppercase" style="margin-top: 30px;">Subscribe Now</a>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+        <!-- Footer
+        ============================================= -->
         <footer id="footer" class="dark">
 
             <div class="container">
 
-                <!-- Footer Widgets
-                ============================================= -->
-                <div class="footer-widgets-wrap clearfix">
+              <!-- Footer Widgets
+             ============================================= -->
+              <div class="footer-widgets-wrap clearfix">
 
-                    <div class="col_full">
+                <div class="col_full">
 
-                        <div class="col_one_fifth">
+                  <div class="col_one_fifth">
 
-                            <div class="widget clearfix">
+                    <div class="widget clearfix">
 
-                                <img src="images/fgl-footer-widget-logo-dark.png" alt="" class="footer-logo">
+                      <img src="../images/fgl-footer-widget-logo-dark.png" alt="" class="footer-logo">
 
-                                <div class="widget subscribe-widget clearfix">
-                                    <h5><strong>Subscribe</strong> to Our Newsletters for Important News:</h5>
-                                    <div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
-                                  <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
-                                    <div class="input-group divcenter">
-                                      <!--<span class="input-group-addon"><i class="icon-email2"></i></span>-->
-                                      <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Email" style="background-color: seashell;">
+                      <div class="widget subscribe-widget clearfix">
+                        <h5><strong>Subscribe</strong> to Our Newsletters for Important News:</h5>
+                        <div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+                        <form id="widget-subscribe-form" action="../include/subscribe.php" role="form" method="post" class="nobottommargin">
+                          <div class="input-group divcenter">
+                            <!--<span class="input-group-addon"><i class="icon-email2"></i></span>-->
+                            <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Email" style="background-color: seashell;">
                                     <span class="input-group-btn">
                                         <button class="btn btn-success" type="submit">Subscribe</button>
                                     </span>
-                                    </div>
-                                  </form>
-                                    <script type="text/javascript">
-                                        $("#widget-subscribe-form").validate({
-                                            submitHandler: function(form) {
-                                                $(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-                                                $(form).ajaxSubmit({
-                                                    target: '#widget-subscribe-form-result',
-                                                    success: function() {
-                                                        $(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-                                                        $('#widget-subscribe-form').find('.form-control').val('');
-                                                        $('#widget-subscribe-form-result').attr('data-notify-msg', $('#widget-subscribe-form-result').html()).html('');
-                                                        SEMICOLON.widget.notifications($('#widget-subscribe-form-result'));
-                                                    }
-                                                });
-                                            }
-                                        });
-                                    </script>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col_four_fifth col_last">
-
-                          <div class="col_one_fourth">
-
-                            <div class="widget widget_links clearfix">
-
-                              <h4 style="color:white">About FGL</h4>
-
-                              <ul>
-                                <li><a href="about-fgl/ratings.html">Ratings</a></li>
-                                <li><a href="about-fgl/careers.html">Careers</a></li>
-                                <li><a href="about-fgl/leadership-team.html">Leadership Team</a></li>
-                                <li><a href="about-fgl/investors.html">Investors</a></li>
-                              </ul>
-
-                            </div>
-
                           </div>
-
-                          <div class="col_one_fourth">
-
-                            <div class="widget widget_links clearfix">
-
-                              <h4 style="color:white">Annuities</h4>
-
-                              <ul>
-                                <li><a href="annuities/annuities-101.html">Annuities 101</a></li>
-                                <li><a href="annuities/annuities-101.html">Product Comparison</a></li>
-                                <li><a href="annuities/prosperity-elite-series.html">Prosperity Elite®</a></li>
-                                <li><a href="annuities/performance-pro.html">Performance Pro®</a></li>
-                              </ul>
-
-                            </div>
-
-                          </div>
-                          <div class="col_one_fourth">
-
-                            <div class="widget widget_links clearfix">
-
-                              <h4 style="color:white">Life Insurance</h4>
-
-                              <ul>
-                                <li><a href="life-insurance/life-insurance-101.html">Life 101</a></li>
-                                <li><a href="life-insurance/life-insurance-101.html">Product Comparison</a></li>
-                                <li><a href="life-insurance/fg-life-elite.html">FG Life-Elite®</a></li>
-                                <li><a href="life-insurance/fg-life-choice.html">FG Life-Choice®</a></li>
-
-                              </ul>
-
-                            </div>
-
-                          </div>
-
-                            <div class="col_one_fourth col_last">
-
-                                <div class="widget widget_links clearfix">
-
-                                  <h4 style="color:white">Contact Us</h4>
-
-                                  <ul>
-                                    <li><a href="contact.html#tabs-1">FAQ</a></li>
-                                    <li><a href="download-forms.html">Download Forms</a></li>
-                                    <li><a href="contact.html#tabs-4">Reach Customer Service</a></li>
-                                    <li><a href="contact.html#tabs-5">Talk to an Agent</a></li>
-
-                                  </ul>
-
-                                </div>
-
-                            </div>
+                        </form>
+                        <script type="text/javascript">
+                          $("#widget-subscribe-form").validate({
+                            submitHandler: function(form) {
+                              $(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
+                              $(form).ajaxSubmit({
+                                target: '#widget-subscribe-form-result',
+                                success: function() {
+                                  $(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
+                                  $('#widget-subscribe-form').find('.form-control').val('');
+                                  $('#widget-subscribe-form-result').attr('data-notify-msg', $('#widget-subscribe-form-result').html()).html('');
+                                  SEMICOLON.widget.notifications($('#widget-subscribe-form-result'));
+                                }
+                              });
+                            }
+                          });
+                        </script>
+                      </div>
 
                     </div>
+
+                  </div>
+
+                  <div class="col_four_fifth col_last">
+
+                    <div class="col_one_fourth">
+
+                      <div class="widget widget_links clearfix">
+
+                        <h4 style="color:white">About FGL</h4>
+
+                        <ul>
+                          <li><a href="../about-fgl/ratings.html">Ratings</a></li>
+                          <li><a href="../about-fgl/careers.html">Careers</a></li>
+                          <li><a href="../about-fgl/leadership-team.html">Leadership Team</a></li>
+                          <li><a href="../investors.html">Investors</a></li>
+                        </ul>
+
+                      </div>
+
                     </div>
 
+                    <div class="col_one_fourth">
 
-                </div><!-- .footer-widgets-wrap end -->
+                      <div class="widget widget_links clearfix">
+
+                        <h4 style="color:white">Annuities</h4>
+
+                        <ul>
+                          <li><a href="annuities-101.html">Annuities 101</a></li>
+                          <li><a href="annuities-101.html">Product Comparison</a></li>
+                          <li><a href="prosperity-elite-series.html">Prosperity Elite®</a></li>
+                          <li><a href="performance-pro.html">Performance Pro®</a></li>
+                        </ul>
+
+                      </div>
+
+                    </div>
+                    <div class="col_one_fourth">
+
+                      <div class="widget widget_links clearfix">
+
+                        <h4 style="color:white">Life Insurance</h4>
+
+                        <ul>
+                          <li><a href="../life-insurance/life-insurance-101.html">Life 101</a></li>
+                          <li><a href="../life-insurance/life-insurance-101.html">Product Comparison</a></li>
+                          <li><a href="../life-insurance/fg-life-elite.html">FG Life-Elite®</a></li>
+                          <li><a href="../life-insurance/fg-life-choice.html">FG Life-Choice®</a></li>
+
+                        </ul>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col_one_fourth col_last">
+
+                      <div class="widget widget_links clearfix">
+
+                        <h4 style="color:white">Contact Us</h4>
+
+                        <ul>
+                          <li><a href="../contact.html#tabs-1">FAQ</a></li>
+                          <li><a href="../download-forms.html">Download Forms</a></li>
+                          <li><a href="../contact.html#tabs-4">Reach Customer Service</a></li>
+                          <li><a href="../contact.html#tabs-5">Talk to an Agent</a></li>
+
+                        </ul>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+
+              </div><!-- .footer-widgets-wrap end -->
 
             </div>
 
-            <!-- Copyrights
-            ============================================= -->
-            <div id="copyrights">
+          <!-- Copyrights
+         ============================================= -->
+          <div id="copyrights">
 
-                <div class="container clearfix">
+            <div class="container clearfix">
 
-                  <div class="col_half">
-                    <p style="color:#5c666f; text-shadow: none">&copy; 2015 Fidelity & Guaranty Life</p>
-                  </div>
+              <div class="col_half">
+                <p style="color:#5c666f; text-shadow: none">&copy; 2015 Fidelity & Guaranty Life</p>
+              </div>
 
-                    <div class="col_half col_last tright">
-                        <div class="fright clearfix">
-                            <a href="#" class="social-icon si-small si-borderless si-facebook">
-                                <i class="icon-facebook"></i>
-                                <i class="icon-facebook"></i>
-                            </a>
+              <div class="col_half col_last tright">
+                <div class="fright clearfix">
+                  <a href="https://www.facebook.com/FidelityandGuarantyLife" target="_blank" class="social-icon si-small si-borderless si-facebook">
+                    <i class="icon-facebook"></i>
+                    <i class="icon-facebook"></i>
+                  </a>
 
-                            <a href="#" class="social-icon si-small si-borderless si-gplus">
-                                <i class="icon-youtube"></i>
-                                <i class="icon-youtube"></i>
-                            </a>
+                  <a href="https://www.youtube.com/user/MyFGLife" target="_blank" class="social-icon si-small si-borderless si-gplus">
+                    <i class="icon-youtube"></i>
+                    <i class="icon-youtube"></i>
+                  </a>
 
-                            <a href="#" class="social-icon si-small si-borderless si-twitter">
-                                <i class="icon-twitter"></i>
-                                <i class="icon-twitter"></i>
-                            </a>
+                  <a href="https://twitter.com/fg_life" target="_blank" class="social-icon si-small si-borderless si-twitter">
+                    <i class="icon-twitter"></i>
+                    <i class="icon-twitter"></i>
+                  </a>
 
-                            <a href="#" class="social-icon si-small si-borderless si-gplus">
-                                <i class="icon-gplus"></i>
-                                <i class="icon-gplus"></i>
-                            </a>
+                  <a href="https://plus.google.com/107644813050443359842/posts" target="_blank" class="social-icon si-small si-borderless si-gplus">
+                    <i class="icon-gplus"></i>
+                    <i class="icon-gplus"></i>
+                  </a>
 
-                            <a href="#" class="social-icon si-small si-borderless si-linkedin">
-                                <i class="icon-linkedin"></i>
-                                <i class="icon-linkedin"></i>
-                            </a>
-                        </div>
-
-                        <div class="clear"></div>
-
-                    </div>
-
+                  <a href="http://www.linkedin.com/company/fidelity-&-guaranty-life?trk=hb_tab_compy_id_2188830" target="_blank" class="social-icon si-small si-borderless si-linkedin">
+                    <i class="icon-linkedin"></i>
+                    <i class="icon-linkedin"></i>
+                  </a>
                 </div>
+                <div class="clear"></div>
 
-            </div><!-- #copyrights end -->
+              </div>
+
+            </div>
+
+          </div>
+          <!-- #copyrights end -->
 
         </footer><!-- #footer end -->
 
@@ -446,7 +665,7 @@
 
     <!-- Footer Scripts
     ============================================= -->
-    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="../js/functions.js"></script>
 
 </body>
 </html>
