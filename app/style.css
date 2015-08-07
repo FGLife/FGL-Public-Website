@@ -248,6 +248,12 @@ h4.gray-heading {
   color: #5a6771;
   text-transform: uppercase;
 }
+h5.gray-heading {
+    font-size: 17px !important;
+    font-weight: 400;
+    color: #5a6771;
+    text-transform: uppercase;
+}
 /*-----------------------------------------------------------------------------------
 
     helpers.less
@@ -7830,6 +7836,61 @@ body:not(.device-touch) .button.button-full strong {
   display: block;
   width: 28px;
   height: 28px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 16px;
+  position: relative;
+}
+.feature-box .icon-interested-customer:before{
+  content: "";
+  background-image: url(images/icons/icon-interested-customer.png);
+  display: block;
+  width: 57px;
+  height: 60px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 16px;
+  position: relative;
+}
+.feature-box .icon-policyholder:before{
+  content: "";
+  background-image: url(images/icons/icon-policyholder.png);
+  display: block;
+  width: 56px;
+  height: 60px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 16px;
+  position: relative;
+}
+.feature-box .icon-agent:before{
+  content: "";
+  background-image: url(images/icons/icon-agent.png);
+  display: block;
+  width: 49px;
+  height: 60px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 16px;
+  position: relative;
+}
+.feature-box .icon-investor:before{
+  content: "";
+  background-image: url(images/icons/icon-investor.png);
+  display: block;
+  width: 50px;
+  height: 60px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 16px;
+  position: relative;
+}
+.feature-box .icon-media:before{
+  content: "";
+  background-image: url(images/icons/icon-media.png);
+  display: block;
+  width: 56px;
+  height: 55px;
   background-repeat: no-repeat;
   margin: 0 auto;
   top: 16px;
