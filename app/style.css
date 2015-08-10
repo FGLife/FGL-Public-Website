@@ -249,10 +249,10 @@ h4.gray-heading {
   text-transform: uppercase;
 }
 h5.gray-heading {
-    font-size: 17px !important;
-    font-weight: 400;
-    color: #5a6771;
-    text-transform: uppercase;
+  font-size: 17px !important;
+  font-weight: 400;
+  color: #5a6771;
+  text-transform: uppercase;
 }
 /*-----------------------------------------------------------------------------------
 
@@ -578,7 +578,6 @@ span.middot {
 .section-fgl-green .container + .video-wrap {
   z-index: 1;
 }
-
 .featured-links-section {
   background-color: #dee9eb;
   padding: 60px 0;
@@ -682,7 +681,6 @@ span.middot {
 .featured-links-section span {
   text-align: left;
 }
-
 .parallax {
   background-color: transparent;
   background-attachment: fixed;
@@ -3831,7 +3829,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-desc {
   font-size: 19px !important;
 }
 .portfolio-3 .portfolio-desc p.caption {
-  line-height: 2 !important;
+  line-height: 2;
 }
 .portfolio-3 .portfolio-item .portfolio-image,
 .portfolio-3 .portfolio-item .portfolio-image a,
@@ -7841,7 +7839,7 @@ body:not(.device-touch) .button.button-full strong {
   top: 16px;
   position: relative;
 }
-.feature-box .icon-interested-customer:before{
+.feature-box .icon-interested-customer:before {
   content: "";
   background-image: url(images/icons/icon-interested-customer.png);
   display: block;
@@ -7852,7 +7850,7 @@ body:not(.device-touch) .button.button-full strong {
   top: 16px;
   position: relative;
 }
-.feature-box .icon-policyholder:before{
+.feature-box .icon-policyholder:before {
   content: "";
   background-image: url(images/icons/icon-policyholder.png);
   display: block;
@@ -7863,7 +7861,7 @@ body:not(.device-touch) .button.button-full strong {
   top: 16px;
   position: relative;
 }
-.feature-box .icon-agent:before{
+.feature-box .icon-agent:before {
   content: "";
   background-image: url(images/icons/icon-agent.png);
   display: block;
@@ -7874,7 +7872,7 @@ body:not(.device-touch) .button.button-full strong {
   top: 16px;
   position: relative;
 }
-.feature-box .icon-investor:before{
+.feature-box .icon-investor:before {
   content: "";
   background-image: url(images/icons/icon-investor.png);
   display: block;
@@ -7885,7 +7883,7 @@ body:not(.device-touch) .button.button-full strong {
   top: 16px;
   position: relative;
 }
-.feature-box .icon-media:before{
+.feature-box .icon-media:before {
   content: "";
   background-image: url(images/icons/icon-media.png);
   display: block;
@@ -10125,7 +10123,7 @@ body:not(.device-touch) .clients-grid li a {
   font-size: 19px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 700;
   margin-top: -5px;
 }
 .team-title span {
@@ -12630,31 +12628,31 @@ body:not(.device-touch) .tagcloud a {
   border: 1px solid #b1b1b1;
 }
 span.member-mark {
-    width: 20px;
-    height: 20px;
-    background: #ff641f;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    display: block;
+  width: 20px;
+  height: 20px;
+  background: #ff641f;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  display: block;
 }
 span.chairperson-mark {
-    width: 20px;
-    height: 20px;
-    background: #242b6a;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    display: block;
+  width: 20px;
+  height: 20px;
+  background: #242b6a;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  display: block;
 }
 span.financial-expert-mark {
-    width: 20px;
-    height: 20px;
-    background: #19a094;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #19a094;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  display: inline-block;
 }
 .corporate-gov .table-key {
   display: block;

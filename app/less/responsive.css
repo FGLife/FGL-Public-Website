@@ -75,7 +75,7 @@
   .promo-uppercase > .container > span {
     font-size: 14px;
   }
-  .portfolio-3 .portfolio-item{
+  .portfolio-3 .portfolio-item {
     min-height: 482px;
   }
 }
@@ -559,18 +559,10 @@
   .landing-form-overlay {
     bottom: -142px;
   }
-  .team.team-list .team-desc.long-text{
-	height: 265px;
+  .team.team-list .team-desc.long-text {
+    height: 265px;
   }
 }
-
-@media only screen and (min-width: 479px) and (max-width: 991px) {
-  .annuities-large-table{
-	overflow: scroll;
-	display: block;
-  }
-}
-
 @media only screen and (max-width: 991px) {
   #wrapper {
     width: 100%;
@@ -1419,13 +1411,13 @@
     margin-left: -200px;
     bottom: 0;
   }
-  .featured-links-section .press-releases{
-	padding-right: 0px;
-	width: 100%;
+  .featured-links-section .press-releases {
+    padding-right: 0px;
+    width: 100%;
   }
-  .featured-links-section .featured-reports{
-	padding-left: 0px;
-	width: 100%;
+  .featured-links-section .featured-reports {
+    padding-left: 0px;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1920,15 +1912,18 @@
   }
   /* Annuities Page
 	-----------------------------------------------------------------*/
-  .annuities-page .feature-box{
-	display: inline-block;
+  .annuities-page .feature-box {
+    display: inline-block;
   }
   /* About - Leadership Page
 	-----------------------------------------------------------------*/
   .team .team-content ~ .social-icon {
-	margin-top: 10px;
-	bottom: 0px;
-	position: inherit;
+    margin-top: 10px;
+    bottom: 0px;
+    position: inherit;
+  }
+  .corporate-gov span.fright {
+    float: none !important;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -2338,15 +2333,12 @@
     margin-right: 8px;
   }
   .team.team-list .team-desc {
-	height: inherit;
+    height: inherit;
   }
-  .featured-links-section p.caption{
-	height: auto;
-	margin-bottom: 30px;
-	max-width: 75%;
-  }
-  .corporate-gov span.fright{
-	float: none !important;
+  .featured-links-section p.caption {
+    height: auto;
+    margin-bottom: 30px;
+    max-width: 75%;
   }
   .corporate-gov .table-key li {
     width: 100%;
