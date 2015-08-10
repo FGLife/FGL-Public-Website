@@ -32,7 +32,7 @@
 
     <!-- Document Title
     ============================================= -->
-    <title>Manage Policy | Fidelity & Guaranty Life</title>
+    <title>Talk to Agent | Fidelity & Guaranty Life</title>
 
 </head>
 
@@ -184,11 +184,11 @@
     <div class="container center clearfix">
 
       <div class=" col_half notopmargin nobottommargin">
-        <h1 class="page-title" style="text-transform: uppercase">Manage Policy</h1>
+        <h1 class="page-title" style="text-transform: uppercase">Talk to an Agent</h1>
       </div>
 
       <div class="col_half notopmargin nobottommargin col_last">
-        <p class="breadcrumbs">Home / Contact / Policyholder / Manage Policy</p>
+        <p class="breadcrumbs">Home / Contact / Policyholder / Talk to Agent</p>
       </div>
 
     </div>
@@ -204,67 +204,102 @@
         <div class="clear"></div>
 
 
-        <div class="tabs-section">
-          <h3>Download Forms</h3>
+
+
+        <!-- Talk to an agent  ======================== -->
+
+
+          <div class="col-md-2 "></div>
+          <div class="col-md-8 ">
+
+
+            <div id="lead-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+
+            <form class="nobottommargin topmargin contact-page-form" id="lead-contactform" name="lead-contactform" action="include/sendemail.php" method="post">
+
+              <div class="form-process"></div>
+
+              <div class="col_full">
+                <select id="lead-contactform-service" name="template-contactform-service" class="sm-form-control">
+                  <option value="">I want to discuss...</option>
+                  <option value="Agency Services">Annuities</option>
+                  <option value="Annutiy New Business">Life insurance</option>
+                </select>
+              </div>
+
+
+              <div class="col_half">
+                <input type="text" id="lead-contactform-firstname" placeholder="First Name" name="lead-contactform-firstname" value="" class="sm-form-control required" />
+              </div>
+
+
+              <div class="col_half col_last">
+                <input type="text" id="lead-contactform-lastname" placeholder="Last Name" name="lead-contactform-lastname" value="" class="sm-form-control required" />
+              </div>
+
+
+              <div class="col_full">
+                <input type="text" id="lead-contactform-address1" placeholder="Address 1" name="lead-contactform-address1" value="" class="sm-form-control required" />
+              </div>
+
+
+              <div class="col_full">
+                <input type="text" id="lead-contactform-address2" placeholder="Address 2" name="lead-contactform-address2" value="" class="sm-form-control required" />
+              </div>
+
+
+              <div class="col_half">
+                <input type="email" id="lead-contactform-email" placeholder="Email" name="lead-contactform-email" value="" class="required email sm-form-control" />
+              </div>
+
+
+              <div class="col_half col_last">
+                <input type="text" id="lead-contactform-phone" placeholder="Phone" name="lead-contactform-phone" value="" class="sm-form-control" />
+              </div>
+
+              <div class="col_full">
+                <input type="text" id="lead-contactform-policy" placeholder="FGL policy number, if you own one" name="template-contactform-policy" value="" class="sm-form-control" />
+              </div>
+
+
+              <div class="col_full">
+                <textarea class="required sm-form-control" placeholder="Comments" id="lead-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+              </div>
+
+              <div class="col_full hidden">
+                <input type="text" id="lead-contactform-botcheck" name="lead-contactform-botcheck" value="" class="sm-form-control" />
+              </div>
+
+              <div class="col_full">
+                <button name="submit" type="submit" id="lead-submit-button" tabindex="5" value="Submit" class="button button-orange button-3d nomargin">Submit</button>
+              </div>
+
+            </form>
+
+            <script type="text/javascript">
+
+              $("#lead-contactform").validate({
+                submitHandler: function(form) {
+                  $('.form-process').fadeIn();
+                  $(form).ajaxSubmit({
+                    target: '#lead-form-result',
+                    success: function() {
+                      $('.form-process').fadeOut();
+                      $('#lead-contactform').find('.sm-form-control').val('');
+                      $('#lead-form-result').attr('data-notify-msg', $('#lead-form-result').html()).html('');
+                      SEMICOLON.widget.notifications($('#lead-form-result'));
+                    }
+                  });
+                }
+              });
+
+            </script>
+
+          </div><!-- Contact Form End -->
+        </div>
+        <div class="col-md-2 col_last"></div>
         </div>
 
-
-
-        <div class="line bottommargin-sm"></div>
-
-
-        <!-- FORMS  ======================== -->
-
-        <div class=" fgl-bullet">
-          <h4 class="blue-heading">Changes</h4>
-          <ul>
-            <li><a href="manage-policies/change-beneficiary.html">Change beneficiary</a></li>
-            <li><a href="manage-policies/change-address.html">Change address</a></li>
-            <li><a href="manage-policies/change-name.html">Change name</a></li>
-          </ul>
-
-          <h4 class="blue-heading">Records</h4>
-          <ul>
-            <li><a href="manage-policies/request-duplicate-annuity-contract.html">Request a duplicate annuity contract?</a></li>
-            <li><a href="manage-policies/request-duplicate-life-policy.html">Request a duplicate life policy</a></li>
-          </ul>
-
-          <h4 class="blue-heading">Ownership</h4>
-          <ul>
-            <li><a href="manage-policies/transfer-ownership.html">Transfer ownership</a></li>
-            <li><a href="manage-policies/use-policy-as-collateral.html">Use policy as collateral</a></li>
-          </ul>
-
-          <h4 class="blue-heading">Banking</h4>
-          <ul>
-            <li><a href="manage-policies/change-premium-payments-for-life-contract.html">Authorize or change automatic premium payments for a life contract</a></li>
-            <li><a href="manage-policies/change-direct-deposit-for-annuity-payments.html">Authorize or change direct deposit for annuity payments</a></li>
-          </ul>
-
-          <h4 class="blue-heading">Transfers</h4>
-          <ul>
-            <li><a href="manage-policies/change-fia-contract-allocations.html">Change fixed index annuity contract allocations</a></li>
-            <li><a href="manage-policies/convert-ira-to-roth-ira.html">Convert a traditional IRA to a Roth IRA</a></li>
-          </ul>
-
-          <h4 class="blue-heading">Accessing Funds</h4>
-          <ul>
-            <li><a href="manage-policies/annuitize-non-qualified-annuity-contract.html">Withdraw from or annuitize a non-qualified annuity contract</a></li>
-            <li><a href="manage-policies/annuitize-qualified-annuity-contract.html">Withdraw from or annuitize a qualified annuity contract</a></li>
-            <li><a href="manage-policies/annuitize-403b-tax-sheltered-annuity-contract.html">Withdraw from or annuitize a 403(b) tax-sheltered annuity contract</a></li>
-            <li><a href="manage-policies/request-rmd-from-qualified-plan.html">Request a required minimum distribution (RMD) from qualified plan</a></li>
-            <li><a href="manage-policies/request-surrender-of-life-insurance-contract.html">Request a partial or full surrender of your life insurance contract</a></li>
-            <li><a href="manage-policies/request-loan-from-life-insurance-contract.html">Request a loan from your life insurance contact</a></li>
-          </ul>
-        </div>
-
-
-        <a href="policyholder.html"><h4>BACK</h4></a>
-      </div>
-
-
-
-    </div>
 
   </section><!-- #content end -->
 
