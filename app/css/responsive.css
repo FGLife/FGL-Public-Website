@@ -1902,6 +1902,9 @@
 		bottom: 0px;
 		position: inherit;
 	}
+    .corporate-gov span.fright{
+	    float: none !important;
+    }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -2315,6 +2318,16 @@
 	    margin-bottom: 30px;
 	    max-width: 75%;
     }
+	.corporate-gov .table-key li {
+	  width: 100%;
+	  text-align: left;
+	  margin-bottom: 4px;
+	  margin-left: 0px !important;
+	}
+	.corporate-gov span.center-block {
+	  display: inline-block;
+	  margin-left: 25px;
+	}
 }
 
 
