@@ -1206,12 +1206,12 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 }
 #footer.dark,
 .dark #footer {
-  background-color: #009999;
+  background-color: #009483;
   color: #CCC;
   border-top-color: rgba(0, 0, 0, 0.2);
 }
 .dark #copyrights {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #fff;
   color: rgba(255, 255, 255, 0.25);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
@@ -1243,11 +1243,7 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
   color: #FFF;
 }
 .dark .widget h4 {
-<<<<<<< HEAD
-  color: #FFFFFF !important;
-=======
   color: white !important;
->>>>>>> origin/master
 }
 .dark .widget p {
   opacity: 0.8;
@@ -1274,13 +1270,8 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 .dark .widget_categories li a,
 .dark .widget_pages li a,
 .dark .widget_rss li a {
-<<<<<<< HEAD
-  color: #FFFFFF !important;
-  background-image: url("../images/icons/widget-link-dark.png");
-=======
   color: white;
   background-image: url("../images/icons/widget-link-dark.png") !important;
->>>>>>> origin/master
 }
 .dark .widget_nav_menu li a:hover,
 .dark .widget_links li a:hover,
