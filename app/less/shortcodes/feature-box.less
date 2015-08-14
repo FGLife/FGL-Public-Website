@@ -11,65 +11,43 @@
 
 
 .feature-box {
-	position: relative;
-	margin-top: 20px;
-	padding: 0 0 0 80px;
-	&:first-child {
-		margin-top: 0;
-	}
-
-
-
-	.fbox-icon {
-		display: block;
-		position: absolute;
-		width: 64px;
-		height: 64px;
-		top: 0;
-		left: 0;
-		a,
-		i,
-		img {
-			display: block;
-			position: relative;
-			width: 100%;
-			height: 100%;
-			color: #FFF;
-		}
-		i,
-		img {
-			.border-radius(50%);
-			background-color: #19a094;
-		}
-    &.icon-fgl-form-instructions {
-      width: 40px;
-      height: 40px;
-      //fgl-pdt
+    position: relative;
+    margin-top: 20px;
+    padding: 0 0 0 80px;
+    .fbox-icon {
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        top: 0;
+        left: 0;
+        i {
+            font-style: normal;
+            font-size: 28px;
+            text-align: center;
+            line-height: 64px;
+        }
     }
-		i {
-			font-style: normal;
-			font-size: 28px;
-			text-align: center;
-			line-height: 64px;
-		}
-	}
-	h3 {
-		font-size: 16px;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		margin-bottom: 0;
-		color: #001a71;
-		//color: #333; fgl-KC
-	}
-	p {
-		margin: 8px 0 0 0;
-		//color: #999; fgl-KC
-    color: #5c666f;
-	}
-
-	.before-heading { font-size: 14px; }
-	.icon-water-drop:before {
+    .fbox-icon.icon-fgl-form-instructions {
+        width: 40px;
+        height: 40px;
+    }
+    h3 {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        color: #001a71;
+    }
+    p {
+        margin: 8px 0 0 0;
+        color: #5c666f;
+    }
+    .before-heading {
+        font-size: 14px;
+    }
+    .icon-water-drop:before {
         content: "";
         background-image: url(images/icon-water-drop.png);
         display: block;
@@ -113,232 +91,291 @@
         top: 20px;
         position: relative;
     }
-	.icon-water-drop-2:before {
-	    content: "";
-	    background-image: url(images/icon-water-drop.png);
-	    display: block;
-	    width: 40px;
-	    height: 62px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 3px;
-	    position: relative;
-	    transform: scale(.6);
-	}
-	.icon-prosperity-2:before {
-	    content: "";
-	    background-image: url(images/icon-prosperity.png);
-	    display: block;
-	    width: 45px;
-	    height: 65px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 0px;
-	    position: relative;
-	    transform: scale(.6);
-	}
-	.icon-performance-2:before {
-	    content: "";
-	    background-image: url(images/icon-performance.png);
-	    display: block;
-	    width: 65px;
-	    height: 65px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 0px;
-	    position: relative;
-	    transform: scale(.6);
-	}
-	.icon-safe:before{
-	    content: "";
-	    background-image: url(images/icons/icon-safe.png);
-	    display: block;
-	    width: 30px;
-	    height: 30px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 18px;
-	    position: relative;
-	}
-	.icon-graph:before{
-	    content: "";
-	    background-image: url(images/icons/icon-graph.png);
-	    display: block;
-	    width: 30px;
-	    height: 30px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 18px;
-	    position: relative;
-	}
-	.icon-index-safety-7:before{
-	    content: "";
-	    background-image: url(images/icons/icon-index-safety-7.png);
-	    display: block;
-	    width: 42px;
-	    height: 30px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 16px;
-	    position: relative;
-	}
-	.icon-index-choice-10:before{
-	    content: "";
-	    background-image: url(images/icons/icon-index-choice-10.png);
-	    display: block;
-	    width: 42px;
-	    height: 30px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 16px;
-	    position: relative;
-	}
-	.icon-building:before{
-	    content: "";
-	    background-image: url(images/icons/icon-building.png);
-	    display: block;
-	    width: 34px;
-	    height: 30px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 16px;
-	    position: relative;
-	}
-	.icon-life-elite:before{
-	    content: "";
-	    background-image: url(images/icons/icon-elite.png);
-	    display: block;
-	    width: 67px;
-	    height: 60px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 4px;
-	    position: relative;
-	    transform: scale(.64);
-	}
-	.icon-arrows:before{
-	    content: "";
-	    background-image: url(images/icons/icon-arrows.png);
-	    display: block;
-	    width: 44px;
-	    height: 38px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 12px;
-	    position: relative;
-	}
-	.icon-road:before{
-	    content: "";
-	    background-image: url(images/icons/icon-road.png);
-	    display: block;
-	    width: 28px;
-	    height: 28px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 16px;
-	    position: relative;
-	}
-	.icon-interested-customer:before{
-	    content: "";
-	    background-image: url(images/icons/icon-interested-customer.png);
-	    display: block;
+    .icon-water-drop-2:before {
+        content: "";
+        background-image: url(images/icon-water-drop.png);
+        display: block;
+        width: 40px;
+        height: 62px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 3px;
+        position: relative;
+        transform: scale(0.6);
+    }
+    .icon-prosperity-2:before {
+        content: "";
+        background-image: url(images/icon-prosperity.png);
+        display: block;
+        width: 45px;
+        height: 65px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 0px;
+        position: relative;
+        transform: scale(0.6);
+    }
+    .icon-performance-2:before {
+        content: "";
+        background-image: url(images/icon-performance.png);
+        display: block;
+        width: 65px;
+        height: 65px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 0px;
+        position: relative;
+        transform: scale(0.6);
+    }
+    .icon-safe:before {
+        content: "";
+        background-image: url(images/icons/icon-safe.png);
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 18px;
+        position: relative;
+    }
+    .icon-graph:before {
+        content: "";
+        background-image: url(images/icons/icon-graph.png);
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 18px;
+        position: relative;
+    }
+    .icon-index-safety-7:before {
+        content: "";
+        background-image: url(images/icons/icon-index-safety-7.png);
+        display: block;
+        width: 42px;
+        height: 30px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 16px;
+        position: relative;
+    }
+    .icon-index-choice-10:before {
+        content: "";
+        background-image: url(images/icons/icon-index-choice-10.png);
+        display: block;
+        width: 42px;
+        height: 30px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 16px;
+        position: relative;
+    }
+    .icon-building:before {
+        content: "";
+        background-image: url(images/icons/icon-building.png);
+        display: block;
+        width: 34px;
+        height: 30px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 16px;
+        position: relative;
+    }
+    .icon-life-elite:before {
+        content: "";
+        background-image: url(images/icon-elite.png);
+        display: block;
+        width: 67px;
+        height: 60px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 4px;
+        position: relative;
+        transform: scale(0.64);
+    }
+    .icon-arrows:before {
+        content: "";
+        background-image: url(images/icons/icon-arrows.png);
+        display: block;
+        width: 44px;
+        height: 38px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 12px;
+        position: relative;
+    }
+    .icon-road:before {
+        content: "";
+        background-image: url(images/icons/icon-road.png);
+        display: block;
+        width: 28px;
+        height: 28px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 16px;
+        position: relative;
+    }
+    .icon-interested-customer:before {
+        content: "";
+        background-image: url(images/icons/icon-interested-customer.png);
+        display: block;
+        width: 57px;
+        height: 60px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 16px;
+        position: relative;
+    }
+    .icon-faq:before {
+        content: "";
+        background-image: url(images/icons/icon-faq.png);
+        display: block;
         width: 63px;
         height: 60px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 24px;
-	    position: relative;
-	}
-	.icon-policyholder:before{
-	    content: "";
-	    background-image: url(images/icons/icon-policyholder.png);
-	    display: block;
-	    width: 61px;
-	    height: 60px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 17px;
-	    position: relative;
-	}
-	.icon-find:before{
-	    content: "";
-	    background-image: url(images/icons/icon-find.png);
-	    display: block;
-	    width: 61px;
-	    height: 60px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 17px;
-	    position: relative;
-	}
-	.icon-handshake:before{
-	    content: "";
-	    background-image: url(images/icons/icon-handshake.png);
-	    display: block;
-	    width: 74px;
-	    height: 48px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 29px;
-	    position: relative;
-	}
-	.feature-box .icon-cycle:before {
-	    content: "";
-	    background-image: url(images/icons/icon-cycle.png);
-	    display: block;
-	    width: 61px;
-	    height: 67px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 12px;
-	    position: relative;
-	}
-	.icon-agent:before{
-	    content: "";
-	    background-image: url(images/icons/icon-agent.png);
-	    display: block;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 24px;
+        position: relative;
+    }
+    .icon-policyholder:before {
+        content: "";
+        background-image: url(images/icons/icon-policyholder.png);
+        display: block;
+        width: 56px;
+        height: 60px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 16px;
+        position: relative;
+    }
+    .icon-find:before {
+        content: "";
+        background-image: url(images/icons/icon-find.png);
+        display: block;
+        width: 61px;
+        height: 60px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 17px;
+        position: relative;
+    }
+    .icon-handshake:before {
+        content: "";
+        background-image: url(images/icons/icon-handshake.png);
+        display: block;
+        width: 74px;
+        height: 48px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 29px;
+        position: relative;
+    }
+    .icon-cycle:before {
+        content: "";
+        background-image: url(images/icons/icon-cycle.png);
+        display: block;
+        width: 61px;
+        height: 67px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 12px;
+        position: relative;
+    }
+    .icon-manage:before {
+        content: "";
+        background-image: url(images/icons/icon-manage.png);
+        display: block;
+        width: 61px;
+        height: 60px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 17px;
+        position: relative;
+    }
+    .icon-agent:before {
+        content: "";
+        background-image: url(images/icons/icon-agent.png);
+        display: block;
+        width: 49px;
+        height: 60px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 16px;
+        position: relative;
+    }
+    .icon-submit:before {
+        content: "";
+        background-image: url(images/icons/icon-submit.png);
+        display: block;
         width: 72px;
         height: 60px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 25px;
-	    position: relative;
-	}
-	.icon-investor:before{
-	    content: "";
-	    background-image: url(images/icons/icon-investor.png);
-	    display: block;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 25px;
+        position: relative;
+    }
+    .icon-investor:before {
+        content: "";
+        background-image: url(images/icons/icon-investor.png);
+        display: block;
         width: 50px;
         height: 60px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 16px;
-	    position: relative;
-	}
-	.icon-service:before {
-	    content: "";
-	    background-image: url(images/icons/icon-service.png);
-	    display: block;
-	    width: 58px;
-	    height: 62px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 14px;
-	    position: relative;
-	}
-	.icon-media:before{
-	    content: "";
-	    background-image: url(images/icons/icon-media.png);
-	    display: block;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 16px;
+        position: relative;
+    }
+    .icon-service:before {
+        content: "";
+        background-image: url(images/icons/icon-service.png);
+        display: block;
+        width: 58px;
+        height: 62px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 14px;
+        position: relative;
+    }
+    .icon-media:before {
+        content: "";
+        background-image: url(images/icons/icon-media.png);
+        display: block;
+        width: 56px;
+        height: 55px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 16px;
+        position: relative;
+    }
+    .icon-request:before {
+        content: "";
+        background-image: url(images/icons/icon-request.png);
+        display: block;
         width: 63px;
         height: 57px;
-	    background-repeat: no-repeat;
-	    margin: 0 auto;
-	    top: 20px;
-	    position: relative;
-	}
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        top: 20px;
+        position: relative;
+    }
 }
-
+.feature-box:first-child {
+    margin-top: 0;
+}
+.feature-box .fbox-icon a,.feature-box .fbox-icon i,.feature-box .fbox-icon img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+}
+.feature-box .fbox-icon i,.feature-box .fbox-icon img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #19a094;
+}
 .feature-box-section .feature-box h3 {
   font-size: 14px;
   font-weight: 700;
