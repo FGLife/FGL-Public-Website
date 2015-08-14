@@ -6643,12 +6643,13 @@ span.light-text {
   content: "";
   background-image: url(images/icons/icon-ratings.png);
   display: block;
-  width: 62px;
+  width: 85px;
   height: 62px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 17px;
+  top: 37px;
   position: relative;
+  transform: scale(.94);
 }
 .about-page .icon-responsibility:before {
   content: "";
@@ -6665,34 +6666,35 @@ span.light-text {
   content: "";
   background-image: url(images/icons/icon-culture.png);
   display: block;
-  width: 64px;
+  width: 70px;
   height: 64px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 17px;
+  top: 29px;
   position: relative;
 }
 .about-page .icon-directors:before {
   content: "";
   background-image: url(images/icons/icon-directors.png);
   display: block;
-  width: 44px;
-  height: 54px;
+  width: 76px;
+  height: 43px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 20px;
+  top: 24px;
   position: relative;
 }
 .about-page .icon-careers:before {
   content: "";
   background-image: url(images/icons/icon-careers.png);
   display: block;
-  width: 51px;
-  height: 55px;
+  width: 72px;
+  height: 69px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 20px;
+  top: 11px;
   position: relative;
+  transform: scale(.94);
 }
 .testimonials-section {
   padding: 30px 0px;
@@ -7808,14 +7810,15 @@ body:not(.device-touch) .button.button-full strong {
 }
 .feature-box .icon-life-elite:before {
   content: "";
-  background-image: url(images/icons/icon-arrows.png);
+  background-image: url(images/icon-elite.png);
   display: block;
-  width: 44px;
-  height: 38px;
+  width: 67px;
+  height: 60px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 12px;
+  top: 4px;
   position: relative;
+  transform: scale(.64);
 }
 .feature-box .icon-arrows:before {
   content: "";
@@ -7843,33 +7846,66 @@ body:not(.device-touch) .button.button-full strong {
   content: "";
   background-image: url(images/icons/icon-interested-customer.png);
   display: block;
-  width: 57px;
+  width: 63px;
   height: 60px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 16px;
+  top: 24px;
   position: relative;
 }
 .feature-box .icon-policyholder:before {
   content: "";
   background-image: url(images/icons/icon-policyholder.png);
   display: block;
-  width: 56px;
+  width: 61px;
   height: 60px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 16px;
+  top: 17px;
+  position: relative;
+}
+.feature-box .icon-find:before {
+  content: "";
+  background-image: url(images/icons/icon-find.png);
+  display: block;
+  width: 61px;
+  height: 60px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 17px;
+  position: relative;
+}
+.feature-box .icon-handshake:before {
+  content: "";
+  background-image: url(images/icons/icon-handshake.png);
+  display: block;
+  width: 74px;
+  height: 48px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 29px;
+  position: relative;
+}
+.feature-box .icon-cycle:before {
+  content: "";
+  background-image: url(images/icons/icon-cycle.png);
+  display: block;
+  width: 61px;
+  height: 67px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 12px;
   position: relative;
 }
 .feature-box .icon-agent:before {
   content: "";
   background-image: url(images/icons/icon-agent.png);
   display: block;
-  width: 49px;
+  width: 72px;
   height: 60px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 16px;
+  top: 25px;
   position: relative;
 }
 .feature-box .icon-investor:before {
@@ -7883,15 +7919,26 @@ body:not(.device-touch) .button.button-full strong {
   top: 16px;
   position: relative;
 }
+.feature-box .icon-service:before {
+  content: "";
+  background-image: url(images/icons/icon-service.png);
+  display: block;
+  width: 58px;
+  height: 62px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 14px;
+  position: relative;
+}
 .feature-box .icon-media:before {
   content: "";
   background-image: url(images/icons/icon-media.png);
   display: block;
-  width: 56px;
-  height: 55px;
+  width: 63px;
+  height: 57px;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 16px;
+  top: 20px;
   position: relative;
 }
 .feature-box-section .feature-box h3 {
