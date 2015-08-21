@@ -426,6 +426,9 @@ span.middot {
 .norightpadding {
   padding-right: 0 !important;
 }
+.toppadding-sm{
+  padding-top: 20px !important;
+}
 .notoppadding {
   padding-top: 0 !important;
 }
@@ -10225,6 +10228,9 @@ body:not(.device-touch) .clients-grid li a {
   text-transform: none;
   margin-top: -5px;
   line-height: 1.3;
+}
+.team-title.bod span {
+	color:#5a6771;
 }
 .team-content {
   margin-top: 10px;
