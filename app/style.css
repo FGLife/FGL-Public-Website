@@ -420,6 +420,9 @@ span.middot {
 .nopadding {
   padding: 0 !important;
 }
+.leftpadding-sm{
+  padding-left: 30px !important;
+}
 .noleftpadding {
   padding-left: 0 !important;
 }
@@ -12283,6 +12286,13 @@ button.toast-close-button {
 #copyrights p {
   margin-bottom: 20px;
   font-size: 14px;
+}
+#copyrights a {
+  color: #5c666f;
+}
+#copyrights a:hover {
+  color: #5c666f;
+  text-decoration: underline !important;
 }
 .copyright-links a {
   display: inline-block;
