@@ -1905,6 +1905,16 @@
     .corporate-gov span.fright{
 	    float: none !important;
     }
+	.stock-quote-table.tabs.tabs-alt ul.tab-nav li {
+	    border:#ddd solid 1px;
+	    width: 100% !important;
+	    margin-left: 0px;
+	}
+	.stock-quote-table.tabs.tabs-alt ul.tab-nav li.ui-tabs-active a {
+	    border: 0;
+        margin-top: -1px;
+        background-color: rgba(0, 142, 125, 0.31);
+	}
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
