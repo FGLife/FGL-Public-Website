@@ -51,35 +51,33 @@
       <div class="col_full nobottommargin clearfix">
 
         <!-- Top Links
-        ============================================= -->
+                    ============================================= -->
 
 
-        <div class="top-links fright" >
+                    <div class="top-links fright" >
 
+                        <ul>
+                            <li>
+                              <a href="#" class="login-btn button button-3d button-green btn-block center" onclick="jQuery('.top-link-section').toggle();">Login to SalesLink</a>
+                                <div class="top-link-section">
+                                    <form id="top-login" role="form" name="login-form">
+                                        <div class="input-group" id="top-login-username">
+                                            <span class="input-group-addon"><i class="icon-user"></i></span>
+                                            <input type="email" class="form-control" placeholder="Username" required="">
+                                        </div>
+                                        <div class="input-group" id="top-login-password">
+                                            <span class="input-group-addon"><i class="icon-key"></i></span>
+                                            <input type="password" class="form-control" placeholder="Password" required="">
+                                        </div>
 
-          <ul>
+                                        <button class="btn btn-block" type="submit" style="background-color: #19a094; color:white;">Sign in</button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-            <li onclick="jQuery('.top-link-section').toggle();">
-              <a href="#" class="login-btn button button-3d button-green btn-block center">Login to SalesLink</a>
-              <div class="top-link-section">
-                <form id="top-login" role="form">
-                  <div class="input-group" id="top-login-username">
-                    <span class="input-group-addon"><i class="icon-user"></i></span>
-                    <input type="email" class="form-control" placeholder="Username" required="">
-                  </div>
-                  <div class="input-group" id="top-login-password">
-                    <span class="input-group-addon"><i class="icon-key"></i></span>
-                    <input type="password" class="form-control" placeholder="Password" required="">
-                  </div>
-
-                  <button class="btn btn-block" type="submit" style="background-color: #19a094; color:white;">Sign in</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- .top-links end -->
+                    <!-- .top-links end -->
 
       </div>
 
@@ -190,7 +188,7 @@
       </div>
 
       <div class="col_half notopmargin nobottommargin col_last">
-        <p class="breadcrumbs">Home / Life Insurance / Life Insurance 101</p>
+        <p class="breadcrumbs"><a href="/index.html">Home</a> / <a href="/life-insurance.html">Life Insurance</a> / <a href="/life-insurance/what-is-life-insurance.html">Life Insurance 101</a></p>
       </div>
 
     </div>
@@ -433,7 +431,10 @@
       <div class="container clearfix">
 
         <div class="col_half">
-          <p style="color:#5c666f; text-shadow: none">&copy; 2015 Fidelity & Guaranty Life</p>
+          <p style="color:#5c666f; text-shadow: none">&copy; 2015 Fidelity & Guaranty Life
+            <a href="/privacy-policy.html" class="leftpadding-sm">Privacy Policy</a>
+            <a href="/website-terms.html" class="leftpadding-sm">Website Terms</a>
+          </p>
         </div>
 
         <div class="col_half col_last tright">
