@@ -6731,7 +6731,7 @@ span.light-text {
 /* Contact Page
 -----------------------------------------------------------------*/
 section.contact-top-container {
-  background: url('images/slider/full/contact.jpg');
+  background: url('images/contact/contact.jpg');
   background-size: cover;
   position: relative;
 }

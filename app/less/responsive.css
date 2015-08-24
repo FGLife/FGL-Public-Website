@@ -1926,7 +1926,7 @@
     float: none !important;
   }
   .stock-quote-table.tabs.tabs-alt ul.tab-nav li {
-    border:#ddd solid 1px;
+    border: #ddd solid 1px;
     width: 100% !important;
     margin-left: 0px;
   }
@@ -2361,8 +2361,8 @@
     margin-left: 25px;
   }
   #copyrights a {
-	width: 100%;
-	display: block;
+    width: 100%;
+    display: block;
   }
 }
 /* ----------------------------------------------------------------
