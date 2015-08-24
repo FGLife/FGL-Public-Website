@@ -10,12 +10,16 @@ var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 var minifyHtml = require('gulp-minify-html');
 
+
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cssminify = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var less = require('gulp-less');
 //end thembuilder task references
+
+var notify = require('gulp-notify');
+var autoprefixer = require('gulp-autoprefixer');
 
 //begin themebuilder tasks
 //include plug-ins
@@ -275,4 +279,118 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
+});
+
+
+// Push to AWS
+
+//
+// Css-Fonts
+gulp.task('aws_fontstheme', function(){
+    var fSrc = 'app/css/fonts/**/*';
+    var fDst = 'aws/css/fonts';
+
+    gulp.src(fSrc)
+        .pipe(gulp.dest(fDst));
+});
+
+// Styles
+gulp.task('aws_styles', function() {
+    var fSrc = 'app/*.less';
+    var fDst = 'aws';
+
+  return less('fSrc', { style: 'expanded' })
+      .pipe(autoprefixer('last 2 versions'))
+      .pipe(gulp.dest('fDst'))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(cssminify())
+      .pipe(gulp.dest('fDst'))
+      .pipe(notify({ message: 'AWS styles task complete' }));
+});
+
+//or is it this? preprocess less, minify, and save as css
+gulp.task('aws_less', ['aws_less:responsive', 'aws_less:dark']);
+gulp.task('aws_less:responsive', function() {
+    var lsSrc = 'app/less/**/responsive.less',
+        lsDst = 'aws/css';
+
+    return gulp.src(lsSrc)
+        .pipe(less())
+        .pipe(cssminify({processImport:false}))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(lsDst));
+});
+gulp.task('aws_less:dark', function() {
+    var lsSrc = 'app/less/**/dark.less',
+        lsDst = 'aws/css';
+
+    return gulp.src(lsSrc)
+        .pipe(less())
+        .pipe(cssminify({processImport:false}))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(lsDst));
+});
+//commented out due to error
+/*gulp.task('less:shortcodes', function() {
+ var lsSrc = 'app/less/!**!/shortcodes.less',
+ lsDst = 'build/WebsiteTemplates/CanvasBase/App_Themes/CanvasBase/Styles/';
+
+ return gulp.src(lsSrc)
+ .pipe(less())
+ .pipe(cssminify({processImport:false}))
+ .pipe(gulp.dest(lsDst));
+ });*/
+
+// Images - works
+gulp.task('aws_images', function() {
+    var fSrc = 'app/images/**/*';
+    var fDst = 'aws/images';
+  return gulp.src(fSrc)
+      .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+      .pipe(gulp.dest(fDst))
+      .pipe(notify({ message: 'AWS images task complete' }));
+});
+
+// HTML - works
+gulp.task('aws_html',function(){
+    var htmlSrc = 'app/**/*.html';
+    var htmlDst = 'aws';
+
+    gulp.src(htmlSrc)
+        .pipe(minifyHtml())
+        .pipe(gulp.dest(htmlDst));
+});
+
+
+//Script - concatenate, rename, and uglify js files
+gulp.task('aws_scripts',function(){
+    var jsSrc = 'app/js/**/*.js';
+    var jsDst = 'aws/js';
+
+    gulp.src(jsSrc)
+        .pipe(concat('main.js'))
+        .pipe(rename({suffix: '.min'}))
+        //.pipe(uglify())
+        .pipe(gulp.dest(jsDst));
+});
+
+// Scripts - ?
+gulp.task('aws_js_scripts', function() {
+    var fSrc = 'app/js/**/*.js';
+    var fDst = 'aws/js';
+
+  return gulp.src(fSrc)
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'))
+      .pipe(concat('main.js'))
+      .pipe(gulp.dest(fDst))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(uglify())
+      .pipe(gulp.dest(fDst))
+      .pipe(notify({ message: 'AWS scripts task complete' }));
+});
+
+// Clean - works
+gulp.task('aws_clean', function(cb) {
+    del(['aws/*',], cb)
 });
