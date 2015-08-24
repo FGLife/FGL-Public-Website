@@ -1,8 +1,14 @@
 <?php
-	$database="sphider";
-	$mysql_user = "webmaster_fgl";
-	$mysql_password = "62391j#!j";
-	$mysql_host = "http://fgl-sphider-db.cugdpksf2yw1.us-east-1.rds.amazonaws.com:3306";
+	$database='sphider';
+	$mysql_user = 'webmaster_fgl';
+	$mysql_password = '62391j#!j';
+
+	//non-public:
+	// $mysql_host = 'fgl-sphider-db.cugdpksf2yw1.us-east-1.rds.amazonaws.com:3306';
+
+	//public:
+	$mysql_host = 'fgl-sphider.cugdpksf2yw1.us-east-1.rds.amazonaws.com:3306';
+
 	$mysql_table_prefix = "";
 
 
