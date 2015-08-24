@@ -6448,6 +6448,12 @@ td.actions {
   color: #5a6771;
   font-size: 14px;
 }
+.top-block.section p.breadcrumbs a{
+  color: #5a6771;
+}
+.top-block.section p.breadcrumbs a:hover{
+  color: #009999;
+}
 .key-features h3 {
   font-size: 25px;
   font-weight: 400;
