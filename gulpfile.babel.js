@@ -18,7 +18,7 @@ var rename = require('gulp-rename');
 var less = require('gulp-less');
 
 //var gulp = require('gulp');
-var php = require('gulp-connect-php');
+//var php = require('gulp-connect-php');
 //var browserSync = require('browser-sync');
 //end thembuilder task references
 
