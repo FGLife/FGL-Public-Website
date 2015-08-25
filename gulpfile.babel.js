@@ -16,6 +16,10 @@ var uglify = require('gulp-uglify');
 var cssminify = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var less = require('gulp-less');
+
+var gulp = require('gulp');
+var php = require('gulp-connect-php');
+var browserSync = require('browser-sync');
 //end thembuilder task references
 
 var notify = require('gulp-notify');
@@ -224,6 +228,30 @@ gulp.task('serve', ['styles', 'fonts'], () => {
       }
     }
   });
+
+//new php
+
+
+
+var reload  = browserSync.reload;
+
+gulp.task('php', function() {
+    php.server({ base: 'build', port: 8010, keepalive: true});
+});
+gulp.task('browser-sync',['php'], function() {
+    browserSync({
+        proxy: '127.0.0.1:8010',
+        port: 8080,
+        open: true,
+        notify: false
+    });
+});
+gulp.task('default', ['browser-sync'], function () {
+    gulp.watch(['build/*.php'], [reload]);
+});
+
+//
+
 
   gulp.watch([
     'app/*.html',

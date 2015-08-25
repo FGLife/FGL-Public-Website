@@ -15,7 +15,8 @@ $version_nr			= '1.3.5';
 $language			= 'en';
 
 // Template name/directory in templates dir
-$template	= 'standard';
+//$template	= 'standard';
+$template	= 'fgl';
 
 //Administrators email address (logs can be sent there)
 $admin_email		= 'admin@localhost';
