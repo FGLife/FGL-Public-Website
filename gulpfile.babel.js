@@ -17,11 +17,10 @@ var cssminify = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var less = require('gulp-less');
 
-//var gulp = require('gulp');
+//paul's additions
+var copy = require('gulp-copy');
 var php = require('gulp-connect-php');
-//var browserSync = require('browser-sync');
 //end thembuilder task references
-
 var notify = require('gulp-notify');
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -238,6 +237,7 @@ var reload  = browserSync.reload;
 gulp.task('php', function() {
     php.server({ base: 'build', port: 8010, keepalive: true});
 });
+
 gulp.task('browser-sync',['php'], function() {
     browserSync({
         proxy: '127.0.0.1:8010',
@@ -375,8 +375,7 @@ gulp.task('aws_images', function() {
     var fDst = 'aws/images';
   return gulp.src(fSrc)
       .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-      .pipe(gulp.dest(fDst))
-      .pipe(notify({ message: 'AWS images task complete' }));
+      .pipe(gulp.dest(fDst));
 });
 
 // HTML - works
@@ -385,7 +384,7 @@ gulp.task('aws_html',function(){
     var htmlDst = 'aws';
 
     gulp.src(htmlSrc)
-        .pipe(minifyHtml())
+    .pipe(minifyHtml())
         .pipe(gulp.dest(htmlDst));
 });
 
@@ -402,23 +401,22 @@ gulp.task('aws_scripts',function(){
         .pipe(gulp.dest(jsDst));
 });
 
-// Scripts - ?
-gulp.task('aws_js_scripts', function() {
-    var fSrc = 'app/js/**/*.js';
-    var fDst = 'aws/js';
+gulp.task('aws_copy',function(){
+    //php files
+    var fSrc = 'app/search/**/*';
+    var fDst = 'aws/search/';
+    return gulp.src(fSrc)
+        .pipe(gulp.dest(fDst));
 
-  return gulp.src(fSrc)
-      .pipe(jshint())
-      .pipe(jshint.reporter('default'))
-      .pipe(concat('main.js'))
-      .pipe(gulp.dest(fDst))
-      .pipe(rename({ suffix: '.min' }))
-      .pipe(uglify())
-      .pipe(gulp.dest(fDst))
-      .pipe(notify({ message: 'AWS scripts task complete' }));
 });
 
 // Clean - works
 gulp.task('aws_clean', function(cb) {
-    del(['aws/*',], cb)
+    del(['aws/*'], cb)
 });
+
+gulp.task('aws_prepare',['aws_images','aws_html','aws_copy'],function(){
+
+});
+
+
