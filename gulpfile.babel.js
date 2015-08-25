@@ -17,15 +17,15 @@ var cssminify = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var less = require('gulp-less');
 
-<<<<<<< HEAD
+
 //paul's additions
 var copy = require('gulp-copy');
 var php = require('gulp-connect-php');
-=======
+
 //var gulp = require('gulp');
 //var php = require('gulp-connect-php');
 //var browserSync = require('browser-sync');
->>>>>>> origin/groove_product_page
+
 //end thembuilder task references
 var notify = require('gulp-notify');
 var autoprefixer = require('gulp-autoprefixer');
