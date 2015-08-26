@@ -47,6 +47,7 @@
 [class^="icon-"], [class*=" icon-"],
 [class^="icon-line-"], [class*=" icon-line-"],
 [class^="icon-line2-"], [class*=" icon-line2-"],
+[class^="icon-fgl-"], [class*=" icon-fgl-"],
 .side-header #primary-menu ul > li.sub-menu > a:after {
 	display: inline-block;
 	font-family: 'font-icons';
@@ -3075,87 +3076,87 @@
 	content: "\e001";
 }
 
-.fgl-about-bod:before {
+.icon-fgl-about-bod:before {
 	content: "a";
 }
-.fgl-about-careers:before {
+.icon-fgl-about-careers:before {
 	content: "b";
 }
-.fgl-about-culture:before {
+.icon-fgl-about-culture:before {
 	content: "c";
 }
-.fgl-about-ratings:before {
+.icon-fgl-about-ratings:before {
 	content: "d";
 }
-.fgl-interested-customer:before {
+.icon-fgl-interested-customer:before {
 	content: "e";
 }
-.fgl-investor-contact-us:before {
+.icon-fgl-investor-contact-us:before {
 	content: "f";
 }
-.fgl-life-choice:before {
+.icon-fgl-life-choice:before {
 	content: "g";
 }
-.fgl-life-elite:before {
+.icon-fgl-life-elite:before {
 	content: "h";
 }
-.fgl-retirement-pro:before {
+.icon-fgl-retirement-pro:before {
 	content: "i";
 }
-.fgl-safe-income-plus:before {
+.icon-fgl-safe-income-plus:before {
 	content: "j";
 }
-.fgl-agent-change-status:before {
+.icon-fgl-agent-change-status:before {
 	content: "k";
 }
-.fgl-media-contact-us:before {
+.icon-fgl-media-contact-us:before {
 	content: "l";
 }
-.fgl-agent-contact-us:before {
+.icon-fgl-agent-contact-us:before {
 	content: "m";
 }
-.fgl-perf-pro:before {
+.icon-fgl-perf-pro:before {
 	content: "n";
 }
-.fgl-policyholder-contact-us:before {
+.icon-fgl-policyholder-contact-us:before {
 	content: "o";
 }
-.fgl-agent-contacted:before {
+.icon-fgl-agent-contacted:before {
 	content: "p";
 }
-.fgl-agent-imo:before {
+.icon-fgl-agent-imo:before {
 	content: "q";
 }
-.fgl-policyholder-faq:before {
+.icon-fgl-policyholder-faq:before {
 	content: "r";
 }
-.fgl-fgny-index-choice-10:before {
+.icon-fgl-fgny-index-choice-10:before {
 	content: "s";
 }
-.fgl-policyholder-manage-policies:before {
+.icon-fgl-policyholder-manage-policies:before {
 	content: "t";
 }
-.fgl-fgny-index-safety-7:before {
+.icon-fgl-fgny-index-safety-7:before {
 	content: "u";
 }
-.fgl-policyholder-reach-customer-service:before {
+.icon-fgl-policyholder-reach-customer-service:before {
 	content: "v";
 }
-.fgl-guarantee-platinum:before {
+.icon-fgl-guarantee-platinum:before {
 	content: "w";
 }
-.fgl-policyholder-request-agent-call:before {
+.icon-fgl-policyholder-request-agent-call:before {
 	content: "x";
 }
-.fgl-immediate-income:before {
+.icon-fgl-immediate-income:before {
 	content: "y";
 }
-.fgl-policyholder-submit-policies:before {
+.icon-fgl-policyholder-submit-policies:before {
 	content: "z";
 }
-.fgl-index-choice-10:before {
+.icon-fgl-index-choice-10:before {
 	content: "A";
 }
-.fgl-prosperity-elite:before {
+.icon-fgl-prosperity-elite:before {
 	content: "B";
 }
