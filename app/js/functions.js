@@ -1492,7 +1492,8 @@ var SEMICOLON = SEMICOLON || {};
 					}
 					if( !flexsDirection ) { flexsDirection = 'horizontal'; }
 					if( !flexsSlideshow ) { flexsSlideshow = true; } else { flexsSlideshow = false; }
-					if( !flexsPause ) { flexsPause = 5000; }
+					//fgl-pdt slowed flexPause from 5000 to 15000
+					if( !flexsPause ) { flexsPause = 15000; }
 					if( !flexsSpeed ) { flexsSpeed = 600; }
 					if( !flexsVideo ) { flexsVideo = false; }
 					if( flexsDirection == 'vertical' ) { flexsSheight = false; }
