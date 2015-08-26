@@ -23,13 +23,13 @@ $postid = isset( $_POST['portid'] ) ? $_POST['portid'] : '';
     ============================================= -->
     <div class="col_full portfolio-single-image">
         <div class="masonry-thumbs col-5 clearfix" data-big="3" data-lightbox="gallery">
-            <a href="images/portfolio/full/1.jpg" data-lightbox="gallery-item"><img class="image_fade" src="images/portfolio/3/1.jpg" alt="Gallery Thumb 1"></a>
-            <a href="images/portfolio/full/2.jpg" data-lightbox="gallery-item"><img class="image_fade" src="images/portfolio/3/2.jpg" alt="Gallery Thumb 2"></a>
-            <a href="images/portfolio/full/3.jpg" data-lightbox="gallery-item"><img class="image_fade" src="images/portfolio/3/3.jpg" alt="Gallery Thumb 3"></a>
-            <a href="images/portfolio/full/4.jpg" data-lightbox="gallery-item"><img class="image_fade" src="images/portfolio/3/4.jpg" alt="Gallery Thumb 4"></a>
-            <a href="images/portfolio/full/5.jpg" data-lightbox="gallery-item"><img class="image_fade" src="images/portfolio/3/5.jpg" alt="Gallery Thumb 5"></a>
-            <a href="images/portfolio/full/6.jpg" data-lightbox="gallery-item"><img class="image_fade" src="images/portfolio/3/6.jpg" alt="Gallery Thumb 6"></a>
-            <a href="images/portfolio/full/7.jpg" data-lightbox="gallery-item"><img class="image_fade" src="images/portfolio/3/7.jpg" alt="Gallery Thumb 7"></a>
+            <a href="/images/portfolio/full/1.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/images/portfolio/3/1.jpg" alt="Gallery Thumb 1"></a>
+            <a href="/images/portfolio/full/2.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/images/portfolio/3/2.jpg" alt="Gallery Thumb 2"></a>
+            <a href="/images/portfolio/full/3.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/images/portfolio/3/3.jpg" alt="Gallery Thumb 3"></a>
+            <a href="/images/portfolio/full/4.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/images/portfolio/3/4.jpg" alt="Gallery Thumb 4"></a>
+            <a href="/images/portfolio/full/5.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/images/portfolio/3/5.jpg" alt="Gallery Thumb 5"></a>
+            <a href="/images/portfolio/full/6.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/images/portfolio/3/6.jpg" alt="Gallery Thumb 6"></a>
+            <a href="/images/portfolio/full/7.jpg" data-lightbox="gallery-item"><img class="image_fade" src="/images/portfolio/3/7.jpg" alt="Gallery Thumb 7"></a>
         </div>
     </div><!-- .portfolio-single-image end -->
 
