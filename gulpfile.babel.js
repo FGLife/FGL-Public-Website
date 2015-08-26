@@ -329,21 +329,31 @@ gulp.task('aws_fontstheme', function(){
 });
 
 // Styles
-gulp.task('aws_styles', function() {
-    var fSrc = 'app/*.less';
-    var fDst = 'aws';
 
-  return less('fSrc', { style: 'expanded' })
-      .pipe(autoprefixer('last 2 versions'))
-      .pipe(gulp.dest('fDst'))
-      .pipe(rename({ suffix: '.min' }))
-      .pipe(cssminify())
-      .pipe(gulp.dest('fDst'))
-      .pipe(notify({ message: 'AWS styles task complete' }));
+gulp.task('aws_css_1', function() {
+    var cssSrc = 'app/style.css',
+        cssDst = 'aws';
+
+    return gulp.src(cssSrc)
+        .pipe(cssminify({processImport:false}))
+        //.pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(cssDst));
+
 });
 
-//or is it this? preprocess less, minify, and save as css
-gulp.task('aws_less', ['aws_less:responsive', 'aws_less:dark']);
+gulp.task('aws_css_2', function() {
+
+    var cssSrc = 'app/css/**/*.css',
+        cssDst = 'aws/css';
+
+    return gulp.src(cssSrc)
+        .pipe(cssminify({processImport:false}))
+        //.pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(cssDst));
+});
+
+
+//Preprocess less, minify, and save as css (warning - dark.less currently does link to dark.css in less files)
 gulp.task('aws_less:responsive', function() {
     var lsSrc = 'app/less/**/responsive.less',
         lsDst = 'aws/css';
@@ -351,7 +361,7 @@ gulp.task('aws_less:responsive', function() {
     return gulp.src(lsSrc)
         .pipe(less())
         .pipe(cssminify({processImport:false}))
-        .pipe(rename({suffix: '.min'}))
+        //.pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(lsDst));
 });
 gulp.task('aws_less:dark', function() {
@@ -361,19 +371,12 @@ gulp.task('aws_less:dark', function() {
     return gulp.src(lsSrc)
         .pipe(less())
         .pipe(cssminify({processImport:false}))
-        .pipe(rename({suffix: '.min'}))
+        //.pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(lsDst));
 });
-//commented out due to error
-/*gulp.task('less:shortcodes', function() {
- var lsSrc = 'app/less/!**!/shortcodes.less',
- lsDst = 'build/WebsiteTemplates/CanvasBase/App_Themes/CanvasBase/Styles/';
 
- return gulp.src(lsSrc)
- .pipe(less())
- .pipe(cssminify({processImport:false}))
- .pipe(gulp.dest(lsDst));
- });*/
+//Run all stying
+gulp.task('aws_less', ['aws_less:responsive', 'aws_less:dark']);
 
 // Images - works
 gulp.task('aws_images', function() {
@@ -402,11 +405,13 @@ gulp.task('aws_scripts',function(){
 
     gulp.src(jsSrc)
         .pipe(concat('main.js'))
-        .pipe(rename({suffix: '.min'}))
+        //.pipe(rename({suffix: '.min'}))
         //.pipe(uglify())
         .pipe(gulp.dest(jsDst));
 });
 
+
+//Copy and move php files
 gulp.task('aws_copy',function(){
     //php files
     var fSrc = 'app/search/**/*';
@@ -416,12 +421,22 @@ gulp.task('aws_copy',function(){
 
 });
 
+gulp.task('aws_copy_js',function(){
+    //php files
+    var fSrc = 'app/js/**/*.js';
+    var fDst = 'aws/js';
+    return gulp.src(fSrc)
+        .pipe(gulp.dest(fDst));
+
+});
+
+
 // Clean - works
 gulp.task('aws_clean', function(cb) {
     del(['aws/*'], cb)
 });
 
-gulp.task('aws_prepare',['aws_images','aws_html','aws_copy'],function(){
+gulp.task('aws_prepare',['aws_fontstheme','aws_css','aws_less','aws_images','aws_html','aws_html','aws_scripts', 'aws_copy','aws_copy_js'],function(){
 
 });
 
