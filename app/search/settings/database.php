@@ -7,12 +7,12 @@
 	// $mysql_host = 'fgl-sphider-db.cugdpksf2yw1.us-east-1.rds.amazonaws.com:3306';
 
 	//public:
-	//$mysql_host = 'fgl-sphider.cugdpksf2yw1.us-east-1.rds.amazonaws.com:3306';
+	$mysql_host = 'fgl-sphider.cugdpksf2yw1.us-east-1.rds.amazonaws.com:3306';
 
 	//for use with phpstorm: $mysql_host='localhost:3306';
 
 	//for use with mamp
-	$mysql_host='localhost:8889';
+	//$mysql_host='localhost:8889';
 
 	$mysql_table_prefix = "";
 

@@ -88,7 +88,7 @@ body.side-push-panel #side-panel.dark {
 }
 .dark .section,
 .section.dark {
-  background-color: #282828;
+  background-color: #EFEFEF;
   border-color: rgba(255, 255, 255, 0.1);
 }
 .dark #top-bar,
