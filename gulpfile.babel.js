@@ -436,7 +436,7 @@ gulp.task('aws_clean', function(cb) {
     del(['aws/*'], cb)
 });
 
-gulp.task('aws_prepare',['aws_fontstheme','aws_css','aws_less','aws_images','aws_html','aws_html','aws_scripts', 'aws_copy','aws_copy_js'],function(){
+gulp.task('aws_prepare',['aws_fontstheme','aws_css_1','aws_less','aws_images','aws_html','aws_html','aws_scripts', 'aws_copy','aws_copy_js'],function(){
 
 });
 
