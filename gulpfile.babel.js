@@ -19,7 +19,7 @@ var less = require('gulp-less');
 
 
 //paul's additions
-var copy = require('gulp-copy');
+//var copy = require('gulp-copy');
 var php = require('gulp-connect-php');
 
 //var gulp = require('gulp');
