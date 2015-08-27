@@ -7643,9 +7643,9 @@ body:not(.device-touch) .button.button-full strong {
 }
 .feature-box .fbox-icon i {
   font-style: normal;
-  font-size: 28px;
+  font-size: 40px;
   text-align: center;
-  line-height: 64px;
+  line-height: 55px;
 }
 .feature-box .fbox-icon.icon-fgl-form-instructions {
   width: 40px;
@@ -8220,8 +8220,8 @@ body:not(.device-touch) .button.button-full strong {
   margin: 0 auto 30px;
 }
 .feature-box.fbox-center .fbox-icon i {
-  font-size: 30px;
-  line-height: 80px;
+  font-size: 65px;
+  line-height: 1.3 !important;
 }
 .feature-box.fbox-center.fbox-outline .fbox-icon i {
   line-height: 50px;
