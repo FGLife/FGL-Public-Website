@@ -563,6 +563,20 @@
     height: 265px;
   }
 }
+
+@media (min-width: 767px) and (max-width: 1199px) {
+	#footer .btn-success {
+	    padding: 8px 1px;
+    }
+}
+
+@media only screen and (min-width: 479px) and (max-width: 991px) {
+  .annuities-large-table{
+	overflow: scroll;
+	display: block;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   #wrapper {
     width: 100%;

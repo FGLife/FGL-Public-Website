@@ -11809,6 +11809,25 @@ span.hs-form-required {
 .hs-error-msgs label {
   margin-bottom: 0px;
 }
+#footer .hs-input {
+    width: 53%;
+    display: inline-block;
+    float: left;
+    height: 34px;
+    border-radius: 2px !important;
+    background-color: seashell;
+    font-size: 12px;
+    font-family: 'proxima-nova', Arial, sans-serif;
+    font-weight: bold !important;
+}
+#footer .inputs-list {
+    float: left;
+    margin-top: 5px;
+}
+#footer .hbspt-form {
+    margin-top: -22px;
+}
+
 
 
 /* ----------------------------------------------------------------
@@ -12318,6 +12337,9 @@ button.toast-close-button {
 #footer .btn-success {
   font-size: 12px;
   padding: 8px 12px;
+  width: 37%;
+  margin-left: -2px;
+  height: 34px;
 }
 .footer-widgets-wrap .col_full,
 .footer-widgets-wrap .col_half,
