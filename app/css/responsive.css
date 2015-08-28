@@ -1788,10 +1788,6 @@
   h5 {
     margin: 10px 0 0 0;
   }
-  :before,
-  :after {
-    display: none;
-  }
   .testimonials-grid li {
     float: none;
     width: auto !important;
