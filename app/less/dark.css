@@ -1243,7 +1243,7 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
   color: #FFF;
 }
 .dark .widget h4 {
-  color: white !important;
+  color: #DDD;
 }
 .dark .widget p {
   opacity: 0.8;
@@ -1270,8 +1270,7 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 .dark .widget_categories li a,
 .dark .widget_pages li a,
 .dark .widget_rss li a {
-  color: white;
-  background-image: url("../images/icons/widget-link-dark.png") !important;
+  color: #FFF;
 }
 .dark .widget_nav_menu li a:hover,
 .dark .widget_links li a:hover,
@@ -1282,7 +1281,7 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 .dark .widget_categories li a:hover,
 .dark .widget_pages li a:hover,
 .dark .widget_rss li a:hover {
-  color: #ff5000;
+  color: #AAA;
 }
 .dark .nav-tree li a {
   color: #BBB;
