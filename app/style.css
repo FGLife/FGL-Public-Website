@@ -6987,11 +6987,11 @@ body:not(.device-touch) .button {
   font-weight: 300;
 }
 .button.button-xlarge {
-  padding: 0 32px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  height: 52px;
-  line-height: 52px;
+  padding: 0 120px 0 25px;
+  font-size: 24px;
+  height: 55px;
+  line-height: 55px;
+  font-weight: 400;
 }
 .button.button-desc {
   text-align: left;
