@@ -2371,6 +2371,16 @@
     width: 100%;
     display: block;
   }
+  form.hs-form .form-columns-2 .hs-form-field .hs-input, form.hs-form .form-columns-3 .hs-form-field .hs-input {
+    width: 100% !important;
+    margin-right: 0px;
+  }
+  .hs-form fieldset.form-columns-2 .input {
+    margin-right: 0px !important;
+  }
+  .hbspt-form input.hs-button {
+    font-size: 14px;
+  }
 }
 /* ----------------------------------------------------------------
     Retina CSS
