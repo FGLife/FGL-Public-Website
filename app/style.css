@@ -6734,12 +6734,12 @@ section.contact-top-container {
   background-size: cover;
   position: relative;
 }
-section.contact-top-container .contact-top-container .heading-block h1 {
+section.contact-top-container .heading-block h1 {
   font-size: 38px;
   text-transform: none;
   font-weight: 500;
 }
-section.contact-top-container .contact-top-container .search-bar {
+section.contact-top-container .search-bar {
   max-width: 570px;
   padding-left: 25px;
   padding-right: 25px;
@@ -6796,21 +6796,6 @@ section.contact-top-container form.contact-page-form button#submit-button {
   width: 100%;
   font-weight: 500;
   font-size: 18px;
-}
-section.contact-top-container section.contact-top-container-agent {
-  background: url('images/contact/agent_search.jpg');
-  background-size: cover;
-  position: relative;
-}
-section.contact-top-container section.contact-top-container-agent .contact-top-container-agent .heading-block h1 {
-  font-size: 38px;
-  text-transform: none;
-  font-weight: 500;
-}
-section.contact-top-container section.contact-top-container-agent .contact-top-container-agent .search-bar {
-  max-width: 570px;
-  padding-left: 25px;
-  padding-right: 25px;
 }
 /*-----------------------------------------------------------------------------------
     shortcodes.less
@@ -11754,6 +11739,10 @@ form .col_five_sixth {
 /* ----------------------------------------------------------------
     HUBSPOT Forms
 -----------------------------------------------------------------*/
+.hbspt-form {
+    max-width: 540px;
+    margin: 0 auto;
+}
 .hbspt-form fieldset {
   margin-bottom: 0px;
 }
@@ -11833,6 +11822,26 @@ span.hs-form-required {
 }
 #footer .hbspt-form {
   margin-top: -22px;
+}
+.hs-form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100% !important;
+  max-width: none !important;
+}
+.hs-form fieldset.form-columns-1 .hs-input {
+  width: 100% !important;
+}
+.hs-form fieldset.form-columns-1 .input {
+  margin-right: 0px !important;
+  margin-right: 0px;
+}
+.hs-form fieldset.form-columns-2 .hs_lastname .input {
+  margin-right: 0px;
+}
+.hs-form fieldset.form-columns-2 .hs_phone .input {
+  margin-right: 0px;
 }
 /* ----------------------------------------------------------------
     Contact Form
