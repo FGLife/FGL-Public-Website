@@ -115,7 +115,7 @@ li {
 body {
   line-height: 1.5;
   color: #5c666f;
-  font-size: 16px;
+  font-size: 15px;
   font-family: "proxima-nova", Arial, sans-serif;
 }
 a {
@@ -175,7 +175,7 @@ h4 {
   font-size: 18px;
 }
 h5 {
-  font-size: 16px;
+  font-size: 15px;
 }
 h6 {
   font-size: 12px;
@@ -6449,7 +6449,7 @@ td.actions {
   color: #5a6771;
 }
 .top-block.section p.breadcrumbs a:hover {
-  color: #009999;
+  color: #009f93;
 }
 .key-features h3 {
   font-size: 25px;
@@ -6520,7 +6520,7 @@ td.actions {
   line-height: 1.5 !important;
 }
 p.caption {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5 !important;
   float: left;
 }
@@ -12362,13 +12362,13 @@ button.toast-close-button {
 #copyrights {
   padding: 20px 0 0px 0px;
   background-color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.8;
 }
 #copyrights i.footer-icon {
   position: relative;
   top: 1px;
-  font-size: 16px;
+  font-size: 15px;
   width: 14px;
   text-align: center;
   margin-right: 3px;
@@ -12407,7 +12407,7 @@ button.toast-close-button {
   margin-bottom: 10px;
 }
 .copyrights-menu a {
-  font-size: 16px;
+  font-size: 15px;
   margin: 0 10px;
   border-bottom: 0 !important;
 }
@@ -12564,7 +12564,7 @@ body:not(.device-touch) .tagcloud a {
   background: url("images/icons/checkmark.png") left top no-repeat;
   border: none !important;
   color: #5a6771;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4;
   width: 100%;
 }
