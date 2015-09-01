@@ -118,7 +118,6 @@ hr.col_half {
 /* Take Action Section
 -----------------------------------------------------------------*/
 .take-action-content p {
-  font-size: 15px !important;
   margin-bottom: 15px;
   color: #5a6771;
 }
@@ -126,21 +125,18 @@ hr.col_half {
   margin-bottom: 0px !important;
 }
 .take-action-content .col_full p {
-  font-size: 15px !important;
   margin-bottom: 0px;
   color: #5a6771;
 }
 .take-action-content li {
   width: 100%;
-  font-size: 15px !important;
   line-height: 1.4;
   background: none !important;
   padding: 0 !important;
   color: #5a6771 !important;
 }
-.take-action-content h4 {
+.take-action-content h5 {
   color: #5a6771;
-  font-size: 15px;
 }
 .take-action-content li:before {
   content: "•";
