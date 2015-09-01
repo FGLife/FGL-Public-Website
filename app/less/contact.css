@@ -10,12 +10,12 @@ section.contact-top-container {
   background-size: cover;
   position: relative;
 }
-section.contact-top-container .contact-top-container .heading-block h1 {
+section.contact-top-container .heading-block h1 {
   font-size: 38px;
   text-transform: none;
   font-weight: 500;
 }
-section.contact-top-container .contact-top-container .search-bar {
+section.contact-top-container .search-bar {
   max-width: 570px;
   padding-left: 25px;
   padding-right: 25px;
@@ -72,6 +72,4 @@ section.contact-top-container form.contact-page-form button#submit-button {
   width: 100%;
   font-weight: 500;
   font-size: 18px;
-}
-
 }
