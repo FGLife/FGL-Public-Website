@@ -1897,6 +1897,9 @@
   .top-block.section h1.page-title {
     width: 100%;
   }
+  .top-block.section h2.page-title {
+    width: 100%;
+  }
   /* Contact Page
 	-----------------------------------------------------------------*/
   .contact-page .tabs.tabs-bb ul.tab-nav li {

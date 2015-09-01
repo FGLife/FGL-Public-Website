@@ -227,6 +227,14 @@ small {
 sup {
   top: -0.3em;
 }
+h1.header-alt {
+    font-weight: 400;
+    color: #009f93;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+    font-family: "proxima-nova", Arial, sans-serif;
+    font-size: 24px;
+}
 h3.blue-heading {
   font-size: 25px !important;
   font-weight: 400;
@@ -6431,13 +6439,6 @@ td.actions {
 .top-block.section {
   padding: 29px 0;
 }
-.top-block.section h1.page-title {
-  float: left;
-  color: #5a6771;
-  font-size: 28px;
-  font-weight: 400;
-  margin-bottom: 0px;
-}
 .top-block.section p.breadcrumbs {
   margin-bottom: 0px;
   float: right;
@@ -6450,6 +6451,14 @@ td.actions {
 }
 .top-block.section p.breadcrumbs a:hover {
   color: #009f93;
+}
+.top-block.section h1.page-title,
+.top-block.section h2.page-title {
+  float: left;
+  color: #5a6771;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 0px;
 }
 .key-features h3 {
   font-size: 25px;
