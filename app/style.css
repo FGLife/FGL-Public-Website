@@ -6797,6 +6797,24 @@ section.contact-top-container form.contact-page-form button#submit-button {
   font-weight: 500;
   font-size: 18px;
 }
+<<<<<<< HEAD
+=======
+section.contact-top-container section.contact-top-container-agent {
+  background: url('images/contact/contact.jpg');
+  background-size: cover;
+  position: relative;
+}
+section.contact-top-container section.contact-top-container-agent .contact-top-container-agent .heading-block h1 {
+  font-size: 38px;
+  text-transform: none;
+  font-weight: 500;
+}
+section.contact-top-container section.contact-top-container-agent .contact-top-container-agent .search-bar {
+  max-width: 570px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+>>>>>>> 289e5d941c5405728e163adfbd0e11c81a638c36
 /*-----------------------------------------------------------------------------------
     shortcodes.less
 -----------------------------------------------------------------------------------*/
