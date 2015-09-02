@@ -11754,6 +11754,10 @@ form .col_five_sixth {
 /* ----------------------------------------------------------------
     HUBSPOT Forms
 -----------------------------------------------------------------*/
+.hbspt-form {
+    max-width: 540px;
+    margin: 0 auto;
+}
 .hbspt-form fieldset {
   margin-bottom: 0px;
 }
@@ -11833,6 +11837,26 @@ span.hs-form-required {
 }
 #footer .hbspt-form {
   margin-top: -22px;
+}
+.hs-form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100% !important;
+  max-width: none !important;
+}
+.hs-form fieldset.form-columns-1 .hs-input {
+  width: 100% !important;
+}
+.hs-form fieldset.form-columns-1 .input {
+  margin-right: 0px !important;
+  margin-right: 0px;
+}
+.hs-form fieldset.form-columns-2 .hs_lastname .input {
+  margin-right: 0px;
+}
+.hs-form fieldset.form-columns-2 .hs_phone .input {
+  margin-right: 0px;
 }
 /* ----------------------------------------------------------------
     Contact Form
