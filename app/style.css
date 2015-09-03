@@ -8128,7 +8128,7 @@ body:not(.device-touch) .button.button-full strong {
 }
 .feature-box.fbox-border .fbox-icon i.icon-fgl-form-instructions {
   font-size: 18px;
-  line-height: 38px !important;
+  line-height: 31px !important;
 }
 .feature-box.fbox-border.fbox-large .fbox-icon i {
   line-height: 94px !important;
