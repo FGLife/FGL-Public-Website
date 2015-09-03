@@ -1217,7 +1217,7 @@ body.stretched #header.full-header .container {
   padding: 0 25px;
   color: #001a71;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: "proxima-nova", Arial, sans-serif;
@@ -7359,7 +7359,8 @@ body:not(.device-touch) .button.button-full strong {
 }
 .button-3d.button-gray:hover,
 .button-reveal.button-gray:hover {
-  background-color: #444C53 !important;
+  color: #FFFFFF;
+  background-color: #4A4E52 !important;
 }
 .button-dirtygreen {
   background-color: #1693A5;
@@ -7380,6 +7381,7 @@ body:not(.device-touch) .button.button-full strong {
 }
 .button-3d.button-orange:hover,
 .button-reveal.button-orange:hover {
+  color: #FFFFFF;
   background-color: #f4611e !important;
 }
 .button-black {
