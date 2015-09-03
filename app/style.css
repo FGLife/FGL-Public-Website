@@ -11754,6 +11754,10 @@ form .col_five_sixth {
 /* ----------------------------------------------------------------
     HUBSPOT Forms
 -----------------------------------------------------------------*/
+.hbspt-form {
+  max-width: 540px;
+  margin: 0 auto;
+}
 .hbspt-form fieldset {
   margin-bottom: 0px;
 }
