@@ -249,16 +249,16 @@
 			      <tr>
 			         <td data-th="Company">Fidelity &amp; Guaranty Life Insurance Company</td>
 			         <td data-th="Standard & Poor's">
-			            <div><span><a href="#s-and-p">BBB-</a></span></a> </div>
+			            <div><span><a href="#" onclick="$('#standard').click();return false;">BBB-</a></span></a> </div>
 			         </td>
 			         <td data-th="A.M. Best">
-			            <div><span><a href="#">B++</a></span> </div>
+			            <div><span><a href="#" onclick="$('#am-best').click();return false;">B++</a></span> </div>
 			         </td>
 			         <td data-th="Moody's">
-			            <div><span><a href="#">Baa3</a></span> </div>
+			            <div><span><a href="#" onclick="$('#moody').click();return false;">Baa3</a></span> </div>
 			         </td>
 			         <td data-th="Fitch">
-			            <div><span><a href="#">BBB </a></span><a href="#"></a></div>
+			            <div><span><a href="#" onclick="$('#fitch').click();return false;">BBB</a></span></div>
 			         </td>
 			      </tr>
 			      <tr>
@@ -266,16 +266,16 @@
 			            New York
 			         </td>
 			         <td data-th="Standard & Poor's">
-			            <div><span><a href="#">BBB-</a></span><a href="#"></a> </div>
+			            <div><span><a href="#" onclick="$('#standard').click();return false;">BBB-</a></span><a href="#"></a> </div>
 			         </td>
 			         <td data-th="A.M. Best">
-			            <div><span><a href="#">B++</a></span> </div>
+			            <div><span><a href="#" onclick="$('#am-best').click();return false;">B++</a></span> </div>
 			         </td>
 			         <td data-th="Moody's">
-			            <div><span><a href="#">Baa3</a></span> </div>
+			            <div><span><a href="#" onclick="$('#moody').click();return false;">Baa3</a></span> </div>
 			         </td>
 			         <td data-th="Fitch">
-			            <div><span><a href="#">BBB </a></span><a href="#"></a></div>
+			            <div><span><a href="#" onclick="$('#fitch').click();return false;">BBB </a></span><a href="#"></a></div>
 			         </td>
 			      </tr>
 			   </tbody>
@@ -286,8 +286,8 @@
 
               <h4 class="nobottommargin"><strong>Rating Agency Details</strong></h4>
 
-              <div class="toggle" id="#s-and-p">
-                <div class="togglet" ><i class="toggle-closed icon-line-circle-plus"></i><i
+              <div class="toggle">
+                <div class="togglet" id="am-best"><i class="toggle-closed icon-line-circle-plus"></i><i
                   class="toggle-open icon-line-circle-minus"></i>A.M. Best
                 </div>
                 <div class="togglec clearfix fgl-bullet">
@@ -345,8 +345,8 @@
 
               <div class="dashed-separator"></div>
 
-              <div class="toggle" id="#moodys">
-                <div class="togglet"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Moody's Insurance Financial</div>
+              <div class="toggle">
+                <div class="togglet" id="moody"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Moody's Insurance Financial</div>
                 <div class="togglec clearfix fgl-bullet">
                   <p>Moody's applies numerical modifiers 1, 2, and 3 in each rating classification: the modifier 1 indicates that the security ranks in the higher end of its generic rating category; the modifier 2 indicates a mid-range ranking and the modifier 3 indicates that the issue ranks in the lower end of its generic rating category.</p>
                   <h4>Aaa</h4>
@@ -382,8 +382,8 @@
 
               <div class="dashed-separator"></div>
 
-              <div class="toggle" id="#fitch">
-                <div class="togglet"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Fitch</div>
+              <div class="toggle">
+                <div class="togglet" id="fitch"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Fitch</div>
                 <div class="togglec clearfix fgl-bullet">
                   <h4>AAA</h4>
                   <p>Highest claims paying ability. Risk factors are negligible.</p>
@@ -416,8 +416,8 @@
               <div class="dashed-separator"></div>
 
               <div class="toggle">
-                <div class="togglet"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Standard &amp; Poor's</div>
-                <div class="togglec clearfix fgl-bullet">
+                <div class="togglet" id="standard"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Standard &amp; Poor's</div>
+                <div class="togglec clearfix fgl-bullet" >
                   <h4>AAA</h4>
                   <p>Extremely strong capacity to meet financial commitments. Highest Rating.</p>
                   <h4>AA</h4>
