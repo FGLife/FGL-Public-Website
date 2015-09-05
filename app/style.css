@@ -1021,6 +1021,12 @@ body.stretched .container-fullwidth {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.form-control,
+.st-default-search-input {
+  background-image: none !important;
+  width: 100% !important;
+  line-height: inherit !important;
+}
 /*-----------------------------------------------------------------------------------
 
 	header.less
