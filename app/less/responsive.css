@@ -2397,7 +2397,7 @@
     display: none;
   }
   #logo a.retina-logo {
-    display: block;
+    display: inline-block;
   }
   .owl-carousel.owl-loading,
   .preloader,
