@@ -6755,6 +6755,10 @@ section.contact-top-container {
   background-size: cover;
   position: relative;
 }
+section.contact-top-container.policyholder  {
+  background: url('images/contact/contact.jpg');
+  background-size: cover;
+}
 section.contact-top-container .heading-block h1 {
   font-size: 38px;
   text-transform: none;
