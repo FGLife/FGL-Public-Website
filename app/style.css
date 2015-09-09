@@ -12873,7 +12873,7 @@ body:not(.device-touch) .tagcloud a {
 }
 .life-insurance-page.annuities-page .annuities-large-table.table > tbody > tr > td,
 .annuities-page .annuities-large-table.table > thead > tr > th {
-  vertical-align: middle;
+  vertical-align: bottom;
   padding: 5px 10px 5px 10px;
   max-width: 138px;
   border: 1px solid #b1b1b1;
