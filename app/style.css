@@ -7693,6 +7693,7 @@ body:not(.device-touch) .button.button-full strong {
 .feature-box .fbox-icon.icon-fgl-form-instructions {
   width: 40px;
   height: 40px;
+  line-height: 0 !important;
 }
 .feature-box h3 {
   font-size: 16px;
@@ -8159,9 +8160,9 @@ body:not(.device-touch) .button.button-full strong {
 .feature-box.fbox-border .fbox-icon i {
   line-height: 62px !important;
 }
-.feature-box.fbox-border .fbox-icon i.icon-fgl-form-instructions {
+.feature-box.fbox-border .fbox-icon i .icon-fgl-form-instructions {
   font-size: 18px;
-  line-height: 31px !important;
+  line-height: 0 !important;
 }
 .feature-box.fbox-border.fbox-large .fbox-icon i {
   line-height: 94px !important;
