@@ -122,3 +122,33 @@
 .fgl-prosperity-elite:before {
   content: "B";
 }
+.fgl-eight:before {
+  content: "C";
+}
+.fgl-nine:before {
+  content: "D";
+}
+.fgl-one:before {
+  content: "E";
+}
+.fgl-five:before {
+  content: "F";
+}
+.fgl-four:before {
+  content: "G";
+}
+.fgl-two:before {
+  content: "H";
+}
+.fgl-three:before {
+  content: "I";
+}
+.fgl-ten:before {
+  content: "J";
+}
+.fgl-seven:before {
+  content: "K";
+}
+.fgl-six:before {
+  content: "L";
+}
