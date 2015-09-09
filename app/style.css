@@ -3322,8 +3322,8 @@ html[xmlns] .slider-wrap {
 -----------------------------------------------------------------*/
 #page-title {
   position: relative;
-  padding: 50px 0;
-  background-color: #f5f5f5;
+  padding: 30px 0;
+  background-color: #efefef;
   border-bottom: 1px solid #EEE;
 }
 #page-title .container {
@@ -3332,12 +3332,18 @@ html[xmlns] .slider-wrap {
 #page-title h1 {
   padding: 0;
   margin: 0;
-  line-height: 1;
+  /*line-height: 1;*/
   font-weight: 600;
-  letter-spacing: 1px;
-  color: #333;
-  font-size: 28px;
+  /*letter-spacing: 1px;*/
+  /*color: #333;*/
+  /* letter-spacing: 1px; */
+  /*color: #333;*/
+  /*font-size: 28px;*/
   text-transform: uppercase;
+  color: #5a6771;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 0px;
 }
 #page-title span {
   display: block;
@@ -3355,7 +3361,8 @@ html[xmlns] .slider-wrap {
   margin: -10px 0 0 0 !important;
   background-color: transparent !important;
   padding: 0 !important;
-  font-size: 12px;
+  /*font-size: 12px;*/
+  font-size: 14px;
 }
 body.stretched .container-fullwidth .breadcrumb {
   right: 60px !important;
@@ -3364,7 +3371,7 @@ body.stretched .container-fullwidth .breadcrumb {
   margin-top: 35px !important;
 }
 .breadcrumb a {
-  color: #555;
+  color: #5a6771;
 }
 .breadcrumb a:hover {
   color: #009f93;
