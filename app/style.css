@@ -6778,7 +6778,7 @@ section.contact-top-container {
   background-size: cover;
   position: relative;
 }
-section.contact-top-container .policyholder {
+section.contact-top-container.policyholder {
   background: url('images/contact/contact.jpg');
   background-size: cover;
 }
