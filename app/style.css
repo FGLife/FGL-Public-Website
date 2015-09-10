@@ -1115,7 +1115,7 @@ body.stretched #header.full-header .container {
   color: #000;
 }
 #logo img {
-  display: block;
+  display: inline-block;
   max-width: 100%;
 }
 #logo a.standard-logo {
