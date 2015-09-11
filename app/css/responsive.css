@@ -618,10 +618,6 @@
   /* ----------------------------------------------------------------
     	Header
 	-----------------------------------------------------------------*/
-  #top-bar {
-    margin-bottom: 100px;
-    z-index: 200;
-  }
   #header,
   #header-wrap,
   #header.sticky-style-2,
@@ -629,13 +625,6 @@
   #header.sticky-style-2 #header-wrap,
   #header.sticky-style-3 #header-wrap {
     height: auto !important;
-    position: fixed;
-    z-index: 199;
-    top: 45px;
-    width: 100%;
-    background-color: #FFF;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    -webkit-backface-visibility: hidden;
   }
   #header.sticky-style-2 #header-wrap,
   #header.sticky-style-3 #header-wrap {
