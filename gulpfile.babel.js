@@ -412,17 +412,15 @@ gulp.task('aws_images_move', function() {
     .pipe(gulp.dest(fDst));
 });
 
-
-// Zip file for upload
-gulp.task('aws_zip', function () {
-
-  var Src = 'aws/**/*',
-    Dst = 'aws/';
-
-  return gulp.src(Src)
-    .pipe(zip('aws_archive.zip'))
-    .pipe(gulp.dest(Dst));
+// Move favicons
+gulp.task('aws_favicons_move', function() {
+  var fSrc = 'app/favicons/**/*';
+  var fDst = 'aws/favicons';
+  return gulp.src(fSrc)
+    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(gulp.dest(fDst));
 });
+
 
 // Clean AWS file
 gulp.task('aws_clean', function(cb) {
@@ -434,10 +432,22 @@ gulp.task('aws_htaccess_clean', function(cb) {
   del(['aws/.htaccess'], cb)
 });
 
+//Clean directory
+gulp.task('aws_clean_all', ['aws_clean', 'aws_htaccess_clean']);
+
 //Run all prep
-gulp.task('aws_prepare', ['aws_clean', 'aws_htaccess_clean', 'aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_style-import_move', 'aws_htaccess','aws_js_move', 'aws_html_move', 'aws_images_move', 'aws_zip']);
+gulp.task('aws_prepare', ['aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_style-import_move', 'aws_htaccess', 'aws_js_move', 'aws_html_move', 'aws_images_move', 'aws_favicons_move']);
 
 
+// Zip file for upload
+gulp.task('aws_zip', function () {
 
+  var Src = 'aws/**/*',
+    Dst = 'aws/';
+
+  return gulp.src(Src)
+    .pipe(zip('aws_archive.zip'))
+    .pipe(gulp.dest(Dst));
+});
 
 
