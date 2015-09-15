@@ -16,6 +16,7 @@ var uglify = require('gulp-uglify');
 var cssminify = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var less = require('gulp-less');
+var zip = require('gulp-zip');
 
 
 //paul's additions
@@ -402,55 +403,41 @@ gulp.task('aws_html_move', function() {
     .pipe(gulp.dest(cssDst));
 });
 
+// Move images
+gulp.task('aws_images_move', function() {
+  var fSrc = 'app/images/**/*';
+  var fDst = 'aws/images';
+  return gulp.src(fSrc)
+    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(gulp.dest(fDst));
+});
+
+
+// Zip file for upload
+gulp.task('aws_zip', function () {
+
+  var Src = 'aws/**/*',
+    Dst = 'aws/';
+
+  return gulp.src(Src)
+    .pipe(zip('aws_archive.zip'))
+    .pipe(gulp.dest(Dst));
+});
+
 // Clean AWS file
 gulp.task('aws_clean', function(cb) {
-  del(['aws/*.*'], cb)
+  del(['aws/*'], cb)
+});
+
+// Clean .htaccess file
+gulp.task('aws_htaccess_clean', function(cb) {
+  del(['aws/.htaccess'], cb)
 });
 
 //Run all prep
-gulp.task('aws_prepare', ['aws_clean', 'aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_style-import_move', 'aws_htaccess','aws_js_move', 'aws_html_move']);
+gulp.task('aws_prepare', ['aws_clean', 'aws_htaccess_clean', 'aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_style-import_move', 'aws_htaccess','aws_js_move', 'aws_html_move', 'aws_images_move', 'aws_zip']);
 
 
 
-/*//Preprocess less, minify, and save as css (warning - dark.less currently does link to dark.css in less files)
-gulp.task('aws_less:responsive', function() {
-    var lsSrc = 'app/less/!**!/responsive.less',
-        lsDst = 'aws/css';
-
-    return gulp.src(lsSrc)
-        .pipe(less())
-        .pipe(cssminify({processImport:false}))
-        //.pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(lsDst));
-});
-gulp.task('aws_less:dark', function() {
-    var lsSrc = 'app/less/!**!/dark.less',
-        lsDst = 'aws/css';
-
-    return gulp.src(lsSrc)
-        .pipe(less())
-        .pipe(cssminify({processImport:false}))
-        //.pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(lsDst));
-});
-
-//Run all stying
-gulp.task('aws_less', ['aws_less:responsive', 'aws_less:dark']);
-
-// Images - works
-gulp.task('aws_images', function() {
-    var fSrc = 'app/images/!**!/!*';
-    var fDst = 'aws/images';
-  return gulp.src(fSrc)
-      .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-      .pipe(gulp.dest(fDst));
-});*/
-
-
-/*
-gulp.task('aws_prepare',['aws_fontstheme','aws_css_1','aws_less','aws_images','aws_html','aws_html','aws_scripts', 'aws_copy','aws_copy_js'],function(){
-
-});
-*/
 
 
