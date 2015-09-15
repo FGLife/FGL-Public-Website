@@ -315,12 +315,17 @@ gulp.task('default', ['clean'], () => {
   gulp.start('build');
 });
 
-
-// Push to AWS
-
+///////////////////////////////////////
 //
-// Css-Fonts
-gulp.task('aws_fontstheme', function(){
+//
+// Bundle for AWS
+//
+//
+///////////////////////////////////////
+
+
+// Move webfonts
+gulp.task('aws_webfonts_move', function(){
     var fSrc = 'app/css/fonts/**/*';
     var fDst = 'aws/css/fonts';
 
@@ -328,9 +333,9 @@ gulp.task('aws_fontstheme', function(){
         .pipe(gulp.dest(fDst));
 });
 
-// Styles
+// Minify and move main style.css
 
-gulp.task('aws_css_1', function() {
+gulp.task('aws_css_minify_move', function() {
     var cssSrc = 'app/style.css',
         cssDst = 'aws';
 
@@ -341,7 +346,9 @@ gulp.task('aws_css_1', function() {
 
 });
 
-gulp.task('aws_css_2', function() {
+
+// Move other supporting vendor style.css
+gulp.task('aws_css_move', function() {
 
     var cssSrc = 'app/css/**/*.css',
         cssDst = 'aws/css';
@@ -352,10 +359,62 @@ gulp.task('aws_css_2', function() {
         .pipe(gulp.dest(cssDst));
 });
 
+// Move style-import.css
+gulp.task('aws_style-import_move', function() {
 
-//Preprocess less, minify, and save as css (warning - dark.less currently does link to dark.css in less files)
+  var cssSrc = 'app/style-import.css',
+    cssDst = 'aws/';
+
+  return gulp.src(cssSrc)
+    .pipe(cssminify({processImport:false}))
+    //.pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(cssDst));
+});
+
+// Move htaccess
+gulp.task('aws_htaccess', function() {
+
+  var cssSrc = 'app/.htaccess',
+    cssDst = 'aws/';
+
+  return gulp.src(cssSrc)
+    .pipe(gulp.dest(cssDst));
+});
+
+
+// Move js
+gulp.task('aws_js_move',function(){
+  //php files
+  var fSrc = 'app/js/**/*.js';
+  var fDst = 'aws/js';
+  return gulp.src(fSrc)
+    .pipe(gulp.dest(fDst));
+
+});
+
+// Move html
+gulp.task('aws_html_move', function() {
+
+  var cssSrc = 'app/**/*.html',
+    cssDst = 'aws/';
+
+  return gulp.src(cssSrc)
+    .pipe(gulp.dest(cssDst));
+});
+
+// Clean AWS file
+gulp.task('aws_clean', function(cb) {
+  del(['aws/*.*'], cb)
+});
+
+//Run all prep
+gulp.task('aws_prepare', ['aws_clean', 'aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_style-import_move', 'aws_htaccess','aws_js_move', 'aws_html_move']);
+
+
+
+/*//Preprocess less, minify, and save as css (warning - dark.less currently does link to dark.css in less files)
 gulp.task('aws_less:responsive', function() {
-    var lsSrc = 'app/less/**/responsive.less',
+    var lsSrc = 'app/less/!**!/responsive.less',
         lsDst = 'aws/css';
 
     return gulp.src(lsSrc)
@@ -365,7 +424,7 @@ gulp.task('aws_less:responsive', function() {
         .pipe(gulp.dest(lsDst));
 });
 gulp.task('aws_less:dark', function() {
-    var lsSrc = 'app/less/**/dark.less',
+    var lsSrc = 'app/less/!**!/dark.less',
         lsDst = 'aws/css';
 
     return gulp.src(lsSrc)
@@ -380,64 +439,18 @@ gulp.task('aws_less', ['aws_less:responsive', 'aws_less:dark']);
 
 // Images - works
 gulp.task('aws_images', function() {
-    var fSrc = 'app/images/**/*';
+    var fSrc = 'app/images/!**!/!*';
     var fDst = 'aws/images';
   return gulp.src(fSrc)
       .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
       .pipe(gulp.dest(fDst));
-});
-
-// HTML - works
-gulp.task('aws_html',function(){
-    var htmlSrc = 'app/**/*.html';
-    var htmlDst = 'aws';
-
-    gulp.src(htmlSrc)
-    .pipe(minifyHtml())
-        .pipe(gulp.dest(htmlDst));
-});
+});*/
 
 
-//Script - concatenate, rename, and uglify js files
-gulp.task('aws_scripts',function(){
-    var jsSrc = 'app/js/**/*.js';
-    var jsDst = 'aws/js';
-
-    gulp.src(jsSrc)
-        .pipe(concat('main.js'))
-        //.pipe(rename({suffix: '.min'}))
-        //.pipe(uglify())
-        .pipe(gulp.dest(jsDst));
-});
-
-
-//Copy and move php files
-gulp.task('aws_copy',function(){
-    //php files
-    var fSrc = 'app/search/**/*';
-    var fDst = 'aws/search/';
-    return gulp.src(fSrc)
-        .pipe(gulp.dest(fDst));
-
-});
-
-gulp.task('aws_copy_js',function(){
-    //php files
-    var fSrc = 'app/js/**/*.js';
-    var fDst = 'aws/js';
-    return gulp.src(fSrc)
-        .pipe(gulp.dest(fDst));
-
-});
-
-
-// Clean - works
-gulp.task('aws_clean', function(cb) {
-    del(['aws/*'], cb)
-});
-
+/*
 gulp.task('aws_prepare',['aws_fontstheme','aws_css_1','aws_less','aws_images','aws_html','aws_html','aws_scripts', 'aws_copy','aws_copy_js'],function(){
 
 });
+*/
 
 
