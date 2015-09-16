@@ -17,6 +17,7 @@ var cssminify = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var less = require('gulp-less');
 var zip = require('gulp-zip');
+var replace = require('gulp-replace');
 
 
 //paul's additions
@@ -432,12 +433,24 @@ gulp.task('aws_htaccess_clean', function(cb) {
   del(['aws/.htaccess'], cb)
 });
 
-//Clean directory
+//Run these
+
+//#1 Clean directory
 gulp.task('aws_clean_all', ['aws_clean', 'aws_htaccess_clean']);
 
-//Run all prep
+//#2 Run all prep
 gulp.task('aws_prepare', ['aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_style-import_move', 'aws_htaccess', 'aws_js_move', 'aws_html_move', 'aws_images_move', 'aws_favicons_move']);
 
+//#3 Change CSS references
+gulp.task('css_add_ext', function(){
+
+  var Src = 'aws/**/*';
+  var Dst = 'aws';
+
+  gulp.src([Src])
+    .pipe(replace('.css', '.css.min'))
+    .pipe(gulp.dest(Dst));
+});
 
 // Zip file for upload
 gulp.task('aws_zip', function () {
@@ -449,5 +462,4 @@ gulp.task('aws_zip', function () {
     .pipe(zip('aws_archive.zip'))
     .pipe(gulp.dest(Dst));
 });
-
 

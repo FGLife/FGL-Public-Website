@@ -25,6 +25,7 @@
     "gulp-minify-html": "^1.0.3",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "gulp-ruby-sass": "^1.2.0",
     "gulp-size": "^1.2.1",
     "gulp-sourcemaps": "^1.5.0",
