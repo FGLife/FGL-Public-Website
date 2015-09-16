@@ -236,10 +236,6 @@ gulp.task('serve', ['styles', 'fonts'], () => {
     }
   });
 
-//new php
-
-
-
 var reload  = browserSync.reload;
 
 gulp.task('php', function() {
@@ -260,7 +256,6 @@ gulp.task('default', ['browser-sync'], function () {
 
 //
 
-
   gulp.watch([
     'app/*.html',
     'app/js/**/*.js',
@@ -272,6 +267,8 @@ gulp.task('default', ['browser-sync'], function () {
   gulp.watch('app/css/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
+
+
 
 gulp.task('serve:dist', () => {
   browserSync({
@@ -462,4 +459,52 @@ gulp.task('aws_zip', function () {
     .pipe(zip('aws_archive.zip'))
     .pipe(gulp.dest(Dst));
 });
+
+//serve aws folder
+gulp.task('serve_aws', ['styles', 'fonts'], () => {
+  browserSync({
+    notify: false,
+    port: 9000,
+    server: {
+      baseDir: ['.tmp', 'aws'],
+      routes: {
+        '/bower_components': 'bower_components'
+      }
+    }
+  });
+
+var reload  = browserSync.reload;
+
+gulp.task('php', function() {
+  php.server({ base: 'build', port: 8010, keepalive: true});
+});
+
+gulp.task('browser-sync',['php'], function() {
+  browserSync({
+    proxy: '127.0.0.1:8010',
+    port: 8080,
+    open: true,
+    notify: false
+  });
+});
+gulp.task('default', ['browser-sync'], function () {
+  gulp.watch(['build/*.php'], [reload]);
+});
+
+//
+
+gulp.watch([
+  'aws/*.html',
+  'aws/js/**/*.js',
+  'aws/images/**/*',
+  '.tmp/css/fonts/**/*'
+]).on('change', reload);
+
+gulp.watch('aws/css/**/*.css', ['styles']);
+gulp.watch('aws/css/fonts/**/*', ['fonts']);
+gulp.watch('bower.json', ['wiredep', 'fonts']);
+});
+
+
+//end serve aws folder
 
