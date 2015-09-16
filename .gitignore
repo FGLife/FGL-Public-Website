@@ -56,3 +56,5 @@ GulpFiles/build/gulpfile.js
 .idea/vcs.xml
 
 styles.css
+
+app/faqs.html
