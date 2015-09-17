@@ -17,6 +17,7 @@ var cssminify = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var less = require('gulp-less');
 var zip = require('gulp-zip');
+var replace = require('gulp-replace');
 
 
 //paul's additions
@@ -235,10 +236,6 @@ gulp.task('serve', ['styles', 'fonts'], () => {
     }
   });
 
-//new php
-
-
-
 var reload  = browserSync.reload;
 
 gulp.task('php', function() {
@@ -259,7 +256,6 @@ gulp.task('default', ['browser-sync'], function () {
 
 //
 
-
   gulp.watch([
     'app/*.html',
     'app/js/**/*.js',
@@ -271,6 +267,8 @@ gulp.task('default', ['browser-sync'], function () {
   gulp.watch('app/css/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
+
+
 
 gulp.task('serve:dist', () => {
   browserSync({
@@ -432,12 +430,24 @@ gulp.task('aws_htaccess_clean', function(cb) {
   del(['aws/.htaccess'], cb)
 });
 
-//Clean directory
+//Run these
+
+//#1 Clean directory
 gulp.task('aws_clean_all', ['aws_clean', 'aws_htaccess_clean']);
 
-//Run all prep
+//#2 Run all prep
 gulp.task('aws_prepare', ['aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_style-import_move', 'aws_htaccess', 'aws_js_move', 'aws_html_move', 'aws_images_move', 'aws_favicons_move']);
 
+//#3 Change CSS references
+gulp.task('css_add_ext', function(){
+
+  var Src = 'aws/**/*';
+  var Dst = 'aws';
+
+  gulp.src([Src])
+    .pipe(replace('.css', '.css.min'))
+    .pipe(gulp.dest(Dst));
+});
 
 // Zip file for upload
 gulp.task('aws_zip', function () {
@@ -450,4 +460,51 @@ gulp.task('aws_zip', function () {
     .pipe(gulp.dest(Dst));
 });
 
+//serve aws folder
+gulp.task('serve_aws', ['styles', 'fonts'], () => {
+  browserSync({
+    notify: false,
+    port: 9000,
+    server: {
+      baseDir: ['.tmp', 'aws'],
+      routes: {
+        '/bower_components': 'bower_components'
+      }
+    }
+  });
+
+var reload  = browserSync.reload;
+
+gulp.task('php', function() {
+  php.server({ base: 'build', port: 8010, keepalive: true});
+});
+
+gulp.task('browser-sync',['php'], function() {
+  browserSync({
+    proxy: '127.0.0.1:8010',
+    port: 8080,
+    open: true,
+    notify: false
+  });
+});
+gulp.task('default', ['browser-sync'], function () {
+  gulp.watch(['build/*.php'], [reload]);
+});
+
+//
+
+gulp.watch([
+  'aws/*.html',
+  'aws/js/**/*.js',
+  'aws/images/**/*',
+  '.tmp/css/fonts/**/*'
+]).on('change', reload);
+
+gulp.watch('aws/css/**/*.css', ['styles']);
+gulp.watch('aws/css/fonts/**/*', ['fonts']);
+gulp.watch('bower.json', ['wiredep', 'fonts']);
+});
+
+
+//end serve aws folder
 
