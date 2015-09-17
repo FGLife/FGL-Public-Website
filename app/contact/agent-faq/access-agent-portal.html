@@ -223,19 +223,7 @@
 
   </section><!-- #page-title end -->
 
-  <div class="top-block section nomargin noborder dark">
-    <div class="container center clearfix">
 
-      <div class=" col_half notopmargin nobottommargin">
-        <h2 class="page-title" style="text-transform: uppercase">FAQ</h2>
-      </div>
-
-      <div class="col_half notopmargin nobottommargin col_last">
-        <p class="breadcrumbs"><a href="/index.html">Home</a> / <a href="/contact.html">Contact</a> / <a href="/contact/agent-faq.html">FAQ</a></p>
-      </div>
-
-    </div>
-  </div>
 
   <!-- Content
   ============================================= -->
@@ -262,7 +250,15 @@
 
         </div>
 
-        <a href="../agent-faq.html"><h4>BACK</h4></a>
+        <div class="col-md-1">
+          <a class="button button-3d button-green button-small center" onclick="goBack()">BACK</a>
+
+          <script>
+            function goBack() {
+              window.history.back();
+            }
+          </script>
+        </div>
       </div>
 
 
