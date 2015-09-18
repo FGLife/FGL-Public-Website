@@ -194,7 +194,7 @@
                         <div id="top-search">
                             <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
                             <form action="#" method="get">
-                                <input type="text" name="query" class="form-control st-default-search-input" value="" placeholder="Type &amp; Hit Enter..">
+                                <input type="text" name="query" id="st-main-search" data-st-install-key="NBP6RxzYN_7Bef4YzTzY" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
 
                             </form>
                         </div><!-- #top-search end -->
@@ -244,14 +244,19 @@
 
                   <div class="col_full fgl-bullet">
 
-                    <p>Unfortunately at this time we cannot accept premium payments online. If you need to submit your premium payment, there are three different options. Your options include monthly bank draft, a bank a wire or mailing a check to either of the following addresses.</p>
+                    <p>At this time we cannot accept premium payments online.</p>
 
-                    <p><strong>Postal Mail:</strong><br />
-                      Fidelity & Guaranty Life Insurance Company Service Center, <br /> P.O. Box 81497, <br /> Lincoln, NE 68501</p>
 
-                    <p><strong>Overnight Delivery:</strong><br /> Fidelity & Guaranty Life Insurance Company Service Center, <br /> 777 Research Drive, <br /> Lincoln, NE 68521</p>
 
-                  <a href="../policyholder-faq.html"><h4>BACK</h4></a>
+                    <div class="col-md-1">
+                      <a class="button button-3d button-green button-small center" onclick="goBack()">BACK</a>
+
+                      <script>
+                        function goBack() {
+                          window.history.back();
+                        }
+                      </script>
+                    </div>
 				</div>
             </div>
         </section><!-- #content end -->

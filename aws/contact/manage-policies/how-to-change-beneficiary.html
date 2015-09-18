@@ -195,7 +195,7 @@
                         <div id="top-search">
                             <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
                             <form action="#" method="get">
-                                <input type="text" name="query" class="form-control st-default-search-input" value="" placeholder="Type &amp; Hit Enter..">
+                                <input type="text" name="query" id="st-main-search" data-st-install-key="NBP6RxzYN_7Bef4YzTzY" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
 
                             </form>
                         </div><!-- #top-search end -->
@@ -335,7 +335,7 @@
             </div>
 
             <div class="col_half col_last">
-              <div class="feature-box center media-box fbox-bg">
+              <div class="feature-box media-box fbox-bg">
                 <div class="fbox-media fgl-form-image">
                   <a href="https://s3.amazonaws.com/fgl-docs/forms/admin0840.pdf"><img class="image_fade" src="/images/forms/admin0840_Page_1.png"
                                    alt="Featured Box Image"></a>
@@ -347,7 +347,15 @@
             </div>
 
 
-            <a href="/contact/life-insurance-annuity-forms.html"><h4>BACK</h4></a>
+            <div class="col-md-1">
+              <a class="button button-3d button-green button-small center" onclick="goBack()">BACK</a>
+
+              <script>
+                function goBack() {
+                  window.history.back();
+                }
+              </script>
+            </div>
           </div>
 
 

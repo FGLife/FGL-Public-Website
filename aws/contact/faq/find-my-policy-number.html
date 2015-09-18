@@ -194,7 +194,7 @@
                         <div id="top-search">
                             <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
                             <form action="#" method="get">
-                                <input type="text" name="query" class="form-control st-default-search-input" value="" placeholder="Type &amp; Hit Enter..">
+                                <input type="text" name="query" id="st-main-search" data-st-install-key="NBP6RxzYN_7Bef4YzTzY" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
 
                             </form>
                         </div><!-- #top-search end -->
@@ -236,7 +236,7 @@
 
 
               <div class="tabs-section">
-                <h1 class="faq-alt">How To Find Your Policy Number</h1>
+                <h1 class="faq-alt">How Do I Find My Policy Number</h1>
               </div>
 
 
@@ -246,10 +246,18 @@
 
                   <div class="col_full">
 
-                    <p>Please contact your agent or customer service if you cannot remember your policy number.  Please have the social security number associated with the policy.</p>
+                    <p>Your policy number can be found on page 3 of your policy. You may also contact your agent or our Customer Service Department at 888-513-8797.</p>
                   </div>
 
-                  <a href="../policyholder-faq.html"><h4>BACK</h4></a>
+                  <div class="col-md-1">
+                    <a class="button button-3d button-green button-small center" onclick="goBack()">BACK</a>
+
+                    <script>
+                      function goBack() {
+                        window.history.back();
+                      }
+                    </script>
+                  </div>
 				</div>
             </div>
         </section><!-- #content end -->

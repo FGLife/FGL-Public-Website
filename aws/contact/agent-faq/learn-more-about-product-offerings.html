@@ -194,7 +194,7 @@
           <div id="top-search">
             <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
             <form action="#" method="get">
-              <input type="text" name="query" class="form-control st-default-search-input" value="" placeholder="Type &amp; Hit Enter..">
+              <input type="text" name="query" id="st-main-search" data-st-install-key="NBP6RxzYN_7Bef4YzTzY" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
 
             </form>
           </div><!-- #top-search end -->
@@ -235,7 +235,7 @@
 
 
         <div class="tabs-section">
-          <h1 class="faq-alt">Learn More About Product Offerings</h1>
+          <h1 class="faq-alt">How Can I Learn More About Product Offerings</h1>
         </div>
 
 
@@ -245,11 +245,19 @@
 
         <div class="col_full fgl-bullet">
 
-          <p>Information for all of our life insurance and annuity products, including consumer brochures can be found on our public website <a href="https://www.fglife.com">www.fglife.com</a>. Please also log in to SalesLink for dedicated Product Resource Hubs</p>
+          <p>Information for all of our life insurance and annuity products, including consumer brochures can be found on our public website <a href="https://www.fglife.com">www.fglife.com</a>. Please also log in to our dedicated agent portal, SalesLink, for more resources.</p>
 
         </div>
 
-        <a href="../agent-faq.html"><h4>BACK</h4></a></p>
+        <div class="col-md-1">
+          <a class="button button-3d button-green button-small center" onclick="goBack()">BACK</a>
+
+          <script>
+            function goBack() {
+              window.history.back();
+            }
+          </script>
+        </div>
       </div>
 
 

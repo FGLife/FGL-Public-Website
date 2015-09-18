@@ -194,7 +194,7 @@
                         <div id="top-search">
                             <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
                             <form action="#" method="get">
-                                <input type="text" name="query" class="form-control st-default-search-input" value="" placeholder="Type &amp; Hit Enter..">
+                                <input type="text" name="query" id="st-main-search" data-st-install-key="NBP6RxzYN_7Bef4YzTzY" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
 
                             </form>
                         </div><!-- #top-search end -->
@@ -352,7 +352,15 @@
               </div>
 
 
-              <a href="/contact/life-insurance-annuity-forms.html"><h4>BACK</h4></a>
+              <div class="col-md-1">
+                <a class="button button-3d button-green button-small center" onclick="goBack()">BACK</a>
+
+                <script>
+                  function goBack() {
+                    window.history.back();
+                  }
+                </script>
+              </div>
             </div>
 
 

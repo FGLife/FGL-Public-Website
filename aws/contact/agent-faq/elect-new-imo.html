@@ -194,7 +194,7 @@
           <div id="top-search">
             <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
             <form action="#" method="get">
-              <input type="text" name="query" class="form-control st-default-search-input" value="" placeholder="Type &amp; Hit Enter..">
+              <input type="text" name="query" id="st-main-search" data-st-install-key="NBP6RxzYN_7Bef4YzTzY" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
 
             </form>
           </div><!-- #top-search end -->
@@ -244,7 +244,7 @@
 
 
         <div class="col_full fgl-bullet">
-          <p>Yes, you can change IMOs.  Visit our agent portal, SalesLink and complete and submit the Agent Transfer Request form (ADMIN5224). </p>
+          <p>Yes, you can change IMO.  Visit our agent portal, SalesLink and complete and submit the Agent Transfer Request form (ADMIN5224). </p>
           <p>Please Note: A release is not required for agents who request reappointment under a new hierarchy following all guidelines noted below are met. Application sign dates will determine eligibility for release.</p>
           <h4>Life Agents</h4>
           <ul>
@@ -260,7 +260,15 @@
           <p>Agent must be in good order and not have a debit balance in order for a hierarchy change to be processed.</p>
         </div>
 
-        <a href="../agent-faq.html"><h4>BACK</h4></a></p>
+        <div class="col-md-1">
+          <a class="button button-3d button-green button-small center" onclick="goBack()">BACK</a>
+
+          <script>
+            function goBack() {
+              window.history.back();
+            }
+          </script>
+        </div>
       </div>
 
 
