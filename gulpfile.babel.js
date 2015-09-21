@@ -445,7 +445,7 @@ gulp.task('css_add_ext', function(){
   var Dst = 'aws';
 
   gulp.src([Src])
-    .pipe(replace('.css', '.css.min'))
+    .pipe(replace('.css', '.min.css'))
     .pipe(gulp.dest(Dst));
 });
 
