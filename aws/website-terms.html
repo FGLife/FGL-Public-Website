@@ -68,6 +68,16 @@
 </head>
 
 <body class="stretched">
+	
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKP5LZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKP5LZ');</script>
+<!-- End Google Tag Manager -->
 
 <!-- Document Wrapper
 ============================================= -->
@@ -82,36 +92,44 @@
       <div class="col_full nobottommargin clearfix">
 
         <!-- Top Links
-        ============================================= -->
+                  ============================================= -->
 
 
-        <div class="top-links fright">
+                  <div class="top-links fright">
 
-          <ul>
-            <li>
-              <a href="#" class="login-btn button button-3d button-green btn-block center"
-                 onclick="jQuery('.top-link-section').toggle();">Login to SalesLink</a>
+                    <ul>
+                      <li>
+                        <a href="#" class="login-btn button button-3d button-green btn-block center"
+                           onclick="jQuery('.top-link-section').toggle();">Login to SalesLink</a>
 
-              <div class="top-link-section">
-                <form id="top-login" role="form" name="login-form">
-                  <div class="input-group" id="top-login-username">
-                    <span class="input-group-addon"><i class="icon-user"></i></span>
-                    <input type="email" class="form-control" placeholder="Username" required="">
+                        <div class="top-link-section">
+                          <form id="top-login" role="form" name="login-form"
+                                action="https://www.fglife.com/Logon/Passport_Logon.asp" method="post">
+                            <div class="input-group" id="top-login-username">
+                              <span class="input-group-addon">
+                                <i class="icon-user"></i>
+                              </span>
+                              <input name="AgentID" id="AgentID" type="text" autocomplete="off" maxlength="255"
+                                     class="form-control" placeholder="Username" required="">
+                            </div>
+                            <div class="input-group" id="top-login-password">
+                              <span class="input-group-addon">
+                                <i class="icon-key"></i>
+                              </span>
+                              <input name="password" id="password" type="password" autocomplete="off" maxlength="255"
+                                     class="form-control" placeholder="Password" required="">
+                            </div>
+
+                            <button class="btn btn-block" type="submit" style="background-color: #19a094; color:white;">
+                              Sign in
+                            </button>
+                          </form>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="input-group" id="top-login-password">
-                    <span class="input-group-addon"><i class="icon-key"></i></span>
-                    <input type="password" class="form-control" placeholder="Password" required="">
-                  </div>
 
-                  <button class="btn btn-block" type="submit" style="background-color: #19a094; color:white;">Sign in
-                  </button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- .top-links end -->
+                  <!-- .top-links end -->
 
       </div>
 
@@ -167,22 +185,11 @@
                 <li><a href="/annuities/fg-retirement-pro.html">
                   <div>FG Retirement Pro</div>
                 </a></li>
-                <li><a href="/annuities/fg-index-choice-10.html">
-                  <div>FG Index-Choice 10</div>
-                </a></li>
-                <li><a href="/annuities/fgny-index-safety-7.html">
-                  <div>FGNY Index-Safety 7</div>
-                </a></li>
-                <li><a href="/annuities/fgny-index-choice-10.html">
-                  <div>FGNY Index-Choice 10</div>
-                </a></li>
-                <li><a href="/annuities/fg-guarantee-platinum.html">
-                  <div>FG Guarantee-Platinum</div>
-                </a></li>
-                <li><a href="/annuities/fg-immediate-income.html">
-                  <div>FG Immediate-Income</div>
-                </a></li>
-              </ul>
+                <li><a href="/annuities/fg-index-choice-10.html"><div>FG Index-Choice 10</div></a></li>
+                                    <li><a href="/annuities/fgny-index-choice-10.html"><div>FGNY Index-Choice 10</div></a></li>
+                                    <li><a href="/annuities/fg-guarantee-platinum.html"><div>FG Guarantee-Platinum</div></a></li>
+                                    <li><a href="/annuities/fg-immediate-income.html"><div>FG Immediate-Income</div></a></li>
+                                </ul>
             </li>
             <li><a href="/index.html">
               <div>Life Insurance</div>
@@ -489,6 +496,7 @@
 
         <h3 class="blue-heading">Copyright Notice</h3>
         <p><sup>Copyright © 2001-2014 Fidelity & Guaranty Life Insurance Company, 601 Locust Street, 14th Floor, Des Moines, IA 50309 U.S.A. All rights reserved.</sup></p>
+        <div class="col_full fgl-compliance">15-809</div>
 
       </div>
 
