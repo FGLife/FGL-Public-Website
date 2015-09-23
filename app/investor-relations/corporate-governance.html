@@ -377,19 +377,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="widget subscribe-widget clearfix">
                                     <h5>Subscribe to Our Newsletters for Important News:</h5>
 
-									<!--[if lte IE 8]>
-									<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-									<![endif]-->
-									<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-									<script>
-									  hbspt.forms.create({
-									    portalId: '260128',
-									    formId: 'eca123cb-31c8-471b-a517-f5cc90e205e1',
-									    css: '',
-									    cssRequired: '',
-									    submitButtonClass: 'btn btn-success'
-									  });
-									</script>
+									<div class="hbspt-form subscribe-form-container">
+										<!--[if lte IE 8]>
+										<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+										<![endif]-->
+										<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+										<script>
+										  hbspt.forms.create({
+										    portalId: '260128',
+										    formId: 'eca123cb-31c8-471b-a517-f5cc90e205e1',
+										    css: '',
+										    cssRequired: '',
+										    submitButtonClass: 'btn btn-success',
+										    target: '.subscribe-form-container'
+										  });
+										</script>
+									</div>
                                 </div>
 
                             </div>
