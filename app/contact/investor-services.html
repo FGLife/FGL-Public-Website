@@ -252,18 +252,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="col-md-2 "></div>
         <div class="col-md-8 ">
-          <!--[if lte IE 8]>
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-          <![endif]-->
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-          <script>
-            hbspt.forms.create({
-              portalId: '260128',
-              formId: '7d950072-e2cd-4af5-8cbd-2ae87d90d6a1',
-              css: ''
-            });
-          </script>
-
+            <div class="hbspt-form hub-form-container">
+	          <!--[if lte IE 8]>
+	          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+	          <![endif]-->
+	          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+	          <script>
+	            hbspt.forms.create({
+	              portalId: '260128',
+	              formId: '7d950072-e2cd-4af5-8cbd-2ae87d90d6a1',
+	              css: '',
+	              target: '.hub-form-container'
+	            });
+	          </script>
+            </div>
 
         </div>
         <div class="col-md-2 col_last"></div>

@@ -7059,6 +7059,7 @@ body.stretched #header.full-header .container {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   border: 0 !important;
+  padding: 0 25px !important;
   letter-spacing: 0;
   font-family: "proxima-nova", Arial, sans-serif;
   -webkit-transition: all 0.2s ease-in-out;
@@ -28508,8 +28509,11 @@ img.mfp-img {
   .landing-form-overlay {
     bottom: -142px;
   }
+  .team.team-list {
+    min-height: 285px;
+  }
   .team.team-list .team-desc.long-text {
-    height: 265px;
+    height: 285px;
   }
 }
 @media (min-width: 767px) and (max-width: 1199px) {
