@@ -24140,6 +24140,57 @@ body:not(.no-transition) #wrapper,
 .icon-fgl-prosperity-elite:before {
 	content: "B";
 }
+.fgl-eight:before {
+  content: "C";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-nine:before {
+  content: "D";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-one:before {
+  content: "E";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-five:before {
+  content: "F";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-four:before {
+  content: "G";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-two:before {
+  content: "H";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-three:before {
+  content: "I";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-ten:before {
+  content: "J";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-seven:before {
+  content: "K";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-six:before {
+  content: "L";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+
 @charset "UTF-8";
 
 /*!
@@ -28509,11 +28560,8 @@ img.mfp-img {
   .landing-form-overlay {
     bottom: -142px;
   }
-  .team.team-list {
-    min-height: 285px;
-  }
   .team.team-list .team-desc.long-text {
-    height: 285px;
+    height: 265px;
   }
 }
 @media (min-width: 767px) and (max-width: 1199px) {

@@ -559,8 +559,11 @@
   .landing-form-overlay {
     bottom: -142px;
   }
+  .team.team-list {
+    min-height: 285px;
+  }
   .team.team-list .team-desc.long-text {
-    height: 265px;
+    height: 285px;
   }
 }
 @media (min-width: 767px) and (max-width: 1199px) {
