@@ -420,7 +420,7 @@ gulp.task('aws_favicons_move', function() {
     .pipe(gulp.dest(fDst));
 });
 
-
+//Clean Tasks
 // Clean AWS file
 gulp.task('aws_clean', function(cb) {
   del(['aws/*'], cb)
@@ -431,6 +431,50 @@ gulp.task('aws_htaccess_clean', function(cb) {
   del(['aws/.htaccess'], cb)
 });
 
+//JS rename concat tasks
+
+//replace paths and reference for concatenated minified/unminified css, and js
+gulp.task('htmlreplace', function() {
+
+  var htmlSrc = 'aws/**/*.html';
+  var htmlDst = 'aws';
+
+  gulp.src(htmlSrc)
+    .pipe(htmlreplace({
+      'js': '/js/app.min.js',
+      'discard':""
+    }))
+    .pipe(gulp.dest(htmlDst));
+});
+
+//output concatenated and renamed js
+gulp.task('scripts',function(){
+  var jsSrc = 'aws/js/**/*.js';
+  var jsDst = 'aws/js';
+
+  return gulp.src(jsSrc)
+    .pipe(concat('app.js'))
+    .pipe(rename({suffix: '.min'}))
+    //.pipe(uglify())
+    .pipe(gulp.dest(jsDst));
+
+});
+
+//output concatenated js
+gulp.task('scriptsunmini',function(){
+  var jsSrc = 'aws/js/**/*.js';
+  //var jsDst = 'build/WebsiteTemplates/CanvasBase/App_Themes/CanvasBase/js';
+  var jsDst = 'aws/js';
+
+  return gulp.src(jsSrc)
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest(jsDst));
+});
+
+
+
+
+
 //Run these
 
 //#1 Clean directory
@@ -439,16 +483,10 @@ gulp.task('aws_clean_all', ['aws_clean', 'aws_htaccess_clean']);
 //#2 Run all prep
 gulp.task('aws_prepare', ['aws_webfonts_move', 'aws_css_minify_move', /*'aws_css_move',*/ /*'aws_style-import_move',*/ 'aws_htaccess', 'aws_js_move', 'aws_html_move', 'aws_images_move', 'aws_favicons_move']);
 
-//#3 Change CSS references
-gulp.task('css_add_ext', function(){
+//#3 Concat & rename JS
+gulp.task('aws_js',['htmlreplace', 'scripts','scriptsunmini']);
 
-  var Src = 'aws/**/*';
-  var Dst = 'aws';
 
-  gulp.src([Src])
-    .pipe(replace('.css', '.min.css'))
-    .pipe(gulp.dest(Dst));
-});
 
 // Zip file for upload
 /*gulp.task('aws_zip', function () {
