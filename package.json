@@ -15,6 +15,7 @@
     "gulp-connect-php": "0.0.5",
     "gulp-copy": "0.0.2",
     "gulp-eslint": "^0.13.2",
+    "gulp-html-replace": "^1.5.4",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^2.3.0",
     "gulp-jshint": "^1.11.2",

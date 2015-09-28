@@ -12,6 +12,7 @@ var minifyHtml = require('gulp-minify-html');
 
 
 var concat = require('gulp-concat');
+var htmlreplace = require('gulp-html-replace');
 var uglify = require('gulp-uglify');
 var cssminify = require('gulp-minify-css');
 var rename = require('gulp-rename');
@@ -346,20 +347,20 @@ gulp.task('aws_css_minify_move', function() {
 });
 
 
-// Move other supporting vendor style.css
+/*// Move other supporting vendor style.css
 gulp.task('aws_css_move', function() {
 
-    var cssSrc = 'app/css/**/*.css',
+    var cssSrc = 'app/css/!**!/!*.css',
         cssDst = 'aws/css';
 
     return gulp.src(cssSrc)
         .pipe(cssminify({processImport:false}))
         //.pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(cssDst));
-});
+});*/
 
 // Move style-import.css
-gulp.task('aws_style-import_move', function() {
+/*gulp.task('aws_style-import_move', function() {
 
   var cssSrc = 'app/style-import.css',
     cssDst = 'aws/';
@@ -368,7 +369,7 @@ gulp.task('aws_style-import_move', function() {
     .pipe(cssminify({processImport:false}))
     //.pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(cssDst));
-});
+});*/
 
 // Move htaccess
 gulp.task('aws_htaccess', function() {
@@ -436,7 +437,7 @@ gulp.task('aws_htaccess_clean', function(cb) {
 gulp.task('aws_clean_all', ['aws_clean', 'aws_htaccess_clean']);
 
 //#2 Run all prep
-gulp.task('aws_prepare', ['aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_style-import_move', 'aws_htaccess', 'aws_js_move', 'aws_html_move', 'aws_images_move', 'aws_favicons_move']);
+gulp.task('aws_prepare', ['aws_webfonts_move', 'aws_css_minify_move', /*'aws_css_move',*/ /*'aws_style-import_move',*/ 'aws_htaccess', 'aws_js_move', 'aws_html_move', 'aws_images_move', 'aws_favicons_move']);
 
 //#3 Change CSS references
 gulp.task('css_add_ext', function(){
@@ -450,15 +451,15 @@ gulp.task('css_add_ext', function(){
 });
 
 // Zip file for upload
-gulp.task('aws_zip', function () {
+/*gulp.task('aws_zip', function () {
 
-  var Src = 'aws/**/*',
+  var Src = 'aws/!**!/!*',
     Dst = 'aws/';
 
   return gulp.src(Src)
     .pipe(zip('aws_archive.zip'))
     .pipe(gulp.dest(Dst));
-});
+});*/
 
 //serve aws folder
 gulp.task('serve_aws', ['styles', 'fonts'], () => {
