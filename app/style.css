@@ -20549,6 +20549,15 @@ body:not(.device-touch) .tagcloud a {
 .annuities-page .annuities-large-table.table th {
   border: none !important;
 }
+.annuities-page .ratings-large-table.table {
+  max-width: none;
+  margin: 0 auto;
+  font-size: 13px !important;
+}
+.annuities-page .ratings-large-table.table th {
+  border: none !important;
+  width: 40px !important;
+}
 .annuities-page .table.table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #cdd1d4;
 }
@@ -20557,21 +20566,21 @@ body:not(.device-touch) .tagcloud a {
   vertical-align: middle;
   padding: 5px 15px 5px 15px;
   max-width: 265px;
-  border-top: 1px solid #b1b1b1;
+  border-top: 1px solid #b1b1b1 !important;
 }
 .annuities-page .annuities-large-table.table > tbody > tr > td,
 .annuities-page .annuities-large-table.table > thead > tr > th {
   vertical-align: middle;
   padding: 10px;
   max-width: 265px;
-  border: 1px solid #b1b1b1;
+  border: 1px solid #b1b1b1 !important;
 }
 .life-insurance-page.annuities-page .annuities-large-table.table > tbody > tr > td,
 .annuities-page .annuities-large-table.table > thead > tr > th {
   vertical-align: bottom;
   padding: 5px 10px 5px 10px;
   max-width: 138px;
-  border: 1px solid #b1b1b1;
+  border: 1px solid #b1b1b1 !important;
 }
 span.member-mark {
   width: 20px;
