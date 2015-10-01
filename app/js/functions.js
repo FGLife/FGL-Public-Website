@@ -2239,6 +2239,15 @@ var SEMICOLON = SEMICOLON || {};
 			SEMICOLON.widget.masonryThumbs();
 			SEMICOLON.slider.owlCaptionInit();
 			SEMICOLON.header.topsocial();
+
+			// Form submission fix that conflicts with animsition plugin on iPad
+			setTimeout(function() {
+				$(document.body).append('<iframe id="_dead_end_frame" name="_dead_end_frame" style="display:none;"></iframe>');
+
+				$('form[action*="forms.hubspot.com"]').each(function() {
+					$(this).attr('target', '_dead_end_frame');
+				});
+			}, 1500);
 		}
 
 	};
