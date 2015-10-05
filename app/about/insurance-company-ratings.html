@@ -13,7 +13,9 @@
     <!-- Stylesheets
     ============================================= -->
 
-    <link rel="stylesheet" href="/style.css" type="text/css" />
+    <!-- build:css -->
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <!-- endbuild -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
@@ -37,7 +39,7 @@
   <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="/favicons/manifest.json">
+
   <meta name="apple-mobile-web-app-title" content="FGLIFE.COM">
   <meta name="application-name" content="FGLIFE.COM">
   <meta name="msapplication-TileColor" content="#ffffff">
@@ -46,9 +48,10 @@
 
     <!-- External JavaScripts
     ============================================= -->
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/js/plugins.js"></script>
-
+    <!-- build:js -->
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/plugins.js"></script>
+    <!-- endbuild -->
     <!-- Document Title
     ============================================= -->
     <title>Insurance Company Ratings | Fidelity &amp; Guaranty Life</title>
@@ -238,7 +241,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="container clearfix">
 
-			<table class="annuities-large-table table table-striped bottommargin-md" width="100%" border="0" cellspacing="0" cellpadding="12" >
+			<table class="ratings-large-table table table-striped bottommargin-md" width="100%" border="0" cellspacing="0" cellpadding="12" >
 			   <tbody border="0">
 			      <tr>
 			         <th>&nbsp;</th>
@@ -299,125 +302,115 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="togglet" id="am-best"><i class="toggle-closed icon-line-circle-plus"></i><i
                   class="toggle-open icon-line-circle-minus"></i>A.M. Best
                 </div>
-                <div class="togglec clearfix fgl-bullet">
+                <div class="togglec clearfix fgl-bullets">
                   <h4>A++ and A+ (Superior)</h4>
 
-                  <p>Assigned to companies that have a superior ability to meet their ongoing insurance obligations</p>
+                  <p>Assigned to insurance companies that have a superior ability to meet their ongoing insurance obligations.</p>
 
                   <h4>A and A- (Excellent)</h4>
 
-                  <p>Assigned to companies that have an excellent ability to meet their ongoing insurance
+                  <p>Assigned to insurance companies that have an excellent ability to meet their ongoing insurance
                     obligations.</p>
 
                   <h4>B++ and B+ (Good)</h4>
 
-                  <p>Assigned to companies that have a good ability to meet their ongoing insurance obligations.</p>
+                  <p>Assigned to insurance companies that have a good ability to meet their ongoing insurance obligations.</p>
 
                   <h4>B and B- (Fair)</h4>
 
-                  <p>Assigned to companies that have a fair ability to meet their ongoing insurance obligations.
+                  <p>Assigned to insurance companies that have a fair ability to meet their ongoing insurance obligations.
                     Financial strength is vulnerable to adverse changes in underwriting and economic conditions.</p>
 
                   <h4>C++ and C+ (Marginal)</h4>
 
-                  <p>Assigned to companies that have a marginal ability to meet their ongong insurance obligations.
+                  <p>Assigned to insurance companies that have a marginal ability to meet their ongoing insurance obligations.
                     Financial strength is vulnerable to adverse changes in underwriting and economic conditions.</p>
 
                   <h4>C and C- (Weak)</h4>
 
-                  <p>Assigned to companies that have a weak ability to meet their ongoing insurance obligations.
+                  <p>Assigned to insurance companies that have a weak ability to meet their ongoing insurance obligations.
                     Financial strength is very vulnerable to adverse changes in underwriting and economic
                     conditions.</p>
 
                   <h4>D (Poor)</h4>
 
-                  <p>Assigned to companies that have a poor ability to meet their ongoing insurance obligations.
+                  <p>Assigned to insurance companies that have a poor ability to meet their ongoing insurance obligations.
                     Financial strength is extremely vulnerable to adverse changes in underwriting and economic
                     conditions.</p>
 
-                  <h4>E (Under Regulatory Supervision)</h4>
 
-                  <p>Assigned to companies (and possibly their subsidiaries/affiliates) placed under a significant form of regulatory supervision, control or restraint - including cease and desist orders, conservatorship or rehabilitation, but not liquidation - that prevents conduct of normal, ongoing insurance
-                    operations.</p>
-
-                  <h4>F (In Liquidation)</h4>
-
-                  <p>Assigned to companies placed in liquidation by a court of law or a forced liquidation.</p>
-
-                  <h4>S (Suspended)</h4>
-
-                  <p>Assigned to rated companies when sudden and significant events affect their balance sheet strength or operating performance and rating implications cannot be evaluated due to a lack of timely or
-                    adequate information.</p>
-                  <p><em>Rating structure as of 1/16/2012</em></p>
                 </div>
               </div>
 
               <div class="dashed-separator"></div>
 
               <div class="toggle">
-                <div class="togglet" id="moody"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Moody's Insurance Financial</div>
+                <div class="togglet" id="moody"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Moody's Investors Service</div>
                 <div class="togglec clearfix fgl-bullet">
-                  <p>Moody's applies numerical modifiers 1, 2, and 3 in each rating classification: the modifier 1 indicates that the security ranks in the higher end of its generic rating category; the modifier 2 indicates a mid-range ranking and the modifier 3 indicates that the issue ranks in the lower end of its generic rating category.</p>
+                  <p>Moody's appends numerical modifiers 1, 2, and 3 in each generic rating classification from Aa through Caa. The modifier 1 indicates that the obligations ranks in the higher end of its generic rating category; the modifier 2 indicates a mid-range ranking and the modifier 3 indicates a ranking in the lower end of that generic rating category.</p>
                   <h4>Aaa</h4>
-                  <p>Insurance companies rated Aaa offer exceptional financial security. While the financial strength of these companies is likely to change, such changes as can be visualized are most unlikely to impair their fundamentally strong position.</p>
+                  <p>Obligations rated Aaa are judged to be of the highest quality, subject to the lowest level of credit risk.</p>
 
                   <h4>Aa</h4>
-                  <p>Insurance companies rated Aa offer excellent financial security. Together with the Aaa group they constitute what are generally known as high grade companies. They are rated lower than Aaa companies because long-term risks appear somewhat larger.</p>
+                  <p>Obligations rated Aa are judged to be of high quality, and are subject to very low credit risk.</p>
 
                   <h4>A</h4>
-                  <p>Insurance companies rated A offer good financial security. However, elements may be present which suggest a susceptibility to impairment sometime in the future.</p>
+                  <p>Obligations rated A are judged to be upper-medium grade and are subject to low credit risk.</p>
 
                   <h4>Baa</h4>
-                  <p>Insurance companies rated Baa offer adequate financial security. However, certain protective elements may be lacking or may be characteristically unreliable over any great length of time.</p>
+                  <p>Obligations rated Baa are judged to be medium-grade and subject to moderate credit risk and as such may possess certain speculative characteristics.</p>
 
                   <h4>Ba</h4>
-                  <p>Insurance companies rated Ba offer questionable financial security. Often the ability of these companies to meet policyholder obligations may be very moderate and thereby not well safeguarded in the future.</p>
+                  <p>Obligations rated Ba are judged to be speculative and are subject to substantial credit risk.</p>
 
                   <h4>B</h4>
-                  <p>Insurance companies rated B offer poor financial security. Assurance of punctual payment of policyholder obligations over any long period of time is small.</p>
+                  <p>Obligations rated B are considered speculative and are subject to high credit risk.</p>
 
                   <h4>Caa</h4>
-                  <p>Insurance companies rated Caa offer very poor financial security. They may be in default on their policyholder obligations or there may be present elements of danger with respect to punctual payment of policyholder obligations an claims.</p>
+                  <p>Obligations rated Caa are judged to be speculative of poor standing and are subject to very high credit risk.</p>
 
                   <h4>Ca</h4>
-                  <p>Insurance companies rated Ca offer extremely poor financial security. Such companies are often in default on their policyholder obligations or have other marked shortcomings.</p>
+                  <p>Obligations rated Ca are highly speculative and are likely in, or very near, default, with some prospect of recovery of principal and interest.</p>
 
                   <h4>C</h4>
-                  <p>Insurance companies rated C are the lowest rated class of insurance company and can be regarded as having extremely poor prospects of ever offering financial security.</p>
-                  <p><em>Rating structure as of 1/16/2012.</em></p>
-
+                  <p>Obligations rated C are the lowest rated and are typically in default, with little prospect for recovery of principal or interest.</p>
                 </div>
               </div>
 
               <div class="dashed-separator"></div>
 
               <div class="toggle">
-                <div class="togglet" id="fitch"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Fitch</div>
+                <div class="togglet" id="fitch"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Fitch Ratings</div>
                 <div class="togglec clearfix fgl-bullet">
-                  <h4>AAA</h4>
-                  <p>Highest claims paying ability. Risk factors are negligible.</p>
+                  <P>"+" or "-" may be appended to a rating to indicate the relative position of a credit within the rating category. Such suffixes are not added to ratings in the 'AAA' category or to ratings below the 'B' category.</P>
+                  <h4>AAA: Exceptionally Strong</h4>
+                  <p>'AAA' IFS Ratings denote the lowest expectation of ceased or interrupted payments. They are assigned only in the case of exceptionally strong capacity to meet policyholder and contract obligations. This capacity is highly unlikely to be adversely affected by foreseeable events.</p>
 
-                  <h4>AA+, AA, AA-</h4>
-                  <p>Very high claims paying ability. Protection factors are strong. Risk is modest, but may vary slightly over time due to economic and/or underwriting conditions.</p>
+                  <h4>AA: Very Strong</h4>
+                  <p>'AA' IFS Ratings denote a very low expectation of ceased or interrupted payments. They indicate very strong capacity to meet policyholder and contract obligations. This capacity is not significantly vulnerable to foreseeable events.</p>
 
-                <h4>A+, A, A-</h4>
-                  <p>High claims paying ability. Protection factors are average and there is an expectation of variability in risk over time due to economic and/or underwriting conditions.</p>
+                <h4>A: Strong</h4>
+                  <p>'A' IFS Ratings denote a low expectation of ceased or interrupted payments. They indicate strong capacity to meet policyholder and contract obligations. This capacity may, nonetheless, be more vulnerable to changes in circumstances or in economic conditions than is the case for higher ratings.</p>
 
-                  <h4>BBB+, BBB, BBB-</h4>
-                  <p>Adequate claims paying ability. Protection factors are adequate. There is considerable variability in risk over time due to economic and/or underwriting conditions.</p>
+                  <h4>BBB: Good</h4>
+                  <p>'BBB' IFS Ratings indicate that there is currently a low expectation of ceased or interrupted payments. The capacity to meet policyholder and contract obligations on a timely basis is considered adequate, but adverse changes in circumstances and economic conditions are more likely to impact this capacity.</p>
 
-                  <h4>BB+, BB, BB-</h4>
-                  <p>Uncertain claims paying ability and less than investment-grade quality. However, the company is deemed likely to meet these obligations when due. Protection factors will vary widely with changes in economic and/or underwriting conditions.</p>
+                  <h4>BB: Moderately Weak</h4>
+                  <p>'BB' IFS Ratings indicate that there is an elevated vulnerability to ceased or interrupted payments, particularly as the result of adverse economic or market changes over time. However, business or financial alternatives may be available to allow for policyholder and contract obligations to be met in a timely manner.</p>
 
-                  <h4>B+, B, B-</h4>
-                  <p>Possessing risk that policyholder and contractholder obligations will not be paid when due. Protection factors will vary widely with changes in economic and underwriting conditions or company fortunes.</p>
+                  <h4>B: Weak</h4>
+                  <p>'B' IFS Ratings indicate two possible conditions. If obligations are still being met on a timely basis, there is significant risk that ceased or interrupted payments could occur in the future, but a limited margin of safety remains. Capacity for continued timely payments is contingent upon a sustained, favorable business and economic environment, and favorable market conditions. Alternatively, a 'B' IFS Rating is assigned to obligations that have experienced ceased or interrupted payments, but with the potential for extremely high recoveries. Such obligations would possess a recovery assessment of 'RR1' (Outstanding).</p>
 
-                  <h4>CCC</h4>
-                  <p>There is substantial risk that policyholder and contractholder obligations will not be paid when due. Company has been or is likely to be placed under state insurance department supervision.</p>
+                  <h4>CCC: Very Weak</h4>
+                  <p>'CCC' IFS Ratings indicate two possible conditions. If obligations are still being met on a timely basis, there is a real possibility that ceased or interrupted payments could occur in the future. Capacity for continued timely payments is solely reliant upon a sustained, favorable business and economic environment, and favorable market conditions. Alternatively, a 'CCC' IFS Rating is assigned to obligations that have experienced ceased or interrupted payments, and with the potential for average to superior recoveries. Such obligations would possess a recovery assessment of 'RR2' (Superior), 'RR3' (Good), and 'RR4' (Average).</p>
+                  <h4>CC: Extremely Weak</h4>
+                  <p>'CC' IFS Ratings indicate two possible conditions. If obligations are still being met on a timely basis, it is probable that ceased or interrupted payments will occur in the future. Alternatively, a 'CC' IFS Rating is assigned to obligations that have experienced ceased or interrupted payments, with the potential for average to below-average recoveries. Such obligations would possess a recovery assessment of 'RR4' (Average) or 'RR5' (Below Average).</p>
 
-                  <h4>DD</h4>
-                  <p>Company is under an order of liquidation.</p>
-                  <p><em>Rating structure as of 1/16/2012</em></p>
+                  <h4>C: Distressed</h4>
+                  <p>'C' IFS Ratings indicate two possible conditions. If obligations are still being met on a timely basis, ceased or interrupted payments are imminent. Alternatively, a 'C' IFS Rating is assigned to obligations that have experienced ceased or interrupted payments, and with the potential for below average to poor recoveries. Such obligations would possess a recovery assessment of 'RR5' (Below Average) or 'RR6' (Poor).</p>
+
+
+
 
                 </div>
               </div>
@@ -427,45 +420,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div class="toggle">
                 <div class="togglet" id="standard"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Standard &amp; Poor's</div>
                 <div class="togglec clearfix fgl-bullet" >
+                  <p>Ratings from 'AA' to 'CCC' may be modified by the addition of a plus (+) or minus (-) sign to show relative standing within the major rating categories.</p>
                   <h4>AAA</h4>
-                  <p>Extremely strong capacity to meet financial commitments. Highest Rating.</p>
+                  <p>An insurer rated 'AAA' has extremely strong financial security characteristics. 'AAA' is the highest insurer financial strength rating assigned by Standard & Poor's.</p>
                   <h4>AA</h4>
-                  <p>Very strong capacity to meet financial commitments.</p>
+                  <p>An insurer rated 'AA' has very strong financial security characteristics, differing only slightly from those rated higher.</p>
                   <h4>A</h4>
-                  <p>Strong capacity to meet financial commitments, but somewhat susceptible to adverse economic conditions and changes in circumstances.</p>
+                  <p>An insurer rated 'A' has strong financial security characteristics, but is somewhat more likely to be affected by adverse business conditions than are insurers with higher ratings. </p>
 
                   <h4>BBB</h4>
-                  <p>Adequate capacity to meet financial commitments, but more subject to adverse economic conditions.</p>
+                  <p>An insurer rated 'BBB' has good financial security characteristics, but is more likely to be affected by adverse business conditions than are higher-rated insurers.</p>
 
-                  <h4>BBB-</h4>
-                  <p>Considered lowest investment grade by market participants.</p>
-                  <h4>BB+</h4>
-                  <p>Considered highest speculative grade by market participants.</p>
+
 
                   <h4>BB</h4>
-                  <p>Less vulnerable in the near-term but faces major ongoing uncertainties to adverse business, financial and economic conditions.</p>
+                  <p>An insurer rated 'BB' has marginal financial security characteristics. Positive attributes exist, but adverse business conditions could lead to insufficient ability to meet financial commitments. </p>
 
                   <h4>B</h4>
-                  <p>More vulnerable to adverse business, financial and economic conditions but currently has the capacity to meet financial commitments.</p>
+                  <p>An insurer rated 'B' has weak financial security characteristics. Adverse business conditions will likely impair its ability to meet financial commitments. </p>
 
                   <h4>CCC</h4>
-                  <p>Currently vulnerable and dependent on favorable business, financial and economic conditions to meet financial commitments.</p>
+                  <p>An insurer rated 'CCC' has very weak financial security characteristics, and is dependent on favorable business conditions to meet financial commitments. </p>
 
                   <h4>CC</h4>
-                  <p>Currently highly vulnerable.</p>
+                  <p>An insurer rated 'CC' has extremely weak financial security characteristics and is likely not to meet some of its financial commitments. </p>
 
-                  <h4>C</h4>
-                  <p>Currently highly vulnerable obligations and other defined circumstances.</p>
 
-                  <h4>D</h4>
-                  <p>Payment default on financial commitments.</p>
-                  <p><em>Rating structure as of 7/9/2013</em></p>
+
                 </div>
 
               </div>
 
             </div>
-
+<div class="fgl-bullet">
+  <ul> 
+    <li>Standard & Poor’s rating is current as of: 7/31/2015</li>
+    <li>A.M. Best rating is current as of: 12/17/2014</li>
+    <li>Moody’s rating is current as of: 7/7/2014</li>
+    <li>Fitch rating is current as of: 8/20/2015</li>
+  </ul>
+</div>
             <div class="col_full fgl-compliance">15-726</div>
 
         </div>
@@ -654,7 +648,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Footer Scripts
 ============================================= -->
-<script type="text/javascript" src="/js/functions.js"></script><script type="text/javascript" src="/js/swsearch.js"></script>
+   <!-- build:js1 -->
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript" src="/js/swsearch.js"></script>
 
 </body>
 </html>

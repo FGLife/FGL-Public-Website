@@ -20549,6 +20549,15 @@ body:not(.device-touch) .tagcloud a {
 .annuities-page .annuities-large-table.table th {
   border: none !important;
 }
+.annuities-page .ratings-large-table.table {
+  max-width: none;
+  margin: 0 auto;
+  font-size: 13px !important;
+}
+.annuities-page .ratings-large-table.table th {
+  border: none !important;
+  width: 40px !important;
+}
 .annuities-page .table.table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #cdd1d4;
 }
@@ -20557,21 +20566,21 @@ body:not(.device-touch) .tagcloud a {
   vertical-align: middle;
   padding: 5px 15px 5px 15px;
   max-width: 265px;
-  border-top: 1px solid #b1b1b1;
+  border-top: 1px solid #b1b1b1 !important;
 }
 .annuities-page .annuities-large-table.table > tbody > tr > td,
 .annuities-page .annuities-large-table.table > thead > tr > th {
   vertical-align: middle;
   padding: 10px;
   max-width: 265px;
-  border: 1px solid #b1b1b1;
+  border: 1px solid #b1b1b1 !important;
 }
 .life-insurance-page.annuities-page .annuities-large-table.table > tbody > tr > td,
 .annuities-page .annuities-large-table.table > thead > tr > th {
   vertical-align: bottom;
   padding: 5px 10px 5px 10px;
   max-width: 138px;
-  border: 1px solid #b1b1b1;
+  border: 1px solid #b1b1b1 !important;
 }
 span.member-mark {
   width: 20px;
@@ -24140,6 +24149,57 @@ body:not(.no-transition) #wrapper,
 .icon-fgl-prosperity-elite:before {
 	content: "B";
 }
+.fgl-eight:before {
+  content: "C";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-nine:before {
+  content: "D";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-one:before {
+  content: "E";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-five:before {
+  content: "F";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-four:before {
+  content: "G";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-two:before {
+  content: "H";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-three:before {
+  content: "I";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-ten:before {
+  content: "J";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-seven:before {
+  content: "K";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+.fgl-six:before {
+  content: "L";
+  font-size: 30px;
+  line-height: 0 !important;
+}
+
 @charset "UTF-8";
 
 /*!
@@ -28509,11 +28569,8 @@ img.mfp-img {
   .landing-form-overlay {
     bottom: -142px;
   }
-  .team.team-list {
-    min-height: 285px;
-  }
   .team.team-list .team-desc.long-text {
-    height: 285px;
+    height: 265px;
   }
 }
 @media (min-width: 767px) and (max-width: 1199px) {
@@ -29429,6 +29486,13 @@ img.mfp-img {
     font-size: 13px;
     min-width: 49px;
     padding: 0 11px;
+  }
+  #page-title .breadcrumb {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 15px 0 0 !important;
   }
 }
 @media only screen and (max-width: 767px) {

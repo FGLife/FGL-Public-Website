@@ -13,7 +13,9 @@
   <!-- Stylesheets
   ============================================= -->
 
+  <!-- build:css -->
   <link rel="stylesheet" href="/style.css" type="text/css" />
+  <!-- endbuild -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <!--[if lt IE 9]>
@@ -37,7 +39,7 @@
   <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="/favicons/manifest.json">
+
   <meta name="apple-mobile-web-app-title" content="FGLIFE.COM">
   <meta name="application-name" content="FGLIFE.COM">
   <meta name="msapplication-TileColor" content="#ffffff">
@@ -46,10 +48,11 @@
 
   <!-- External JavaScripts
   ============================================= -->
-  <script type="text/javascript" src="/js/jquery.js"></script>
-  <script type="text/javascript" src="/js/plugins.js"></script>
-
-  <!-- Document Title
+  <!-- build:js -->
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/plugins.js"></script>
+    <!-- endbuild -->
+    <!-- Document Title
   ============================================= -->
   <title>FG Life-Elite&reg; Life Insurance | Fidelity &amp; Guaranty Life</title>
 
@@ -251,11 +254,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <hr class="col_half">
 
           <ul>
-            <li>Income tax free insurance benefits, tax deferred growth of account values, and the possible tax advantaged access to account values</li>
+            <li>Tax deferred growth of account values, and the possible tax advantaged access to account values</li>
             <li>Ability to earn interest based on the performance of the S&amp;P 500&reg; Index, subject to a cap, without any downside risk</li>
             <li>Select between two death benefit options. You may also switch the death benefit option in the future based on your changing needs</li>
             <li>Access to surrender value through withdrawals or loans</li>
-            <li>Fidelity & Guaranty Life may credit a .25% persistency bonus to the fixed and indexed account value, after the 10th policy year</li>
+            <li>Beginning in the 11<sup>th</sup> policy year a 0.25% persistency bonus may be credited to the fixed and indexed account value</li>
             <li>15 year guarantee that the life insurance policy will not lapse as long as the required premiums are paid</li>
             </ul>
 
@@ -304,12 +307,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="togglec clearfix fgl-bullet">
                   <p>The account value can be allocated between a fixed account, indexed interest accounts, or a combination of these accounts.</p>
                   <ul>
-                    <li>One is a fixed interest account where Fidelity & Guaranty Life declares a rate of interest that the account value earns. The declared rate of interest is fixed for a year.</li>
-                    <li>The other accounts are indexed interest accounts. The account value earns interest based on the performance of the S&amp;P 500&reg; index, subject to a cap. The maximum cap rate is set in advance of each segment’s buy date and may change as each segment renews. The minimum cap guaranteed by policy varies as follows: 1.5% when the 140% participation rate is selected, 2% when the 100% participation rate is selected, or 1% when the Monthly Point-to-Point option is selected.</li>
+
+                    <li>One is a fixed interest account where Fidelity &amp; Guaranty Life declares and guarantees for one year period a rate of interest that is fixed for a year.</li>
+                    <li>The other accounts are indexed interest accounts. The account value earns interest based on the performance of the S&amp;P 500&reg; index, subject to a cap and/or participation rate. The cap rate is set in advance of each segment’s buy date and may change as each segment renews. The minimum cap guaranteed by policy varies as follows: 1.5% when the 140% participation rate is selected, 2% when the 100% participation rate is selected, or 1% when the Monthly Point-to-Point option is selected.</li>
+
                   </ul>
                   <p>The rate for fixed and indexed interest accounts is guaranteed to never be less than .25%.
                     Account allocations between the interest crediting accounts may be changed once every year on the account value segment anniversary, subject to at least 30 days prior notice.</p>
-                    <p>Fidelity & Guaranty Life places money into the indexed interest account up to twelve times per year on the 15th of every month, or the first business day thereafter.</p>
+                    <p>When allocating account value into the indexed interest account, it’s important to understand how these accounts are managed. Fidelity & Guaranty Life places money into the indexed interest account up to twelve times per year on the 15th of every month, or the first business day thereafter.</p>
                 </div>
               </div>
 
@@ -320,12 +325,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="togglec clearfix fgl-bullet">
                   <p>When premium is received before the monthly account allocation date, it is held in a short-term interest earning account and earns a declared interest rate daily, until the next monthly account allocation date.</p>
                   <p>The fixed interest account is credited with interest daily at the then current declared interest rate.</p>
-                  <p>The indexed interest account credit is based upon a formula linked to changes in the S&amp;P 500&reg; and is subject to a cap.</p>
-                  <ul>
-                    <li>Annual Point-to-Point</li>
-                    <li>Monthly Point-to-Point</li>
-                  </ul>
-                  <p>The resulting indexed interest credit is multiplied by account value at the segment anniversary and the percentage allocated to each applicable indexed interest account. The index interest credit will not be credited to any portion of the account value that is deducted to pay cost of insurance charges or have been withdrawn or used as collateral under a fixed loan structure.</p>
+                  <p>The indexed interest account credit is based, in part, upon a formula linked to changes in the S&amp;P 500&reg; and is subject to a cap.</p>
+                  <h4>Annual Point-to-Point</h4>
+                  <p>The index change is determined by dividing the current month’s
+                    index price by the prior month’s index price, then subtracting 1.
+                    A cap is applied to each monthly gain; negative monthly
+                    changes are not limited, and the 12 monthly index changes
+                    are totaled at the end of the segment anniversary to determine
+                    interest credited. The interest credited will not be less
+                    than 0.25%</p>
+                  <h4>Monthly Point-to-Point</h4>
+                  <p>The index change is determined by dividing the current
+                    month’s index price by the prior month’s index price, then
+                    subtracting 1. A cap is applied to each monthly change;
+                    negative monthly changes are not limited, and the 12
+                    monthly index changes are totaled at the end of the segment
+                    anniversary to determine indexed interest credited, if any. The
+                    interest credited will not be less than 0.25%</p>
+
+                  <p>The resulting indexed interest credit is multiplied by account value at the segment anniversary and the percentage allocated to each applicable indexed interest account. Any index interest credit will not be credited to any portion of the account value that is deducted to pay cost of insurance charges or have been withdrawn or used as collateral under a fixed loan structure.</p>
                   <p>Beginning in the 11th policy year, FGL may credit an additional 0.25% persistency bonus interest rate to the fixed and indexed account value. Although our intent and history is to pay this bonus, FGL reserves the right to not declare a bonus.</p>
                 </div>
               </div>
@@ -344,11 +362,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <h4>Option A - Death Benefit</h4>
                   <p>With this type of death benefit, your death benefit is the greater of the face amount and the minimum death benefit required by law.</p>
                   <h4>Option B - Death Benefit</h4>
-                  <p>With this type of death benefit, your total death benefit is the greater of the face amount plus the account value in the policy and the minimum death benefit required by law. You have the option to change death benefit options on the policy anniversary. Changing the death benefit option does not require any additional underwriting.</p>
+                  <p>With this type of death benefit, your total death benefit is the greater of the face amount plus the account value in the policy and the minimum death benefit required by law. You have the option to change death benefit options on the policy anniversary. </p>
                   <h4>Flexible Death Benefit</h4>
                   <p>FG Life-Elite is issued with a minimum face amount of $50,000. As long as you meet underwriting criteria you may adjust the face amount upward or downward, once each year. An increase may be made after the first policy year and a decrease after the third policy year. The face amount may not be reduced below $50,000.</p>
                   <h4>No Lapse Guarantee</h4> 
                   <p>Your policy will remain in effect for 15 years if, during each month of the 15-year period, the premiums you pay are never less than the minimum no-lapse premium amount increased by any outstanding loan balances and partial withdrawal values. You may be foregoing the advantage of building up account value by paying only the minimum no-lapse premium.</p>
+                  <p>The no lapse guarantee may increase the likelihood may increase the likelihood that your account value will be insufficient to cover the monthly mortality costs and expense charges unless additional premium is paid. If additional premium is not paid, your policy may terminate. Please consult your agent for details.</p>
                 </div>
               </div>
 
@@ -365,6 +384,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <p>No surrender charge applies to premium added to your account value during any policy year that exceeds the annual target premium.</p>
                   <h4>Partial Withdrawals</h4>
                   <p>As long as the policy's surrender value is positive, withdrawals may be made from the policy after the first policy year. Withdrawals will reduce the face amount by an equivalent amount. There is a $25 charge for each withdrawal and surrender charges may be incurred. Consult your tax advisor before making a withdrawal as it may be taxable.</p>
+                  <p>Partial withdrawals may increase the likelihood that your account value will be insufficient to cover the monthly mortality costs and expense charges unless additional premium is paid. If additional premium is not paid, your policy may terminate. Please consult your agent for details.</p>
+
                 </div>
               </div>
 
@@ -376,11 +397,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <p>A highly important and very valuable feature of your life insurance policy is the ability to take loans against the surrender value. With FG Life-Elite&reg;, loans are available after the first policy year, and there is no limit to the number of loans that can be taken, provided that there is uncollateralized surrender value in the policy.</p>
                   <p>FG Life-Elite&reg; offers two types of loans: Fixed and Variable. The difference between the two relates to the rate of interest charged and how the account value that is collateralized to cover the loan continues to earn interest. As always, you should select the loan that best suits your needs.</p>
                   <h4>Fixed Loan Option</h4>
-                  <p>For loans made in policy years 2-10, the interest charged is 4%. The account value is that used as collateral to cover the loan is moved into a fixed interest account where it is guaranteed to earn 2%. The net cost of the loan is 2% <strong>(4% charged minus 2% earned equals 2% cost).</strong></p>
-                  <p>In policy year 11 and beyond, preferred loans are available on the surrender value in the policy that is in excess of the no-lapse premiums paid into the policy. The interest charged is 2%. The account value that is used as collateral to cover the loan is moved into a fixed interest account where it is guaranteed to earn 2%. The net cost of the loan is 0% <strong>(2% charged minus 2% earned equals 0% cost).</strong></p>
+                  <p>Account value in excess of premiums paid will
+                    be available for a preferred loan. For loans made
+                    in policy years 2 - 10, loans will be charged no
+                    more than the declared annual interest rate plus
+                    2%. The account value that is used as collateral
+                    to cover the loan is moved into a fixed interest
+                    account where it will be credited the declared
+                    annual interest rate.</p>
+                    <p>In policy years 11 and beyond, the interest
+                    charged on the preferred loan is equal to the
+                    declared annual interest rate. The account value
+                    that is collateralized to cover the loan will be
+                    credited with a rate equal to the declared annual
+                    interest rate.</p>
                   <h4>Variable Loan Option</h4>
                   <p>FG Life-Elite&reg; stands out from many traditional indexed universal life products in that it offers a variable loan option. With a variable loan, the rate charged on the loan is based on the Moody's Corporate Bond Yield Average Index.</p>
                   <p>Like the fixed loan, variable loans may be available after the first policy year. Unlike the fixed loan, with the variable loan the account value that is used as collateral for the loan may continue to earn interest and/or index credits in the same proportion as the unloaned portion of your total account value. As a result, you may continue to earn interest and/or index interest credits up to the cap for that index crediting period. This design gives you the ability to leverage the policy values through loans. For instance, you might borrow at a 5% rate of interest, but the cash value used as collateral for the loan may earn 10%. In this scenario, you have a 5% gain. On the other hand, there is the possibility that you can borrow at 5% and earn 0% if the index doesn't perform well that year. In that scenario, the loan design costs a full 5%. Variable loans are a higher risk option that may have either a positive or negative outcome relative to a fixed loan.</p>
+                  <p>Variable loan option is subject to state availability, certain restrictions may apply and it may increase likelihood that your account value will be insufficient to cover the monthly mortality costs and expense charges unless additional premium is paid. If additional premium is not paid, your policy may terminate. Please consult your agent for details.</p>
                 </div>
               </div>
 
@@ -388,15 +422,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
               <div class="toggle">
                 <div class="togglet last"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>What optional benefits are available?</div>
+
                 <div class="togglec clearfix fgl-bullet">
+
                   <h4>Accelerated Benefit for Terminal Illness</h4>
-                  <p>If a physician diagnoses you with a terminal illness that results in a life expectancy of less than 24 months, this rider can pay a benefit of up to 100% of your policy's death benefit, not to exceed $500,000. This could help with unexpected medical costs not covered by traditional medical coverage, travel, or anything else. Your policy death benefit would be reduced by the benefit amount for this year. You should seek advice from a tax professional before exercising this rider.</p>
+                  <p>If a physician diagnoses you with a terminal illness that results in a life expectancy of less than 24 months, this rider can pay a benefit of up to 100% of your policy's death benefit, not to exceed $500,000. This could help with unexpected medical costs not covered by traditional medical coverage, travel, or anything else.</p>
+                  <p>Your policy death benefit would be reduced by the benefit amount for this rider. You should seek advice from a tax professional before exercising this rider.</p>
                   <h4>Accelerated Benefit for Critical Illness</h4>
-                  <p>This benefit will pay up to 100% of your policy's death benefit, not to exceed $500,000, in the event you suffer a heart attack, stroke, or are diagnosed with cancer or end-stage renal failure. This could help you in a variety of ways as you focus on your treatment. The benefit amount for this rider will be based on your age and severity of the illness - the policy death benefit would be reduced accordingly. You should seek advice from a tax professional before exercising this rider.</p>
+                  <p>This benefit will pay up to 100% of your policy’s death benefit, not to exceed
+                    $500,000, in the event you suffer a heart attack, stroke, or are diagnosed with
+                    cancer or end-stage renal failure. The covered critical illness must first occur on
+                    or after the 30th day following the effective date of the rider. This could help you
+                    in a variety of ways as you focus on your treatment. The benefit amount for this
+                    rider will be based on your age and severity of the illness - the policy death benefit
+                    would be reduced accordingly. You should seek advice from a tax professional
+                    before exercising this rider.</p>
                   <h4>Waiver of Monthly Deduction Rider</h4>
-                  <p>This valuable feature keeps your policy in force by waiving the monthly charges in your life insurance policy should the insured become totally disabled for longer than six months. This prevents the cancellation of coverage and keeps the surrender value from being depleted.In addition to the basic protection provided by FG Life-Elite&reg;, there are additional benefits that may be added to enhance your life insurance.</p>
+                  <p>This valuable feature keeps your policy in force by waiving the monthly charges
+                    in your life insurance policy should the insured become totally disabled for longer
+                    than six months and begins the policy anniversary on which you attain age 60.
+                    This prevents the cancellation of coverage and keeps the surrender value from
+                    being depleted.</p>
                   <h4>Accidental Death Benefit Rider</h4>
-                  <p>This rider increases the death benefit in the event of certain accident-related deaths. The total amount of coverage may not exceed the lesser of the policy face amount or $250,000.</p>
+                  <p>This rider increases the death benefit in the event of certain accident related
+                    deaths as long as it is prior to the policy anniversary on which you attain age
+                    70 and request is made within 120 days from the date of the accident. The total
+                    amount of coverage may not exceed the lesser of the policy face amount or
+                    $250,000.</p>
                   <h4>Primary Insured Term Life Insurance Rider</h4>
                   <p>This rider is designed to help minimize policy charges in order to maximize policy
                     values and income distributions for heavily funded sales. This rider is available
@@ -423,8 +475,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <p>The rider is convertible to permanent life insurance within 31 days prior to the time the child ceases to be insured under the rider. The amount of insurance for a converted policy may be up to five times the amount of the rider without underwriting.</p>
                   <h4>Ultimate Income Rider</h4>
                   <p>This rider allows you to designate how your death benefit will be paid. Instead of a single lump sum at death, payments can be distributed for years, providing steady income to your beneficiaries.</p>
-                  <h4>Over Loan Protection</h4>
-                  <p>This rider can prevent your life insurance policy from entering a lapse status as the result of outstanding loans that exceed your surrender value. Certain conditions must be met before the rider can be exercised, and there is a one-time administrative fee when the rider is exercised. This rider may be exercised one time during the lifetime of the life insurance policy.</p>
+                  <h4>Overloan Protection Rider</h4>
+                  <p>This rider can prevent your life insurance policy from entering a lapse status as the result of outstanding loans that exceed your surrender value provided the policy has been in effect for at least 15 years and you have attained age 75. Certain conditions must be met before the rider can be exercised, and there is a one-time administrative fee when the rider is exercised. This rider may be exercised one time during the lifetime of the life insurance policy.</p>
+                  <p>Optional benefit riders may not be available in all states. Some riders are subject to additional charges. Additional restrictions and limitations apply; see policy for complete details. Should you elect the Critical Illness Benefit or Terminal Illness Benefit an administration fee of up to $500 may apply in some states. Consult your tax advisor before exercising benefits. The Overloan Protection Rider has an administrative fee of up to 5% of the account value at the time the rider is exercised.</p>
                 </div>
               </div>
 
@@ -433,7 +486,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div class="toggle">
                 <div class="togglet"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Do I pay fees or charges?</div>
                 <div class="togglec clearfix">
-                  <p>A 7.5% premium expense charge will be deducted from premiums paid up to the annual target premium. A 5% premium expense charge will be deducted from premiums, made in excess of the annual target premium. Each month, the company will deduct the cost of insurance charge, unit expense charge, rider charges and an $8 expense charge from the account value. </p>
+                  <p>A 7.5% premium expense charge will be deducted from premiums paid up to the annual target premium in the first 10 years. A 5% premium expense charge will be deducted from premiums paid up to the annual target premium beginning in year 11. A 5% premium expense charge will be deducted from premiums paid in excess of the annual target premium. Each month, the company will deduct the cost of insurance charge, unit expense charge, any rider charges applicable and an $8 expense charge from the account value. </p>
 
                   <p>Monthly deductions will be deducted against the basic account value starting with the most recent segments. If the basic account value is insufficient to cover the monthly deduction, the excess account value will be used to cover cost of insurance deductions starting with the most recent segments. </p></div>
               </div>
@@ -673,7 +726,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Footer Scripts
 ============================================= -->
-<script type="text/javascript" src="/js/functions.js"></script><script type="text/javascript" src="/js/swsearch.js"></script>
+   <!-- build:js1 -->
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript" src="/js/swsearch.js"></script>
 
 </body>
 </html>

@@ -12,6 +12,7 @@ var minifyHtml = require('gulp-minify-html');
 
 
 var concat = require('gulp-concat');
+var htmlreplace = require('gulp-html-replace');
 var uglify = require('gulp-uglify');
 var cssminify = require('gulp-minify-css');
 var rename = require('gulp-rename');
@@ -336,24 +337,22 @@ gulp.task('aws_webfonts_move', function(){
 
 gulp.task('aws_css_minify_move', function() {
     var cssSrc = 'app/style.css',
-        cssDst = 'aws';
+        cssDst = 'aws/css';
 
     return gulp.src(cssSrc)
         .pipe(cssminify({processImport:false}))
-        //.pipe(rename({suffix: '.min'}))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(cssDst));
-
 });
 
 
 // Move other supporting vendor style.css
 gulp.task('aws_css_move', function() {
-
     var cssSrc = 'app/css/**/*.css',
         cssDst = 'aws/css';
 
     return gulp.src(cssSrc)
-        .pipe(cssminify({processImport:false}))
+        //.pipe(cssminify({processImport:false}))
         //.pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(cssDst));
 });
@@ -365,7 +364,7 @@ gulp.task('aws_style-import_move', function() {
     cssDst = 'aws/';
 
   return gulp.src(cssSrc)
-    .pipe(cssminify({processImport:false}))
+    //.pipe(cssminify({processImport:false}))
     //.pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(cssDst));
 });
@@ -419,7 +418,7 @@ gulp.task('aws_favicons_move', function() {
     .pipe(gulp.dest(fDst));
 });
 
-
+//Clean Tasks
 // Clean AWS file
 gulp.task('aws_clean', function(cb) {
   del(['aws/*'], cb)
@@ -430,6 +429,49 @@ gulp.task('aws_htaccess_clean', function(cb) {
   del(['aws/.htaccess'], cb)
 });
 
+//JS rename concat tasks
+
+//replace paths and reference for concatenated minified/unminified css, and js
+gulp.task('htmlreplace', function() {
+
+  var htmlSrc = 'aws/**/*.html';
+  var htmlDst = 'aws';
+
+  gulp.src(htmlSrc)
+    .pipe(htmlreplace({
+      'css': '/css/style.min.css',
+      'js': '/js/lib.min.js',
+      'js1': '/js/app.min.js' //these go on the bottom
+    }))
+    .pipe(gulp.dest(htmlDst));
+});
+
+gulp.task('scriptsspecific', function(){
+  var jsSrc = 'app/js/**/*.js';
+  //var jsDst = 'build/WebsiteTemplates/CanvasBase/App_Themes/CanvasBase/js';
+  var jsDst = 'aws/js';
+
+  return gulp.src(['app/js/functions.js'])
+    .pipe(concat('app.js'))
+    .pipe(rename({suffix: '.min'}))
+    //.pipe(uglify())
+    .pipe(gulp.dest(jsDst));
+});
+
+//concatenate and rename jquery and plugins to app.min.js
+gulp.task('scriptsspecifictop', function(){
+  var jsSrc = 'app/js/**/*.js';
+  //var jsDst = 'build/WebsiteTemplates/CanvasBase/App_Themes/CanvasBase/js';
+  var jsDst = 'aws/js';
+
+  return gulp.src(['app/js/jquery.js','app/js/**/plugins.js'])
+    .pipe(concat('lib.js'))
+    .pipe(rename({suffix: '.min'}))
+    //.pipe(uglify())
+    .pipe(gulp.dest(jsDst));
+});
+
+
 //Run these
 
 //#1 Clean directory
@@ -438,27 +480,20 @@ gulp.task('aws_clean_all', ['aws_clean', 'aws_htaccess_clean']);
 //#2 Run all prep
 gulp.task('aws_prepare', ['aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_style-import_move', 'aws_htaccess', 'aws_js_move', 'aws_html_move', 'aws_images_move', 'aws_favicons_move']);
 
-//#3 Change CSS references
-gulp.task('css_add_ext', function(){
+//#3 Concat & rename JS
+gulp.task('aws_postprod',['htmlreplace', 'scriptsspecific','scriptsspecifictop']);
 
-  var Src = 'aws/**/*';
-  var Dst = 'aws';
-
-  gulp.src([Src])
-    .pipe(replace('.css', '.min.css'))
-    .pipe(gulp.dest(Dst));
-});
 
 // Zip file for upload
-gulp.task('aws_zip', function () {
+/*gulp.task('aws_zip', function () {
 
-  var Src = 'aws/**/*',
+  var Src = 'aws/!**!/!*',
     Dst = 'aws/';
 
   return gulp.src(Src)
     .pipe(zip('aws_archive.zip'))
     .pipe(gulp.dest(Dst));
-});
+});*/
 
 //serve aws folder
 gulp.task('serve_aws', ['styles', 'fonts'], () => {

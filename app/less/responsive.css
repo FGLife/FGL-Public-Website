@@ -559,8 +559,11 @@
   .landing-form-overlay {
     bottom: -142px;
   }
+  .team.team-list {
+    min-height: 285px;
+  }
   .team.team-list .team-desc.long-text {
-    height: 265px;
+    height: 285px;
   }
 }
 @media (min-width: 767px) and (max-width: 1199px) {
@@ -1476,6 +1479,13 @@
     font-size: 13px;
     min-width: 49px;
     padding: 0 11px;
+  }
+  #page-title .breadcrumb {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 15px 0 0 !important;
   }
 }
 @media only screen and (max-width: 767px) {
