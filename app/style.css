@@ -15370,9 +15370,9 @@ body:not(.device-touch) .button.button-full strong {
 }
 .feature-box .fbox-icon i {
   font-style: normal;
-  font-size: 40px;
+  font-size: 45px;
   text-align: center;
-  line-height: 55px;
+  line-height: 65px;
 }
 .feature-box .fbox-icon.icon-fgl-form-instructions {
   width: 40px;
