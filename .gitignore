@@ -58,3 +58,7 @@ GulpFiles/build/gulpfile.js
 styles.css
 
 
+
+app/images/.DS_Store
+
+app/.DS_Store
