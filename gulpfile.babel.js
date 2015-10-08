@@ -337,7 +337,8 @@ gulp.task('aws_webfonts_move', function(){
 
 gulp.task('aws_css_minify_move', function() {
     var cssSrc = 'app/style.css',
-        cssDst = 'aws/css';
+        //cssDst = 'aws/css'; temporary fix for images
+      cssDst = 'aws';
 
     return gulp.src(cssSrc)
         .pipe(cssminify({processImport:false}))
@@ -439,7 +440,8 @@ gulp.task('htmlreplace', function() {
 
   gulp.src(htmlSrc)
     .pipe(htmlreplace({
-      'css': '/css/style.min.css',
+      //'css': '/css/style.min.css', temp for image fix
+      'css': '/style.min.css',
       'js': '/js/lib.min.js',
       'js1': '/js/app.min.js' //these go on the bottom
     }))
