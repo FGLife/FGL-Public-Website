@@ -24,6 +24,104 @@
     }
 }
 
+.annuities-page {
+    .table {
+        max-width: 990px;
+        margin: 0 auto;
+        font-size: 13px !important;
+    }
+    .annuities-large-table.table {
+        max-width: none;
+        margin: 0 auto;
+        font-size: 13px !important;
+        th {
+            border: none !important;
+        }
+    }
+    .ratings-large-table.table {
+      max-width: none;
+      margin: 0 auto;
+      font-size: 13px !important;
+      th {
+        border: none !important;
+        width: 40px !important;
+      }
+    }
+    .table.table-striped {
+        & > tbody {
+            & > tr:nth-of-type(odd) {
+                background-color: #cdd1d4;
+            }
+        }
+    }
+}
+.annuities-page .table > tbody > tr > td, .annuities-page .table > thead > tr > th {
+    vertical-align: middle;
+    padding: 5px 15px 5px 15px;
+    max-width: 265px;
+    border-top: 1px solid #b1b1b1 !important;
+}
+.annuities-page .annuities-large-table.table> tbody > tr > td, .annuities-page .annuities-large-table.table> thead > tr > th {
+    vertical-align: middle;
+    padding: 10px;
+    max-width: 265px;
+    border: 1px solid #b1b1b1 !important;
+
+}
+.life-insurance-page.annuities-page .annuities-large-table.table> tbody > tr > td, .annuities-page .annuities-large-table.table> thead > tr > th {
+  vertical-align: bottom;
+  padding: 5px 10px 5px 10px;
+  max-width: 138px;
+  border: 1px solid #b1b1b1 !important;
+}
+
+span.member-mark {
+    width: 20px;
+    height: 20px;
+    background: #ff641f;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    display: block;
+}
+span.chairperson-mark {
+    width: 20px;
+    height: 20px;
+    background: @fgl-blue;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    display: block;
+}
+span.financial-expert-mark {
+    width: 20px;
+    height: 20px;
+    background: #19a094;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.corporate-gov {
+    .table-key {
+        display: block;
+        margin: 30px auto;
+        text-align: center;
+        li:first-child {
+            margin-left: 30px;
+        }
+    }
+    h4 {
+        margin-bottom: 5px;
+    }
+}
+.corporate-gov .table-key li,.corporate-gov .table-key li span {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+
 .btn-link {
     color: @theme-color;
     &:hover,

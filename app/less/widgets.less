@@ -11,16 +11,16 @@
 
 .widget {
     position: relative;
-    margin-top: 50px;
+    margin-top: 40px;
     &:first-child {
         margin-top: 0;
     }
     & > h4 {
-        margin-bottom: 25px;
-        font-size: 15px;
+        margin-bottom: 12px;
+        //fgl pdt
+        font-size: 14px;
         font-weight: 600;
         letter-spacing: 2px;
-        text-transform: uppercase;
     }
     p {
         font-size: 14px;
@@ -125,7 +125,8 @@ body {
             background: url("images/icons/widget-link.png") left top no-repeat;
             border: none !important;
             color: #FFFFFF;
-            font-size: 14px;
+            //fgl pdt
+            font-size: 13px;
             &:hover {
                 color: #000;
             }
@@ -143,10 +144,17 @@ body {
       padding: 0 3px 0 12px;
       background: url("images/icons/widget-link.png") left top no-repeat;
       border: none !important;
-      color: #444;
-      font-size: 16px;
+      color: #5a6771;
+      //font-size: 15px;
+      width: 100%;
+    a{
+      color:#009999;
       &:hover {
-        color: #000;
+        color:#B2E0E0 ;
+      }
+    }
+      &:hover {
+        color: @fgl-blue;
 
     }
   }
@@ -156,16 +164,17 @@ body {
   li {
     list-style: none;
     margin: 0;
-    padding: 6px;
-
     display: inline-block;
-    padding: 5 3px 0 12px;
-    background: url("images/icons/widget-link.png") left top no-repeat;
+    padding: 0px 0px 15px 40px;
+    background: url("images/icons/checkmark.png") left top no-repeat;
     border: none !important;
-    color: #444;
-    font-size: 16px;
+    color: #5a6771;
+    //font-size: 14px;
+    font-size: @font-size-base;
+    line-height: 1.4;
+    width: 100%;
     &:hover {
-      color: #000;
+      color: @fgl-blue;
 
     }
   }
@@ -228,6 +237,17 @@ body {
      ul {
         ul {
             margin-left: 15px;
+        }
+    }
+}
+
+.widget_links {
+    li {
+        padding-left: 0px !important;
+        a {
+            background: none !important;
+            background-image: none !important;
+            padding-left: 0px !important;
         }
     }
 }
@@ -302,8 +322,9 @@ body {
 .subscribe-widget {
     h5 {
         font-weight: 300;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.5;
+        margin-bottom: 30px;
     }
 }
 

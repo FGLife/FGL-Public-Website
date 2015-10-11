@@ -71,17 +71,18 @@ body:not(.device-touch) {
         line-height: 34px;
     }
     &.button-large {
-        padding: 0 26px;
-        font-size: 16px;
+        padding: 0 15px;
+        font-size: 19px;
         height: 46px;
         line-height: 46px;
+        font-weight: 300;
     }
     &.button-xlarge {
-        padding: 0 32px;
-        font-size: 18px;
-        letter-spacing: 2px;
-        height: 52px;
-        line-height: 52px;
+        padding: 0 120px 0 25px;
+        font-size: 24px;
+        height: 55px;
+        line-height: 55px;
+       font-weight: 400;
     }
     &.button-desc {
         text-align: left;
@@ -219,7 +220,7 @@ body:not(.device-touch) {
 .button {
     &.button-3d {
         .border-radius(3px);
-        border-bottom: 3px solid rgba(0,0,0,0.15);
+       /* border-bottom: 3px solid rgba(0,0,0,0.15); */
         -webkit-transition: none;
         -o-transition: none;
         transition: none;
@@ -517,9 +518,9 @@ body {
 .button-3d.button-yellow:hover,
 .button-reveal.button-yellow:hover { background-color: #ECD078 !important; }
 
-.button-green { background-color: #009999; } //pdt
+.button-green { background-color: #19a094; } //pdt
 .button-3d.button-green:hover,
-.button-reveal.button-green:hover { background-color: #ff5000 !important; } //pdt
+.button-reveal.button-green:hover { background-color: #097F75 !important; } //pdt
 
 .button-brown { background-color: #774F38; }
 .button-3d.button-brown:hover,
@@ -541,9 +542,12 @@ body {
 .button-3d.button-leaf:hover,
 .button-reveal.button-leaf:hover { background-color: #A8CABA !important; }
 //below changes to button colors gray-FGL-KC
-.button-gray { background-color: #9DA3A8; }
+.button-gray { background-color: #5a6771; }
 .button-3d.button-gray:hover,
-.button-reveal.button-gray:hover { background-color: #ff5000 !important; }
+//fgl-pdt color to #4A4E52
+.button-reveal.button-gray:hover {
+    color: #FFFFFF;
+    background-color: #4A4E52 !important; }
 
 .button-dirtygreen { background-color: #1693A5; }
 .button-3d.button-dirtygreen:hover,
@@ -553,9 +557,11 @@ body {
 .button-3d.button-blue:hover,
 .button-reveal.button-blue:hover { background-color: #001a71 !important; }
 
-.button-orange { background-color: #ff5000; }
+.button-orange { background-color: #fd7233; }
 .button-3d.button-orange:hover,
-.button-reveal.button-orange:hover { background-color: #ff5000 !important; }
+.button-reveal.button-orange:hover {
+    color: #FFFFFF;
+    background-color: #f4611e !important; }
 
 .button-black { background-color: #111; }
 .button-3d.button-black:hover,
@@ -565,6 +571,7 @@ body {
 .button-3d.button-white:hover,
 .button-reveal.button-white:hover { background-color: #F9F9F9 !important; }
 
+.btn-success:hover{ background-color: #4A4E52; border-color: #4A4E52;}
 
 /* Buttons - No Hover
 -----------------------------------------------------------------*/

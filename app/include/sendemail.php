@@ -7,19 +7,25 @@ $mail = new PHPMailer();
 if( isset( $_POST['template-contactform-submit'] ) AND $_POST['template-contactform-submit'] == 'submit' ) {
     if( $_POST['template-contactform-name'] != '' AND $_POST['template-contactform-email'] != '' AND $_POST['template-contactform-message'] != '' ) {
 
-        $name = $_POST['template-contactform-name'];
+        $service = $_POST['template-contactform-service'];
+        $firstname = $_POST['template-contactform-firstname'];
+        $lastname = $_POST['template-contactform-lastname'];
+        $address1 = $_POST['template-contactform-address1'];
+        $address2 = $_POST['template-contactform-address2'];
+        $city = $_POST['template-contactform-city'];
+        $state = $_POST['template-contactform-state'];
+        $zip = $_POST['template-contactform-zip'];
         $email = $_POST['template-contactform-email'];
         $phone = $_POST['template-contactform-phone'];
-        $service = $_POST['template-contactform-service'];
-        $subject = $_POST['template-contactform-subject'];
+        $policy = $_POST['template-contactform-policy'];
         $message = $_POST['template-contactform-message'];
 
-        $subject = isset($subject) ? $subject : 'New Message From Contact Form';
+        $subject = isset($subject) ? $subject : 'New Message From FGL-Contact-Us Form';
 
         $botcheck = $_POST['template-contactform-botcheck'];
 
-        $toemail = ''; // Your Email Address
-        $toname = ''; // Your Name
+        $toemail = ''; // paul.tyler@fglife.com
+        $toname = ''; // Paul Tyler
 
         if( $botcheck == '' ) {
 
@@ -36,7 +42,7 @@ if( isset( $_POST['template-contactform-submit'] ) AND $_POST['template-contactf
 
             $referrer = $_SERVER['HTTP_REFERER'] ? '<br><br><br>This Form was submitted from: ' . $_SERVER['HTTP_REFERER'] : '';
 
-            $body = "$name $email $phone $service $message $referrer";
+            $body = "$service $firstname $lastname $adrress1 $address2 $city $state $zip $email $phone $policy $message";
 
             $mail->MsgHTML( $body );
             $sendEmail = $mail->Send();

@@ -767,6 +767,7 @@ var SEMICOLON = SEMICOLON || {};
 			SEMICOLON.header.fullWidthMenu();
 			SEMICOLON.header.overlayMenu();
 			SEMICOLON.header.stickyMenu();
+			SEMICOLON.header.stickyMenuMobile();
 			SEMICOLON.header.sideHeader();
 			SEMICOLON.header.sidePanel();
 			SEMICOLON.header.onePageScroll();
@@ -889,7 +890,7 @@ var SEMICOLON = SEMICOLON || {};
 					$('#page-menu:not(.dots-menu,.no-sticky)').addClass('sticky-page-menu');
 					if( !$headerWrap.hasClass('force-not-dark') ) { $headerWrap.removeClass('not-dark'); }
 					SEMICOLON.header.stickyMenuClass();
-				} else if( $body.hasClass('device-xs') || $body.hasClass('device-xxs') || $body.hasClass('device-sm') ) {
+				} else if( $body.hasClass('device-xs') || $body.hasClass('device-xxs') /*|| $body.hasClass('device-sm')*/ ) {
 					if( $body.hasClass('sticky-responsive-menu') ) {
 						$('#header:not(.no-sticky)').addClass('responsive-sticky-header');
 						SEMICOLON.header.stickyMenuClass();
@@ -901,6 +902,40 @@ var SEMICOLON = SEMICOLON || {};
 				SEMICOLON.header.removeStickyness();
 			}
 		},
+		
+		stickyMenuMobile: function(){
+			
+			if( $body.hasClass('device-sm') || $body.hasClass('device-xs') || $body.hasClass('device-xxs') ) {
+				if ($window.scrollTop() > 0) {
+						$('#header-wrap').css({'top' : '0px', 'z-index' : '999'});
+						$('#top-bar').css({'top' : '0px', 'z-index' : '1', 'margin-bottom' : '0px'})
+				}
+
+			}
+			
+			$window.on("scroll", SEMICOLON.header.stickyMenuMobileOnScroll ).on('resize', SEMICOLON.header.stickyMenuMobileOnResize) ;
+			
+		},
+		
+		stickyMenuMobileOnScroll: function(e) {
+			
+			if( $body.hasClass('device-sm') || $body.hasClass('device-xs') || $body.hasClass('device-xxs') ) {
+			
+				if ($window.scrollTop() > 0) {
+						$('#header-wrap').css({'top' : '0px', 'z-index' : '999'});
+						$('#top-bar').css({'top' : '0px', 'z-index' : '1', 'margin-bottom' : '0px'})
+				}
+				else {
+						$('#header-wrap').css('top', '45px') ;
+						$('#top-bar').css({'top' : '0px', 'z-index' : '200', 'margin-bottom' : '100px'})
+				}
+			}
+		},
+		
+		stickyMenuMobileOnResize: function(e) {
+						$('#header-wrap').get(0).style.cssText = '' ;
+						$('#top-bar').get(0).style.cssText = '' ;
+	    },
 
 		removeStickyness: function(){
 			if( $header.hasClass('sticky-header') ){
@@ -1492,7 +1527,8 @@ var SEMICOLON = SEMICOLON || {};
 					}
 					if( !flexsDirection ) { flexsDirection = 'horizontal'; }
 					if( !flexsSlideshow ) { flexsSlideshow = true; } else { flexsSlideshow = false; }
-					if( !flexsPause ) { flexsPause = 5000; }
+					//fgl-pdt slowed flexPause from 5000 to 15000
+					if( !flexsPause ) { flexsPause = 15000; }
 					if( !flexsSpeed ) { flexsSpeed = 600; }
 					if( !flexsVideo ) { flexsVideo = false; }
 					if( flexsDirection == 'vertical' ) { flexsSheight = false; }
@@ -2203,6 +2239,15 @@ var SEMICOLON = SEMICOLON || {};
 			SEMICOLON.widget.masonryThumbs();
 			SEMICOLON.slider.owlCaptionInit();
 			SEMICOLON.header.topsocial();
+
+			// Form submission fix that conflicts with animsition plugin on iPad
+			setTimeout(function() {
+				$(document.body).append('<iframe id="_dead_end_frame" name="_dead_end_frame" style="display:none;"></iframe>');
+
+				$('form[action*="forms.hubspot.com"]').each(function() {
+					$(this).attr('target', '_dead_end_frame');
+				});
+			}, 1500);
 		}
 
 	};

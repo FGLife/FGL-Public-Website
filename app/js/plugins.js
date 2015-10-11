@@ -8,7 +8,7 @@
  *
  * Open source under the BSD License.
  *
- * Copyright © 2008 George McGinley Smith
+ * Copyright ï¿½ 2008 George McGinley Smith
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -177,7 +177,7 @@ jQuery.extend( jQuery.easing,
  *
  * Open source under the BSD License.
  *
- * Copyright © 2001 Robert Penner
+ * Copyright ï¿½ 2001 Robert Penner
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -320,6 +320,9 @@ jQuery.extend( jQuery.easing,
 })(jQuery);
 
 
+		// Removes hover event on login button
+		setTimeout(function(){jQuery('.top-links ul').unbind();},1000);
+						
 
 
 /**

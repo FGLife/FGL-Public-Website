@@ -23,9 +23,10 @@
         line-height: 24px;
         padding: 0 0 0 24px;
         margin: 0;
-        font-size: 16px;
+        //fgl-pdt
+        font-size: 17px;
         font-weight: 600;
-        color: #444;
+        color: #5c666f;
         cursor: pointer;
     }
     .togglet i {
@@ -56,8 +57,41 @@
         display: block;
         position: relative;
         padding: 10px 0 0 24px;
+        //fgl-pdt
+        h4 {
+            font-size:17px;
+        }
     }
 }
+
+.faq-page {
+    .faqs {
+        .togglet {
+            border-bottom: 1px #b1b1b1 solid;
+            padding-bottom: 12px !important;
+            font-size: 18px !important;
+            color: @fgl-blue !important;
+            padding-left: 0px;
+        }
+        .toggle {
+            border-bottom: none;
+        }
+        .togglec {
+	        padding-left: 0px;
+	        padding-top: 20px;
+	        font-size: 15px;
+        }
+    }
+}
+
+.annuities-page {
+    .faqs {
+        .toggle {
+            border-bottom: 1px #b1b1b1 solid;
+        }
+    }
+}
+
 
 /* Toggle - with Title Background
 -----------------------------------------------------------------*/
@@ -102,7 +136,8 @@
         .togglet,
         .toggleta {
             line-height: 44px;
-            padding: 0 15px 0 36px;
+          padding: 8px 15px 0 36px;
+            //padding: 0px 15px 0 36px; fgl-kc
         }
     }
 }
