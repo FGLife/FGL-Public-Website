@@ -344,6 +344,24 @@ gulp.task('aws_css_minify_move', function() {
         .pipe(cssminify({processImport:false}))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(cssDst));
+
+  var cssSrc = 'app/css/bootstrap.css',
+  //cssDst = 'aws/css'; temporary fix for images
+    cssDst = 'aws/css';
+
+  return gulp.src(cssSrc)
+    .pipe(cssminify({processImport:false}))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(cssDst));
+
+  var cssSrc = 'app/css/font-icons.css',
+  //cssDst = 'aws/css'; temporary fix for images
+    cssDst = 'aws/css';
+
+  return gulp.src(cssSrc)
+    .pipe(cssminify({processImport:false}))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(cssDst));
 });
 
 
@@ -452,6 +470,8 @@ gulp.task('htmlreplace', function() {
     .pipe(htmlreplace({
       //'css': '/css/style.min.css', temp for image fix
       'css': '/style.min.css',
+      'css1': '/css/bootstrap.min.css',
+      'css2': '/css/font-icons.min.css',
       'js': '/js/lib.min.js',
       'js1': '/js/app.min.js' //these go on the bottom
     }))
