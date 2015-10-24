@@ -644,5 +644,53 @@ gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
 
-//end serve aws folder
+//end serve UAT folder
+
+//serve aws folder
+gulp.task('serve_uat', ['styles', 'fonts'], () => {
+  browserSync({
+    notify: false,
+    port: 9000,
+    server: {
+      baseDir: ['.tmp', 'uat'],
+      routes: {
+        '/bower_components': 'bower_components'
+      }
+    }
+  });
+
+var reload  = browserSync.reload;
+
+gulp.task('php', function() {
+  php.server({ base: 'build', port: 8010, keepalive: true});
+});
+
+gulp.task('browser-sync',['php'], function() {
+  browserSync({
+    proxy: '127.0.0.1:8010',
+    port: 8080,
+    open: true,
+    notify: false
+  });
+});
+gulp.task('default', ['browser-sync'], function () {
+  gulp.watch(['build/*.php'], [reload]);
+});
+
+//
+
+gulp.watch([
+  'uat/*.html',
+  'uat/js/**/*.js',
+  'uat/images/**/*',
+  '.tmp/css/fonts/**/*'
+]).on('change', reload);
+
+gulp.watch('uat/css/**/*.css', ['styles']);
+gulp.watch('uat/css/fonts/**/*', ['fonts']);
+gulp.watch('bower.json', ['wiredep', 'fonts']);
+});
+
+
+//end serve UAT folder
 
