@@ -19,6 +19,7 @@ var rename = require('gulp-rename');
 var less = require('gulp-less');
 var zip = require('gulp-zip');
 var replace = require('gulp-replace');
+var runSequence = require('run-sequence');
 
 
 //paul's additions
@@ -432,7 +433,7 @@ gulp.task('aws_html_move', function() {
     .pipe(gulp.dest(cssDst));
 });
 
-// Move html
+// Move sitemap
 gulp.task('aws_sitemap_move', function() {
 
   var cssSrc = 'app/sitemap.xml',
@@ -516,6 +517,57 @@ gulp.task('scriptsspecifictop', function(){
 });
 
 
+// Clean UAT file - do first
+gulp.task('uat_clean', function(cb) {
+  del(['uat/*'], cb)
+});
+
+// Clean UAT config file
+gulp.task('uat_config1_clean', function(cb) {
+  del(['aws/*.config'], cb)
+});
+
+// Clean UAT file
+gulp.task('uat_config2_clean', function(cb) {
+  del(['aws/*.txt'], cb)
+});
+
+
+// Copy AWS directory and name UAT directory
+gulp.task('aws_dir_copy_uat', function() {
+
+  var cssSrc = 'aws/**/*.*',
+    cssDst = 'uat';
+
+  return gulp.src(cssSrc)
+    .pipe(gulp.dest(cssDst));
+});
+
+// Move sitemap
+gulp.task('uat_sitemap_move', function() {
+
+  var cssSrc = 'app/sitemap.xml',
+    cssDst = 'uat';
+
+  return gulp.src(cssSrc)
+    .pipe(gulp.dest(cssDst));
+});
+
+// Move configuration files for UAT
+gulp.task('uat_config1', function() {
+  var fSrc = 'app/*.txt';
+  var fDst = 'uat';
+  return gulp.src(fSrc)
+    .pipe(gulp.dest(fDst));
+});
+
+gulp.task('uat_config2', function() {
+  var fSrc = 'app/*.config';
+  var fDst = 'uat';
+  return gulp.src(fSrc)
+    .pipe(gulp.dest(fDst));
+});
+
 //Run these
 
 //#1 Clean directory
@@ -527,6 +579,13 @@ gulp.task('aws_prepare', ['aws_webfonts_move', 'aws_css_minify_move', 'aws_css_m
 //#3 Concat & rename JS
 gulp.task('aws_postprod',['htmlreplace', 'scriptsspecific','scriptsspecifictop']);
 
+//#4 Clean UAT folder
+gulp.task('uat_clean_all',['uat_clean','uat_config1_clean','uat_config2_clean']);
+
+//Master build command
+gulp.task('makepackage', function(){
+  runSequence('aws_clean_all','aws_prepare','aws_postprod','uat_clean_all',['aws_dir_copy_uat','uat_sitemap_move','uat_config1','uat_config2']);
+});
 
 // Zip file for upload
 /*gulp.task('aws_zip', function () {
@@ -585,5 +644,53 @@ gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
 
-//end serve aws folder
+//end serve UAT folder
+
+//serve aws folder
+gulp.task('serve_uat', ['styles', 'fonts'], () => {
+  browserSync({
+    notify: false,
+    port: 9000,
+    server: {
+      baseDir: ['.tmp', 'uat'],
+      routes: {
+        '/bower_components': 'bower_components'
+      }
+    }
+  });
+
+var reload  = browserSync.reload;
+
+gulp.task('php', function() {
+  php.server({ base: 'build', port: 8010, keepalive: true});
+});
+
+gulp.task('browser-sync',['php'], function() {
+  browserSync({
+    proxy: '127.0.0.1:8010',
+    port: 8080,
+    open: true,
+    notify: false
+  });
+});
+gulp.task('default', ['browser-sync'], function () {
+  gulp.watch(['build/*.php'], [reload]);
+});
+
+//
+
+gulp.watch([
+  'uat/*.html',
+  'uat/js/**/*.js',
+  'uat/images/**/*',
+  '.tmp/css/fonts/**/*'
+]).on('change', reload);
+
+gulp.watch('uat/css/**/*.css', ['styles']);
+gulp.watch('uat/css/fonts/**/*', ['fonts']);
+gulp.watch('bower.json', ['wiredep', 'fonts']);
+});
+
+
+//end serve UAT folder
 
