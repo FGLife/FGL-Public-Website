@@ -1,11 +1,9 @@
 // generated on 2015-07-02 using generator-gulp-webapp 1.0.1
-import gulp from 'gulp';
-import gulpLoadPlugins from 'gulp-load-plugins';
-//import browserSync from 'browser-sync';
-import del from 'del';
-import {stream as wiredep} from 'wiredep';
-
+var gulp = require('gulp');
+var wiredep = require('wiredep').stream;
+var gulpLoadPlugins = require('gulp-load-plugins');
 var browserSync = require('browser-sync');
+var del = require('del');
 
 //these are needed for the them builder task
 var changed = require('gulp-changed');
@@ -23,16 +21,7 @@ var zip = require('gulp-zip');
 var replace = require('gulp-replace');
 var runSequence = require('run-sequence');
 
-
-//paul's additions
-//var copy = require('gulp-copy');
 var php = require('gulp-connect-php');
-
-//var gulp = require('gulp');
-//var php = require('gulp-connect-php');
-//var browserSync = require('browser-sync');
-
-//end thembuilder task references
 var notify = require('gulp-notify');
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -321,7 +310,7 @@ gulp.task('default', ['clean'], function() {
 ///////////////////////////////////////
 //
 //
-// Bundle for AWS
+// Bundle for AWS and UAT servers
 //
 //
 ///////////////////////////////////////
@@ -591,7 +580,12 @@ gulp.task('aws_zip', function () {
     .pipe(gulp.dest(Dst));
 });
 
-//Run these
+//////////////////////////////////////////////////////////
+//
+// Subscripts 1-4 must run sequentially
+// Script 5 - makepackage completes build for AWS and UAT
+//
+//////////////////////////////////////////////////////////
 
 //#1 Clean directory
 gulp.task('aws_clean_all', ['aws_clean', 'aws_htaccess_clean']);
@@ -605,7 +599,7 @@ gulp.task('aws_postprod',['htmlreplace', 'scriptsspecific','scriptsspecifictop']
 //#4 Clean UAT folder
 gulp.task('uat_clean_all',['uat_clean','uat_config1_clean','uat_config2_clean']);
 
-//Master build command
+//#5 Master build command
 gulp.task('makepackage', function(){
   runSequence('aws_clean_all','aws_prepare','aws_postprod','uat_clean_all',['aws_dir_copy_uat','uat_sitemap_move','uat_config1','uat_config2'],['uat_zip','aws_zip']);
 });
