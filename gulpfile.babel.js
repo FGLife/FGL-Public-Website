@@ -578,6 +578,17 @@ gulp.task('uat_zip', function () {
     .pipe(gulp.dest(Dst));
 });
 
+// Zip AWS file for upload
+
+gulp.task('aws_zip', function () {
+  var Src = 'aws/**';
+  var Dst = 'aws';
+
+  return gulp.src([Src], {dot: true})
+    .pipe(zip('aws_archive.zip'))
+    .pipe(gulp.dest(Dst));
+});
+
 //Run these
 
 //#1 Clean directory
@@ -594,20 +605,7 @@ gulp.task('uat_clean_all',['uat_clean','uat_config1_clean','uat_config2_clean'])
 
 //Master build command
 gulp.task('makepackage', function(){
-  runSequence('aws_clean_all','aws_prepare','aws_postprod','uat_clean_all',['aws_dir_copy_uat','uat_sitemap_move','uat_config1','uat_config2'],'uat_zip');
-});
-
-
-
-// Zip file for upload -- can't get this one to include .htaccess
-
-gulp.task('aws_zip', function () {
-  var Src = 'aws/**/*.*';
-  var Dst = 'aws';
-
-  return gulp.src(Src)
-    .pipe(zip('aws_archive.zip'))
-    .pipe(gulp.dest(Dst));
+  runSequence('aws_clean_all','aws_prepare','aws_postprod','uat_clean_all',['aws_dir_copy_uat','uat_sitemap_move','uat_config1','uat_config2'],['uat_zip','aws_zip']);
 });
 
 //serve aws folder -- gulp.task('serve_aws', ['styles', 'fonts'], () => {
