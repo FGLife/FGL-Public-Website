@@ -217,6 +217,8 @@ gulp.task('extras', function() {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
+//Serve app
+
 gulp.task('serve', ['styles', 'fonts'], function() {
   browserSync({
     notify: false,
@@ -231,18 +233,6 @@ gulp.task('serve', ['styles', 'fonts'], function() {
 
 var reload  = browserSync.reload;
 
-gulp.task('php', function() {
-    php.server({ base: 'build', port: 8010, keepalive: true});
-});
-
-gulp.task('browser-sync',['php'], function() {
-    browserSync({
-        proxy: '127.0.0.1:8010',
-        port: 8080,
-        open: true,
-        notify: false
-    });
-});
 gulp.task('default', ['browser-sync'], function () {
     gulp.watch(['build/*.php'], [reload]);
 });
@@ -261,7 +251,7 @@ gulp.task('default', ['browser-sync'], function () {
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
-
+// end serv app
 
 gulp.task('serve:dist', function() {
   browserSync({
@@ -589,7 +579,7 @@ gulp.task('makepackage', function(){
   runSequence('aws_clean','aws_prepare','aws_postprod','uat_clean',['aws_dir_copy_uat','uat_sitemap_move','uat_config1','uat_config2'],['uat_zip','aws_zip']);
 });
 
-//serve aws folder -- gulp.task('serve_aws', ['styles', 'fonts'], () => {
+//start serve aws folder
 gulp.task('serve_aws', ['styles', 'fonts'], function(){
   browserSync({
     notify: false,
@@ -616,10 +606,9 @@ gulp.watch('aws/css/fonts/**/*', ['fonts']);
 gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
+//end serve AWS folder
 
-//end serve UAT folder
-
-//serve aws folder
+//start serve UAT folder
 gulp.task('serve_uat', ['styles', 'fonts'], function(){
   browserSync({
     notify: false,
