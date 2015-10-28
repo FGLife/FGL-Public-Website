@@ -13829,6 +13829,13 @@ span.hs-form-required {
 .hs-form fieldset.form-columns-2 div.hs-form-field:nth-of-type(2) .input {
   margin-right: 0px;
 }
+.hs-form-radio ul {
+  list-style: none;
+}
+.hs-form-radio .hs-input {
+  width: auto !important;
+  display: inline-block;
+}
 .investor-email .hs_submit {
   margin-top: 25px;
 }
