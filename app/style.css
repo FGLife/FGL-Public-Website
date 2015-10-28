@@ -13826,15 +13826,38 @@ span.hs-form-required {
   margin-right: 0px !important;
   margin-right: 0px;
 }
+.hs-form fieldset.form-columns-1 input[type="checkbox"] {
+  width: auto !important;
+  margin-top: -10px;
+  float: left;
+  margin-right: 15px;
+}
+.hs-form fieldset.form-columns-1 input[type="radio"] {
+  width: auto !important;
+  margin-top: -10px;
+  float: left;
+  margin-right: 15px;
+}
 .hs-form fieldset.form-columns-2 div.hs-form-field:nth-of-type(2) .input {
   margin-right: 0px;
 }
-.hs-form-radio ul {
-  list-style: none;
+.hs-form label {
+  margin-top: 10px;
+  margin-bottom: 2px;
 }
-.hs-form-radio .hs-input {
-  width: auto !important;
+.hs-form ul.inputs-list.multi-container {
+  list-style: none;
   display: inline-block;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.hs-form ul.inputs-list.multi-container label {
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.hs-form ul.inputs-list li {
+  display: inline-block;
+  width: 100%;
 }
 .investor-email .hs_submit {
   margin-top: 25px;
