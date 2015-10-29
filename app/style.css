@@ -13859,6 +13859,13 @@ span.hs-form-required {
   display: inline-block;
   width: 100%;
 }
+.hs-form-radio ul {
+  list-style: none;
+}
+.hs-form-radio .hs-input {
+  width: auto !important;
+  display: inline-block;
+}
 .investor-email .hs_submit {
   margin-top: 25px;
 }

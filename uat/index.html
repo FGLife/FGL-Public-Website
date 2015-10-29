@@ -11,9 +11,16 @@
 
        <!-- Stylesheets
     ============================================= -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/font-icons.min.css">
-  <link rel="stylesheet" href="/style.min.css">
+  <!-- build:css1 -->
+  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css2 -->
+  <link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
+  <!-- endbuild -->
+
+  <!-- build:css -->
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <!-- endbuild -->
 
 
 
@@ -52,7 +59,10 @@
 
     <!-- External JavaScripts
     ============================================= -->
-	<script src="/js/lib.min.js"></script>
+	<!-- build:js -->
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/plugins.js"></script>
+    <!-- endbuild -->
 
     <!-- Document Title
     ============================================= -->
@@ -472,7 +482,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="col-md-9">
                         <div class=" topmargin-sm">
                             <h3 style="text-transform: uppercase">Take the  most important step.<br />
-                                Ask today to talk to an independent agent.</h3>
+                                Talk to an independent agent.</h3>
                         </div>
                     </div>
 
@@ -665,7 +675,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Footer Scripts
     ============================================= -->
 
-  <script src="/js/app.min.js"></script>
+  <!-- build:js1 -->
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <!-- endbuild -->
 
 
     <script type="text/javascript" src="/js/swsearch.js"></script>

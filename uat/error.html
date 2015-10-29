@@ -9,8 +9,16 @@
 
   <!-- Stylesheets
   ============================================= -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/font-icons.min.css">  <link rel="stylesheet" href="/style.min.css">  <link rel="shortcut icon" href="/images/icons/favicons/favicon-16.png">
+  <!-- build:css1 -->
+  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css2 -->
+  <link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css -->
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <!-- endbuild -->
+  <link rel="shortcut icon" href="/images/icons/favicons/favicon-16.png">
   <link rel="apple-touch-icon" href="/images/icons/favicons/favicon-57.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/favicons/favicon-72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/favicons/favicon-114.png">
@@ -22,7 +30,10 @@
 
   <!-- External JavaScripts
   ============================================= -->
-  <script src="/js/lib.min.js"></script>
+  <!-- build:js -->
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/plugins.js"></script>
+    <!-- endbuild -->
     <!-- Document Title
   ============================================= -->
   <title>Oops | Fidelity & Guaranty Life</title>
@@ -465,7 +476,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Footer Scripts
 ============================================= -->
-   <script src="/js/app.min.js"></script>
+   <!-- build:js1 -->
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <!-- endbuild -->
     <script type="text/javascript" src="/js/swsearch.js"></script>
 
 
