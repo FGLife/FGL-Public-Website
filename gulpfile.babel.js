@@ -1,9 +1,9 @@
 // generated on 2015-07-02 using generator-gulp-webapp 1.0.1
-import gulp from 'gulp';
-import gulpLoadPlugins from 'gulp-load-plugins';
-import browserSync from 'browser-sync';
-import del from 'del';
-import {stream as wiredep} from 'wiredep';
+var gulp = require('gulp');
+var wiredep = require('wiredep').stream;
+var gulpLoadPlugins = require('gulp-load-plugins');
+var browserSync = require('browser-sync');
+var del = require('del');
 
 //these are needed for the them builder task
 var changed = require('gulp-changed');
@@ -21,16 +21,7 @@ var zip = require('gulp-zip');
 var replace = require('gulp-replace');
 var runSequence = require('run-sequence');
 
-
-//paul's additions
-//var copy = require('gulp-copy');
 var php = require('gulp-connect-php');
-
-//var gulp = require('gulp');
-//var php = require('gulp-connect-php');
-//var browserSync = require('browser-sync');
-
-//end thembuilder task references
 var notify = require('gulp-notify');
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -146,7 +137,7 @@ gulp.task('buildtheme',['scripts','fontstheme','imagemin','less','htmltheme'],fu
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-gulp.task('styles', () => {
+gulp.task('styles', function() {
   return gulp.src('app/css/*.css')
     .pipe($.sourcemaps.init())
     .pipe($.autoprefixer({browsers: ['last 1 version']}))
@@ -156,7 +147,7 @@ gulp.task('styles', () => {
 });
 
 function lint(files, options) {
-  return () => {
+  return function() {
     return gulp.src(files)
       .pipe(reload({stream: true, once: true}))
       .pipe($.eslint(options))
@@ -178,7 +169,7 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
-gulp.task('html', ['styles'], () => {
+gulp.task('html', ['styles'], function() {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
   return gulp.src('app/*.html')
@@ -191,7 +182,7 @@ gulp.task('html', ['styles'], () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('images', () => {
+gulp.task('images', function(){
   return gulp.src('app/images/**/*')
     .pipe($.if($.if.isFile, $.cache($.imagemin({
       progressive: true,
@@ -207,7 +198,7 @@ gulp.task('images', () => {
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('fonts', () => {
+gulp.task('fonts', function() {
   return gulp.src(require('main-bower-files')({
     filter: '**/*.{eot,svg,ttf,woff,woff2}'
   }).concat('app/css/fonts/**/*'))
@@ -215,7 +206,7 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('dist/css/fonts'));
 });
 
-gulp.task('extras', () => {
+gulp.task('extras', function() {
   return gulp.src([
     'app/*.*',
     '!app/*.html'
@@ -226,7 +217,9 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts'], () => {
+//Serve app
+
+gulp.task('serve', ['styles', 'fonts'], function() {
   browserSync({
     notify: false,
     port: 9000,
@@ -240,18 +233,6 @@ gulp.task('serve', ['styles', 'fonts'], () => {
 
 var reload  = browserSync.reload;
 
-gulp.task('php', function() {
-    php.server({ base: 'build', port: 8010, keepalive: true});
-});
-
-gulp.task('browser-sync',['php'], function() {
-    browserSync({
-        proxy: '127.0.0.1:8010',
-        port: 8080,
-        open: true,
-        notify: false
-    });
-});
 gulp.task('default', ['browser-sync'], function () {
     gulp.watch(['build/*.php'], [reload]);
 });
@@ -270,9 +251,9 @@ gulp.task('default', ['browser-sync'], function () {
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
+// end serv app
 
-
-gulp.task('serve:dist', () => {
+gulp.task('serve:dist', function() {
   browserSync({
     notify: false,
     port: 9000,
@@ -282,7 +263,7 @@ gulp.task('serve:dist', () => {
   });
 });
 
-gulp.task('serve:test', () => {
+gulp.task('serve:test', function() {
   browserSync({
     notify: false,
     port: 9000,
@@ -300,7 +281,7 @@ gulp.task('serve:test', () => {
 });
 
 // inject bower components
-gulp.task('wiredep', () => {
+gulp.task('wiredep', function() {
   gulp.src('app/*.html')
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)*\.\./
@@ -308,18 +289,18 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], function() {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-gulp.task('default', ['clean'], () => {
+gulp.task('default', ['clean'], function() {
   gulp.start('build');
 });
 
 ///////////////////////////////////////
 //
 //
-// Bundle for AWS
+// Bundle for AWS and UAT servers
 //
 //
 ///////////////////////////////////////
@@ -464,20 +445,16 @@ gulp.task('aws_favicons_move', function() {
 //Clean Tasks
 // Clean AWS file
 gulp.task('aws_clean', function(cb) {
-  del(['aws/*'], cb)
+  del(['aws/*'],{dot: true}, cb)
 });
 
-// Clean .htaccess file
-gulp.task('aws_htaccess_clean', function(cb) {
-  del(['aws/.htaccess'], cb)
-});
 
-//JS rename concat tasks
+/*//JS rename concat tasks
 
 //replace paths and reference for concatenated minified/unminified css, and js
 gulp.task('htmlreplace', function() {
 
-  var htmlSrc = 'aws/**/*.html';
+  var htmlSrc = 'aws/!**!/!*.html';
   var htmlDst = 'aws';
 
   gulp.src(htmlSrc)
@@ -492,7 +469,7 @@ gulp.task('htmlreplace', function() {
 });
 
 gulp.task('scriptsspecific', function(){
-  var jsSrc = 'app/js/**/*.js';
+  var jsSrc = 'app/js/!**!/!*.js';
   //var jsDst = 'build/WebsiteTemplates/CanvasBase/App_Themes/CanvasBase/js';
   var jsDst = 'aws/js';
 
@@ -505,33 +482,22 @@ gulp.task('scriptsspecific', function(){
 
 //concatenate and rename jquery and plugins to app.min.js
 gulp.task('scriptsspecifictop', function(){
-  var jsSrc = 'app/js/**/*.js';
+  var jsSrc = 'app/js/!**!/!*.js';
   //var jsDst = 'build/WebsiteTemplates/CanvasBase/App_Themes/CanvasBase/js';
   var jsDst = 'aws/js';
 
-  return gulp.src(['app/js/jquery.js','app/js/**/plugins.js'])
+  return gulp.src(['app/js/jquery.js','app/js/!**!/plugins.js'])
     .pipe(concat('lib.js'))
     .pipe(rename({suffix: '.min'}))
     //.pipe(uglify())
     .pipe(gulp.dest(jsDst));
-});
+});*/
 
 
 // Clean UAT file - do first
 gulp.task('uat_clean', function(cb) {
-  del(['uat/*'], cb)
+  del(['uat/*'],{dot: true}, cb)
 });
-
-// Clean UAT config file
-gulp.task('uat_config1_clean', function(cb) {
-  del(['aws/*.config'], cb)
-});
-
-// Clean UAT file
-gulp.task('uat_config2_clean', function(cb) {
-  del(['aws/*.txt'], cb)
-});
-
 
 // Copy AWS directory and name UAT directory
 gulp.task('aws_dir_copy_uat', function() {
@@ -568,38 +534,53 @@ gulp.task('uat_config2', function() {
     .pipe(gulp.dest(fDst));
 });
 
-//Run these
+// Zip UAT file for upload
+gulp.task('uat_zip', function () {
+  var Src = 'uat/*';
+  var Dst = 'uat';
+
+  return gulp.src(Src)
+    .pipe(zip('uat_archive.zip'))
+    .pipe(gulp.dest(Dst));
+});
+
+// Zip AWS file for upload
+
+gulp.task('aws_zip', function () {
+  var Src = 'aws/**';
+  var Dst = 'aws';
+
+  return gulp.src([Src], {dot: true})
+    .pipe(zip('aws_archive.zip'))
+    .pipe(gulp.dest(Dst));
+});
+
+//////////////////////////////////////////////////////////
+//
+// Subscripts 1-4 must run sequentially
+// Script 5 - makepackage completes build for AWS and UAT
+//
+//////////////////////////////////////////////////////////
 
 //#1 Clean directory
-gulp.task('aws_clean_all', ['aws_clean', 'aws_htaccess_clean']);
+gulp.task('aws_clean');
 
 //#2 Run all prep
 gulp.task('aws_prepare', ['aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_css1_minify_move', 'aws_css2_minify_move', 'aws_style_move','aws_style-import_move', 'aws_htaccess', 'aws_js_move', 'aws_html_move', 'aws_sitemap_move', 'aws_images_move', 'aws_favicons_move']);
 
-//#3 Concat & rename JS
-gulp.task('aws_postprod',['htmlreplace', 'scriptsspecific','scriptsspecifictop']);
+/*//#3 Concat & rename JS
+gulp.task('aws_postprod',['htmlreplace', 'scriptsspecific','scriptsspecifictop']);*/
 
 //#4 Clean UAT folder
-gulp.task('uat_clean_all',['uat_clean','uat_config1_clean','uat_config2_clean']);
+gulp.task('uat_clean');
 
-//Master build command
+//#5 Master build command
 gulp.task('makepackage', function(){
-  runSequence('aws_clean_all','aws_prepare','aws_postprod','uat_clean_all',['aws_dir_copy_uat','uat_sitemap_move','uat_config1','uat_config2']);
+  runSequence('aws_clean','aws_prepare',/*'aws_postprod',*/'uat_clean',['aws_dir_copy_uat','uat_sitemap_move','uat_config1','uat_config2'],['uat_zip','aws_zip']);
 });
 
-// Zip file for upload
-/*gulp.task('aws_zip', function () {
-
-  var Src = 'aws/!**!/!*',
-    Dst = 'aws/';
-
-  return gulp.src(Src)
-    .pipe(zip('aws_archive.zip'))
-    .pipe(gulp.dest(Dst));
-});*/
-
-//serve aws folder
-gulp.task('serve_aws', ['styles', 'fonts'], () => {
+//start serve aws folder
+gulp.task('serve_aws', ['styles', 'fonts'], function(){
   browserSync({
     notify: false,
     port: 9000,
@@ -613,24 +594,6 @@ gulp.task('serve_aws', ['styles', 'fonts'], () => {
 
 var reload  = browserSync.reload;
 
-gulp.task('php', function() {
-  php.server({ base: 'build', port: 8010, keepalive: true});
-});
-
-gulp.task('browser-sync',['php'], function() {
-  browserSync({
-    proxy: '127.0.0.1:8010',
-    port: 8080,
-    open: true,
-    notify: false
-  });
-});
-gulp.task('default', ['browser-sync'], function () {
-  gulp.watch(['build/*.php'], [reload]);
-});
-
-//
-
 gulp.watch([
   'aws/*.html',
   'aws/js/**/*.js',
@@ -643,11 +606,10 @@ gulp.watch('aws/css/fonts/**/*', ['fonts']);
 gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
+//end serve AWS folder
 
-//end serve UAT folder
-
-//serve aws folder
-gulp.task('serve_uat', ['styles', 'fonts'], () => {
+//start serve UAT folder
+gulp.task('serve_uat', ['styles', 'fonts'], function(){
   browserSync({
     notify: false,
     port: 9000,
@@ -661,24 +623,6 @@ gulp.task('serve_uat', ['styles', 'fonts'], () => {
 
 var reload  = browserSync.reload;
 
-gulp.task('php', function() {
-  php.server({ base: 'build', port: 8010, keepalive: true});
-});
-
-gulp.task('browser-sync',['php'], function() {
-  browserSync({
-    proxy: '127.0.0.1:8010',
-    port: 8080,
-    open: true,
-    notify: false
-  });
-});
-gulp.task('default', ['browser-sync'], function () {
-  gulp.watch(['build/*.php'], [reload]);
-});
-
-//
-
 gulp.watch([
   'uat/*.html',
   'uat/js/**/*.js',
@@ -690,7 +634,6 @@ gulp.watch('uat/css/**/*.css', ['styles']);
 gulp.watch('uat/css/fonts/**/*', ['fonts']);
 gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
-
 
 //end serve UAT folder
 
