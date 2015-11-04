@@ -12,8 +12,16 @@
 
     <!-- Stylesheets
     ============================================= -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/font-icons.min.css">  <link rel="stylesheet" href="/style.min.css">
+  <!-- build:css1 -->
+  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css2 -->
+  <link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css -->
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <!-- endbuild -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
         <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -45,7 +53,10 @@
 
     <!-- External JavaScripts
     ============================================= -->
-    <script src="/js/lib.min.js"></script>
+    <!-- build:js -->
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/plugins.js"></script>
+    <!-- endbuild -->
     <!-- Document Title
     ============================================= -->
     <title>Agent Support | Fidelity & Guaranty Life</title>
@@ -263,7 +274,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                 <div class="container clearfix">
 
-                  <div class="col_one_fifth">
+                  <div class="col_one_sixth">
                     <div class="feature-box fbox-center fbox-light fbox-effect">
                       <div class="fbox-icon">
                         <a href="agent-faq.html"><i class="icon-fgl-policyholder-faq i-alt i-alt"></i></a>
@@ -272,7 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
 
-                  <div class="col_one_fifth">
+                  <div class="col_one_sixth">
                     <div class="feature-box fbox-center fbox-light fbox-effect">
                       <div class="fbox-icon">
                         <a href="/contact/find-an-imo.html"><i class="icon-fgl-agent-imo i-alt"></i></a>
@@ -281,7 +292,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
 
-                  <div class="col_one_fifth">
+                  <div class="col_one_sixth">
                     <div class="feature-box fbox-center fbox-light fbox-effect">
                       <div class="fbox-icon">
                         <a href="agent-get-contracted.html"><i class="icon-fgl-agent-contacted i-alt"></i></a>
@@ -290,7 +301,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
 
-                  <div class="col_one_fifth">
+                  <div class="col_one_sixth">
+                    <div class="feature-box fbox-center fbox-light fbox-effect">
+                      <div class="fbox-icon">
+                        <a href="https://training.fglife.com/"><i class="icon-fgl-policyholder-request-agent-call i-alt"></i></a>
+                      </div>
+                      <h4 class="blue-heading">Take Training</h4>
+                    </div>
+                  </div>
+
+                  <div class="col_one_sixth">
                     <div class="feature-box fbox-center fbox-light fbox-effect">
                       <div class="fbox-icon">
                         <a href="agent-change-contract-status.html"><i class="icon-fgl-agent-change-status i-alt"></i></a>
@@ -299,7 +319,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                   </div>
 
-                  <div class="col_one_fifth col_last">
+                  <div class="col_one_sixth col_last">
                     <div class="feature-box fbox-center fbox-light fbox-effect">
                       <div class="fbox-icon">
                         <a href="agency-services.html"><i class="icon-fgl-media-contact-us i-alt"></i></a>
@@ -310,7 +330,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                   <div class="clear"></div>
 
-                  <div class="col_full fgl-compliance">15-771</div>
+                  <div class="col_full fgl-compliance">15-985</div>
                     </div>
 
 
@@ -502,7 +522,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Footer Scripts
     ============================================= -->
-   <script src="/js/app.min.js"></script>
+   <!-- build:js1 -->
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <!-- endbuild -->
     <script type="text/javascript" src="/js/swsearch.js"></script>
 
 </body>

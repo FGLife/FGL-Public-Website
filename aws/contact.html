@@ -12,8 +12,16 @@
 
     <!-- Stylesheets
     ============================================= -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/font-icons.min.css">  <link rel="stylesheet" href="/style.min.css">
+  <!-- build:css1 -->
+  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css2 -->
+  <link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css -->
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <!-- endbuild -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
         <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -45,7 +53,10 @@
 
     <!-- External JavaScripts
     ============================================= -->
-    <script src="/js/lib.min.js"></script>
+    <!-- build:js -->
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/plugins.js"></script>
+    <!-- endbuild -->
     <!-- Document Title
     ============================================= -->
     <title>Contact Us | Fidelity &amp; Guaranty Life</title>
@@ -241,16 +252,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <div class="container clearfix">
 
-		            <h4 class="blue-heading nomargin" style="font-size: 24px !important;">Choose an option that best describes you</h4>
+		            <h4 class="blue-heading nomargin" style="font-size: 24px !important;">I am...</h4>
 
-	                <p class="bottommargin-md" style="font-size: 18px;">We have customized our support options to give you the best service possible in the most convenient manner</p>
+	                <p class="bottommargin-md" style="font-size: 18px;"></p>
 
                     <div class="col_one_fifth">
                         <div class="feature-box fbox-center fbox-light fbox-effect">
                             <div class="fbox-icon">
                                 <a href="contact/talk-to-agent.html"><i class="icon-fgl-interested-customer i-alt"></i></a>
                             </div>
-                          <h4 class="blue-heading">Interested Customer</h4>
+                          <h4 class="blue-heading">Looking for insurance</h4>
                         </div>
                     </div>
 
@@ -259,16 +270,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="fbox-icon">
                                 <a href="contact/policyholder-support.html"><i class="icon-fgl-policyholder-contact-us i-alt"></i></a>
                             </div>
-                          <h4 class="blue-heading">Policyholder</h4>
+                          <h4 class="blue-heading">A policyholder</h4>
                         </div>
                     </div>
 
                     <div class="col_one_fifth">
                         <div class="feature-box fbox-center fbox-light fbox-effect">
                             <div class="fbox-icon">
-                                <a href="contact/agent-support.html"><i class="icon-fgl-agent-contact-us i-alt"></i></a>
+                                <a href="contact/agent-support.html"><i class="icon-fgl-policyholder-request-agent-call i-alt"></i></a>
                             </div>
-                          <h4 class="blue-heading">Agent</h4>
+                          <h4 class="blue-heading">An agent</h4>
                         </div>
                     </div>
 
@@ -277,7 +288,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="fbox-icon">
                                 <a href="/investor-relations/shareholder-services.html"><i class="icon-fgl-investor-contact-us i-alt"></i></a>
                             </div>
-                          <h4 class="blue-heading">Investor</h4>
+                          <h4 class="blue-heading">An investor researching NYSE:FGL</h4>
                         </div>
                     </div>
 
@@ -286,12 +297,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="fbox-icon">
                                 <a href="contact/media-inquiry.html"><i class="icon-fgl-media-contact-us i-alt"></i></a>
                             </div>
-                          <h4 class="blue-heading">Media</h4>
+                          <h4 class="blue-heading">A member of the media</h4>
                         </div>
                     </div>
 
                     <div class="clear"></div>
-            <div class="col_full fgl-compliance">15-755</div>
+            <div class="col_full fgl-compliance">15-987</div>
           </div>
 
         </div>
@@ -478,7 +489,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Footer Scripts
     ============================================= -->
-  <script src="/js/app.min.js"></script>
+  <!-- build:js1 -->
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <!-- endbuild -->
     <script type="text/javascript" src="/js/swsearch.js"></script>
 
 </body>

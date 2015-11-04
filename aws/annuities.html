@@ -16,8 +16,16 @@
 
   <!-- Stylesheets
   ============================================= -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/font-icons.min.css">  <link rel="stylesheet" href="/style.min.css">
+  <!-- build:css1 -->
+  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css2 -->
+  <link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css -->
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <!-- endbuild -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
   <!--[if lt IE 9]>
   <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -49,7 +57,10 @@
 
   <!-- External JavaScripts
   ============================================= -->
-  <script src="/js/lib.min.js"></script>
+  <!-- build:js -->
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/plugins.js"></script>
+    <!-- endbuild -->
     <!-- Document Title
   ============================================= -->
   <title>Annuity Products | Fidelity &amp; Guaranty Life</title>
@@ -404,7 +415,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
         </div>
-        <div class="col_full fgl-compliance">15-728</div>
+        <div class="col_full fgl-compliance">15-986</div>
       </div>
 
 
@@ -428,7 +439,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="col-md-9">
           <div class=" topmargin-sm">
             <h3 style="text-transform: uppercase">Take the most important step.<br/>
-              Talk to an independent agent today.</h3>
+              Talk to an independent agent.</h3>
           </div>
         </div>
 
@@ -623,7 +634,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Footer Scripts
 ============================================= -->
-   <script src="/js/app.min.js"></script>
+   <!-- build:js1 -->
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <!-- endbuild -->
     <script type="text/javascript" src="/js/swsearch.js"></script>
 
 </body>
