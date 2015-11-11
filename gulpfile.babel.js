@@ -445,7 +445,7 @@ gulp.task('aws_favicons_move', function() {
 //Clean Tasks
 // Clean AWS file
 gulp.task('aws_clean', function(cb) {
-  del(['aws/*'],{dot: true}, cb)
+  del(['aws/*'],{'dot': true}, cb)
 });
 
 
@@ -496,7 +496,7 @@ gulp.task('scriptsspecifictop', function(){
 
 // Clean UAT file - do first
 gulp.task('uat_clean', function(cb) {
-  del(['uat/*'],{dot: true}, cb)
+  del(['uat/*'], cb)
 });
 
 // Copy AWS directory and name UAT directory
