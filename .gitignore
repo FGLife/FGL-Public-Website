@@ -16,3 +16,5 @@ GulpFiles/build/gulpfile.js
 .idea/vcs.xml
 app/images/.DS_Store
 app/.DS_Store
+
+.idea/misc.xml
