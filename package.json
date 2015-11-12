@@ -49,5 +49,8 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "del": "^1.2.1"
   }
 }
