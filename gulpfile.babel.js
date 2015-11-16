@@ -444,8 +444,8 @@ gulp.task('aws_favicons_move', function() {
 
 //Clean Tasks
 // Clean AWS file
-gulp.task('aws_clean', function(cb) {
-  del(['aws/*'],{dot: true}, cb)
+gulp.task('aws_clean', function() {
+  del(['aws/*'])
 });
 
 
@@ -536,7 +536,7 @@ gulp.task('uat_config2', function() {
 
 // Zip UAT file for upload
 gulp.task('uat_zip', function () {
-  var Src = 'uat/*';
+  var Src = 'uat/**';
   var Dst = 'uat';
 
   return gulp.src(Src)
