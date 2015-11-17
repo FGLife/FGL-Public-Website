@@ -269,12 +269,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
 	            <![endif]-->
 	            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-	            <script>
+			    <script>
 	              hbspt.forms.create({
 	                portalId: '260128',
-                  formId: 'cb618382-e033-4d52-81c3-432d7a98feb1',
+                    formId: 'cb618382-e033-4d52-81c3-432d7a98feb1',
 	                css: '',
-	                target: '.hub-form-container'
+	                target: '.hub-form-container',
+                    onFormSubmit: function(e){
+                    var $form = $('.hub-form-container form');
+                      if ($form.data('submitted') === true) {
+                          // Previously submitted - don't submit again
+                          alert('Form already submitted. Please wait.');
+                          e.preventDefault();
+                      } else {
+                          // Mark it so that the next submit can be ignored
+                          // ADDED requirement that form be valid
+                          if($form.valid()) {
+                              $form.data('submitted', true);
+                          }
+                      } 
+                    // Keep chainability
+                    return this;
+                  }
 	              });
 	            </script>
             </div>
