@@ -275,7 +275,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	                portalId: '260128',
 	                formId: '80e0d20c-be1c-4100-a327-338be9b1c4f1',
 	                css: '',
-	                target: '.hub-form-container'
+	                target: '.hub-form-container',
+	                onFormSubmit: function(e){
+                    var $form = $('.hub-form-container form');
+                      if ($form.data('submitted') === true) {
+                          // Previously submitted - don't submit again
+                          alert('Form already submitted. Please wait.');
+                          e.preventDefault();
+                      } else {
+                          // Mark it so that the next submit can be ignored
+                          // ADDED requirement that form be valid
+                          if($form.valid()) {
+                              $form.data('submitted', true);
+                          }
+                      } 
+                    // Keep chainability
+                    return this;
+                  }
 	              });
 	            </script>
 			</div>
