@@ -5,10 +5,10 @@ dist
 bower_components
 test/bower_components
 node/**/*.json
+
+.idea
+.idea/misc.xml
 .idea/encodings.xml
-.idea/watcherTasks.xml
-.idea/encodings.xml
-.idea/watcherTasks.xml
 .idea/watcherTasks.xml
 .idea/encodings.xml
 .idea/workspace.xml
@@ -17,8 +17,6 @@ GulpFiles/build/gulpfile.js
 app/images/.DS_Store
 app/.DS_Store
 
-.idea/misc.xml
-.idea
 /aws
 /uat
 /build
