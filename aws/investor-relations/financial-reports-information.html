@@ -253,6 +253,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <p class="bottommargin-sm"><strong> Fiscal 4Q 2015</strong><br>
           <a title="4Q 2015 Earnings Release" href="https://s3.amazonaws.com/fglife-docs/investor-relations/financial-reports/4Q+2015+FGL+Earnings+Release.pdf">4Q 2015 Earnings Release</a><br>
+          <a title="4Q 2015 Earnings Release" href="https://d2liin8b37blzf.cloudfront.net/investor-relations/financial-reports/4q-2015-10-k-09-30-2015.pdf">4Q 2015 10-K 09.30.2015</a><br>
           <a title="4Q 2015 Financial Supplement" href="https://s3.amazonaws.com/fglife-docs/investor-relations/financial-reports/4Q+2015+Financial+Supplement.pdf">4Q 2015 Financial Supplement</a>&nbsp;
           (<a title="Excel" href="https://s3.amazonaws.com/fglife-docs/investor-relations/financial-reports/4Q+2015+Financial+Supplement.xlsx">Excel</a>)
 
@@ -341,7 +342,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										    css: '',
 										    cssRequired: '',
 										    submitButtonClass: 'btn btn-success',
-										    target: '.subscribe-form-container'
+										    target: '.subscribe-form-container',
+											onFormSubmit: function(e){
+											var $form = $('.subscribe-form-container form');
+											  if ($form.data('submitted') === true) {
+											      // Previously submitted - don't submit again
+											      e.preventDefault();
+											  } else {
+											      // Mark it so that the next submit can be ignored
+											      // ADDED requirement that form be valid
+											      if($form.valid()) {
+											          $form.data('submitted', true);
+											          $form.hide();
+											          setTimeout(function(){
+											               if(!$('.submitted-message').length)
+											              {
+											                   $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+											                   $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+											              }
+											          },500);
+											     }
+											  } 
+											// Keep chainability
+											return this;
+											}
 										  });
 										</script>
 									</div>
