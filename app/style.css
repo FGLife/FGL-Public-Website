@@ -9983,10 +9983,10 @@ body:not(.device-touch) .button.button-full strong {
 }
 .feature-box-section .feature-box h3 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
   margin-bottom: 0;
-  color: #5a6771;
+  color: #001a71;
   text-transform: none;
 }
 /* Feature Box - Icon Large
