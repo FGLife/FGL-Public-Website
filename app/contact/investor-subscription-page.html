@@ -270,7 +270,30 @@
                 portalId: '260128',
                 formId: 'f3666d1a-3c77-4216-9df3-22fa186d538e',
                 css: '',
-	            target: '.hub-form-container'
+	            target: '.hub-form-container',
+	            onFormSubmit: function(e){
+                    var $form = $('.hub-form-container form');
+                      if ($form.data('submitted') === true) {
+                          // Previously submitted - don't submit again
+                          e.preventDefault();
+                      } else {
+                          // Mark it so that the next submit can be ignored
+                          // ADDED requirement that form be valid
+                          if($form.valid()) {
+                              $form.data('submitted', true);
+                              $form.hide();
+                              setTimeout(function(){
+	                               if(!$('.submitted-message').length)
+	                              {
+		                               $("<p>Thank you for submitting the form, someone will be in touch shortly.</p>").insertAfter($form);
+		                               $("html, body").animate({ scrollTop: $('.hub-form-container').offset().top - 200 }, 1000);
+		                          }
+                              },500);
+	                     }
+                      } 
+                    // Keep chainability
+                    return this;
+                  }
               });
             </script>
           </div>
@@ -317,7 +340,30 @@
                       css: '',
                       cssRequired: '',
                       submitButtonClass: 'btn btn-success',
-                      target: '.subscribe-form-container'
+                      target: '.subscribe-form-container',
+											onFormSubmit: function(e){
+											var $form = $('.subscribe-form-container form');
+											  if ($form.data('submitted') === true) {
+											      // Previously submitted - don't submit again
+											      e.preventDefault();
+											  } else {
+											      // Mark it so that the next submit can be ignored
+											      // ADDED requirement that form be valid
+											      if($form.valid()) {
+											          $form.data('submitted', true);
+											          $form.hide();
+											          setTimeout(function(){
+											               if(!$('.submitted-message').length)
+											              {
+											                   $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+											                   $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+											              }
+											          },500);
+											     }
+											  } 
+											// Keep chainability
+											return this;
+											}
                     });
                   </script>
                 </div>

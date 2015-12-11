@@ -276,7 +276,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       <li>A copy of your current Errors & Omissions coverage</li>
                       <li>A copy of your Anti-Money Laundering training certification </li>
                     </ul>
-                    <p>Once we have received all of your fully completed, signed forms and have conducted the mandatory background checks, we will set you up in our system, provided no additional inforamtion is needed.  You will receive a welcome letter that contains your agent number, a PIN and logon instructions for our agent portal, SalesLink.  If you have additional questions, please contact us at 800-445-6758 or <a href="mailto:contracting.support@fglife.com">Contracting.Support@fglife.com</a>
+                    <p>Once we have received all of your fully completed, signed forms and have conducted the mandatory background checks, we will set you up in our system, provided no additional information is needed.  You will receive a welcome letter that contains your agent number, a PIN and logon instructions for our agent portal, SalesLink.  If you have additional questions, please contact us at 800-445-6758 or <a href="mailto:contracting.support@fglife.com">Contracting.Support@fglife.com</a>
                     </p>
                   </div>
 
@@ -356,7 +356,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										    css: '',
 										    cssRequired: '',
 										    submitButtonClass: 'btn btn-success',
-										    target: '.subscribe-form-container'
+										    target: '.subscribe-form-container',
+											onFormSubmit: function(e){
+											var $form = $('.subscribe-form-container form');
+											  if ($form.data('submitted') === true) {
+											      // Previously submitted - don't submit again
+											      e.preventDefault();
+											  } else {
+											      // Mark it so that the next submit can be ignored
+											      // ADDED requirement that form be valid
+											      if($form.valid()) {
+											          $form.data('submitted', true);
+											          $form.hide();
+											          setTimeout(function(){
+											               if(!$('.submitted-message').length)
+											              {
+											                   $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+											                   $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+											              }
+											          },500);
+											     }
+											  }
+											// Keep chainability
+											return this;
+											}
 										  });
 										</script>
 									</div>

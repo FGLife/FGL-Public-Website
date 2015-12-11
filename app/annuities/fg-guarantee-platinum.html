@@ -368,7 +368,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<div class="toggle">
                   <div class="togglet"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>How does this affect my taxes?</div>
                   <div class="togglec clearfix">
-                    <p>The annuity is tax-deferred, which means you don&rsquo;t pay taxes on the interest it earns until the money is paid to you. When you take payouts or make a withdrawal, you pay ordinary income taxes on the earned interest. Withdrawals are treated as coming from earnings first and then as a return of your premium. Payments under an annuity payment plan are treated as coming partially from earnings and partially as return of premium. You may pay a federal income tax penalty on earnings you withdraw before age 59 1&frasl;2. If your state imposes a premium tax, it will be deducted from the money you receive. </p>
+                    <p>The annuity is tax-deferred, which means you don&rsquo;t pay taxes on the interest it earns until the money is paid to you. When you take payouts or make a withdrawal, you pay ordinary income taxes on the earned interest. Withdrawals are treated as coming from earnings first and then as a return of your premium. Payments under an annuity payment plan are treated as coming partially from earnings and partially as return of premium. You may pay a federal income tax penalty on earnings you withdraw before age 59 &frac12;. If your state imposes a premium tax, it will be deducted from the money you receive. </p>
 
                     <p>Buying an annuity within an IRA, 401(k) or other tax- deferred retirement plan doesn&rsquo;t give you any extra tax benefit. Choose the annuity based on its other features and benefits as well as its risks and costs, not its tax benefits. Please consult your tax advisor regarding your unique situation. </p>
                     <p>Internal Revenue Code provides that if a non-natural person holds the annuity and such person is not holding as an agent for a natural person, the contract shall not be treated as an annuity contract for income tax purposes. </p></div>
@@ -385,7 +385,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       <li>You have a set number of days (at least 10) to look at the annuity after you buy it. If you decide during that time that you don&rsquo;t want it, you can return the annuity and get your premium back. Read the cover page of your annuity contract as soon as you receive it to understand how many days you have to decide if you want to keep it.</li>
                       <li>At least once each year, we will send you a report of the current annuity values.</li>
                       <li>We pay the agent, broker, or firm for selling the annuity to you. Compensation is not deducted from your premium. However, the compensation we pay impacts contract pricing including surrender charges, interest rates, caps, participation rates and spread.</li>
-                      <li>Required Minimum Distributions &ndash; Certain tax qualified annuities are subject to required minimum distributions which generally require that distributions begin no later than April 1st of the year following your attainment of age 70<sup>1&frasl;2</sup> and that amounts be paid to you over a period not longer than your life expectancy.</li>
+                      <li>Required Minimum Distributions &ndash; Certain tax qualified annuities are subject to required minimum distributions which generally require that distributions begin no later than April 1st of the year following your attainment of age 70&frac12; and that amounts be paid to you over a period not longer than your life expectancy.</li>
                       <li>Fidelity &amp; Guaranty Life guarantees your annuity values. As a legal reserve company, Fidelity &amp; Guaranty Life is required by state regulation to maintain reserves equal to or greater than guaranteed surrender values.</li>
                     </ul>
 
@@ -482,7 +482,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										    css: '',
 										    cssRequired: '',
 										    submitButtonClass: 'btn btn-success',
-										    target: '.subscribe-form-container'
+										    target: '.subscribe-form-container',
+											onFormSubmit: function(e){
+											var $form = $('.subscribe-form-container form');
+											  if ($form.data('submitted') === true) {
+											      // Previously submitted - don't submit again
+											      e.preventDefault();
+											  } else {
+											      // Mark it so that the next submit can be ignored
+											      // ADDED requirement that form be valid
+											      if($form.valid()) {
+											          $form.data('submitted', true);
+											          $form.hide();
+											          setTimeout(function(){
+											               if(!$('.submitted-message').length)
+											              {
+											                   $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+											                   $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+											              }
+											          },500);
+											     }
+											  }
+											// Keep chainability
+											return this;
+											}
 										  });
 										</script>
 									</div>
