@@ -445,8 +445,10 @@ gulp.task('aws_favicons_move', function() {
 //Clean Tasks
 // Clean AWS file
 gulp.task('aws_clean', function() {
-  del(['aws/*'])
+  del(['aws/**']);
 });
+
+
 
 
 /*//JS rename concat tasks
