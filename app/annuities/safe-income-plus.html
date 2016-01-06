@@ -45,6 +45,7 @@
   <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="/favicons/FGL_Safari.svg" color="#001a71">
 
   <meta name="apple-mobile-web-app-title" content="FGLIFE.COM">
   <meta name="application-name" content="FGLIFE.COM">
@@ -526,7 +527,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="togglet"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>Do I pay fees or charges?</div>
                         <div class="togglec clearfix">
                             <p>Your full premium is available to earn interest from the effective date of your annuity. Surrender charges and MVA apply for the first ten years on full or partial surrenders.</p>
-                            <p>If you elect the optional Enhanced Guaranteed Minimum Withdrawal Benefit rider at issue, there is a charge that is deducted from the contract's account value annually after the completion of the first contract year. The annual charge for this rider is 0.95% multiplied by the income base. Once this rider is elected it cannot be voluntarily terminated until 10 contract years have elapsed; state variations apply. </p>
+                            <p>If you elect the optional Enhanced Guaranteed Minimum Withdrawal Benefit rider at issue, there is a charge that is deducted from the contract's account value annually after the completion of the first contract year. The annual charge for this rider is 1.05% multiplied by the income base. Once this rider is elected it cannot be voluntarily terminated until 10 contract years have elapsed; state variations apply. </p>
                         </div>
                     </div>
 
@@ -554,7 +555,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <li>You have a set number of days (at least 10) to look at the annuity after you buy it. If you decide during that time that you don&rsquo;t want it, you can return the annuity and get your premium back. Read the cover page of your annuity contract as soon as you receive it to understand how many days you have to decide if you want to keep it.</li>
                                 <li>At least once each year, we will send you a report of the current annuity values.</li>
                                 <li>We pay the agent, broker, or firm for selling the annuity to you. Compensation is not deducted from your premium. However, the compensation we pay impacts contract pricing including surrender charges, interest rates, caps, participation rates and spread.</li>
-                                <li>Required Minimum Distributions &ndash; Certain tax qualified annuities are subject to required minimum distributions which generally require that distributions begin no later than April 1st of the year following your attainment of age 70<sup>1&frasl;2</sup> and that amounts be paid to you over a period not longer than your life expectancy.</li>
+                                <li>Required Minimum Distributions &ndash; Certain tax qualified annuities are subject to required minimum distributions which generally require that distributions begin no later than April 1st of the year following your attainment of age 70&frac12; and that amounts be paid to you over a period not longer than your life expectancy.</li>
                                 <li>Fidelity &amp; Guaranty Life guarantees your annuity values. As a legal reserve company, Fidelity &amp; Guaranty Life is required by state regulation to maintain reserves equal to or greater than guaranteed surrender values.</li>
                             </ul>
                         </div>
@@ -651,7 +652,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										    css: '',
 										    cssRequired: '',
 										    submitButtonClass: 'btn btn-success',
-										    target: '.subscribe-form-container'
+										    target: '.subscribe-form-container',
+											onFormSubmit: function(e){
+											var $form = $('.subscribe-form-container form');
+											  if ($form.data('submitted') === true) {
+											      // Previously submitted - don't submit again
+											      e.preventDefault();
+											  } else {
+											      // Mark it so that the next submit can be ignored
+											      // ADDED requirement that form be valid
+											      if($form.valid()) {
+											          $form.data('submitted', true);
+											          $form.hide();
+											          setTimeout(function(){
+											               if(!$('.submitted-message').length)
+											              {
+											                   $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+											                   $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+											              }
+											          },500);
+											     }
+											  }
+											// Keep chainability
+											return this;
+											}
 										  });
 										</script>
 									</div>
@@ -746,7 +770,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="container clearfix">
 
                     <div class="col_half">
-                        <p style="color:#5c666f; text-shadow: none">&copy; 2015 Fidelity & Guaranty Life
+                        <p style="color:#5c666f; text-shadow: none">&copy; 2016 Fidelity & Guaranty Life
 	                        <a href="/privacy-policy.html" class="leftpadding-sm">Privacy Policy</a>
                             <a href="/website-terms.html" class="leftpadding-sm">Website Terms</a>
                         </p>

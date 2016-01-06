@@ -50,6 +50,7 @@
   <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="/favicons/FGL_Safari.svg" color="#001a71">
 
   <meta name="apple-mobile-web-app-title" content="FGLIFE.COM">
   <meta name="application-name" content="FGLIFE.COM">
@@ -367,45 +368,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	                    </div>
 
 	                    <div class="col_one_fourth nobottommargin">
-	                        <div class="feature-box center media-box fbox-bg" data-animate="fadeIn" data-delay="0">
+	                        <div class="feature-box center media-box fbox-bg" data-animate="fadeInLeft" data-delay="0">
 	                            <div class="fbox-media">
-	                                <a href="http://success.fglife.com/social-security-is-real-retirement-age-is-70-fb"><img class="image_fade" src="/images/front/years-to-retirement.jpg" alt="Years to Retirement"></a>
+	                                <a href="http://success.fglife.com/social-security-is-real-retirement-age-is-70"><img class="image_fade" src="/images/front/years-to-retirement.jpg" alt="Years to Retirement"></a>
 	                            </div>
 	                            <div class="fbox-desc">
-                                <a href="http://success.fglife.com/social-security-is-real-retirement-age-is-70-fb"><h3>Years to Retirement<span class="subtitle">At what age should I honestly plan to retire from work?</span></h3></a>
+                                <a href="http://success.fglife.com/social-security-is-real-retirement-age-is-70"><h3>Years to Retirement<span class="subtitle">At <span style="color:#009999;">what age</span> should I honestly plan to retire from work?</span></h3></a>
 	                            </div>
 	                        </div>
 	                    </div>
 
 	                    <div class="col_one_fourth nobottommargin">
-	                        <div class="feature-box center media-box fbox-bg" data-animate="fadeIn" data-delay="50">
+	                        <div class="feature-box center media-box fbox-bg" data-animate="fadeInUp" data-delay="25">
 	                            <div class="fbox-media">
-	                                <a href="http://success.fglife.com/aging-checklist-from-fidelity-and-guaranty-life"><img class="image_fade" src="/images/front/helping-parents.jpg" alt="Helping Parents"></a>
+	                                <a href="http://success.fglife.com/aging-checklist-from-fidelity-and-guaranty-life"><img class="image_fade" src="/images/front/helping-parents.jpg" alt="Helping Parents">
 	                            </div>
 	                            <div class="fbox-desc">
-                                <a href="http://success.fglife.com/aging-checklist-from-fidelity-and-guaranty-life"><h3>Helping Parents<span class="subtitle">What support will my aging parents require?</span></h3></a>
+                                <a href="http://success.fglife.com/aging-checklist-from-fidelity-and-guaranty-life"><h3>Helping Parents<span class="subtitle">What support will my <span style="color:#009999;">aging parents</span> require?</span></h3></a>
 	                            </div>
 	                        </div>
 	                    </div>
 
 	                    <div class="col_one_fourth nobottommargin">
-	                        <div class="feature-box center media-box fbox-bg" data-animate="fadeIn" data-delay="100">
+	                        <div class="feature-box center media-box fbox-bg" data-animate="fadeInUp" data-delay="50">
 	                            <div class="fbox-media">
 	                                <a href="http://success.fglife.com/working-women-affect-social-security-replacement-rates"><img class="image_fade" src="/images/front/women-v-men.jpg" alt="Women vs. Men"></a>
 	                            </div>
 	                            <div class="fbox-desc">
-                                <a href="http://success.fglife.com/working-women-affect-social-security-replacement-rates"><h3>Women v. Men<span class="subtitle">Do women have different financial planning needs than men?</span></h3></a>
+                                <a href="http://success.fglife.com/working-women-affect-social-security-replacement-rates"><h3>Women v. Men<span class="subtitle">Do women have <span style="color:#009999;">different financial planning</span> needs than men?</span></h3></a>
 	                            </div>
 	                        </div>
 	                    </div>
 
 	                    <div class="col_one_fourth col_last nobottommargin">
-	                        <div class="feature-box center media-box fbox-bg" data-animate="fadeIn" data-delay="150">
+	                        <div class="feature-box center media-box fbox-bg" data-animate="fadeInRight" data-delay="75">
 	                            <div class="fbox-media">
 	                                <a href="http://success.fglife.com/plan-for-retirement-with-steven-sass"><img class="image_fade" src="/images/front/income-guarantees.jpg" alt="Income Guarantees"></a>
 	                            </div>
 	                            <div class="fbox-desc">
-                                <a href="http://success.fglife.com/plan-for-retirement-with-steven-sass"><h3>Income Guarantees<span class="subtitle">How can an annuity help improve my retirement?</span></h3></a>
+                                <a href="http://success.fglife.com/plan-for-retirement-with-steven-sass"><h3>Income Guarantees<span class="subtitle">How can an <span style="color:#009999;">annuity help</span> improve my retirement?</span></h3></a>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -528,7 +529,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										    css: '',
 										    cssRequired: '',
 										    submitButtonClass: 'btn btn-success',
-										    target: '.subscribe-form-container'
+										    target: '.subscribe-form-container',
+											onFormSubmit: function(e){
+											var $form = $('.subscribe-form-container form');
+											  if ($form.data('submitted') === true) {
+											      // Previously submitted - don't submit again
+											      e.preventDefault();
+											  } else {
+											      // Mark it so that the next submit can be ignored
+											      // ADDED requirement that form be valid
+											      if($form.valid()) {
+											          $form.data('submitted', true);
+											          $form.hide();
+											          setTimeout(function(){
+											               if(!$('.submitted-message').length)
+											              {
+											                   $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+											                   $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+											              }
+											          },500);
+											     }
+											  }
+											// Keep chainability
+											return this;
+											}
 										  });
 										</script>
 									</div>
@@ -623,7 +647,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="container clearfix">
 
                     <div class="col_half">
-                        <p style="color:#5c666f; text-shadow: none">&copy; 2015 Fidelity & Guaranty Life
+                        <p style="color:#5c666f; text-shadow: none">&copy; 2016 Fidelity & Guaranty Life
 	                        <a href="/privacy-policy.html" class="leftpadding-sm">Privacy Policy</a>
                             <a href="/website-terms.html" class="leftpadding-sm">Website Terms</a>
                         </p>
@@ -681,6 +705,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
     <script type="text/javascript" src="/js/swsearch.js"></script>
-   
+
 </body>
 </html>

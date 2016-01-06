@@ -26,6 +26,31 @@
         <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
 
+  <!-- Favicons
+============================================= -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="/favicons/FGL_Safari.svg" color="#001a71">
+
+  <meta name="apple-mobile-web-app-title" content="FGLIFE.COM">
+  <meta name="application-name" content="FGLIFE.COM">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
     <!-- External JavaScripts
     ============================================= -->
     <!-- build:js -->
@@ -333,7 +358,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       <li>Commuted value; determined by discontinuing the remaining guaranteed annuity payments at the annually compounded interest rate(s) which is (are) yield rates used by us to determine those payments. The commuted value will always be less than the sum of the remaining guaranteed annuity payments; or</li>
                       <li>The minimum accelerated benefit amount; which is equal to the discounted value of the next year of payments that would have been made if the annuitant were alive. The discounted value will always be less than the sum of the next years annuity payments.</li>
                     </ul>
-                    <p>We will require a statement from the annuitant's physcician to be completed on a form provided by us. Additional restrictions may apply; please see the consumer brochure and statement of understanding for additional details.</p>
+                    <p>We will require a statement from the annuitant's physician to be completed on a form provided by us. Additional restrictions may apply; please see the consumer brochure and statement of understanding for additional details.</p>
                     </div>
           </div>
 
@@ -465,7 +490,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										    css: '',
 										    cssRequired: '',
 										    submitButtonClass: 'btn btn-success',
-										    target: '.subscribe-form-container'
+										    target: '.subscribe-form-container',
+											onFormSubmit: function(e){
+											var $form = $('.subscribe-form-container form');
+											  if ($form.data('submitted') === true) {
+											      // Previously submitted - don't submit again
+											      e.preventDefault();
+											  } else {
+											      // Mark it so that the next submit can be ignored
+											      // ADDED requirement that form be valid
+											      if($form.valid()) {
+											          $form.data('submitted', true);
+											          $form.hide();
+											          setTimeout(function(){
+											               if(!$('.submitted-message').length)
+											              {
+											                   $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+											                   $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+											              }
+											          },500);
+											     }
+											  }
+											// Keep chainability
+											return this;
+											}
 										  });
 										</script>
 									</div>
@@ -560,7 +608,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="container clearfix">
 
                     <div class="col_half">
-                        <p style="color:#5c666f; text-shadow: none">&copy; 2015 Fidelity & Guaranty Life
+                        <p style="color:#5c666f; text-shadow: none">&copy; 2016 Fidelity & Guaranty Life
 	                        <a href="/privacy-policy.html" class="leftpadding-sm">Privacy Policy</a>
                             <a href="/website-terms.html" class="leftpadding-sm">Website Terms</a>
                         </p>

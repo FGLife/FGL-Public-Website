@@ -27,6 +27,31 @@
         <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
 
+  <!-- Favicons
+============================================= -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="/favicons/FGL_Safari.svg" color="#001a71">
+
+  <meta name="apple-mobile-web-app-title" content="FGLIFE.COM">
+  <meta name="application-name" content="FGLIFE.COM">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
     <!-- External JavaScripts
     ============================================= -->
     <!-- build:js -->
@@ -273,7 +298,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="toggle">
                     <div class="togglet"><i class="toggle-closed icon-line-circle-plus"></i><i class="toggle-open icon-line-circle-minus"></i>How will my income potentially grow?</div>
                     <div class="togglec clearfix fgl-bullet">
-                      <p>A benefit base is established for your policy from day one. If the benefit base grows, your guaranteed withdrawal payments will also grow. The benefit base is not cash; it is a separately tracked value used to calculate the guaranteed withdrawal payments only. The benefit base is not a value that can be surrendered or qithdrawn. The benefit base is adjusted proportionately for any withdrawals you may take. It is initially equal to the initial premium plus premium bonus. The benefit base potentially grows based on three index-interest benefit base crediting options linked to the S&amp;P 500&reg; Index subject to cap and particpation rates. FG Retirement Pro&reg; also offers a benefit base fixed interest crediting option. </p>
+                      <p>A benefit base is established for your policy from day one. If the benefit base grows, your guaranteed withdrawal payments will also grow. The benefit base is not cash; it is a separately tracked value used to calculate the guaranteed withdrawal payments only. The benefit base is not a value that can be surrendered or withdrawn. The benefit base is adjusted proportionately for any withdrawals you may take. It is initially equal to the initial premium plus premium bonus. The benefit base potentially grows based on three index-interest benefit base crediting options linked to the S&amp;P 500&reg; Index subject to cap and participation rates. FG Retirement Pro&reg; also offers a benefit base fixed interest crediting option. </p>
 
                     </div>
                   </div>
@@ -582,7 +607,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       <li>You have a set number of days (at least 10) to look at the annuity after you buy it. If you decide during that time that you don&rsquo;t want it, you can return the annuity and get your premium back. Read the cover page of your annuity contract as soon as you receive it to understand how many days you have to decide if you want to keep it.</li>
                       <li>At least once each year, we will send you a report of the current annuity values.</li>
                       <li>We pay the agent, broker, or firm for selling the annuity to you. Compensation is not deducted from your premium. However, the compensation we pay impacts contract pricing including surrender charges, interest rates, caps, participation rates and spread.</li>
-                      <li>Required Minimum Distributions &ndash; Certain tax qualified annuities are subject to required minimum distributions which generally require that distributions begin no later than April 1st of the year following your attainment of age 70<sup>1&frasl;2</sup> and that amounts be paid to you over a period not longer than your life expectancy.</li>
+                      <li>Required Minimum Distributions &ndash; Certain tax qualified annuities are subject to required minimum distributions which generally require that distributions begin no later than April 1st of the year following your attainment of age 70&frac12; and that amounts be paid to you over a period not longer than your life expectancy.</li>
                       <li>Your annuity values are guaranteed by Fidelity &amp; Guaranty Life. As a legal reserve company, Fidelity &amp; Guaranty Life is required by state regulation to maintain reserves equal to or greater than guaranteed surrender values.</li>
                     </ul>
                   </div>
@@ -676,7 +701,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										    css: '',
 										    cssRequired: '',
 										    submitButtonClass: 'btn btn-success',
-										    target: '.subscribe-form-container'
+										    target: '.subscribe-form-container',
+											onFormSubmit: function(e){
+											var $form = $('.subscribe-form-container form');
+											  if ($form.data('submitted') === true) {
+											      // Previously submitted - don't submit again
+											      e.preventDefault();
+											  } else {
+											      // Mark it so that the next submit can be ignored
+											      // ADDED requirement that form be valid
+											      if($form.valid()) {
+											          $form.data('submitted', true);
+											          $form.hide();
+											          setTimeout(function(){
+											               if(!$('.submitted-message').length)
+											              {
+											                   $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+											                   $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+											              }
+											          },500);
+											     }
+											  }
+											// Keep chainability
+											return this;
+											}
 										  });
 										</script>
 									</div>
@@ -771,7 +819,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="container clearfix">
 
                     <div class="col_half">
-                        <p style="color:#5c666f; text-shadow: none">&copy; 2015 Fidelity & Guaranty Life
+                        <p style="color:#5c666f; text-shadow: none">&copy; 2016 Fidelity & Guaranty Life
 	                        <a href="/privacy-policy.html" class="leftpadding-sm">Privacy Policy</a>
                             <a href="/website-terms.html" class="leftpadding-sm">Website Terms</a>
                         </p>

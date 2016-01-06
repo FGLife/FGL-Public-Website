@@ -44,6 +44,7 @@
   <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="/favicons/FGL_Safari.svg" color="#001a71">
 
   <meta name="apple-mobile-web-app-title" content="FGLIFE.COM">
   <meta name="application-name" content="FGLIFE.COM">
@@ -397,7 +398,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										    css: '',
 										    cssRequired: '',
 										    submitButtonClass: 'btn btn-success',
-										    target: '.subscribe-form-container'
+										    target: '.subscribe-form-container',
+											onFormSubmit: function(e){
+											var $form = $('.subscribe-form-container form');
+											  if ($form.data('submitted') === true) {
+											      // Previously submitted - don't submit again
+											      e.preventDefault();
+											  } else {
+											      // Mark it so that the next submit can be ignored
+											      // ADDED requirement that form be valid
+											      if($form.valid()) {
+											          $form.data('submitted', true);
+											          $form.hide();
+											          setTimeout(function(){
+											               if(!$('.submitted-message').length)
+											              {
+											                   $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+											                   $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+											              }
+											          },500);
+											     }
+											  }
+											// Keep chainability
+											return this;
+											}
 										  });
 										</script>
 									</div>
@@ -492,7 +516,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="container clearfix">
 
                     <div class="col_half">
-                        <p style="color:#5c666f; text-shadow: none">&copy; 2015 Fidelity & Guaranty Life
+                        <p style="color:#5c666f; text-shadow: none">&copy; 2016 Fidelity & Guaranty Life
 	                        <a href="/privacy-policy.html" class="leftpadding-sm">Privacy Policy</a>
                             <a href="/website-terms.html" class="leftpadding-sm">Website Terms</a>
                         </p>
