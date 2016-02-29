@@ -263,41 +263,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <div class="col-md-2 "></div>
           <div class="col-md-8 ">
-            <p><strong>Please Note:</strong> By completing this information and providing your contact information you will be contacted by a licensed insurance representative. This licensed representative will contact you to discuss insurance products, including the potential purchase of annuities and/or life insurance.</p>
+            <p><strong>Please Note:</strong> By completing this information and providing your contact information you will be contacted by a licensed insurance representative. This licensed representative will contact you to discuss insurance products, including the potential purchase of annuities and/or life insurance. We take your privacy seriously. See our <a href="/privacy-policy.html">Privacy Policy</a> for more information.</p>
             <div class="hbspt-form hub-form-container">
 	            <!--[if lte IE 8]>
 	            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
 	            <![endif]-->
 	            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-			    <script>
+	            <script>
 	              hbspt.forms.create({
 	                portalId: '260128',
-                    formId: 'cb618382-e033-4d52-81c3-432d7a98feb1',
+                  formId: 'cb618382-e033-4d52-81c3-432d7a98feb1',
 	                css: '',
-	                target: '.hub-form-container',
-                    onFormSubmit: function(e){
-                    var $form = $('.hub-form-container form');
-                      if ($form.data('submitted') === true) {
-                          // Previously submitted - don't submit again
-                          e.preventDefault();
-                      } else {
-                          // Mark it so that the next submit can be ignored
-                          // ADDED requirement that form be valid
-                          if($form.valid()) {
-                              $form.data('submitted', true);
-                              $form.hide();
-                              setTimeout(function(){
-	                               if(!$('.submitted-message').length)
-	                              {
-		                               $("<p>Thank you for submitting the form, someone will be in touch shortly.</p>").insertAfter($form);
-		                               $("html, body").animate({ scrollTop: $('.hub-form-container').offset().top - 200 }, 1000);
-		                          }
-                              },500);
-	                     }
-                      } 
-                    // Keep chainability
-                    return this;
-                  }
+	                target: '.hub-form-container'
 	              });
 	            </script>
             </div>
@@ -307,7 +284,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="col-md-2 col_last"></div>
 
 
-        <div class="col_full fgl-compliance">15-807</div>
+        <div class="col_full fgl-compliance">15-1001</div>
         </div>
 
 </div>
@@ -348,30 +325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										    css: '',
 										    cssRequired: '',
 										    submitButtonClass: 'btn btn-success',
-										    target: '.subscribe-form-container',
-											onFormSubmit: function(e){
-											var $form = $('.subscribe-form-container form');
-											  if ($form.data('submitted') === true) {
-											      // Previously submitted - don't submit again
-											      e.preventDefault();
-											  } else {
-											      // Mark it so that the next submit can be ignored
-											      // ADDED requirement that form be valid
-											      if($form.valid()) {
-											          $form.data('submitted', true);
-											          $form.hide();
-											          setTimeout(function(){
-											               if(!$('.submitted-message').length)
-											              {
-											                   $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
-											                   $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
-											              }
-											          },500);
-											     }
-											  } 
-											// Keep chainability
-											return this;
-											}
+										    target: '.subscribe-form-container'
 										  });
 										</script>
 									</div>

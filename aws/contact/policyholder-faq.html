@@ -13,8 +13,16 @@
 
     <!-- Stylesheets
     ============================================= -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/font-icons.min.css">  <link rel="stylesheet" href="/style.min.css">
+  <!-- build:css1 -->
+  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css2 -->
+  <link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css -->
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <!-- endbuild -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
         <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -46,7 +54,10 @@
 
     <!-- External JavaScripts
     ============================================= -->
-    <script src="/js/lib.min.js"></script>
+    <!-- build:js -->
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/plugins.js"></script>
+    <!-- endbuild -->
     <!-- Document Title
     ============================================= -->
     <title>Policyholder | Fidelity & Guaranty Life</title>
@@ -253,6 +264,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <li><a href="faq/find-my-policy-number.html">How do I find my policy number?</a></li>
             <li><a href="faq/obtain-copy-of-policy.html">How can I obtain a copy of my policy?</a></li>
             <li><a href="faq/provide-authorization-to-individual.html"> How can I provide authorization to another individual to obtain my policy information?</a></li>
+            <li><a href="faq/surrender-value.html">What is the surrender value of my life insurance policy?</a></li>
+            <li><a href="faq/current-interest-rate.html">What's the current interest rate that I'm receiving?</a></li>
+            <li><a href="faq/check-status-of-service-request.html">How do I complete or check the status of a service request?</a></li>
+            <li><a href="faq/check-beneficiary.html">How do I verify the beneficiary on my policy?</a></li>
+            <li><a href="faq/request-in-force-illustration.html">How do I request an in force illustration?</a></li>
+            <li><a href="faq/annual-statement.html">When will I get my annual statement?</a></li>
+
           </ul>
 
           <h4 class="blue-heading">Account Management</h4>
@@ -261,6 +279,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <li><a href="faq/submit-premium-payment.html">How can I submit my premium payment for my life insurance policy?</a></li>
             <li><a href="faq/find-policy-information-online.html">Is my policy information available online?</a></li>
           <li><a href="faq/transfer-between-index-options.html">How do I transfer funds between index options on my annuity contract?</a></li>
+          <li><a href="faq/update-bank-information.html">How do I update the bank information for my life insurance policy?</a></li>
+          <li><a href="faq/premium-due-date.html">When is my life insurance premium due?</a></li>
+          <li><a href="faq/stopping-payment.html">How do I stop a life insurance premium payment from coming out of my bank account?</a></li>
+          <li><a href="faq/submit-payment-on-policy-loan.html">How do I make a payment on my policy loan?</a></li>
+          <li><a href="faq/cancel-term-life-insurance-policy.html">How do I cancel my term life insurance policy?</a></li>
+          <li><a href="faq/update-beneficiary.html">How do I update my beneficiary?</a></li>
+          <li><a href="faq/converting-term-life-to-permanent-insurance.html">How do I convert my term life insurance policy to permanent insurance?</a></li>
+          <li><a href="faq/change-smoker-rating.html">How do I change the smoker rating on my life insurance policy?</a></li>
           </ul>
         <h4 class="blue-heading">Accessing Funds</h4>
         <ul class="fgl-bullet">
@@ -268,7 +294,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <li><a href="faq/take-policy-loan.html">How do I take a policy loan?</a></li>
           <li><a href="faq/file-death-claim.html">How do I file a death claim?</a></li>
           <li><a href="faq/take-withdrawal-from-life-insurance.html">How can I take a withdrawal from my life insurance policy?</a></li>
-
+          <li><a href="faq/surrender-universal-life-policy.html">How do I surrender my universal life insurance policy?</a></li>
+          <li><a href="faq/death-benefit-amount.html">What is the death benefit amount?</a></li>
         </ul>
 
 
@@ -470,7 +497,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Footer Scripts
     ============================================= -->
-  <script src="/js/app.min.js"></script>
+  <!-- build:js1 -->
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <!-- endbuild -->
     <script type="text/javascript" src="/js/swsearch.js"></script>
 
 </body>

@@ -13,8 +13,16 @@
 
     <!-- Stylesheets
     ============================================= -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/font-icons.min.css">  <link rel="stylesheet" href="/style.min.css">
+  <!-- build:css1 -->
+  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css2 -->
+  <link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
+  <!-- endbuild -->
+  <!-- build:css -->
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <!-- endbuild -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
         <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -46,7 +54,10 @@
 
     <!-- External JavaScripts
     ============================================= -->
-    <script src="/js/lib.min.js"></script>
+    <!-- build:js -->
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/plugins.js"></script>
+    <!-- endbuild -->
     <!-- Document Title
     ============================================= -->
     <title>Events Calendar &amp; Presentations | Fidelity &amp; Guaranty Life</title>
@@ -242,47 +253,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 			<h3>Events</h3>
-        <table class="table">
-          <tbody>
-          <tr>
-            <td><strong>Title:&nbsp;</strong></td>
-            <td>Fiscal 4Q 2015 Fidelity &amp; Guaranty Life Earnings Conference Call </td>
-          </tr>
-          <tr>
-            <td><strong>Date:<br> </strong></td>
-            <td>Thursday, November 19, 2015<br> </td>
-          </tr>
-          <tr>
-            <td><strong>Time:<br> </strong></td>
-            <td>9:00 a.m. ET<br> </td>
-          </tr>
-          <tr>
-            <td><strong>Teleconference:<br> </strong></td>
-            <td>Dial-in information for the call is toll-free 1-888-346-2619 (International: 1-412-902-4255). <br> </td>
-          </tr>
-          <tr>
-            <td><strong>Replay:<br> </strong></td>
-            <td>An audio replay will be available until December 10, 2015. The replay access information is toll-free 1-877-344-7529 (International: 1-412-317-0088), conference ID number 10073959. The replay will be available approximately two hours after the completion of the earnings call.<br> </td>
-          </tr>
-          </tbody>
-        </table>
+        <p>There are no events at this time.</p>
 
 
-			<h3 class="nobottommargin">Presentations</h3>
-        <table class="table">
-          <tbody>
-          <tr>
-            <td><strong>Title:</strong></td>
-            <td><a href="https://d2liin8b37blzf.cloudfront.net/investor-relations/presentations/investor-presentation-june-2015-final.pdf">Investor Presentation</a><br> </td>
-
-          </tr>
-          <tr>
-            <td><strong>Date:<br> </strong></td>
-            <td>June 2015<br> </td>
-
-          </tr>
-          </tbody>
-        </table>
+        <h3 class="nobottommargin">Presentations</h3>
+       <p>There are no presentations at this time.</p>
 
         <div class="col_full fgl-compliance">15-919</div>
       </div>
@@ -470,7 +445,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Footer Scripts
 ============================================= -->
-   <script src="/js/app.min.js"></script>
+   <!-- build:js1 -->
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <!-- endbuild -->
     <script type="text/javascript" src="/js/swsearch.js"></script>
 
 </body>
