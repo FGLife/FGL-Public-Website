@@ -13728,6 +13728,9 @@ form .col_five_sixth {
 /* ----------------------------------------------------------------
     HUBSPOT Forms
 -----------------------------------------------------------------*/
+#content .actions input.hs-button {
+  margin-top: 20px;
+}
 .hbspt-form {
   max-width: 540px;
   margin: 0 auto;
@@ -13736,7 +13739,7 @@ form .col_five_sixth {
   margin-bottom: 0px;
 }
 .hbspt-form textarea {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   min-height: 75px;
 }
 .hbspt-form input.hs-button {
