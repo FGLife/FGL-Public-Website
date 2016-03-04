@@ -444,19 +444,23 @@ gulp.task('aws_favicons_move', function() {
 
 //Clean Tasks
 // Clean AWS file
+
+// @deprecated
 gulp.task('aws_clean', function() {
   del(['aws/**']);
 });
 
+gulp.task('aws_clean_new', function() {
+  del(['aws/**/*', 'aws/.htaccess']);
+});
 
 
-
-/*//JS rename concat tasks
+//JS rename concat tasks
 
 //replace paths and reference for concatenated minified/unminified css, and js
 gulp.task('htmlreplace', function() {
 
-  var htmlSrc = 'aws/!**!/!*.html';
+  var htmlSrc = 'aws/**/*.html';
   var htmlDst = 'aws';
 
   gulp.src(htmlSrc)
@@ -478,7 +482,7 @@ gulp.task('scriptsspecific', function(){
   return gulp.src(['app/js/functions.js'])
     .pipe(concat('app.js'))
     .pipe(rename({suffix: '.min'}))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest(jsDst));
 });
 
@@ -488,27 +492,33 @@ gulp.task('scriptsspecifictop', function(){
   //var jsDst = 'build/WebsiteTemplates/CanvasBase/App_Themes/CanvasBase/js';
   var jsDst = 'aws/js';
 
-  return gulp.src(['app/js/jquery.js','app/js/!**!/plugins.js'])
+  return gulp.src(['app/js/jquery.js','app/js/plugins.js'])
     .pipe(concat('lib.js'))
     .pipe(rename({suffix: '.min'}))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest(jsDst));
-});*/
+});
 
 
 // Clean UAT file - do first
+
+// @deprecated
 gulp.task('uat_clean', function(cb) {
   del(['uat/*'],{dot: true}, cb)
+});
+
+gulp.task('uat_clean_new', function() {
+  del(['uat/**/*']);
 });
 
 // Copy AWS directory and name UAT directory
 gulp.task('aws_dir_copy_uat', function() {
 
-  var cssSrc = 'aws/**/*.*',
-    cssDst = 'uat';
+  var appSrc = 'aws/**/*',
+    appDst = 'uat';
 
-  return gulp.src(cssSrc)
-    .pipe(gulp.dest(cssDst));
+  return gulp.src(appSrc)
+    .pipe(gulp.dest(appDst));
 });
 
 // Move sitemap
@@ -565,20 +575,20 @@ gulp.task('aws_zip', function () {
 //////////////////////////////////////////////////////////
 
 //#1 Clean directory
-gulp.task('aws_clean');
+gulp.task('aws_clean_new');
 
 //#2 Run all prep
 gulp.task('aws_prepare', ['aws_webfonts_move', 'aws_css_minify_move', 'aws_css_move', 'aws_css1_minify_move', 'aws_css2_minify_move', 'aws_style_move','aws_style-import_move', 'aws_htaccess', 'aws_js_move', 'aws_html_move', 'aws_sitemap_move', 'aws_images_move', 'aws_favicons_move']);
 
-/*//#3 Concat & rename JS
-gulp.task('aws_postprod',['htmlreplace', 'scriptsspecific','scriptsspecifictop']);*/
+//#3 Concat & rename JS
+gulp.task('aws_postprod',['htmlreplace', 'scriptsspecific','scriptsspecifictop']);
 
 //#4 Clean UAT folder
-gulp.task('uat_clean');
+gulp.task('uat_clean_new');
 
 //#5 Master build command
 gulp.task('makepackage', function(){
-  runSequence('aws_clean','aws_prepare',/*'aws_postprod',*/'uat_clean',['aws_dir_copy_uat','uat_sitemap_move','uat_config1','uat_config2'],['uat_zip','aws_zip']);
+  runSequence('aws_clean_new','aws_prepare','aws_postprod','uat_clean_new',['aws_dir_copy_uat','uat_sitemap_move','uat_config1','uat_config2'],['uat_zip','aws_zip']);
 });
 
 //start serve aws folder
