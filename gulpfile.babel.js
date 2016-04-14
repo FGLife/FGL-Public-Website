@@ -591,6 +591,8 @@ gulp.task('makepackage', function(){
   runSequence('aws_clean_new','aws_prepare','aws_postprod','uat_clean_new',['aws_dir_copy_uat','uat_sitemap_move','uat_config1','uat_config2'],['uat_zip','aws_zip']);
 });
 
+
+
 //start serve aws folder
 gulp.task('serve_aws', ['styles', 'fonts'], function(){
   browserSync({
