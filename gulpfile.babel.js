@@ -464,7 +464,7 @@ gulp.task('htmlreplace', function() {
   var htmlDst = 'aws';
 
   gulp.src(htmlSrc)
-    .pipe(htmlreplace({
+   return .pipe(htmlreplace({
       'css': '/style.min.css',
       'css1': '/css/bootstrap.min.css',
       'css2': '/css/font-icons.min.css',
