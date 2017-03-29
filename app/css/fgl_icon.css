@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "fgl";
-  src:url("../../../FGLIFE Font Icons/fgl4 2/fonts/fgl.eot");
-  src:url("../../../FGLIFE Font Icons/fgl4 2/fonts/fgl.eot?#iefix") format("embedded-opentype"),
-    url("../../../FGLIFE Font Icons/fgl4 2/fonts/fgl.woff") format("woff"),
-    url("../../../FGLIFE Font Icons/fgl4 2/fonts/fgl.ttf") format("truetype"),
-    url("../../../FGLIFE Font Icons/fgl4 2/fonts/fgl.svg#fgl") format("svg");
+  src:url("/fonts/fgl.eot");
+  src:url("/fonts/fgl.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/fgl.woff") format("woff"),
+    url("/fonts/fgl.ttf") format("truetype"),
+    url("/fonts/fgl.svg#fgl") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -154,4 +154,6 @@
 }
 .fgl-accumulatorplus:before {
   content: "\61";
+  font-size: 45px;
+  line-height: 0 !important;
 }

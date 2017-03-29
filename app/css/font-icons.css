@@ -3236,3 +3236,9 @@
   font-size: 30px;
   line-height: 0 !important;
 }
+
+.fgl-accumulatorplus:before {
+  content: "\61";
+  font-size: 30px;
+  line-height: 0 !important;
+}
