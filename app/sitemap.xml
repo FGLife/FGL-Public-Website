@@ -642,4 +642,91 @@
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
-  </urlset>
+
+<url>
+<loc>https://home.fglife.com/landing-pages/caregiving-options.html</loc>
+<lastmod>2017-10-07</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<url>
+  <loc>https://home.fglife.com/landing-pages/e-app.html</loc>
+  <lastmod>2017-10-07</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <url>
+    <loc>https://home.fglife.com/landing-pages/FG-Guarantee-Platinum-5-MYGA.html</loc>
+    <lastmod>2017-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <url>
+      <loc>https://home.fglife.com/landing-pages/FGL-FIUL.html</loc>
+      <lastmod>2017-10-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+      <url>
+        <loc>https://home.fglife.com/landing-pages/innovation-for-all-seasons.html</loc>
+        <lastmod>2017-10-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <url>
+          <loc>https://home.fglife.com/landing-pages/navigating-difficult-conversations.html</loc>
+          <lastmod>2017-10-07</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.8</priority>
+          <url>
+            <loc>https://home.fglife.com/landing-pages/Power-Partner.html</loc>
+            <lastmod>2017-10-07</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+            <url>
+              <loc>https://home.fglife.com/landing-pages/PP-Power-of-Add-On.html</loc>
+              <lastmod>2017-10-07</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+              <url>
+                <loc>https://home.fglife.com/landing-pages/retirement-at-70.html</loc>
+                <lastmod>2017-10-07</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.8</priority>
+              </url>
+              <url>
+                <loc>https://home.fglife.com/landing-pages/social-security-and-retirement-options.html</loc>
+                <lastmod>2017-10-07</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.8</priority>
+              </url>
+              <url>
+                <loc>https://home.fglife.com/landing-pages/the-great-recession.html</loc>
+                <lastmod>2017-10-07</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.8</priority>
+              </url>
+              <url>
+                <loc>https://home.fglife.com/landing-pages/webinars.html</loc>
+                <lastmod>2017-10-07</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.8</priority>
+              </url>
+              <url>
+                <loc>https://home.fglife.com/landing-pages/welcome-new-agent.html</loc>
+                <lastmod>2017-10-07</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.8</priority>
+              </url>
+              <url>
+                <loc>https://home.fglife.com/landing-pages/working-women-and-social-security.html</loc>
+                <lastmod>2017-10-07</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.8</priority>
+              </url>
+              <url>
+                <loc>https://home.fglife.com/investor-relations/merger-information.html</loc>
+                <lastmod>2017-10-07</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.8</priority>
+              </url>
+
+
+
+
+              <set>
