@@ -505,7 +505,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <!-- Footer
-============================================= -->
+  ============================================= -->
 <footer id="footer" class="dark">
 
   <div class="container">
@@ -525,19 +525,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="widget subscribe-widget clearfix">
               <h5>Subscribe to Our Newsletters for Important News:</h5>
 
-              <!--[if lte IE 8]>
-              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-              <![endif]-->
-              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-              <script>
-                hbspt.forms.create({
-                  portalId: '260128',
-                  formId: 'eca123cb-31c8-471b-a517-f5cc90e205e1',
-                  css: '',
-                  cssRequired: '',
-                  submitButtonClass: 'btn btn-success'
-                });
-              </script>
+              <div class="hbspt-form subscribe-form-container">
+                <!--[if lte IE 8]>
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                <![endif]-->
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                <script>
+                  hbspt.forms.create({
+                    portalId: '260128',
+                    formId: 'eca123cb-31c8-471b-a517-f5cc90e205e1',
+                    css: '',
+                    cssRequired: '',
+                    submitButtonClass: 'btn btn-success',
+                    target: '.subscribe-form-container',
+                    onFormSubmit: function(e){
+                      var $form = $('.subscribe-form-container form');
+                      if ($form.data('submitted') === true) {
+                        // Previously submitted - don't submit again
+                        e.preventDefault();
+                      } else {
+                        // Mark it so that the next submit can be ignored
+                        // ADDED requirement that form be valid
+                        if($form.valid()) {
+                          $form.data('submitted', true);
+                          $form.hide();
+                          setTimeout(function(){
+                            if(!$('.submitted-message').length)
+                            {
+                              $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+                              $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+                            }
+                          },500);
+                        }
+                      }
+                      // Keep chainability
+                      return this;
+                    }
+                  });
+                </script>
+              </div>
             </div>
 
           </div>
@@ -556,7 +582,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li><a href="/about/insurance-company-ratings.html">Ratings</a></li>
                 <li><a href="/about/careers.html">Careers</a></li>
                 <li><a href="/about/leadership-team.html">Leadership Team</a></li>
-                <li><a href="/investor-relations.html">Investors</a></li>
               </ul>
 
             </div>
@@ -618,8 +643,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
 
 
-    </div>
-    <!-- .footer-widgets-wrap end -->
+    </div><!-- .footer-widgets-wrap end -->
 
   </div>
 
@@ -631,6 +655,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <div class="col_half">
         <p style="color:#5c666f; text-shadow: none">&copy; 2016 Fidelity & Guaranty Life
+          <a href="https://fglife.bm" class="leftpadding-sm">FGL Holdings</a>
           <a href="/privacy-policy.html" class="leftpadding-sm">Privacy Policy</a>
           <a href="/website-terms.html" class="leftpadding-sm">Website Terms</a>
         </p>
@@ -638,14 +663,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <div class="col_half col_last tright">
         <div class="fright clearfix">
-          <a href="https://www.facebook.com/FidelityandGuarantyLife" target="_blank"
-             class="social-icon si-small si-borderless si-facebook">
+          <a href="https://www.facebook.com/FidelityandGuarantyLife" target="_blank" class="social-icon si-small si-borderless si-facebook">
             <i class="icon-facebook"></i>
             <i class="icon-facebook"></i>
           </a>
 
-          <a href="https://www.youtube.com/user/MyFGLife" target="_blank"
-             class="social-icon si-small si-borderless si-gplus">
+          <a href="https://www.youtube.com/user/MyFGLife" target="_blank" class="social-icon si-small si-borderless si-gplus">
             <i class="icon-youtube"></i>
             <i class="icon-youtube"></i>
           </a>
@@ -655,14 +678,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <i class="icon-twitter"></i>
           </a>
 
-          <a href="https://plus.google.com/107644813050443359842/posts" target="_blank"
-             class="social-icon si-small si-borderless si-gplus">
+          <a href="https://plus.google.com/107644813050443359842/posts" target="_blank" class="social-icon si-small si-borderless si-gplus">
             <i class="icon-gplus"></i>
             <i class="icon-gplus"></i>
           </a>
 
-          <a href="https://www.linkedin.com/company/fidelity-&-guaranty-life?trk=hb_tab_compy_id_2188830" target="_blank"
-             class="social-icon si-small si-borderless si-linkedin">
+          <a href="https://www.linkedin.com/company/fidelity-&-guaranty-life?trk=hb_tab_compy_id_2188830" target="_blank" class="social-icon si-small si-borderless si-linkedin">
             <i class="icon-linkedin"></i>
             <i class="icon-linkedin"></i>
           </a>
@@ -673,11 +694,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     </div>
 
-  </div>
-  <!-- #copyrights end -->
+  </div><!-- #copyrights end -->
 
-</footer>
-<!-- #footer end -->
+</footer><!-- #footer end -->
 
 </div><!-- #wrapper end -->
 
@@ -687,10 +706,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Footer Scripts
 ============================================= -->
-   <!-- build:js1 -->
-    <script type="text/javascript" src="/js/functions.js"></script>
-    <!-- endbuild -->
-    <script type="text/javascript" src="/js/swsearch.js"></script>
+<!-- build:js1 -->
+<script type="text/javascript" src="/js/functions.js"></script>
+<!-- endbuild -->
+<script type="text/javascript" src="/js/swsearch.js"></script>
 
 
 <!-- Siteimprove Code
