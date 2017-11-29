@@ -179,9 +179,9 @@
                 <li><a href="/life-insurance/fg-life-choice.html"><div>FG Life-Choice</div></a></li>
               </ul>
             </li>
-            <li><a href="/index.html"><div>Investors</div></a>
+            <!--<li><a href="/index.html"><div>Investors</div></a>
               <ul>
-                <!--<li><a href="/investor-relations/merger-information.html"><div>Merger Information</div></a></li>-->
+                <li><a href="/investor-relations/merger-information.html"><div>Merger Information</div></a></li>
                 <li><a href="/investor-relations/financial-reports-information.html"><div>Financial Information</div></a></li>
                 <li><a href="/investor-relations/sec-filings.html"><div>SEC Filings</div></a></li>
                 <li><a href="/investor-relations/press-releases.html"><div>Press Releases</div></a></li>
@@ -194,7 +194,7 @@
                 <li><a href="/investor-relations/bondholder-relations.html"><div>Bondholder Relations</div></a></li>
 
               </ul>
-            </li>
+            </li>-->
             <li><a href="/about.html"><div>About</div></a>
               <ul>
                 <li><a href="/about/insurance-company-ratings.html"><div>Ratings</div></a></li>
@@ -270,7 +270,7 @@
 </div>
 
 <!-- Footer
-============================================= -->
+  ============================================= -->
 <footer id="footer" class="dark">
 
   <div class="container">
@@ -302,7 +302,30 @@
                     css: '',
                     cssRequired: '',
                     submitButtonClass: 'btn btn-success',
-                    target: '.subscribe-form-container'
+                    target: '.subscribe-form-container',
+                    onFormSubmit: function(e){
+                      var $form = $('.subscribe-form-container form');
+                      if ($form.data('submitted') === true) {
+                        // Previously submitted - don't submit again
+                        e.preventDefault();
+                      } else {
+                        // Mark it so that the next submit can be ignored
+                        // ADDED requirement that form be valid
+                        if($form.valid()) {
+                          $form.data('submitted', true);
+                          $form.hide();
+                          setTimeout(function(){
+                            if(!$('.submitted-message').length)
+                            {
+                              $("<p>Thank you! You are now subscribed.</p>").insertAfter($form);
+                              $("html, body").animate({ scrollTop: $('.subscribe-form-container').offset().top - 200 }, 1000);
+                            }
+                          },500);
+                        }
+                      }
+                      // Keep chainability
+                      return this;
+                    }
                   });
                 </script>
               </div>
@@ -324,7 +347,6 @@
                 <li><a href="/about/insurance-company-ratings.html">Ratings</a></li>
                 <li><a href="/about/careers.html">Careers</a></li>
                 <li><a href="/about/leadership-team.html">Leadership Team</a></li>
-                <li><a href="/investor-relations.html">Investors</a></li>
               </ul>
 
             </div>
@@ -398,6 +420,7 @@
 
       <div class="col_half">
         <p style="color:#5c666f; text-shadow: none">&copy; 2016 Fidelity & Guaranty Life
+          <a href="https://fglife.bm" class="leftpadding-sm">FGL Holdings</a>
           <a href="/privacy-policy.html" class="leftpadding-sm">Privacy Policy</a>
           <a href="/website-terms.html" class="leftpadding-sm">Website Terms</a>
         </p>
