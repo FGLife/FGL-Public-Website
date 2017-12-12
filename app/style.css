@@ -886,12 +886,12 @@ body.stretched .container-fullwidth {
 }
 .top-links li > a {
   display: block;
-  padding: 0 12px;
-  font-size: 12px;
+  padding: 0 24px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   height: 44px;
-  color: #666;
+  color: #001a71;
 }
 .top-links li i {
   position: relative;
