@@ -14647,7 +14647,7 @@ body:not(.device-touch) .tagcloud a {
   padding: 6px;
   display: inline-block;
   padding: 0 3px 0 12px;
-  background: url("images/icons/widget-link.png") left top no-repeat;
+  background: url("images/icons/widget-link-dark.png") left top no-repeat;
   border: none !important;
   color: #ffffff !important;
   width: 100%;
