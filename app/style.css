@@ -14613,7 +14613,7 @@ body:not(.device-touch) .tagcloud a {
   padding: 0 3px 0 12px;
   background: url("images/icons/widget-link.png") left top no-repeat;
   border: none !important;
-  color: #5a6771;
+  color: #5c666f;
   width: 100%;
 }
 .fgl-bullet li a {
@@ -14639,6 +14639,42 @@ body:not(.device-touch) .tagcloud a {
 }
 .fgl-bullet-space li:hover {
   color: #001a71;
+}
+
+.fgl-white-bullet li {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  display: inline-block;
+  padding: 0 3px 0 12px;
+  background: url("images/icons/widget-link.png") left top no-repeat;
+  border: none !important;
+  color: #ffffff;
+  width: 100%;
+}
+.fgl-white-bullet li a {
+  color: #ffffff;
+}
+.fgl-white-bullet li a:hover {
+  color: #ffffff ;
+}
+.fgl-white-bullet li:hover {
+  color: #ffffff;
+}
+.fgl-white-bullet-space li {
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0px 0px 15px 40px;
+  background: url("images/icons/checkmark.png") left top no-repeat;
+  border: none !important;
+  color: #ffffff;
+  font-size: 15.5px;
+  line-height: 1.4;
+  width: 100%;
+}
+.fgl-white-bullet-space li:hover {
+  color: #ffffff;
 }
 .widget_recent_comments li {
   display: block;
