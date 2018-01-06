@@ -14649,7 +14649,7 @@ body:not(.device-touch) .tagcloud a {
   padding: 0 3px 0 12px;
   background: url("images/icons/widget-link.png") left top no-repeat;
   border: none !important;
-  color: #ffffff;
+  color: #ffffff !important;
   width: 100%;
 }
 .fgl-white-bullet li a {
