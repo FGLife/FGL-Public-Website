@@ -773,6 +773,9 @@ span.middot {
 .col_half {
   width: 48%;
 }
+.col_half_true {
+  width: 50%;
+}
 .col_one_third {
   width: 30.63%;
 }
