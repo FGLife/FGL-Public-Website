@@ -770,6 +770,9 @@ span.middot {
 .col_full {
   width: 100%;
 }
+.col_full_true {
+  width: 100%;
+}
 .col_half {
   width: 48%;
 }
@@ -827,7 +830,7 @@ body.stretched .container-fullwidth {
 .col_five_sixth {
   display: block;
   position: relative;
-  margin-right: 4%;
+  margin-right: 0%;
   margin-bottom: 30px;
   float: left;
 }
