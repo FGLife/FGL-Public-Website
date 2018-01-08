@@ -830,7 +830,7 @@ body.stretched .container-fullwidth {
 .col_five_sixth {
   display: block;
   position: relative;
-  margin-right: 0%;
+  margin-right: 4%;
   margin-bottom: 30px;
   float: left;
 }
