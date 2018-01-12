@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "fgl";
-  src:url("/fonts/fgl.eot");
-  src:url("/fonts/fgl.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/fgl.woff") format("woff"),
-    url("/fonts/fgl.ttf") format("truetype"),
-    url("/fonts/fgl.svg#fgl") format("svg");
+  src:url("fonts/fgl.eot");
+  src:url("fonts/fgl.eot?#iefix") format("embedded-opentype"),
+  url("fonts/fgl.woff") format("woff"),
+  url("fonts/fgl.ttf") format("truetype"),
+  url("fonts/fgl.svg#fgl") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -38,9 +38,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.fgl-about-bod:before {
-  content: "\62";
-}
 .fgl-about-careers:before {
   content: "\63";
 }
@@ -154,6 +151,11 @@
 }
 .fgl-accumulatorplus:before {
   content: "\61";
-  font-size: 45px;
-  line-height: 0 !important;
 }
+.fgl-about-bod:before {
+  content: "\62";
+}
+.fgl-fg-accelerator-plus:before {
+  content: "\4e";
+}
+
