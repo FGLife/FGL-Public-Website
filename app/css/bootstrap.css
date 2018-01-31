@@ -766,18 +766,26 @@ pre code {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.containersection {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 100px;
+  padding-right: 15px;
+}
+
 @media (min-width: 768px) {
-  .container {
+  .container, .containersection{
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .container, .containersection{
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container, .containersection {
     width: 1170px;
   }
 }
