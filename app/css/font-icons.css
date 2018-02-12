@@ -3101,149 +3101,125 @@
 .icon-line2-users:before {
 	content: "\e001";
 }
-
-.icon-fgl-about-bod:before {
-	content: "\62";
-}
 .icon-fgl-about-careers:before {
-	content: "\63";
+  content: "\63";
 }
 .icon-fgl-about-culture:before {
-	content: "\64";
+  content: "\64";
 }
 .icon-fgl-about-ratings:before {
-	content: "\65";
-}
-.icon-fgl-interested-customer:before {
-	content: "\44";
-}
-.icon-fgl-investor-contact-us:before {
-	content: "\43";
-}
-.icon-fgl-life-choice:before {
-	content: "\7a";
-}
-.icon-fgl-life-elite:before {
-	content: "\79";
-}
-.icon-fgl-retirement-pro:before {
-	content: "\41";
-}
-.icon-fgl-safe-income-plus:before {
-	content: "\78";
+  content: "\65";
 }
 .icon-fgl-agent-change-status:before {
-	content: "\66";
-}
-.icon-fgl-media-contact-us:before {
-	content: "\76";
+  content: "\66";
 }
 .icon-fgl-agent-contact-us:before {
-	content: "\67";
-}
-.icon-fgl-perf-pro:before {
-	content: "\71";
-}
-.icon-fgl-policyholder-contact-us:before {
-	content: "\6e";
+  content: "\67";
 }
 .icon-fgl-agent-contacted:before {
-	content: "\68";
+  content: "\68";
 }
 .icon-fgl-agent-imo:before {
-	content: "\69";
+  content: "\69";
 }
-.icon-fgl-policyholder-faq:before {
-	content: "\4c";
+.icon-fgl-eight:before {
+  content: "\6a";
 }
 .icon-fgl-fgny-index-choice-10:before {
-	content: "\6b";
-}
-.icon-fgl-policyholder-manage-policies:before {
-	content: "\4b";
+  content: "\6b";
 }
 .icon-fgl-fgny-index-safety-7:before {
-	content: "\6c";
+  content: "\6c";
 }
-.icon-fgl-policyholder-reach-customer-service:before {
-	content: "\46";
+.icon-fgl-five:before {
+  content: "\6d";
 }
-.icon-fgl-guarantee-platinum:before {
-	content: "\4a";
+.icon-fgl-policyholder-contact-us:before {
+  content: "\6e";
 }
-.icon-fgl-policyholder-request-agent-call:before {
-	content: "\47";
+.icon-fgl-two:before {
+  content: "\6f";
 }
-.icon-fgl-immediate-income:before {
-	content: "\49";
+.icon-fgl-three:before {
+  content: "\70";
 }
-.icon-fgl-policyholder-submit-policies:before {
-	content: "\45";
+.icon-fgl-perf-pro:before {
+  content: "\71";
 }
-.icon-fgl-index-choice-10:before {
-	content: "\48";
+.icon-fgl-one:before {
+  content: "\72";
 }
-.icon-fgl-prosperity-elite:before {
-   content: "B";
+.icon-fgl-ten:before {
+  content: "\73";
 }
-.fgl-pros-elite:before {
+.icon-fgl-six:before {
+  content: "\74";
+}
+.icon-fgl-nine:before {
+  content: "\75";
+}
+.icon-fgl-media-contact-us:before {
+  content: "\76";
+}
+.icon-fgl-seven:before {
+  content: "\77";
+}
+.icon-fgl-safe-income-plus:before {
+  content: "\78";
+}
+.icon-fgl-life-elite:before {
+  content: "\79";
+}
+.icon-fgl-life-choice:before {
+  content: "\7a";
+}
+.icon-fgl-retirement-pro:before {
+  content: "\41";
+}
+.icon-fgl-pros-elite:before {
   content: "\42";
 }
-.fgl-eight:before {
-  content: "\6a";
-  font-size: 30px;
-  line-height: 0 !important;
+.icon-fgl-investor-contact-us:before {
+  content: "\43";
 }
-.fgl-nine:before {
-  content: "\75";
-  font-size: 30px;
-  line-height: 0 !important;
+.icon-fgl-interested-customer:before {
+  content: "\44";
 }
-.fgl-one:before {
-  content: "\72";
-  font-size: 30px;
-  line-height: 0 !important;
+.icon-fgl-policyholder-submit-policies:before {
+  content: "\45";
 }
-.fgl-five:before {
-  content: "\6d";
-  font-size: 30px;
-  line-height: 0 !important;
+.icon-fgl-policyholder-reach-customer-service:before {
+  content: "\46";
 }
-.fgl-four:before {
+.icon-fgl-policyholder-request-agent-call:before {
+  content: "\47";
+}
+.icon-fgl-index-choice-10:before {
+  content: "\48";
+}
+.icon-fgl-immediate-income:before {
+  content: "\49";
+}
+.icon-fgl-guarantee-platinum:before {
+  content: "\4a";
+}
+.icon-fgl-policyholder-manage-policies:before {
+  content: "\4b";
+}
+.icon-fgl-policyholder-faq:before {
+  content: "\4c";
+}
+.icon-fgl-four:before {
   content: "\4d";
-  font-size: 30px;
-  line-height: 0 !important;
 }
-.fgl-two:before {
-  content: "\6f";
-  font-size: 30px;
-  line-height: 0 !important;
-}
-.fgl-three:before {
-  content: "\70";
-  font-size: 30px;
-  line-height: 0 !important;
-}
-.fgl-ten:before {
-  content: "\73";
-  font-size: 30px;
-  line-height: 0 !important;
-}
-.fgl-seven:before {
-  content: "\77";
-  font-size: 30px;
-  line-height: 0 !important;
-}
-.fgl-six:before {
-  content: "\74";
-  font-size: 30px;
-  line-height: 0 !important;
-}
-
-.fgl-accumulatorplus:before {
+.icon-fgl-accumulatorplus:before {
   content: "\61";
-  font-size: 30px;
-  line-height: 0 !important;
+}
+.icon-fgl-about-bod:before {
+  content: "\62";
+}
+.icon-fgl-fg-accelerator-plus:before {
+  content: "\4e";
 }
 
 .fgl-fg-accelerator-plus:before {
