@@ -9668,9 +9668,12 @@ body:not(.device-touch) .button.button-full strong {
   width: 40px;
   height: 40px;
   line-height: 0 !important;
+  margin-top: 20px;
 }
 .feature-box .fbox-icon.icon-fgl-form-instructions i {
-  font-size: 11px;
+  font-size: 20px;
+  margin-top: -10px;
+  padding-top: -5px;
 }
 .feature-box h3 {
   font-size: 16px;
