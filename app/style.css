@@ -895,7 +895,7 @@ body.stretched .container-fullwidth {
   padding: 0 24px;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: none;
   height: 44px;
   color: #001a71;
 }
