@@ -970,10 +970,10 @@ body.stretched .container-fullwidth {
 }
 .top-links a.button {
   color: #fff;
-  height: 32px;
+  height: 34px;
   line-height: 34px;
   border-bottom: none;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 .top-links .login-btn {
   font-size: 14px;
@@ -1304,7 +1304,7 @@ body.stretched #header.full-header .container {
 }
 #primary-menu > ul > li:hover a,
 #primary-menu > ul > li.current a {
-  color: #009f93;
+  color: #009999;
 }
 #primary-menu ul ul,
 #primary-menu ul li .mega-menu-content {
@@ -1314,7 +1314,7 @@ body.stretched #header.full-header .container {
   background-color: #FFF;
   box-shadow: 0px 13px 42px 11px rgba(0, 0, 0, 0.05);
   border: 1px solid #EEE;
-  border-top: 2px solid #009f93;
+  border-top: 2px solid #009999;
   height: auto;
   z-index: 199;
   top: 110px;
@@ -1359,7 +1359,7 @@ body.stretched #header.full-header .container {
 #primary-menu ul ul li:hover > a {
   background-color: #F9F9F9;
   padding-left: 18px;
-  color: #009f93 !important;
+  color: #009999 !important;
 }
 #primary-menu ul ul i {
   line-height: inherit !important;
@@ -1463,7 +1463,7 @@ body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-cont
   color: #444 !important;
 }
 #primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title > a:hover {
-  color: #009f93 !important;
+  color: #009999 !important;
 }
 #primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title.sub-menu > a,
 #primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title.sub-menu:hover > a {
@@ -1521,7 +1521,7 @@ body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-cont
 }
 #primary-menu > div > ul > li:hover a,
 #primary-menu > div > ul > li.current a {
-  color: #009f93;
+  color: #009999;
 }
 body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.center > ul,
 body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.center > div {
@@ -1550,7 +1550,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 #primary-menu.style-3 > ul > li.current > a {
   color: #FFF;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  background-color: #009f93;
+  background-color: #009999;
 }
 /* Primary Menu - Style 4
 -----------------------------------------------------------------*/
@@ -1568,7 +1568,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 }
 #primary-menu.style-4 > ul > li:hover > a,
 #primary-menu.style-4 > ul > li.current > a {
-  border-color: #009f93;
+  border-color: #009999;
 }
 /* Primary Menu - Style 5
 -----------------------------------------------------------------*/
@@ -1655,7 +1655,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 #primary-menu.sub-title > ul > li.current > a,
 #primary-menu.sub-title > div > ul > li:hover > a,
 #primary-menu.sub-title > div > ul > li.current > a {
-  background-color: #009f93;
+  background-color: #009999;
   color: #FFF;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   border-top-color: rgba(0, 0, 0, 0.1);
@@ -1934,13 +1934,13 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
   height: 16px;
   line-height: 16px;
   text-align: center;
-  background-color: #009f93;
+  background-color: #009999;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
 #top-cart a:hover {
-  color: #009f93;
+  color: #009999;
 }
 #top-cart .top-cart-content {
   opacity: 0;
@@ -1950,7 +1950,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
   background-color: #FFF;
   box-shadow: 0px 20px 50px 10px rgba(0, 0, 0, 0.05);
   border: 1px solid #EEE;
-  border-top: 2px solid #009f93;
+  border-top: 2px solid #009999;
   top: 65px;
   right: -15px;
   left: auto;
@@ -8940,12 +8940,12 @@ body:not(.device-xs):not(.device-xxs) .countdown.countdown-large.coming-soon .co
   cursor: pointer;
   outline: none;
   white-space: nowrap;
-  margin: 5px;
+  margin: 0px;
   padding: 0 22px;
   font-size: 14px;
   height: 40px;
   line-height: 40px;
-  background-color: #009f93;
+  background-color: #009999;
   color: #FFF;
   font-weight: 600;
   text-transform: uppercase;
@@ -9320,7 +9320,7 @@ body:not(.device-touch) .button.button-full strong {
   background-color: #ECD078 !important;
 }
 .button-green {
-  background-color: #19a094;
+  background-color: #009999;
 }
 .button-3d.button-green:hover,
 .button-reveal.button-green:hover {
