@@ -18,12 +18,7 @@
 <changefreq>monthly</changefreq>
 <priority>0.9</priority>
 </url>
-<url>
-<loc>https://home.fglife.com/investor-relations/events-calendar-presentations.html</loc>
-<lastmod>2016-03-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-</url>
+
 <url>
 <loc>https://home.fglife.com/index.html</loc>
 <lastmod>2016-03-28</lastmod>
@@ -50,12 +45,6 @@
 </url>
 <url>
 <loc>https://home.fglife.com/about.html</loc>
-<lastmod>2016-03-28</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://home.fglife.com/investor-relations/corporate-governance.html</loc>
 <lastmod>2016-03-28</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.9</priority>
