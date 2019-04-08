@@ -1,11 +1,17 @@
 /*-----------------------------------------------------------------------------------
 
-    helpers.less
+	helpers.less
 
 -----------------------------------------------------------------------------------*/
 
 
 .uppercase { text-transform: uppercase !important; }
+
+.lowercase { text-transform: lowercase !important; }
+
+.capitalize { text-transform: capitalize !important; }
+
+.nott { text-transform: none !important; }
 
 .tright { text-align: right !important; }
 
@@ -18,33 +24,39 @@
 .fnone { float: none !important; }
 
 .ohidden {
-    position: relative;
-    overflow: hidden !important;
+	position: relative;
+	overflow: hidden !important;
 }
 
 .line,
 .double-line {
-    clear: both;
-    position: relative;
-    width: 100%;
-    margin: (@margin-base + 10) 0;
-    border-top: 1px solid #b1b1b1;
+	clear: both;
+	position: relative;
+	width: 100%;
+	margin: (@margin-base + 10) 0;
+	border-top: 1px solid #EEE;
 
-    &.line-sm {
-        margin: @margin-small 0;
-    }
+	&.line-sm {
+		margin: @margin-small 0;
+	}
+}
+
+.vl {
+	border-right: 1px solid gray;
+	height: 175px;
+	margin-right: 30px;
 }
 
 span.middot {
-    display: inline-block;
-    margin: 0 5px;
+	display: inline-block;
+	margin: 0 5px;
 }
 
 .double-line { border-top: 3px double #E5E5E5; }
 
 .emptydiv {
-    display: block !important;
-    position: relative !important;
+	display: block !important;
+	position: relative !important;
 }
 
 .allmargin { margin: @margin-base !important; }
@@ -81,10 +93,6 @@ span.middot {
 
 .bottommargin-lg { margin-bottom: @margin-big !important; }
 
-.topmargin-md{margin-top: @margin-medium !important; }
-
-.bottommargin-md{ margin-bottom: @margin-medium !important; }
-
 .clear-bottommargin-lg { margin-bottom: -@margin-big !important; }
 
 .nomargin {margin: 0 !important; }
@@ -119,17 +127,11 @@ span.middot {
 
 .col-padding { padding: 60px; }
 
-.rightpadding-sm{ padding-right: 10px !important;}
-
 .nopadding { padding: 0 !important; }
-
-.leftpadding-sm { padding-left: 30px !important; }
 
 .noleftpadding { padding-left: 0 !important; }
 
 .norightpadding { padding-right: 0 !important; }
-
-.toppadding-sm { padding-top: 20px !important; }
 
 .notoppadding { padding-top: 0 !important; }
 
@@ -139,22 +141,32 @@ span.middot {
 
 .noshadow { box-shadow: none !important; }
 
+.notextshadow { text-shadow: none !important; }
+
 .hidden { display: none !important; }
 
 .nothidden { display: block !important; }
 
 .inline-block {
-    float: none !important;
-    display: inline-block !important;
+	float: none !important;
+	display: inline-block !important;
 }
 
 .center { text-align: center !important; }
 
 .divcenter {
-    position: relative !important;
-    float: none !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+	position: relative !important;
+	float: none !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+/* Centered text */
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .bgcolor,
@@ -168,62 +180,98 @@ span.middot {
 
 .nobgcolor { background-color: transparent !important; }
 
+.t300 { font-weight: 300 !important; }
+
+.t400 { font-weight: 400 !important; }
+
+.t500 { font-weight: 500 !important; }
+
+.t600 { font-weight: 600 !important; }
+
+.t700 { font-weight: 700 !important; }
+
+.ls0 { letter-spacing: 0px !important; }
+
+.ls1 { letter-spacing: 1px !important; }
+
+.ls2 { letter-spacing: 2px !important; }
+
+.ls3 { letter-spacing: 3px !important; }
+
+.ls4 { letter-spacing: 4px !important; }
+
+.ls5 { letter-spacing: 5px !important; }
+
+.noheight { height: 0 !important; }
+
+.nolineheight { line-height: 0 !important; }
+
+.font-body { font-family: 'HelveticaNeueLTStd-Roman', sans-serif; }
+
+.font-primary { font-family: 'HelveticaNeueLTStd-Roman', sans-serif; }
+
+.font-secondary { font-family: 'HelveticaNeueLTStd-Bd', serif; }
+
 .bgicon {
-    display: block;
-    position: absolute;
-    bottom: -60px;
-    right: -50px;
-    font-size: 210px;
-    color: rgba(0,0,0,0.1);
+	display: block;
+	position: absolute;
+	bottom: -60px;
+	right: -50px;
+	font-size: 210px;
+	color: rgba(0,0,0,0.1);
 }
 
 /* MOVING BG -  TESTIMONIALS */
 .bganimate {
   -webkit-animation:BgAnimated 30s infinite linear;
-     -moz-animation:BgAnimated 30s infinite linear;
-      -ms-animation:BgAnimated 30s infinite linear;
-       -o-animation:BgAnimated 30s infinite linear;
-          animation:BgAnimated 30s infinite linear;
+	 -moz-animation:BgAnimated 30s infinite linear;
+	  -ms-animation:BgAnimated 30s infinite linear;
+	   -o-animation:BgAnimated 30s infinite linear;
+		  animation:BgAnimated 30s infinite linear;
 }
 
 @-webkit-keyframes BgAnimated {
-    from  {background-position:0 0;}
-    to    {background-position:0 400px;}
+	from  {background-position:0 0;}
+	to    {background-position:0 400px;}
 }
 
 @-moz-keyframes BgAnimated {
-    from  {background-position:0 0;}
-    to    {background-position:0 400px;}
+	from  {background-position:0 0;}
+	to    {background-position:0 400px;}
 }
 
 @-ms-keyframes BgAnimated {
-    from  {background-position:0 0;}
-    to    {background-position:0 400px;}
+	from  {background-position:0 0;}
+	to    {background-position:0 400px;}
 }
 
 @-o-keyframes BgAnimated {
-    from  {background-position:0 0;}
-    to    {background-position:0 400px;}
+	from  {background-position:0 0;}
+	to    {background-position:0 400px;}
 }
 
 @keyframes BgAnimated {
-    from  {background-position:0 0;}
-    to    {background-position:0 400px;}
+	from  {background-position:0 0;}
+	to    {background-position:0 400px;}
 }
 
 
 .input-block-level {
-    display: block;
-    width: 100% !important;
-    min-height: 30px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	display: block;
+	width: 100% !important;
+	min-height: 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .vertical-middle {
-    height: auto !important;
-    left: 0;
+	height: auto !important;
+	left: 0;
+	max-width: none !important;
+	z-index: 2;
+
+	+ .video-wrap { z-index: 1 !important; }
 }
 
 .magnific-max-width .mfp-content { max-width: 800px; }

@@ -1,10 +1,10 @@
 /*-----------------------------------------------------------------------------------
 
-    Shortcodes: clients.less
+	Shortcodes: clients.less
 
 -----------------------------------------------------------------------------------*/
 /* ----------------------------------------------------------------
-    Clients
+	Clients
 -----------------------------------------------------------------*/
 .clients-grid,
 .testimonials-grid {
@@ -17,6 +17,7 @@
   position: relative;
   width: 20%;
   padding: 20px 0;
+  -webkit-backface-visibility: hidden;
 }
 .clients-grid.grid-2 li {
   width: 50%;
@@ -38,9 +39,9 @@
   opacity: 1;
 }
 body:not(.device-touch) .clients-grid li a {
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .clients-grid li a,
 .clients-grid li img {

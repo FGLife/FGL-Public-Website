@@ -1,10 +1,10 @@
 /*-----------------------------------------------------------------------------------
 
-    Shortcodes: overlay.less
+	Shortcodes: overlay.less
 
 -----------------------------------------------------------------------------------*/
 /* ----------------------------------------------------------------
-    Overlays
+	Overlays
 -----------------------------------------------------------------*/
 .overlay {
   position: absolute;
@@ -67,6 +67,7 @@ body:not(.device-touch) .text-overlay {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
   /* IE6-9 */
+  backface-visibility: hidden;
 }
 .text-overlay-title h2,
 .text-overlay-title h3,
@@ -126,5 +127,5 @@ body:not(.device-touch) .text-overlay {
   top: 30px;
   right: 30px;
   color: #FFF;
-  font-weight: 600;
+  font-weight: 700;
 }

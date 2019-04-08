@@ -1,41 +1,41 @@
 /*-----------------------------------------------------------------------------------
 
-    typography.less
+	typography.less
 
 -----------------------------------------------------------------------------------*/
 
 
 dl, dt, dd, ol, ul, li {
-    margin: 0;
-    padding: 0;
+	margin: 0 0 0 8px;
+	padding: 0;
 }
 
 .clear {
-    clear: both;
-    display: block;
-    font-size: 0px;
-    height: 0px;
-    line-height: 0;
-    width: 100%;
-    overflow:hidden;
+	clear: both;
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	width: 100%;
+	overflow:hidden;
 }
 
 ::selection {
-    background: @theme-color;
-    color: #FFF;
-    text-shadow: none;
+	background: @theme-color;
+	color: #FFF;
+	text-shadow: none;
 }
 
 ::-moz-selection {
-    background: @theme-color; /* Firefox */
-    color: #FFF;
-    text-shadow: none;
+	background: @theme-color; /* Firefox */
+	color: #FFF;
+	text-shadow: none;
 }
 
 ::-webkit-selection {
-    background: @theme-color; /* Safari */
-    color: #FFF;
-    text-shadow: none;
+	background: @theme-color; /* Safari */
+	color: #FFF;
+	text-shadow: none;
 }
 
 :active,
@@ -43,28 +43,28 @@ dl, dt, dd, ol, ul, li {
 
 
 /* ----------------------------------------------------------------
-    Typography
+	Typography
 -----------------------------------------------------------------*/
 
 
 body {
-    line-height: @line-height-base;
-    color: @body-color;
-    font-size: @font-size-base;
-    font-family: @body-font;
+	line-height: @line-height-base;
+	color: @body-color;
+	font-size: @font-size-base;
+	font-family: @body-font;
 }
 
 a {
-    text-decoration: none !important;
-    color: @theme-color;
+	text-decoration: none !important;
+	color: @theme-color;
 
-    &:hover {
-        color: @fgl-blue;
-    }
+	&:hover {
+		color: #8246af;
+	}
 
-    img {
-        border: none;
-    }
+	img {
+		border: none;
+	}
 }
 
 img { max-width: 100%; }
@@ -73,7 +73,7 @@ iframe { border: none !important; }
 
 
 /* ----------------------------------------------------------------
-    Basic Layout Styles
+	Basic Layout Styles
 -----------------------------------------------------------------*/
 
 
@@ -81,30 +81,18 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
-    color: @heading-color;
-    font-weight: 600;
-    line-height: @line-height-base;
-    margin: 0 0 10px 0;
-    //margin: 0 0 30px 0; - reduce FGL-KC
-    font-family: @heading-font;
-}
+h5 {
+	color: @heading-color;
+	line-height: @line-height-base;
+	margin: 0 0 30px 0;
+	font-family: @heading-font;
 
+	}
 
-.h1-white,
-.h2-white,
-.h3-white,
-.h4-white,
-.h5-white,
-.h6-white,
-.p-white {
-  color: @heading-white;
-}
-
-
-h5,
-h6 { margin-bottom: 20px; }
+h6 { color: @heading-color;
+	line-height: @line-height-base;
+	font-family: @body-font !important;
+	margin-bottom: 20px; }
 
 h1 { font-size: @font-size-h1; }
 
@@ -118,23 +106,20 @@ h5 { font-size: @font-size-h5; }
 
 h6 { font-size: @font-size-h6; }
 
-h3 {font-weight: 400} //KC
-
-h4 { font-weight: 400; } //KC
+h4 { font-weight: 600; }
 
 h5,
-h6 { font-weight: bold; }
+h6 { font-family: @body-font;}
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-h10{
-    > span:not(.nocolor) {
-        color: @theme-color;
-    }
+h6 {
+	> span:not(.nocolor) {
+		color: @theme-color;
+	}
 }
 
 p,
@@ -152,81 +137,24 @@ form { margin-bottom: 30px; }
 small { font-family: @body-font; }
 
 #wrapper {
-    position: relative;
-    float: none;
-    width: 1220px;
-    margin: 0 auto;
-    background-color: #FFF;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	position: relative;
+	float: none;
+	width: 1220px;
+	margin: 0 auto;
+	background-color: #FFF;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-sup {
-  top: -0.3em;
-}
-h1.header-alt {
-    font-weight: 400;
-    color: #009f93;
-    line-height: 1.5;
-    margin: 0 0 10px 0;
-    font-family: "proxima-nova", Arial, sans-serif;
-    font-size: 24px;
-}
-h1.faq-alt {
-    font-size: 24px;
-    color: @fgl-blue;
-    font-weight: 400;
-    line-height: 1;
-}
-h3.blue-heading {
-    font-size: 25px !important;
-    font-weight: 400;
-    color: @fgl-blue;
-}
-h4.blue-heading {
-  font-size: 20px !important;
-  font-weight: 400;
-  color: @fgl-blue;
-}
+.gray {color: #636466 !important;}
 
-h3.gray-heading {
-    font-size: 25px !important;
-    font-weight: 400;
-    color: #5a6771;
-}
-h4.gray-heading {
-    font-size: 20px !important;
-    font-weight: 400;
-    color: #5a6771;
-    text-transform: uppercase;
-}
-h5.gray-heading {
-    font-size: 17px !important;
-    font-weight: 400;
-    color: #5a6771;
-    text-transform: uppercase;
-}
+.blue {color: #003c71 !important;}
 
-section.contact-top-container .heading-block h10{
-  font-size: 38px;
-  text-transform: none;
-  font-weight: 500;
-}
-.heading-block h10 {
-  text-shadow: rgba(0, 0, 0, 0.66) 1px 1px 2px;
-}
-.heading-block h10, .emphasis-title h10, {
-  margin-bottom: 0;
-  letter-spacing: 1px;
-  color: white;
-}
-h10 {
-  font-size: 36px;
-}
-h10, {
-  line-height: 1.5;
-  margin: 0 0 10px 0;
-  font-family: "proxima-nova", Arial, sans-serif;
-}
+.yellow {color: #fec10d !important;}
 
+.white {color: #fff !important;}
+
+.orange {color: #ff9800 !important;}
+
+.green {color: #84bd00 !important;}
