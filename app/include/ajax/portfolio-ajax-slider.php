@@ -25,9 +25,9 @@ $postid = isset( $_POST['portid'] ) ? $_POST['portid'] : '';
         <div class="fslider" data-arrows="false" data-thumbs="true" data-animation="fade">
             <div class="flexslider">
                 <div class="slider-wrap">
-                    <div class="slide" data-thumb="/images/portfolio/single/slider-thumbs/1.jpg"><a href="#"><img src="/images/portfolio/single/1.jpg" alt=""></a></div>
-                    <div class="slide" data-thumb="/images/portfolio/single/slider-thumbs/7.jpg"><a href="#"><img src="/images/portfolio/single/7.jpg" alt=""></a></div>
-                    <div class="slide" data-thumb="/images/portfolio/single/slider-thumbs/10.jpg"><a href="#"><img src="/images/portfolio/single/10.jpg" alt=""></a></div>
+                    <div class="slide" data-thumb="images/portfolio/single/slider-thumbs/1.jpg"><a href="#"><img src="images/portfolio/single/1.jpg" alt=""></a></div>
+                    <div class="slide" data-thumb="images/portfolio/single/slider-thumbs/7.jpg"><a href="#"><img src="images/portfolio/single/7.jpg" alt=""></a></div>
+                    <div class="slide" data-thumb="images/portfolio/single/slider-thumbs/10.jpg"><a href="#"><img src="images/portfolio/single/10.jpg" alt=""></a></div>
                 </div>
             </div>
         </div>

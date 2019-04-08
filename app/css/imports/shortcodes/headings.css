@@ -125,6 +125,10 @@
 .heading-block.center:after,
 .heading-block.title-center:after { margin: 30px auto 0; }
 
+.tright .heading-block,
+.heading-block.tright,
+.heading-block.title-right { direction: rtl; }
+
 .heading-block.noborder:after,
 .heading-block.nobottomborder:after { display: none; }
 

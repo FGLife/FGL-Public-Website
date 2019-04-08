@@ -2,41 +2,56 @@
 
 $apiKey = ''; // Your MailChimp API Key
 $listId = ''; // Your MailChimp List ID
-$double_optin=false;
-$send_welcome=false;
-$email_type = 'html';
+
+if( isset( $_GET['list'] ) AND $_GET['list'] != '' ) {
+	$listId = $_GET['list'];
+}
+
 $email = $_POST['widget-subscribe-form-email'];
+$fname = isset( $_POST['widget-subscribe-form-fname'] ) ? $_POST['widget-subscribe-form-fname'] : '';
+$lname = isset( $_POST['widget-subscribe-form-lname'] ) ? $_POST['widget-subscribe-form-lname'] : '';
 $datacenter = explode( '-', $apiKey );
-$submit_url = "http://" . $datacenter[1] . ".api.mailchimp.com/1.3/?method=listSubscribe";
+$submit_url = "https://" . $datacenter[1] . ".api.mailchimp.com/3.0/lists/" . $listId . "/members/" ;
 
 if( isset( $email ) AND $email != '' ) {
 
-    $data = array(
-        'email_address'=>$email,
-        'apikey'=>$apiKey,
-        'id' => $listId,
-        'double_optin' => $double_optin,
-        'send_welcome' => $send_welcome,
-        'email_type' => $email_type
-    );
+	$merge_vars = array();
+	if( $fname != '' ) { $merge_vars['FNAME'] = $fname; }
+	if( $lname != '' ) { $merge_vars['LNAME'] = $lname; }
 
-    $payload = json_encode($data);
+	$data = array(
+		'email_address' => $email,
+		'status' => 'subscribed'
+	);
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $submit_url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, urlencode($payload));
+	if( !empty( $merge_vars ) ) { $data['merge_fields'] = $merge_vars; }
 
-    $result = curl_exec($ch);
-    curl_close ($ch);
-    $data = json_decode($result);
+	$payload = json_encode($data);
 
-    if ( isset( $data->error ) AND $data->error != '' ){
-        echo $data->error;
-    } else {
-        echo 'You have been <strong>successfully</strong> subscribed to our Email List.';
-    }
+	$auth = base64_encode( 'user:' . $apiKey );
+
+	$header   = array();
+	$header[] = 'Content-type: application/json; charset=utf-8';
+	$header[] = 'Authorization: Basic ' . $auth;
+
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $submit_url);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+
+	$result = curl_exec($ch);
+	curl_close($ch);
+	$data = json_decode($result);
+
+	if ( isset( $data->status ) AND $data->status == 'subscribed' ){
+		echo '{ "alert": "success", "message": "You have been <strong>successfully</strong> subscribed to our Email List." }';
+	} else {
+		echo '{ "alert": "error", "message": "' . $data->title . '" }';
+	}
 
 }
 

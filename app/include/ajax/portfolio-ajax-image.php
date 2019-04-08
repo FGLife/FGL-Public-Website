@@ -22,7 +22,7 @@ $postid = isset( $_POST['portid'] ) ? $_POST['portid'] : '';
     <!-- Portfolio Single Image
     ============================================= -->
     <div class="col_three_fifth portfolio-single-image nobottommargin">
-        <a href="#"><img src="/images/portfolio/single/1.jpg" alt=""></a>
+        <a href="#"><img src="images/portfolio/single/1.jpg" alt=""></a>
     </div><!-- .portfolio-single-image end -->
 
     <!-- Portfolio Single Content

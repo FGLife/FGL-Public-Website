@@ -1,79 +1,39 @@
 @font-face {
 	font-family: 'font-icons';
-	src:url('/css/fonts/font-icons.eot');
-	src:url('/css/fonts/font-icons.eot') format('embedded-opentype'),
-		url('/css/fonts/font-icons.woff') format('woff'),
-		url('/css/fonts/font-icons.ttf') format('truetype'),
-		url('/css/fonts/font-icons.svg') format('svg');
+	src:url('fonts/font-icons.eot');
+	src:url('fonts/font-icons.eot') format('embedded-opentype'),
+		url('fonts/font-icons.woff') format('woff'),
+		url('fonts/font-icons.ttf') format('truetype'),
+		url('fonts/font-icons.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'lined-icons';
-	src:url('/css/fonts/lined-icons.eot');
-	src:url('/css/fonts/lined-icons.eot') format('embedded-opentype'),
-		url('/css/fonts/lined-icons.woff') format('woff'),
-		url('/css/fonts/lined-icons.ttf') format('truetype'),
-		url('/css/fonts/lined-icons.svg') format('svg');
+	src:url('fonts/lined-icons.eot');
+	src:url('fonts/lined-icons.eot') format('embedded-opentype'),
+		url('fonts/lined-icons.woff') format('woff'),
+		url('fonts/lined-icons.ttf') format('truetype'),
+		url('fonts/lined-icons.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Simple-Line-Icons';
-	src:url('/css/fonts/Simple-Line-Icons.eot');
-	src:url('/css/fonts/Simple-Line-Icons.eot?#iefix') format('embedded-opentype'),
-		url('/css/fonts/Simple-Line-Icons.woff') format('woff'),
-		url('/css/fonts/Simple-Line-Icons.ttf') format('truetype'),
-		url('/css/fonts/Simple-Line-Icons.svg#Simple-Line-Icons') format('svg');
+	src:url('fonts/Simple-Line-Icons.eot');
+	src:url('fonts/Simple-Line-Icons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Simple-Line-Icons.woff') format('woff'),
+		url('fonts/Simple-Line-Icons.ttf') format('truetype'),
+		url('fonts/Simple-Line-Icons.svg#Simple-Line-Icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
-@font-face {
-  font-family: "fgl";
-  src:url("fonts/fgl.eot");
-  src:url("fonts/fgl.eot?#iefix") format("embedded-opentype"),
-  url("fonts/fgl.woff") format("woff"),
-  url("fonts/fgl.ttf") format("truetype"),
-  url("fonts/fgl.svg#fgl") format("svg");
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-[data-icon]:before {
-  font-family: "fgl" !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="fgl-"]:before,
-[class*=" fgl-"]:before {
-  font-family: "fgl" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
 [class^="icon-"], [class*=" icon-"],
 [class^="icon-line-"], [class*=" icon-line-"],
 [class^="icon-line2-"], [class*=" icon-line2-"],
-[class^="icon-fgl-"], [class*=" icon-fgl-"],
 .side-header #primary-menu ul > li.sub-menu > a:after {
 	display: inline-block;
 	font-family: 'font-icons';
@@ -85,13 +45,12 @@
 	line-height: inherit;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+    color: #636466;
 }
 
 [class^="icon-line-"], [class*=" icon-line-"] { font-family: 'lined-icons'; }
 
 [class^="icon-line2-"], [class*=" icon-line2-"] { font-family: 'Simple-Line-Icons'; }
-
-[class^="icon-fgl-"], [class*=" icon-fgl-"] { font-family: 'fgl'; }
 
 .icon-lg {
   font-size: 1.3333333333333333em;
@@ -117,7 +76,6 @@
 
 .iconlist {
 	padding-left: 0;
-	margin-left: 1.75em;
 	list-style-type: none;
 }
 
@@ -3100,128 +3058,4 @@
 }
 .icon-line2-users:before {
 	content: "\e001";
-}
-.icon-fgl-about-careers:before {
-  content: "\63";
-}
-.icon-fgl-about-culture:before {
-  content: "\64";
-}
-.icon-fgl-about-ratings:before {
-  content: "\65";
-}
-.icon-fgl-agent-change-status:before {
-  content: "\66";
-}
-.icon-fgl-agent-contact-us:before {
-  content: "\67";
-}
-.icon-fgl-agent-contacted:before {
-  content: "\68";
-}
-.icon-fgl-agent-imo:before {
-  content: "\69";
-}
-.icon-fgl-eight:before {
-  content: "\6a";
-}
-.icon-fgl-fgny-index-choice-10:before {
-  content: "\6b";
-}
-.icon-fgl-fgny-index-safety-7:before {
-  content: "\6c";
-}
-.icon-fgl-five:before {
-  content: "\6d";
-}
-.icon-fgl-policyholder-contact-us:before {
-  content: "\6e";
-}
-.icon-fgl-two:before {
-  content: "\6f";
-}
-.icon-fgl-three:before {
-  content: "\70";
-}
-.icon-fgl-perf-pro:before {
-  content: "\71";
-}
-.icon-fgl-one:before {
-  content: "\72";
-}
-.icon-fgl-ten:before {
-  content: "\73";
-}
-.icon-fgl-six:before {
-  content: "\74";
-}
-.icon-fgl-nine:before {
-  content: "\75";
-}
-.icon-fgl-media-contact-us:before {
-  content: "\76";
-}
-.icon-fgl-seven:before {
-  content: "\77";
-}
-.icon-fgl-safe-income-plus:before {
-  content: "\78";
-}
-.icon-fgl-life-elite:before {
-  content: "\79";
-}
-.icon-fgl-life-choice:before {
-  content: "\7a";
-}
-.icon-fgl-retirement-pro:before {
-  content: "\41";
-}
-.icon-fgl-pros-elite:before {
-  content: "\42";
-}
-.icon-fgl-investor-contact-us:before {
-  content: "\43";
-}
-.icon-fgl-interested-customer:before {
-  content: "\44";
-}
-.icon-fgl-policyholder-submit-policies:before {
-  content: "\45";
-}
-.icon-fgl-policyholder-reach-customer-service:before {
-  content: "\46";
-}
-.icon-fgl-policyholder-request-agent-call:before {
-  content: "\47";
-}
-.icon-fgl-index-choice-10:before {
-  content: "\48";
-}
-.icon-fgl-immediate-income:before {
-  content: "\49";
-}
-.icon-fgl-guarantee-platinum:before {
-  content: "\4a";
-}
-.icon-fgl-policyholder-manage-policies:before {
-  content: "\4b";
-}
-.icon-fgl-policyholder-faq:before {
-  content: "\4c";
-}
-.icon-fgl-four:before {
-  content: "\4d";
-}
-.icon-fgl-accumulatorplus:before {
-  content: "\61";
-}
-.icon-fgl-about-bod:before {
-  content: "\62";
-}
-.icon-fgl-fg-accelerator-plus:before {
-  content: "\4e";
-}
-
-.fgl-fg-accelerator-plus:before {
-  content: "\4e";
 }
